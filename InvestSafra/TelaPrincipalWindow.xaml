@@ -1,0 +1,38 @@
+﻿<Window x:Class="InvestSafra.TelaPrincipalWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InvestSafra"
+        mc:Ignorable="d"
+        Title="TelaPrincipalWindow" Height="653" Width="890">
+
+    <Grid Height="620" VerticalAlignment="Top" Margin="0,10,0,0" >
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="692*"/>
+            <ColumnDefinition Width="173*"/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="25*"/>
+
+        </Grid.ColumnDefinitions>
+
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="396"/>
+            <RowDefinition Height="34"/>
+            <RowDefinition Height="0"/>
+            <RowDefinition Height="0"/>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Imagens/Img De fundo.png"/>
+        </Grid.Background>
+
+        <StackPanel Grid.ColumnSpan="4"  Grid.RowSpan="4" Margin="50,30,-50,-30"/>
+        <StackPanel Grid.RowSpan="2" Margin="234,69,45,17">
+            <Image Source="/Imagens/logo_pgnPrincipal.png"  Grid.RowSpan="2"/>
+        </StackPanel>
+        <Button x:Name="btEntrar" Content="Entrar" BorderThickness="17" Background="#EFA82E" BorderBrush="#EFA82E" Foreground="Black" Visibility="Visible"  Grid.Column="1" Margin="82,14,10,350" Click="btEntrar_Click"/>
+        <Button x:Name="btCadastra" Content="Increva-se" BorderThickness="17" Background="#EFA82E" BorderBrush="#EFA82E" Foreground="Black" Visibility="Visible"  Grid.Column="0" Grid.ColumnSpan="2" Margin="618,14,126,350" Click="btCadastra_Click"/>
+    </Grid>
+</Window>
