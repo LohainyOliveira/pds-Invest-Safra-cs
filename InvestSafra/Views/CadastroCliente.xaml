@@ -100,7 +100,7 @@
                     HorizontalAlignment="Center" 
                     Margin="0,10,0,0" Grid.Row="2" 
                     TextWrapping="Wrap" VerticalAlignment="Top" 
-                    Width="220" Background="#0F040302" FontFamily="Arial" FontWeight="Bold" Grid.Column="1" Height="59"/>
+                    Width="220" Background="#0F040302" FontFamily="Arial" FontWeight="Bold" Grid.Column="1" Height="59" Cursor="Arrow"/>
 
 
         <ComboBox 
@@ -141,6 +141,6 @@
         <PasswordBox
              materialDesign:HintAssist.Hint="Crie uma senha forte"
                     x:Name="psSenha" Padding="16" 
-            Grid.Column="2" HorizontalAlignment="Left" Margin="43,176,0,0" Grid.Row="1" VerticalAlignment="Top" Width="194" Height="49" FontFamily="13" FontWeight="Bold"/>
+            Grid.Column="2" HorizontalAlignment="Left" Margin="43,176,0,0" Grid.Row="1" VerticalAlignment="Top" Width="194" Height="49" FontFamily="13" FontWeight="Bold" Cursor="Arrow"/>
     </Grid>
 </Window>
