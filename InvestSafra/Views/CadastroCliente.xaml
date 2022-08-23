@@ -49,7 +49,7 @@
                     x:Name="NomeCompleto" Padding="16" 
                     HorizontalAlignment="Center" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
-                    Width="194" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60"/>
+                    Width="194" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"/>
         <TextBox 
             Style="{StaticResource MaterialDesignFilledTextBox}"
                     AcceptsReturn="True"
@@ -141,6 +141,6 @@
         <PasswordBox
              materialDesign:HintAssist.Hint="Crie uma senha forte"
                     x:Name="psSenha" Padding="16" 
-            Grid.Column="2" HorizontalAlignment="Left" Margin="43,175,0,0" Grid.Row="1" VerticalAlignment="Top" Width="194" Height="49" FontFamily="13" FontWeight="Bold" Password=" cvbcvbcvb"/>
+            Grid.Column="2" HorizontalAlignment="Left" Margin="43,176,0,0" Grid.Row="1" VerticalAlignment="Top" Width="194" Height="49" FontFamily="13" FontWeight="Bold"/>
     </Grid>
 </Window>

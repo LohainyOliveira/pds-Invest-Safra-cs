@@ -5,8 +5,78 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:InvestSafra.Views"
         mc:Ignorable="d"
+          xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"
+        FontFamily="{DynamicResource MaterialDesignFont}"
         Title="Entrar" Height="450" Width="800">
-    <Grid>
-        
+    <Grid Cursor="Arrow">
+        <Grid.Background>
+            <ImageBrush ImageSource="/Imagens/imgd de fundo desfocada.png"/>
+        </Grid.Background>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="113"/>
+            <RowDefinition/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Label  Content="Login" HorizontalAlignment="Left" Margin="360,35,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="34" Foreground="#EFA82E" FontWeight="Bold" Height="50" Width="107"/>
+        </Grid>
+
+
+
+        <Grid Grid.Row="1" RenderTransformOrigin="0.5,0.5" Margin="0,18,5,0" >
+            <Grid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.374"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Grid.RenderTransform>
+
+
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel HorizontalAlignment="Left" Margin="248,34,0,40" Width="331">
+                <TextBox Style="{StaticResource MaterialDesignFilledTextBox}"
+                    AcceptsReturn="True"
+                    MaxWidth="400"
+                    materialDesign:HintAssist.Hint="Usuário"
+                    x:Name="NomeCompleto" Padding="16" 
+                    HorizontalAlignment="Center" Grid.Row="1" 
+                    TextWrapping="Wrap" 
+                    Width="248" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"/>
+                <PasswordBox materialDesign:HintAssist.Hint="Senha"
+                    x:Name="psSenha" Padding="16" 
+                    FontFamily="13" FontWeight="Bold" Width="248" Height="50" Cursor="Arrow"/>
+
+
+            </StackPanel>
+            <Image HorizontalAlignment="Left" Height="100" Margin="15,-131,0,0" VerticalAlignment="Top" Width="100" Source="/Imagens/logo de canto_png.png"/>
+        </Grid>
+
+        <Grid Grid.Row="2" Margin="0,3,10,30" RenderTransformOrigin="0.5,0.5">
+            <Grid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Grid.RenderTransform>
+            <Button x:Name="btEntrar" Margin ="665,0,0,-10" Content="Entrar" BorderThickness="17" Background="#EFA82E" Foreground="Black" BorderBrush="#EFA82E"  Cursor="Hand"/>
+
+        </Grid>
+
+
     </Grid>
 </Window>
