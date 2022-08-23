@@ -195,7 +195,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Imagens\Img De fundo.png" />
+    <Resource Include="Imagens\img_fundo.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Imagens\imgd de fundo desfocada.png" />
