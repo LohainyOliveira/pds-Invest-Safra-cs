@@ -6,7 +6,10 @@
         xmlns:local="clr-namespace:InvestSafra.Views"
         mc:Ignorable="d"
         Title="CadastrarMaquinas" Height="450" Width="800">
-    <Grid>
-        
+    <Grid Width="796">
+        <Grid.Background>
+            <ImageBrush ImageSource="/Imagens/imgd de fundo desfocada.png"/>
+        </Grid.Background>
+
     </Grid>
 </Window>
