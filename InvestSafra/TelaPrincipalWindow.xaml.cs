@@ -40,5 +40,13 @@ namespace InvestSafra
 			Entrar form = new Entrar();
 			form.ShowDialog();
 		}
-	}
+
+        private void ListViewItem_Selected(object sender, RoutedEventArgs e)
+        {
+
+
+			Entrar form = new Entrar();
+			form.ShowDialog();
+		}
+    }
 }
