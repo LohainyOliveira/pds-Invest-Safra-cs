@@ -112,6 +112,48 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Database\Conexao.cs" />
+    <Compile Include="Models\Area.cs" />
+    <Compile Include="Models\AreaDAO.cs" />
+    <Compile Include="Models\Atividades.cs" />
+    <Compile Include="Models\AtividadesDAO.cs" />
+    <Compile Include="Models\Cliente.cs" />
+    <Compile Include="Models\ClienteDAO.cs" />
+    <Compile Include="Models\Clima.cs" />
+    <Compile Include="Models\ClimaDAO.cs" />
+    <Compile Include="Models\Compra.cs" />
+    <Compile Include="Models\CompraDAO.cs" />
+    <Compile Include="Models\Custos.cs" />
+    <Compile Include="Models\CustosDAO.cs" />
+    <Compile Include="Models\Empresa.cs" />
+    <Compile Include="Models\EmpresaDAO.cs" />
+    <Compile Include="Models\Estoque.cs" />
+    <Compile Include="Models\EstoqueDAO.cs" />
+    <Compile Include="Models\Fazenda.cs" />
+    <Compile Include="Models\FazendaDAO.cs" />
+    <Compile Include="Models\Fornecedor.cs" />
+    <Compile Include="Models\FornecedorDAO.cs" />
+    <Compile Include="Models\Funcionario.cs" />
+    <Compile Include="Models\FuncionarioDAO.cs" />
+    <Compile Include="Models\Insumos.cs" />
+    <Compile Include="Models\InsumosDAO.cs" />
+    <Compile Include="Models\lucros.cs" />
+    <Compile Include="Models\LucrosDAO.cs" />
+    <Compile Include="Models\Maquinas.cs" />
+    <Compile Include="Models\MaquinasDAO.cs" />
+    <Compile Include="Models\Materiais.cs" />
+    <Compile Include="Models\MateriaisDAO.cs" />
+    <Compile Include="Models\Planejamento.cs" />
+    <Compile Include="Models\PlanejamentoDAO.cs" />
+    <Compile Include="Models\ProducaoEstimada.cs" />
+    <Compile Include="Models\ProducaoEstimadaDAO.cs" />
+    <Compile Include="Models\Safra.cs" />
+    <Compile Include="Models\SafraDAO.cs" />
+    <Compile Include="Models\Sementes.cs" />
+    <Compile Include="Models\SementesDAO.cs" />
+    <Compile Include="Models\Usuario.cs" />
+    <Compile Include="Models\UsuarioDAO.cs" />
+    <Compile Include="Models\Venda.cs" />
+    <Compile Include="Models\VendaDAO.cs" />
     <Compile Include="TelaPrincipalWindow.xaml.cs">
       <DependentUpon>TelaPrincipalWindow.xaml</DependentUpon>
     </Compile>
@@ -121,6 +163,7 @@
     <Compile Include="Views\CadastrarMaquinas.xaml.cs">
       <DependentUpon>CadastrarMaquinas.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Class.cs" />
     <Compile Include="Views\Entrar.xaml.cs">
       <DependentUpon>Entrar.xaml</DependentUpon>
     </Compile>
@@ -161,9 +204,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Page Include="TelaPrincipalWindow.xaml">
       <SubType>Designer</SubType>
