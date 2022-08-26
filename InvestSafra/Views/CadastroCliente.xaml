@@ -59,7 +59,7 @@
                     HorizontalAlignment="Center" 
                     Margin="0,165,0,0" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Top" 
-                    Width="194" Background="#0F040302" FontFamily="Arial" FontWeight="Bold" Height="59" Text=""/>
+                    Width="194" Background="#0F040302" FontFamily="Arial" FontWeight="Bold" Height="59" Text="" Cursor="Arrow"/>
         <TextBox 
             Style="{StaticResource MaterialDesignFilledTextBox}"
                     AcceptsReturn="True"
@@ -79,7 +79,7 @@
                     HorizontalAlignment="Center" 
                     Margin="0,10,0,0" Grid.Row="2" 
                     TextWrapping="Wrap" VerticalAlignment="Top" 
-                    Width="194" Background="#0F040302" FontFamily="Arial" FontWeight="Bold" Height="59"/>
+                    Width="194" Background="#0F040302" FontFamily="Arial" FontWeight="Bold" Height="59" Cursor="Arrow"/>
         <ComboBox
              materialDesign:HintAssist.Hint="Local de Trabalho" 
                     HorizontalAlignment="Center"   
