@@ -15,7 +15,7 @@
         Title="Entrar" Height="450" Width="800">
     <Grid Cursor="Arrow">
         <Grid.Background>
-            <ImageBrush ImageSource="/Imagens/imgd de fundo desfocada.png"/>
+            <ImageBrush ImageSource="/Imagens/ImgFundoDesfocado.png"/>
         </Grid.Background>
 
         <Grid.RowDefinitions>

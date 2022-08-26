@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace InvestSafra.Views
 {
@@ -19,9 +20,59 @@ namespace InvestSafra.Views
     /// </summary>
     public partial class CadastrarFuncionario : Window
     {
+
+        DispatcherTimer timer;
+
+		double PainelWidth;
+		bool hidden;
         public CadastrarFuncionario()
         {
             InitializeComponent();
+            timer = new DispatcherTimer();
+            timer.Interval = new TimeSpan(0, 0, 0, 0, 10);
+            timer.Tick += Timer_Tick;
+
+            PainelWidth = SidePainel.Width;
+        }
+
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            if (hidden)
+            {
+                SidePainel.Width += 1;
+                if (SidePainel.Width >= PainelWidth)
+                {
+                    timer.Stop();
+                    hidden = false;
+                }
+
+
+            }
+            else
+            {
+
+                SidePainel.Width -= 1;
+                if (SidePainel.Width <= 30)
+                {
+                    timer.Stop();
+                    hidden = true;
+                }
+            }
+
+        }
+        }
+        private void btMenu_Click(object sender, RoutedEventArgs e)
+        {
+            timer.Start();
+        }
+
+        private void painelHeader_MouseDown_1(object sender, MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                DragMove();
+            }
+
         }
     }
 }

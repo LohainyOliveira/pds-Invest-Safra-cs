@@ -8,5 +8,13 @@ namespace InvestSafra.Models
 {
 	internal class Maquinas
 	{
+		public int Id { get; set; }
+		public string Descricao { get; set; }	
+		public string Modelo { get; set; }	
+		public string Marca { get; set; }	
+		public string Quantidade { get; set; }	
+		public string Medida { get; set; }	
+		public string Valor { get; set; }	
+		public string Nome { get; set; }	
 	}
 }

@@ -8,5 +8,10 @@ namespace InvestSafra.Models
 {
 	internal class Venda
 	{
+		public int Id { get; set; }
+		public double Valor { get; set; }
+		public DateTime Data { get; set; }
+		public string Safra { get; set; }
+		public string Comprador { get; set; }
 	}
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InvestSafra.Models
 {
-	internal class LucrosDAO
-	{
-	}
+    internal class CaixaDAO
+    {
+    }
 }

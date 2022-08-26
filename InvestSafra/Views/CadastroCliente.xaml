@@ -32,7 +32,7 @@
         </Grid.RowDefinitions>
 
         <Grid.Background>
-            <ImageBrush ImageSource="/Imagens/imgd de fundo desfocada.png"/>
+            <ImageBrush ImageSource="/Imagens/ImgFundoDesfocado.png"/>
         </Grid.Background>
 
         <StackPanel Grid.Column="0" Margin="0,0,40,0"/>

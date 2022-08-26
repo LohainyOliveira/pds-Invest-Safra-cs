@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 using InvestSafra.Views;
 
 
@@ -21,14 +22,48 @@ namespace InvestSafra
 	/// </summary>
 	public partial class TelaPrincipalWindow : Window
 	{
+
+		DispatcherTimer timer;
+
+		double PainelWidth;
+		bool hidden;
 		public TelaPrincipalWindow()
 		{
 			InitializeComponent();
+			timer = new DispatcherTimer();
+			timer.Interval = new TimeSpan(0, 0, 0, 0, 10);
+            timer.Tick += Timer_Tick;
+
+			PainelWidth = SidePainel.Width;
 		}
 
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+			if(hidden)
+            {
+				SidePainel.Width += 1;
+				if(SidePainel.Width >= PainelWidth)
+                {
+					timer.Stop();
+					hidden = false;
+                }
 
 
-		private void btCadastra_Click(object sender, RoutedEventArgs e)
+            }
+			else
+            {
+
+				SidePainel.Width -= 1;
+				if (SidePainel.Width <=30)
+				{
+					timer.Stop();
+					hidden = true;
+				}
+			}
+            
+        }
+
+        private void btCadastra_Click(object sender, RoutedEventArgs e)
 		{
 			CadastroCliente form = new CadastroCliente();
 			form.ShowDialog();
@@ -48,5 +83,25 @@ namespace InvestSafra
 			Entrar form = new Entrar();
 			form.ShowDialog();
 		}
+
+        private void btMenu_Click(object sender, RoutedEventArgs e)
+        {
+			timer.Start();
+        }
+
+
+        private void ListViewItem_Selected_1(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void painelHeader_MouseDown_1(object sender, MouseButtonEventArgs e)
+        {
+            if(e.LeftButton == MouseButtonState.Pressed)
+            {
+				DragMove();
+            }
+
+        }
     }
 }

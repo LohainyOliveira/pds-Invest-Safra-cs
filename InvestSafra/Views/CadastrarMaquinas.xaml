@@ -8,8 +8,9 @@
         Title="CadastrarMaquinas" Height="450" Width="800">
     <Grid Width="796">
         <Grid.Background>
-            <ImageBrush ImageSource="/Imagens/imgd de fundo desfocada.png"/>
+            <ImageBrush ImageSource="/Imagens/ImgFundoDesfocado.png"/>
         </Grid.Background>
+
 
     </Grid>
 </Window>
