@@ -3,54 +3,69 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:InvestSafra.Views"
+        xmlns:local="clr-namespace:InvestSafra.Views" 
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-          xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
-        TextElement.FontWeight="Regular"
-        TextElement.FontSize="13"
-        TextOptions.TextFormattingMode="Ideal" 
-        TextOptions.TextRenderingMode="Auto"
-        FontFamily="{DynamicResource MaterialDesignFont}"
         Title="Entrar" Height="450" Width="800">
-    <Window.Background>
-        <ImageBrush ImageSource="/Imagens/ImgFundoDesfocado.png"/>
-    </Window.Background>
+
     <Grid>
+        <Grid>
+            <Grid.Background>
+                <ImageBrush ImageSource="/Imagens/ImgFundoDesfocado.png"/>
+            </Grid.Background>
 
-        <Rectangle Height="280" VerticalAlignment="Top">
-            <Rectangle.Fill>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF2281D1"/>
-                    <GradientStop Color="#FF34268A" Offset="1"/>
-                    <GradientStop Color="#FF33288B" Offset="0.546"/>
-                </LinearGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
+            <Grid x:Name="painelHeader" VerticalAlignment="Top" Height="50"
+              Background="#EFA82E" MouseDown="painelHeader_MouseDown_1">
 
-        <Border Width="280" Height="240" VerticalAlignment="Bottom" Margin="0,80"  Background="white">
-            <Border.Effect>
-                <DropShadowEffect BlurRadius="15" Direction="0" RenderingBias="Quality" ShadowDepth="1" Color="#FFBBBBBB"/>
-            </Border.Effect>
-        </Border>
-        <Grid VerticalAlignment="Bottom" Margin="35,80" Height="240">
-            <StackPanel VerticalAlignment="top" HorizontalAlignment="Center">
-                <StackPanel>
-                    <Label Content="Login" Foreground="Black" FontSize="25" HorizontalAlignment="Center"/>
-                    <Separator></Separator>
-                    <TextBox materialDesign:HintAssist.Hint="Usuário"  Style="{StaticResource MaterialDesignFloatingHintTextBox}" x:Name="txtUsuario" Background="#0F040302" Foreground="white" FontSize="18"></TextBox>
-                    <PasswordBox  materialDesign:HintAssist.Hint="Senha"
-                     x:Name="psSenha" Padding="16" Background="#0F040302"
-                    FontFamily="13" FontWeight="Bold" Cursor="Arrow"/>
+                <TextBlock Text="Bem vindo ao Invest Safra!" FontSize="24"
+                       FontFamily="Script MT Bold" HorizontalAlignment="Center"
+                       VerticalAlignment="Center"/>
 
-                    <Button x:Name="btLogar" Content="Logar" Background="Red" Foreground="black" FontSize="18" Margin="60 10" Cursor="Hand"/>
+                <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Right"
+                        Margin="20 0" Cursor="Hand">
+
+                    <Button x:Name="btHome" Content="Home" BorderThickness="10"
+                        Background="#EFA82E" BorderBrush="#EFA82E" Foreground="Black"
+                        Width="111" Height="41" Click="btHome_Click"/>
+
+                    <Button x:Name="btCadastro" Content="Inscreva-se" Height="40" Width="160"
+                        materialDesign:ButtonAssist.CornerRadius="8" Background="#EFA82E"
+                        BorderBrush="#EFA82E" Foreground="Black" Click="btCadastrar_Click"
+                        Margin="10 0" Cursor="Hand"/>
                 </StackPanel>
-            </StackPanel>
+            </Grid>
+            <Grid x:Name="SidePainel" Background="#EFA82E" HorizontalAlignment="Left" Width="150">
+                <StackPanel>
+                    <Grid Height="150" Background="#EFA82E">
+                        <Button x:Name="btMenu" HorizontalAlignment="Right" Height="40"
+                            VerticalAlignment="Top" Background="Transparent" BorderBrush="Transparent"
+                            Click="btMenu_Click" Cursor="Hand" Margin="0 0 -8 0" Width="68">
+                            <Image Source="Icons/movedor.png"/>
+                        </Button>
+                    </Grid>
+                    <ListView FontFamily="Century Gothic" FontSize="14" Foreground="black"
+                          BorderBrush="Transparent" Background="Transparent">
+                        <ListViewItem Height="40" x:Name="slhome" Selected="ListViewItem_Selected_1">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="Icons/home.png"/>
+                                <TextBlock Margin="10 0 0 0" Text="Home" VerticalAlignment="center" FontWeight="bold"/>
+                            </StackPanel>
+                        </ListViewItem>
+                        <ListViewItem Height="40">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="Icons/contato.png" Height="20" VerticalAlignment="Center"/>
+                                <TextBlock Margin="10 0 0 0" Text="Contatos" VerticalAlignment="Center" FontWeight="Bold"/>
+                            </StackPanel>
+                        </ListViewItem>
+                        <ListViewItem Height="40">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="Views/Icons/curiosidade.png" Height="20" VerticalAlignment="Center"/>
+                                <TextBlock Margin=" 10 0 0 0" Text="Sobre nós" VerticalAlignment="Center" FontWeight="Bold"/>
+                            </StackPanel>
+                        </ListViewItem>
+                    </ListView>
+                </StackPanel>
+            </Grid>
         </Grid>
-        <Button Width="150" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,65" Content="LOGIN"/>
-        <TextBlock Text="ESQUECEU A SENHA?" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="30" Foreground="Gray" Cursor="Hand"/>
-
     </Grid>
-
-
 </Window>

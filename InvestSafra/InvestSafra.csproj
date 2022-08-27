@@ -249,7 +249,7 @@
     <Resource Include="Icons\curiosidade.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Icons\Menu2.png" />
+    <Resource Include="Icons\movedor.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\MaterialDesignThemes.4.4.0\build\MaterialDesignThemes.targets" Condition="Exists('packages\MaterialDesignThemes.4.4.0\build\MaterialDesignThemes.targets')" />

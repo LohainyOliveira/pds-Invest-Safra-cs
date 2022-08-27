@@ -103,5 +103,16 @@ namespace InvestSafra
             }
 
         }
-    }
+
+		private void btCadastrar_Click(object sender, RoutedEventArgs e)
+		{
+
+		}
+
+		private void btHome_Click(object sender, RoutedEventArgs e)
+		{
+			Entrar form = new Entrar();
+			form.ShowDialog();
+		}
+	}
 }
