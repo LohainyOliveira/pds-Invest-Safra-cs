@@ -12,133 +12,394 @@
         TextOptions.TextFormattingMode="Ideal" 
         TextOptions.TextRenderingMode="Auto"
         FontFamily="{DynamicResource MaterialDesignFont}"
-        Title="CadastrarFuncionario" Height="550" Width="800">
+        Title="CadastrarFuncionario" Height="708" Width="2326">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="115"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="60"/>
-        </Grid.RowDefinitions>
 
         <Grid.Background>
             <ImageBrush ImageSource="/Imagens/ImgFundoDesfocado.png"/>
         </Grid.Background>
 
-        <Grid Grid.Row="0">
-            <Image HorizontalAlignment="Left" Height="100" Margin="38,15,0,0" VerticalAlignment="Top" Width="136" Source="/Imagens/logo de canto_png.png"/>
-            <Label  Content="Cadastro de Funcionário" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Arial" FontSize="24" Foreground="#EFA82E" FontWeight="Bold" Height="36" Width="293" RenderTransformOrigin="0.326,0.452"/>
+
+
+
+
+
+
+        <Grid>
+            <Grid x:Name="painelHeader" VerticalAlignment="Top" Height="50"
+              Background="#EFA82E" MouseDown="painelHeader_MouseDown_1">
+
+                <TextBlock Text="Bem vindo ao Invest Safra!" FontSize="24"
+                       FontFamily="Script MT Bold" HorizontalAlignment="Center"
+                       VerticalAlignment="Center"/>
+
+                <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Right"
+                        Margin="20 0" Cursor="Hand">
+
+                    <Button x:Name="btHome" Content="Home" BorderThickness="10"
+                        Background="#EFA82E" BorderBrush="#EFA82E" Foreground="Black"
+                        Width="111" Height="41" Cursor="Hand"/>
+
+                    <Button x:Name="btCadastro" Content="Inscreva-se" Height="40" Width="160"
+                        materialDesign:ButtonAssist.CornerRadius="8" Background="#EFA82E"
+                        BorderBrush="#EFA82E" Foreground="Black" 
+                        Margin="10 0" Cursor="Hand"/>
+                </StackPanel>
+            </Grid>
+            <Grid x:Name="SidePainel" Background="#EFA82E" HorizontalAlignment="Left" Width="150">
+                <StackPanel>
+                    <Grid Height="150" Background="#EFA82E">
+                        <Button x:Name="btMenu" HorizontalAlignment="Right" Height="40"
+                            VerticalAlignment="Top" Background="Transparent" BorderBrush="Transparent"
+                            Click="btMenu_Click" Cursor="Hand" Margin="0 0 -8 0" Width="68">
+                            <Image Source="/Icons/movedor.png"></Image>
+                        </Button>
+                    </Grid>
+                    <ListView FontFamily="Century Gothic" FontSize="14" Foreground="black"
+                          BorderBrush="Transparent" Background="Transparent">
+                        <ListViewItem Height="40" x:Name="slhome" Selected="ListViewItem_Selected_1">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/Icons/home.png"/>
+                                <TextBlock Margin="10 0 0 0" Text="Home" VerticalAlignment="center" FontWeight="bold"/>
+                            </StackPanel>
+                        </ListViewItem>
+                        <ListViewItem Height="40">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/Icons/contato.png" Height="20" VerticalAlignment="Center"/>
+                                <TextBlock Margin="10 0 0 0" Text="Contatos" VerticalAlignment="Center" FontWeight="Bold"/>
+                            </StackPanel>
+                        </ListViewItem>
+                        <ListViewItem Height="43" Width="158">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/Icons/curiosidade.png" Height="20" VerticalAlignment="Center"/>
+                                <TextBlock Margin=" 10 0 0 0" Text="Sobre nós" VerticalAlignment="Center" FontWeight="Bold"/>
+                            </StackPanel>
+                        </ListViewItem>
+                    </ListView>
+                </StackPanel>
+            </Grid>
         </Grid>
 
-        <Grid Grid.Row="1" HorizontalAlignment="Center" >
-            <StackPanel Orientation="Horizontal" Margin="0 0 60 200">
-                <TextBox 
-                    Style="{StaticResource MaterialDesignFilledTextBox}"
-                    AcceptsReturn="True"
-                    MaxWidth="400"
-                    Margin="10 0 50 0"
-                    materialDesign:HintAssist.Hint="Nome Completo"
-                    x:Name="NomeCompleto" Padding="16" Grid.Row="1" 
-                    TextWrapping="Wrap" VerticalAlignment="Center" 
-                    Width="209" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
-                  />
-                <TextBox 
-                    Style="{StaticResource MaterialDesignFilledTextBox}"
-                    AcceptsReturn="True"
-                    MaxWidth="400"
-                    Margin="10 0 50 0"
-                    materialDesign:HintAssist.Hint="CPF"
-                    x:Name="CPF" Padding="16" 
-                    TextWrapping="Wrap" 
-                    Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
-                  />
+        <Grid Grid.Row="0" Margin="0,0,0,31">
+            <Image HorizontalAlignment="Left" Height="100" Margin="38 50 0 0" VerticalAlignment="Top" Width="136" Source="/Imagens/LogoCanto.png"/>
+        </Grid>
+        <StackPanel  VerticalAlignment="Top" HorizontalAlignment="Left" Margin="186 130 36 10">
 
-                <ComboBox
-                    materialDesign:HintAssist.Hint="Sexo" 
-                    HorizontalAlignment="Center"   
-                    Background="#0F040302" FontFamily="Arial" FontWeight="Bold"
-                    x:Name="cbSexo" Padding="8"  Width="208" Grid.Column="1" Grid.Row="1" Height="58">
+            <StackPanel Orientation="Horizontal">
+
+                <TextBlock Text="Funcionário"
+                materialDesign:TextFieldAssist.HasClearButton="True"
+                Style="{StaticResource MaterialDesignHeadline6TextBlock}"
+                Margin="0 10 0 0" Foreground="#EFA82E"/>
+
+            </StackPanel>
+            <StackPanel VerticalAlignment="Top" Orientation="Horizontal">
+                <TextBox
+                x:Name="txtNome"
+                materialDesign:HintAssist.Hint="Nome Completo"
+                materialDesign:TextFieldAssist.HasClearButton="True"
+                Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                Width="714" Cursor="Arrow" RenderTransformOrigin="0.5,0.5">
+                    <TextBox.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0.053"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </TextBox.RenderTransform>
+                </TextBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <DatePicker 
+                x:Name="dpNascimento"
+                materialDesign:HintAssist.Hint="Data de Nascimento" 
+                Style="{StaticResource MaterialDesignOutlinedDatePicker}"
+                Width="300" Margin="0 10 0 0"/>
+
+                <TextBox
+                x:Name="txtRG"
+                materialDesign:HintAssist.Hint="RG"
+                materialDesign:TextFieldAssist.HasClearButton="True"
+                Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                Width="170" Cursor="Arrow" RenderTransformOrigin="0.5,0.5"
+                Margin="20 10 0 0">
+                    <TextBox.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0.053"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </TextBox.RenderTransform>
+                </TextBox>
+
+
+                <TextBox
+                x:Name="txtCPF"
+                materialDesign:HintAssist.Hint="CPF"
+                materialDesign:TextFieldAssist.HasClearButton="True"
+                Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                Width="204" Cursor="Arrow" RenderTransformOrigin="0.5,0.5"
+                Margin="20 10 0 0">
+                    <TextBox.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0.053"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </TextBox.RenderTransform>
+                </TextBox>
+            </StackPanel>
+
+
+            <StackPanel Orientation="Horizontal">
+
+
+                <TextBox
+                x:Name="txtTelefone"
+                materialDesign:HintAssist.Hint="Telefone"
+                materialDesign:TextFieldAssist.HasClearButton="True"
+                Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                Width="300" Cursor="Arrow" RenderTransformOrigin="0.5,0.5"
+                Margin="0 10 0 0">
+                    <TextBox.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0.053"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </TextBox.RenderTransform>
+                </TextBox>
+
+
+                <TextBox
+                x:Name="txtEmail"
+                materialDesign:HintAssist.Hint="Email"
+                materialDesign:TextFieldAssist.HasClearButton="True"
+                Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                Width="396" Cursor="Arrow" RenderTransformOrigin="0.5,0.5"
+                Margin="20 10 0 0">
+                    <TextBox.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0.053"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </TextBox.RenderTransform>
+                </TextBox>
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+
+                <ComboBox x:Name="cbSexo"
+                      materialDesign:HintAssist.Hint="Sexo"
+                      Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                      Width="190" Margin="0 10 0 0">
                     <ComboBoxItem></ComboBoxItem>
-                    <ComboBoxItem>Feminino</ComboBoxItem>
-                    <ComboBoxItem>Masculino</ComboBoxItem>
+                    <ComboBoxItem>Femenino</ComboBoxItem>
+                    <ComboBoxItem>Mascolino</ComboBoxItem>
+                    <ComboBoxItem>Não-Binário</ComboBoxItem>
+                </ComboBox>
+                <TextBox
+                x:Name="txtFuncao"
+                materialDesign:HintAssist.Hint="Função"
+                materialDesign:TextFieldAssist.HasClearButton="True"
+                Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                Width="200" Cursor="Arrow" RenderTransformOrigin="0.5,0.5"
+                Margin="20 10 0 0">
+                    <TextBox.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0.053"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </TextBox.RenderTransform>
+                </TextBox>
+
+                <TextBox
+                x:Name="txtSalario"
+                materialDesign:HintAssist.Hint="Salário"
+                materialDesign:TextFieldAssist.HasClearButton="True"
+                Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                Width="288" Cursor="Arrow" RenderTransformOrigin="0.5,0.5"
+                Margin="20 10 0 0">
+                    <TextBox.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0.053"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </TextBox.RenderTransform>
+                </TextBox>
+            </StackPanel>
+
+
+
+
+            <StackPanel Orientation="Horizontal">
+                <TextBox
+                x:Name="txtCEP"
+                materialDesign:HintAssist.Hint="CEP"
+                materialDesign:TextFieldAssist.HasClearButton="True"
+                Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                Width="150" Cursor="Arrow" RenderTransformOrigin="0.5,0.5"
+                Margin="0 10 0 0">
+                    <TextBox.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0.053"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </TextBox.RenderTransform>
+                </TextBox>
+
+                <ComboBox x:Name="cbEstado"
+                      materialDesign:HintAssist.Hint="Estado"
+                      Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                      Width="190" Margin="20 10 0 0">
+                    <ComboBoxItem></ComboBoxItem>
+                    <ComboBoxItem>AC</ComboBoxItem>
+                    <ComboBoxItem>AM</ComboBoxItem>
+                    <ComboBoxItem>RO</ComboBoxItem>
+                    <ComboBoxItem>RR</ComboBoxItem>
+                    <ComboBoxItem>PA</ComboBoxItem>
+                    <ComboBoxItem>AP</ComboBoxItem>
+                    <ComboBoxItem>MT</ComboBoxItem>
+                    <ComboBoxItem>MS</ComboBoxItem>
+                    <ComboBoxItem>MA</ComboBoxItem>
+                    <ComboBoxItem>TO</ComboBoxItem>
+                    <ComboBoxItem>GO</ComboBoxItem>
+                    <ComboBoxItem>PI</ComboBoxItem>
+                    <ComboBoxItem>CE</ComboBoxItem>
+                    <ComboBoxItem>RN</ComboBoxItem>
+                    <ComboBoxItem>PB</ComboBoxItem>
+                    <ComboBoxItem>PE</ComboBoxItem>
+                    <ComboBoxItem>AL</ComboBoxItem>
+                    <ComboBoxItem>SE</ComboBoxItem>
+                    <ComboBoxItem>BA</ComboBoxItem>
+                    <ComboBoxItem>MG</ComboBoxItem>
+                    <ComboBoxItem>ES</ComboBoxItem>
+                    <ComboBoxItem>RJ</ComboBoxItem>
+                    <ComboBoxItem>SP</ComboBoxItem>
+                    <ComboBoxItem>PR</ComboBoxItem>
+                    <ComboBoxItem>SC</ComboBoxItem>
+                    <ComboBoxItem>RS</ComboBoxItem>
+                    <ComboBoxItem>TO</ComboBoxItem>
+                </ComboBox>
+
+                <TextBox
+                x:Name="txtCidade"
+                materialDesign:HintAssist.Hint="Cidade"
+                materialDesign:TextFieldAssist.HasClearButton="True"
+                Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                Width="340" Cursor="Arrow" RenderTransformOrigin="0.5,0.5"
+                Margin="20 10 0 0">
+                    <TextBox.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0.053"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </TextBox.RenderTransform>
+                </TextBox>
+
+                
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+
+                <TextBox
+                x:Name="txtBairro"
+                materialDesign:HintAssist.Hint="Bairro"
+                materialDesign:TextFieldAssist.HasClearButton="True"
+                Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                Width="400" Cursor="Arrow" RenderTransformOrigin="0.5,0.5"
+                Margin="0 10 0 0">
+                    <TextBox.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0.053"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </TextBox.RenderTransform>
+                </TextBox>
+                <TextBox
+                x:Name="txtRua"
+                materialDesign:HintAssist.Hint="Rua"
+                materialDesign:TextFieldAssist.HasClearButton="True"
+                Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                Width="300" Cursor="Arrow" RenderTransformOrigin="0.5,0.5"
+                Margin="20 10 0 0">
+                    <TextBox.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0.053"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </TextBox.RenderTransform>
+                </TextBox>
+
+
+                <TextBox
+                x:Name="txtNumero"
+                materialDesign:HintAssist.Hint="Número"
+                materialDesign:TextFieldAssist.HasClearButton="True"
+                Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                Width="618" Cursor="Arrow" RenderTransformOrigin="0.5,0.5">
+                    <TextBox.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0.053"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </TextBox.RenderTransform>
+                </TextBox>
+
+
+                <TextBox
+                x:Name="txtComplemento"
+                materialDesign:HintAssist.Hint="Complemento"
+                materialDesign:TextFieldAssist.HasClearButton="True"
+                Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                Width="618" Cursor="Arrow" RenderTransformOrigin="0.5,0.5">
+                    <TextBox.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0.053"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </TextBox.RenderTransform>
+                </TextBox>
+
+
+
+                <ComboBox x:Name="cbTipoCFontrato"
+                      materialDesign:HintAssist.Hint="Tipo de Contrato"
+                      Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                      Width="190" Margin="20 10 0 0">
+                    <ComboBoxItem></ComboBoxItem>
+                    <ComboBoxItem>Contrato por prazo indeterminado</ComboBoxItem>
+                    <ComboBoxItem>Contrato por prazo determinado</ComboBoxItem>
+                    <ComboBoxItem>Contrato de safra</ComboBoxItem>
+                    <ComboBoxItem>Contrato por pequeno prazo</ComboBoxItem>
+                    <ComboBoxItem>Trabalho intermitente</ComboBoxItem>
+                    <ComboBoxItem>Contrato de plantação subsidiária ou intercalar</ComboBoxItem>
                 </ComboBox>
 
             </StackPanel>
-
-            <StackPanel Orientation="Horizontal" Margin="0 0 60 0">
-                <TextBox 
-                    Style="{StaticResource MaterialDesignFilledTextBox}"
-                    AcceptsReturn="True"
-                    MaxWidth="400"
-                    Margin="10 0 50 0"
-                    materialDesign:HintAssist.Hint="Email"
-                    x:Name="Email" Padding="16" Grid.Row="1" 
-                    TextWrapping="Wrap" VerticalAlignment="Center" 
-                    Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
-                  />
-                <TextBox 
-                    Style="{StaticResource MaterialDesignFilledTextBox}"
-                    AcceptsReturn="True"
-                    MaxWidth="400"
-                    Margin="10 0 50 0"
-                    materialDesign:HintAssist.Hint="Data Nascimento"
-                    x:Name="txtDataNascimento" Padding="16" 
-                    TextWrapping="Wrap" 
-                    Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
-                  />
-
-                <TextBox 
-                    Style="{StaticResource MaterialDesignFilledTextBox}"
-                    AcceptsReturn="True"
-                    MaxWidth="400"
-                    materialDesign:HintAssist.Hint="RG"
-                    x:Name="txtRg" Padding="16" Grid.Row="1" 
-                    TextWrapping="Wrap" VerticalAlignment="Center" 
-                    Width="206" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
-                  />
-
-            </StackPanel>
-
-            <StackPanel Orientation="Horizontal" Margin="0 210 60 0">
-                <TextBox 
-                    Style="{StaticResource MaterialDesignFilledTextBox}"
-                    AcceptsReturn="True"
-                    MaxWidth="400"
-                    Margin="10 0 50 0"
-                    materialDesign:HintAssist.Hint="Setor"
-                    x:Name="txtSetor" Padding="16" Grid.Row="1" 
-                    TextWrapping="Wrap" VerticalAlignment="Center" 
-                    Width="209" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
-                  />
-                <TextBox 
-                    Style="{StaticResource MaterialDesignFilledTextBox}"
-                    AcceptsReturn="True"
-                    MaxWidth="400"
-                    Margin="10 0 50 0"
-                    materialDesign:HintAssist.Hint="Função"
-                    x:Name="txtFuncao" Padding="16" 
-                    TextWrapping="Wrap" 
-                    Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
-                  />
-
-                <TextBox 
-                    Style="{StaticResource MaterialDesignFilledTextBox}"
-                    AcceptsReturn="True"
-                    MaxWidth="400"
-                    materialDesign:HintAssist.Hint="Salário"
-                    x:Name="txtSalario" Padding="16" Grid.Row="1" 
-                    TextWrapping="Wrap" VerticalAlignment="Center" 
-                    Width="206" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
-                  />
-
-            </StackPanel>
-
-
-
-        </Grid>
-
-        <Grid Grid.Row="2">
-            <Button x:Name="btSalvar" FontSize="19" Content="Salvar" Height="40" Width="119" HorizontalAlignment="Right" Margin="10 0 50 0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand"/>
-            <Button x:Name="btLimpar" FontSize="19" Content="Limpar" Height="40" Width="119" HorizontalAlignment="Right" Margin="10 0 200 0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand"/>
-        </Grid>
+        </StackPanel>
     </Grid>
 </Window>

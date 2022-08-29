@@ -231,7 +231,7 @@
     <Resource Include="Imagens\ImgFundoDesfocado.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Imagens\logo de canto_png.png" />
+    <Resource Include="Imagens\LogoCanto.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Imagens\logo_pgnPrincipal.png" />

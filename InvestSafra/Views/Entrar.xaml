@@ -40,26 +40,26 @@
                         <Button x:Name="btMenu" HorizontalAlignment="Right" Height="40"
                             VerticalAlignment="Top" Background="Transparent" BorderBrush="Transparent"
                             Click="btMenu_Click" Cursor="Hand" Margin="0 0 -8 0" Width="68">
-                            <Image Source="Icons/movedor.png"/>
+                            <Image Source="/Icons/movedor.png"></Image>
                         </Button>
                     </Grid>
                     <ListView FontFamily="Century Gothic" FontSize="14" Foreground="black"
                           BorderBrush="Transparent" Background="Transparent">
                         <ListViewItem Height="40" x:Name="slhome" Selected="ListViewItem_Selected_1">
                             <StackPanel Orientation="Horizontal">
-                                <Image Source="Icons/home.png"/>
+                                <Image Source="/Icons/home.png"/>
                                 <TextBlock Margin="10 0 0 0" Text="Home" VerticalAlignment="center" FontWeight="bold"/>
                             </StackPanel>
                         </ListViewItem>
                         <ListViewItem Height="40">
                             <StackPanel Orientation="Horizontal">
-                                <Image Source="Icons/contato.png" Height="20" VerticalAlignment="Center"/>
+                                <Image Source="/Icons/contato.png" Height="20" VerticalAlignment="Center"/>
                                 <TextBlock Margin="10 0 0 0" Text="Contatos" VerticalAlignment="Center" FontWeight="Bold"/>
                             </StackPanel>
                         </ListViewItem>
                         <ListViewItem Height="40">
                             <StackPanel Orientation="Horizontal">
-                                <Image Source="Views/Icons/curiosidade.png" Height="20" VerticalAlignment="Center"/>
+                                <Image Source="/Icons/curiosidade.png" Height="20" VerticalAlignment="Center"/>
                                 <TextBlock Margin=" 10 0 0 0" Text="Sobre nós" VerticalAlignment="Center" FontWeight="Bold"/>
                             </StackPanel>
                         </ListViewItem>
