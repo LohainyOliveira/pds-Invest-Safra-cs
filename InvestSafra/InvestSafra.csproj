@@ -151,11 +151,17 @@
     <Compile Include="TelaPrincipalWindow.xaml.cs">
       <DependentUpon>TelaPrincipalWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\CadastrarFazenda.xaml.cs">
+      <DependentUpon>CadastrarFazenda.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\CadastrarFuncionario.xaml.cs">
       <DependentUpon>CadastrarFuncionario.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\CadastrarMaquinas.xaml.cs">
       <DependentUpon>CadastrarMaquinas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ControDeEstoque.xaml.cs">
+      <DependentUpon>ControDeEstoque.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Entrar.xaml.cs">
       <DependentUpon>Entrar.xaml</DependentUpon>
@@ -163,11 +169,17 @@
     <Compile Include="Views\CadastroCliente.xaml.cs">
       <DependentUpon>CadastroCliente.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Insumos.xaml.cs">
+      <DependentUpon>Insumos.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\LevantamentoDeSafra.xaml.cs">
       <DependentUpon>LevantamentoDeSafra.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MenuSafra.xaml.cs">
       <DependentUpon>MenuSafra.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sementes.xaml.cs">
+      <DependentUpon>Sementes.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -202,11 +214,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\CadastrarFazenda.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\CadastrarFuncionario.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\CadastrarMaquinas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ControDeEstoque.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -218,11 +238,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\Insumos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\LevantamentoDeSafra.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\MenuSafra.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Sementes.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
