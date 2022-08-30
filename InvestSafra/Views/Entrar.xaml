@@ -17,7 +17,7 @@
             <Grid x:Name="painelHeader" VerticalAlignment="Top" Height="50"
               Background="#EFA82E" MouseDown="painelHeader_MouseDown_1">
 
-                <TextBlock Text="Bem vindo ao Invest Safra!" FontSize="24"
+                <TextBlock Text="Bem-vindo ao Invest Safra!" FontSize="24"
                        FontFamily="Script MT Bold" HorizontalAlignment="Center"
                        VerticalAlignment="Center"/>
 
