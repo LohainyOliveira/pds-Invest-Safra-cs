@@ -13,7 +13,7 @@
         TextOptions.TextRenderingMode="Auto"
         FontFamily="{DynamicResource MaterialDesignFont}"
         Title="Inscrever" Height="543" Width="956">
-    <Grid Margin="0,0,0,-28">
+    <Grid Margin="0,0,0,-160">
         <Grid.RowDefinitions>
             <RowDefinition Height="115"/>
             <RowDefinition Height="*"/>
