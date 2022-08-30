@@ -21,7 +21,7 @@
     </Grid.RowDefinitions>
 
     <Grid.Background>
-        <ImageBrush ImageSource="/Imagens/ImgFundoDesfocado.png"/>
+        <ImageBrush ImageSource="/Imagens/ImgDesfocada2.png"/>
     </Grid.Background>
 
     <Grid Grid.Row="0">
@@ -88,17 +88,17 @@
                     AcceptsReturn="True"
                     MaxWidth="400"
                     Margin="10 0 50 0"
-                    materialDesign:HintAssist.Hint="Data Nascimento"
+                    materialDesign:HintAssist.Hint="RG"
                     x:Name="txtDataNascimento" Padding="16" 
                     TextWrapping="Wrap" 
                     Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
 
                 <TextBox 
-                    Style="{StaticResource MaterialDesignFilledTextBox}"
+                    Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     AcceptsReturn="True"
                     MaxWidth="400"
-                    materialDesign:HintAssist.Hint="RG"
+                    materialDesign:HintAssist.Hint="Telefone"
                     x:Name="txtRg" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
                     Width="206" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
@@ -108,37 +108,38 @@
 
         <StackPanel Orientation="Horizontal" Margin="0 210 60 0">
                 <TextBox 
-                    Style="{StaticResource MaterialDesignFilledTextBox}"
+                     Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     AcceptsReturn="True"
                     MaxWidth="400"
                     Margin="10 0 50 0"
-                    materialDesign:HintAssist.Hint="Setor"
+                    materialDesign:HintAssist.Hint="Município"
                     x:Name="txtSetor" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
                     Width="209" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
                 <TextBox 
-                    Style="{StaticResource MaterialDesignFilledTextBox}"
+                     Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     AcceptsReturn="True"
                     MaxWidth="400"
                     Margin="10 0 50 0"
-                    materialDesign:HintAssist.Hint="Função"
+                    materialDesign:HintAssist.Hint="UF"
                     x:Name="txtFuncao" Padding="16" 
                     TextWrapping="Wrap" 
                     Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
 
                 <TextBox 
-                    Style="{StaticResource MaterialDesignFilledTextBox}"
+                   Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     AcceptsReturn="True"
                     MaxWidth="400"
-                    materialDesign:HintAssist.Hint="Salário"
+                    materialDesign:HintAssist.Hint="CEP"
                     x:Name="txtSalario" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
                     Width="206" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
+                
 
-        </StackPanel>
+            </StackPanel>
 
 
 
