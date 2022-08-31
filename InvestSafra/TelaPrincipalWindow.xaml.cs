@@ -106,7 +106,7 @@ namespace InvestSafra
 
 		private void btCadastrar_Click(object sender, RoutedEventArgs e)
 		{
-			CadastrarMaquinas form = new CadastrarMaquinas();
+			Insumos form = new Insumos();
 			form.ShowDialog();
 		}
 
