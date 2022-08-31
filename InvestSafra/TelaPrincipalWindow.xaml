@@ -24,12 +24,12 @@
 
                 <Button x:Name="btHome" Content="Entrar" BorderThickness="10"
                         Background="#EFA82E" BorderBrush="#EFA82E" Foreground="Black"
-                        Width="111" Height="41" Click="btHome_Click"/>
+                        Width="111" Height="41" Click="btHome_Click" Cursor="Hand"/>
 
                 <Button x:Name="btCadastro" Content="Inscreva-se" Height="40" Width="160"
                         materialDesign:ButtonAssist.CornerRadius="8" Background="#EFA82E"
                         BorderBrush="#EFA82E" Foreground="Black" Click="btCadastrar_Click"
-                        Margin="10 0"/>
+                        Margin="10 0" Cursor="Hand"/>
             </StackPanel>
         </Grid>
         <Grid x:Name="SidePainel" Background="#EFA82E" HorizontalAlignment="Left" Width="150">
