@@ -42,7 +42,7 @@
                     MaxWidth="400"
                     Margin="10 0 50 0"
                     materialDesign:HintAssist.Hint="Nome Completo"
-                    x:Name="NomeCompleto" Padding="16" Grid.Row="1" 
+                    x:Name="txtNomeCompleto" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
                     Width="209" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
@@ -53,7 +53,7 @@
                     MaxWidth="400"
                     Margin="10 0 50 0"
                     materialDesign:HintAssist.Hint="CPF"
-                    x:Name="CPF" Padding="16" 
+                    x:Name="txtCPF" Padding="16" 
                     TextWrapping="Wrap" 
                     Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
@@ -78,7 +78,7 @@
                     MaxWidth="400"
                     Margin="10 0 50 0"
                     materialDesign:HintAssist.Hint="Email"
-                    x:Name="Email" Padding="16" Grid.Row="1" 
+                    x:Name="txtEmail" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
                     Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
@@ -89,7 +89,7 @@
                     MaxWidth="400"
                     Margin="10 0 50 0"
                     materialDesign:HintAssist.Hint="RG"
-                    x:Name="txtDataNascimento" Padding="16" 
+                    x:Name="txtRg" Padding="16" 
                     TextWrapping="Wrap" 
                     Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
@@ -117,16 +117,41 @@
                     TextWrapping="Wrap" VerticalAlignment="Center" 
                     Width="209" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
-                <TextBox 
-                     Style="{StaticResource MaterialDesignOutlinedTextBox}"
-                    AcceptsReturn="True"
-                    MaxWidth="400"
-                    Margin="10 0 50 0"
-                    materialDesign:HintAssist.Hint="UF"
-                    x:Name="txtFuncao" Padding="16" 
-                    TextWrapping="Wrap" 
-                    Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
-                  />
+                <ComboBox
+                    materialDesign:HintAssist.Hint="Estado" 
+                    Style="{StaticResource MaterialDesignOutlinedComboBox}"   
+                    Background="#0F040302" FontFamily="Arial" FontWeight="Bold"
+                    x:Name="cbEstado" Padding="8"  Margin="10 0 0 0" Width="194" Grid.Column="1" Grid.Row="1" Height="58">
+
+                    <ComboBoxItem></ComboBoxItem>
+                    <ComboBoxItem>AC</ComboBoxItem>
+                    <ComboBoxItem>AM</ComboBoxItem>
+                    <ComboBoxItem>RO</ComboBoxItem>
+                    <ComboBoxItem>RR</ComboBoxItem>
+                    <ComboBoxItem>PA</ComboBoxItem>
+                    <ComboBoxItem>AP</ComboBoxItem>
+                    <ComboBoxItem>MT</ComboBoxItem>
+                    <ComboBoxItem>MS</ComboBoxItem>
+                    <ComboBoxItem>MA</ComboBoxItem>
+                    <ComboBoxItem>TO</ComboBoxItem>
+                    <ComboBoxItem>GO</ComboBoxItem>
+                    <ComboBoxItem>PI</ComboBoxItem>
+                    <ComboBoxItem>CE</ComboBoxItem>
+                    <ComboBoxItem>RN</ComboBoxItem>
+                    <ComboBoxItem>PB</ComboBoxItem>
+                    <ComboBoxItem>PE</ComboBoxItem>
+                    <ComboBoxItem>AL</ComboBoxItem>
+                    <ComboBoxItem>SE</ComboBoxItem>
+                    <ComboBoxItem>BA</ComboBoxItem>
+                    <ComboBoxItem>MG</ComboBoxItem>
+                    <ComboBoxItem>ES</ComboBoxItem>
+                    <ComboBoxItem>RJ</ComboBoxItem>
+                    <ComboBoxItem>SP</ComboBoxItem>
+                    <ComboBoxItem>PR</ComboBoxItem>
+                    <ComboBoxItem>SC</ComboBoxItem>
+                    <ComboBoxItem>RS</ComboBoxItem>
+                    <ComboBoxItem>TO</ComboBoxItem>
+                </ComboBox>
 
                 <TextBox 
                    Style="{StaticResource MaterialDesignOutlinedTextBox}"
@@ -134,8 +159,8 @@
                     MaxWidth="400"
                     materialDesign:HintAssist.Hint="CEP"
                     x:Name="txtSalario" Padding="16" Grid.Row="1" 
-                    TextWrapping="Wrap" VerticalAlignment="Center" 
-                    Width="206" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
+                    TextWrapping="Wrap" VerticalAlignment="Center" Margin="10 0 0 0" 
+                    Width="256" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
 
 
@@ -181,7 +206,7 @@
         </Grid>
 
         <Grid Grid.Row="1" Margin="0,517,10,10" Grid.RowSpan="2">
-            <Button x:Name="btSalvar" FontSize="19" Content="Salvar" Height="40" Width="119" HorizontalAlignment="Right" Margin="10 0 50 0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand"/>
+            <Button x:Name="btSalvar" FontSize="19" Content="Salvar" Height="40" Width="119" HorizontalAlignment="Right" Margin="10 0 50 0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Click="btSalvar_Click"/>
             <Button x:Name="btLimpar" FontSize="19" Content="Limpar" Height="40" Width="119" HorizontalAlignment="Right" Margin="10 0 200 0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand"/>
         </Grid>
     </Grid>
