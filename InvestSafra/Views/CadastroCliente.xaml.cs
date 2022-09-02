@@ -22,7 +22,7 @@ namespace InvestSafra.Views
 	/// </summary>
 	public partial class CadastroCliente : Window
 	{
-        private Cliente _cliente = new Cliente();
+        private ClienteFisico _cliente = new ClienteFisico();
 
         public CadastroCliente()
 		{

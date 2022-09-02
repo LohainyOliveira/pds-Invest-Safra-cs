@@ -116,8 +116,8 @@
     <Compile Include="Models\AreaDAO.cs" />
     <Compile Include="Models\Caixa.cs" />
     <Compile Include="Models\CaixaDAO.cs" />
-    <Compile Include="Models\Cliente.cs" />
-    <Compile Include="Models\ClienteDAO.cs" />
+    <Compile Include="Models\ClienteFisico.cs" />
+    <Compile Include="Models\ClienteFisicoDAO.cs" />
     <Compile Include="Models\Clima.cs" />
     <Compile Include="Models\ClimaDAO.cs" />
     <Compile Include="Models\Compra.cs" />

@@ -99,7 +99,7 @@
                     AcceptsReturn="True"
                     MaxWidth="400"
                     materialDesign:HintAssist.Hint="Telefone"
-                    x:Name="txtRg" Padding="16" Grid.Row="1" 
+                    x:Name="txtTelefone" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
                     Width="206" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
