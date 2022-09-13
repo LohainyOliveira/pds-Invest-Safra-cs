@@ -35,7 +35,15 @@ namespace InvestSafra
             timer.Tick += Timer_Tick;
 
 			PainelWidth = SidePainel.Width;
+
+            Loaded += TelaPrincipalWindow_Loaded;
 		}
+
+        private void TelaPrincipalWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+           new CadastrarFuncionario().Show();
+			this.Close();
+        }
 
         private void Timer_Tick(object sender, EventArgs e)
         {
