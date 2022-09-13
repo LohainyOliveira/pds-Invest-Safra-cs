@@ -12,7 +12,7 @@
         TextOptions.TextFormattingMode="Ideal" 
         TextOptions.TextRenderingMode="Auto"
         FontFamily="{DynamicResource MaterialDesignFont}"
-        Title="CadastrarFuncionario" Height="828" Width="1400">
+        Title="CadastrarFuncionario" Height="800" Width="1400">
     <Grid>
 
         <Grid.RowDefinitions>
