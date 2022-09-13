@@ -111,24 +111,9 @@ namespace InvestSafra.Models
             {
                 var comando = _conn.Query();
 
-                /*create table Caixa(
-                    id_cai int primary key auto_increment not null,
-                    numero_cai int not null,
-                    saldoinicial_cai double not null,
-                    troco_cai double not null,
-                    valorcreditos_cai double not null,
-                    valordebitos_cai double not null,
-                    saldofinal_cai double not null,
-                    descricao_cai varchar(300),
-                    data_hora_cai DateTime
-                    );
-                    */
 
                 comando.CommandText = "UPDATE Caixa set  numero_cai = @numero, saldoinicial_cai = @saldo_inicial, troco_cai =  @troco," +
-                    " valorcreditos_cai = @valor_creditos, valordebitos_cai = @valor_debitos,  WHERE id_are = @id";
-
-
-                comando.CommandText = ("insert into Caixa value (null, @numero, @saldo_inicial, @troco, @valor_creditos, @valor_debitos, @saldo_finial, @descricao, @data_hora)");
+                    " valorcreditos_cai = @valor_creditos, valordebitos_cai = @valor_debitos, saldofinal_cai = @saldo_finial, descricao_cai = @descricao, data_hora_cai = @data_hora   WHERE id_cai = @id";
 
 
 
@@ -150,15 +135,15 @@ namespace InvestSafra.Models
                 throw ex;
             }
         }
-        public void Delete(Area area)
+        public void Delete(Caixa caixa)
         {
             try
             {
                 var comando = _conn.Query();
 
-                comando.CommandText = "Delete from Area where id_are = @id";
+                comando.CommandText = "Delete from Caixa where id_cai = @id";
 
-                comando.Parameters.AddWithValue("@id", area.Id);
+                comando.Parameters.AddWithValue("@id", caixa.Id);
 
                 var resultado = comando.ExecuteNonQuery();
 
