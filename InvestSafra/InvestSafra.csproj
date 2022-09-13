@@ -163,6 +163,9 @@
     <Compile Include="Views\CadastroDeEmpresa.xaml.cs">
       <DependentUpon>CadastroDeEmpresa.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\ClimaFazenda.xaml.cs">
+      <DependentUpon>ClimaFazenda.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ControDeEstoque.xaml.cs">
       <DependentUpon>ControDeEstoque.xaml</DependentUpon>
     </Compile>
@@ -230,6 +233,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\CadastroDeEmpresa.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ClimaFazenda.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
