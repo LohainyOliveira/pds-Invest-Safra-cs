@@ -121,7 +121,7 @@
                     materialDesign:HintAssist.Hint="Estado" 
                     Style="{StaticResource MaterialDesignOutlinedComboBox}"   
                     Background="#0F040302" FontFamily="Arial" FontWeight="Bold"
-                    x:Name="cbEstado" Padding="8"  Margin="10 0 0 0" Width="194" Grid.Column="1" Grid.Row="1" Height="58">
+                    x:Name="cbEstado" Padding="8"  Margin="10 0 0 0" Width="205" Grid.Column="1" Grid.Row="1" Height="58">
 
                     <ComboBoxItem></ComboBoxItem>
                     <ComboBoxItem>AC</ComboBoxItem>
@@ -159,8 +159,8 @@
                     MaxWidth="400"
                     materialDesign:HintAssist.Hint="CEP"
                     x:Name="txtSalario" Padding="16" Grid.Row="1" 
-                    TextWrapping="Wrap" VerticalAlignment="Center" Margin="10 0 0 0" 
-                    Width="256" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
+                    TextWrapping="Wrap" VerticalAlignment="Center" Margin="50 0 0 0" 
+                    Width="210" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
 
 
