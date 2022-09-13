@@ -61,9 +61,12 @@
                             materialDesign:HintAssist.Hint="Senha"
                             x:Name="psSenha" Padding="16" Grid.Row="1" 
                             Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="52" Cursor="Arrow" Width="364"/>
-
+                        <StackPanel>
+                            <Button Name="btLogar" Content="Logar" Cursor="Hand" Margin="0 20 0 0"/>
+                        </StackPanel>
                     </StackPanel>
                 </StackPanel>
+                
 
 
             </StackPanel>
