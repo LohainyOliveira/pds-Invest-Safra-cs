@@ -114,7 +114,7 @@ namespace InvestSafra
 
 		private void btCadastrar_Click(object sender, RoutedEventArgs e)
 		{
-			CadastroCliente form = new CadastroCliente();
+			Insumos form = new Insumos();
 			form.ShowDialog();
 		}
 

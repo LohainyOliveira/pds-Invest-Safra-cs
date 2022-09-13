@@ -13,13 +13,13 @@ namespace InvestSafra.Database
     {
         private static string host = "localhost";
 
-        private static string port = "3360";
+        private static string port = "3307";
 
         private static string user = "root";
 
         private static string password = "root";
 
-        private static string dbname = "";
+        private static string dbname = "bd_safra";
 
         private static MySqlConnection connection;
 

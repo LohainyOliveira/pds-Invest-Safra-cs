@@ -99,7 +99,11 @@
 
             </StackPanel>
 
+<<<<<<< HEAD
             <StackPanel Orientation="Horizontal" Margin="0 270 0 0">
+=======
+            <StackPanel Orientation="Horizontal" Margin="0,230,32,0">
+>>>>>>> 64d3fff63ced86e911b125823ae7680b1ea99cc0
                 <TextBox 
                     Style="{StaticResource MaterialDesignFilledTextBox}"
                     AcceptsReturn="True"

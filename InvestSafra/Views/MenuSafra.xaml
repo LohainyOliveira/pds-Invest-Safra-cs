@@ -6,15 +6,12 @@
         xmlns:local="clr-namespace:InvestSafra.Views"
         mc:Ignorable="d"
         Title="MenuSafra" Height="450" Width="800">
-    <Window.Background>
-        <ImageBrush ImageSource="/Imagens/imgd de fundo desfocada.png"/>
-    </Window.Background>
+   
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Imagens/imgDesfocada2.png"/>
+        </Grid.Background>
 
-        <StackPanel>
-            
-        </StackPanel>
-        <Image HorizontalAlignment="Left" Height="100" Margin="15,-1,0,0" VerticalAlignment="Top" Width="100" Source="/Imagens/logo de canto_png.png"/>
 
     </Grid>
 </Window>

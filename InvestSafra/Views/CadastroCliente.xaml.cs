@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Windows.Threading;
 using InvestSafra;
+using InvestSafra.Models;
 
 namespace InvestSafra.Views
 {
@@ -21,11 +22,15 @@ namespace InvestSafra.Views
 	/// </summary>
 	public partial class CadastroCliente : Window
 	{
-		
-		public CadastroCliente()
+        private ClienteFisico _cliente = new ClienteFisico();
+
+        public CadastroCliente()
 		{
 			InitializeComponent();
 		}
 
-	}
+        private void btSalvar_Click(object sender, RoutedEventArgs e)
+        {
+        }
+    }
 }
