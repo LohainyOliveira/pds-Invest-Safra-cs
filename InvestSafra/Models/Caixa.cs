@@ -8,11 +8,15 @@ namespace InvestSafra.Models
 {
     internal class Caixa
     {
+
         public int Id { get; set; }
         public int Numero { get; set; }
-        public int Descricao { get; set; }
         public double SaldoInicial { get; set; }
+        public double Troco { get; set; }
+        public double ValorCredito { get; set; }    
+        public double ValorDebito { get; set; }
+        public string Descricao { get; set; }
         public double SaldoFinal { get; set; }
-        public DateTime Data_Hora { get; set; }
+        public DateTime? Data_Hora { get; set; }
     }
 }
