@@ -49,11 +49,14 @@ foreign key (id_cliJ_fk) references Cliente_Juridico (id_cliJ)
 
 create table Caixa (
 id_cai int primary key auto_increment not null,
+numero_cai int not null,
 saldoinicial_cai double not null,
 troco_cai double not null,
-valorcréditos_cai double not null,
-valordébitos_cai double not null,
-saldofinal_cai double not null
+valorcreditos_cai double not null,
+valordebitos_cai double not null,
+saldofinal_cai double not null,
+descricao_cai varchar(300),
+data_hora_cai DateTime 
 );
 
 create table Recebimento (
