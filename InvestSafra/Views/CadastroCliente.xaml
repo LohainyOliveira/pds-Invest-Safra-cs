@@ -31,7 +31,7 @@
                 <ColumnDefinition Width="17*"/>
             </Grid.ColumnDefinitions>
             <Image HorizontalAlignment="Left" Height="100" Margin="38,15,0,0" VerticalAlignment="Top" Width="136" Source="/Imagens/LogoCanto.png"/>
-            <Label  Content="Cadastro Cliente" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Malik" FontSize="24" Foreground="#EFA82E" FontWeight="Bold" Height="50" Width="292" RenderTransformOrigin="0.326,0.452"/>
+            <Label  Content="Cadastro Cliente" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Malik" FontSize="24" Foreground="#EFA82E" FontWeight="Bold" Height="50" Width="292" RenderTransformOrigin="0.326,0.452" Margin="376,39,0,0"/>
         </Grid>
 
         <Grid VerticalAlignment="Top" Grid.Row="1" HorizontalAlignment="Center" >
@@ -40,7 +40,7 @@
                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     AcceptsReturn="True"
                     MaxWidth="400"
-                    Margin="10 0 50 0"
+                    Margin="50 0 50 0"
                     materialDesign:HintAssist.Hint="Nome Completo"
                     x:Name="txtNomeCompleto" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
@@ -76,7 +76,7 @@
                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     AcceptsReturn="True"
                     MaxWidth="400"
-                    Margin="10 0 50 0"
+                    Margin="50 0 50 0"
                     materialDesign:HintAssist.Hint="Email"
                     x:Name="txtEmail" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
@@ -111,7 +111,7 @@
                      Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     AcceptsReturn="True"
                     MaxWidth="400"
-                    Margin="10 0 50 0"
+                    Margin="50 0 50 0"
                     materialDesign:HintAssist.Hint="Município"
                     x:Name="txtSetor" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
@@ -171,7 +171,7 @@
                      Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     AcceptsReturn="True"
                     MaxWidth="400"
-                    Margin="10 0 50 0"
+                    Margin="50 0 50 0"
                     materialDesign:HintAssist.Hint="Rua"
                     x:Name="txtRua" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
