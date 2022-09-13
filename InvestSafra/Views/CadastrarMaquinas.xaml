@@ -14,14 +14,7 @@
         FontFamily="{DynamicResource MaterialDesignFont}"
         Title="Inscrever" Height="542" Width="956">
     <Grid Margin="0,0,0,-28" RenderTransformOrigin="0.5,0.5">
-        <Grid.RenderTransform>
-            <TransformGroup>
-                <ScaleTransform/>
-                <SkewTransform/>
-                <RotateTransform Angle="0.043"/>
-                <TranslateTransform/>
-            </TransformGroup>
-        </Grid.RenderTransform>
+       
         <Grid.RowDefinitions>
             <RowDefinition Height="115"/>
             <RowDefinition Height="*"/>
