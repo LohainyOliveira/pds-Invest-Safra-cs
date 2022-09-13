@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:InvestSafra.Views" 
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="Entrar" Height="450" Width="800">
+        Title="Entrar" Height="450" Width="800" ResizeMode="NoResize" WindowStyle="None" WindowStartupLocation="CenterScreen">
 
     <Grid>
         <Grid.ColumnDefinitions>
