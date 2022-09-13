@@ -41,8 +41,8 @@
                     AcceptsReturn="True"
                     MaxWidth="400"
                     Margin="10 0 50 0"
-                    materialDesign:HintAssist.Hint="Nome Completo"
-                    x:Name="txtNomeCompleto" Padding="16" Grid.Row="1" 
+                    materialDesign:HintAssist.Hint="ID"
+                    x:Name="txtID" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
                     Width="209" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
@@ -52,8 +52,8 @@
                     AcceptsReturn="True"
                     MaxWidth="400"
                     Margin="10 0 50 0"
-                    materialDesign:HintAssist.Hint="CPF"
-                    x:Name="txtCPF" Padding="16" 
+                    materialDesign:HintAssist.Hint="Marcas"
+                    x:Name="txtMarcas" Padding="16" 
                     TextWrapping="Wrap" 
                     Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
@@ -66,8 +66,8 @@
                     AcceptsReturn="True"
                     MaxWidth="400"
                     Margin="10 0 50 0"
-                    materialDesign:HintAssist.Hint="Email"
-                    x:Name="txtEmail" Padding="16" Grid.Row="1" 
+                    materialDesign:HintAssist.Hint="Descrição"
+                    x:Name="txtDesc" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
                     Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
@@ -77,8 +77,8 @@
                     AcceptsReturn="True"
                     MaxWidth="400"
                     Margin="10 0 50 0"
-                    materialDesign:HintAssist.Hint="RG"
-                    x:Name="txtRg" Padding="16" 
+                    materialDesign:HintAssist.Hint="Medida"
+                    x:Name="txtMedida" Padding="16" 
                     TextWrapping="Wrap" 
                     Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
@@ -91,26 +91,21 @@
                     AcceptsReturn="True"
                     MaxWidth="400"
                     Margin="10 0 50 0"
-                    materialDesign:HintAssist.Hint="Município"
-                    x:Name="txtSetor" Padding="16" Grid.Row="1" 
+                    materialDesign:HintAssist.Hint="Quantidade"
+                    x:Name="txtQuant" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
                     Width="209" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
+
                 <TextBox
-                    materialDesign:HintAssist.Hint="Estado" 
+                    materialDesign:HintAssist.Hint="Valor R$" 
                     Style="{StaticResource MaterialDesignOutlinedTextBox}"   
                     Background="#0F040302" FontFamily="Arial" FontWeight="Bold"
-                    x:Name="txtest" Padding="8"  Margin="10 0 0 0" Width="194" Grid.Column="1" Grid.Row="1" Height="58"
+                    x:Name="txtValor" Padding="8"  Margin="10 0 0 0" Width="209" Grid.Column="1" Grid.Row="1" Height="58"
                 />
 
-
-
             </StackPanel>
 
-            <StackPanel Orientation="Horizontal" Margin="0,350,60,-76">
-    
-
-            </StackPanel>
 
 
 
