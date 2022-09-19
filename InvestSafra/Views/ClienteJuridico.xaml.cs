@@ -11,26 +11,17 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using System.Windows.Threading;
-using InvestSafra;
-using InvestSafra.Models;
 
 namespace InvestSafra.Views
 {
-	/// <summary>
-	/// Lógica interna para Inscrever.xaml
-	/// </summary>
-	public partial class CadastroCliente : Window
-	{
-        private ClienteFisico _cliente = new ClienteFisico();
-
-        public CadastroCliente()
-		{
-			InitializeComponent();
-		}
-
-        private void btSalvar_Click(object sender, RoutedEventArgs e)
+    /// <summary>
+    /// Lógica interna para ClienteJuridico.xaml
+    /// </summary>
+    public partial class ClienteJuridico : Window
+    {
+        public ClienteJuridico()
         {
+            InitializeComponent();
         }
     }
 }

@@ -15,18 +15,13 @@ using System.Windows.Shapes;
 namespace InvestSafra.Views
 {
     /// <summary>
-    /// Lógica interna para CadastroDeEmpresa.xaml
+    /// Lógica interna para ClienteFisico.xaml
     /// </summary>
-    public partial class CadastroDeEmpresa : Window
+    public partial class ClienteFisico : Window
     {
-        public CadastroDeEmpresa()
+        public ClienteFisico()
         {
             InitializeComponent();
-        }
-
-        private void btSalvar_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
