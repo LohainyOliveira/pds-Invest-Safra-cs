@@ -5,8 +5,209 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:InvestSafra.Views"
         mc:Ignorable="d"
-        Title="ClienteJuridico" Height="450" Width="800">
-    <Grid>
-        
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        Title="ClienteJuridico" Height="543" Width="956">
+    <Grid Margin="-108,0,0,-177">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="115"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+
+        <Grid.Background>
+            <ImageBrush ImageSource="/Imagens/ImgDesfocada2.png"/>
+        </Grid.Background>
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1538*"/>
+                <ColumnDefinition Width="17*"/>
+                <ColumnDefinition Width="17*"/>
+            </Grid.ColumnDefinitions>
+            <Image HorizontalAlignment="Left" Height="100" Margin="38,15,0,0" VerticalAlignment="Top" Width="136" Source="/Imagens/LogoCanto.png"/>
+            <Label  Content="Cadastro Cliente Jurídico " HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Malik" FontSize="24" Foreground="#EFA82E" FontWeight="Bold" Height="50" Width="312" RenderTransformOrigin="0.326,0.452" Margin="376,0,0,0"/>
+        </Grid>
+
+        <Grid VerticalAlignment="Top" Grid.Row="1" HorizontalAlignment="Center" >
+            <StackPanel Orientation="Horizontal" Margin="0 0 60 200">
+                <TextBox 
+                Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                    AcceptsReturn="True"
+                    MaxWidth="400"
+                    Margin="50 0 50 0"
+                    materialDesign:HintAssist.Hint="Nome Completo"
+                    x:Name="txtNomeCompleto" Padding="16" Grid.Row="1" 
+                    TextWrapping="Wrap" VerticalAlignment="Center" 
+                    Width="209" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
+                  />
+                <TextBox 
+                
+                Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                    AcceptsReturn="True"
+                    MaxWidth="400"
+                    Margin="10 0 50 0"
+                    materialDesign:HintAssist.Hint="CPF"
+                    x:Name="txtCPF" Padding="16" 
+                    TextWrapping="Wrap" 
+                    Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
+                  />
+
+                <ComboBox
+                    materialDesign:HintAssist.Hint="Sexo" 
+                    Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                    HorizontalAlignment="Center"   
+                    Background="#0F040302" FontFamily="Arial" FontWeight="Bold"
+                    x:Name="cbSexo" Padding="8"  Width="208" Grid.Column="1" Grid.Row="1" Height="58">
+                    <ComboBoxItem></ComboBoxItem>
+                    <ComboBoxItem>Feminino</ComboBoxItem>
+                    <ComboBoxItem>Masculino</ComboBoxItem>
+                </ComboBox>
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,0,60,10">
+                <TextBox 
+                Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                    AcceptsReturn="True"
+                    MaxWidth="400"
+                    Margin="50 0 50 0"
+                    materialDesign:HintAssist.Hint="Email"
+                    x:Name="txtEmail" Padding="16" Grid.Row="1" 
+                    TextWrapping="Wrap" VerticalAlignment="Center" 
+                    Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
+                  />
+                <TextBox 
+                    
+                Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                    AcceptsReturn="True"
+                    MaxWidth="400"
+                    Margin="10 0 50 0"
+                    materialDesign:HintAssist.Hint="RG"
+                    x:Name="txtRg" Padding="16" 
+                    TextWrapping="Wrap" 
+                    Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
+                  />
+
+                <TextBox 
+                    Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                    AcceptsReturn="True"
+                    MaxWidth="400"
+                    materialDesign:HintAssist.Hint="Telefone"
+                    x:Name="txtTelefone" Padding="16" Grid.Row="1" 
+                    TextWrapping="Wrap" VerticalAlignment="Center" 
+                    Width="206" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
+                  />
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0 210 60 0">
+                <TextBox 
+                     Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                    AcceptsReturn="True"
+                    MaxWidth="400"
+                    Margin="50 0 50 0"
+                    materialDesign:HintAssist.Hint="Município"
+                    x:Name="txtSetor" Padding="16" Grid.Row="1" 
+                    TextWrapping="Wrap" VerticalAlignment="Center" 
+                    Width="209" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
+                  />
+                <ComboBox
+                    materialDesign:HintAssist.Hint="Estado" 
+                    Style="{StaticResource MaterialDesignOutlinedComboBox}"   
+                    Background="#0F040302" FontFamily="Arial" FontWeight="Bold"
+                    x:Name="cbEstado" Padding="8"  Margin="10 0 0 0" Width="205" Grid.Column="1" Grid.Row="1" Height="58">
+
+                    <ComboBoxItem></ComboBoxItem>
+                    <ComboBoxItem>AC</ComboBoxItem>
+                    <ComboBoxItem>AM</ComboBoxItem>
+                    <ComboBoxItem>RO</ComboBoxItem>
+                    <ComboBoxItem>RR</ComboBoxItem>
+                    <ComboBoxItem>PA</ComboBoxItem>
+                    <ComboBoxItem>AP</ComboBoxItem>
+                    <ComboBoxItem>MT</ComboBoxItem>
+                    <ComboBoxItem>MS</ComboBoxItem>
+                    <ComboBoxItem>MA</ComboBoxItem>
+                    <ComboBoxItem>TO</ComboBoxItem>
+                    <ComboBoxItem>GO</ComboBoxItem>
+                    <ComboBoxItem>PI</ComboBoxItem>
+                    <ComboBoxItem>CE</ComboBoxItem>
+                    <ComboBoxItem>RN</ComboBoxItem>
+                    <ComboBoxItem>PB</ComboBoxItem>
+                    <ComboBoxItem>PE</ComboBoxItem>
+                    <ComboBoxItem>AL</ComboBoxItem>
+                    <ComboBoxItem>SE</ComboBoxItem>
+                    <ComboBoxItem>BA</ComboBoxItem>
+                    <ComboBoxItem>MG</ComboBoxItem>
+                    <ComboBoxItem>ES</ComboBoxItem>
+                    <ComboBoxItem>RJ</ComboBoxItem>
+                    <ComboBoxItem>SP</ComboBoxItem>
+                    <ComboBoxItem>PR</ComboBoxItem>
+                    <ComboBoxItem>SC</ComboBoxItem>
+                    <ComboBoxItem>RS</ComboBoxItem>
+                    <ComboBoxItem>TO</ComboBoxItem>
+                </ComboBox>
+
+                <TextBox 
+                   Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                    AcceptsReturn="True"
+                    MaxWidth="400"
+                    materialDesign:HintAssist.Hint="CEP"
+                    x:Name="txtSalario" Padding="16" Grid.Row="1" 
+                    TextWrapping="Wrap" VerticalAlignment="Center" Margin="50 0 0 0" 
+                    Width="210" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
+                  />
+
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,350,60,-76">
+                <TextBox 
+                     Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                    AcceptsReturn="True"
+                    MaxWidth="400"
+                    Margin="50 0 50 0"
+                    materialDesign:HintAssist.Hint="Rua"
+                    x:Name="txtRua" Padding="16" Grid.Row="1" 
+                    TextWrapping="Wrap" VerticalAlignment="Center" 
+                    Width="209" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
+                  />
+                <TextBox 
+                     Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                    AcceptsReturn="True"
+                    MaxWidth="400"
+                    Margin="10 0 50 0"
+                    materialDesign:HintAssist.Hint="Bairro"
+                    x:Name="txtBairro" Padding="16" 
+                    TextWrapping="Wrap" 
+                    Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
+                  />
+
+                <TextBox 
+                   Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                    AcceptsReturn="True"
+                    MaxWidth="400"
+                    materialDesign:HintAssist.Hint="Complemento"
+                    x:Name="txtComplemento" Padding="16" Grid.Row="1" 
+                    TextWrapping="Wrap" VerticalAlignment="Center" 
+                    Width="206" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
+                  />
+
+
+            </StackPanel>
+
+
+
+        </Grid>
+
+        <Grid Grid.Row="1" Margin="0,517,10,30" Grid.RowSpan="2">
+            <Button x:Name="btSalvar" FontSize="19" Content="Salvar" Height="40" Width="119" HorizontalAlignment="Right" Margin="10 0 50 0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" />
+            <Button x:Name="btLimpar" FontSize="19" Content="Limpar" Height="40" Width="119" HorizontalAlignment="Right" Margin="10 0 200 0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand"/>
+        </Grid>
     </Grid>
 </Window>
