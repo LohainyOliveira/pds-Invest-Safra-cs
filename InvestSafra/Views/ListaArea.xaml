@@ -6,7 +6,67 @@
         xmlns:local="clr-namespace:InvestSafra.Views"
         mc:Ignorable="d"
         Title="ListaArea" Height="450" Width="800">
-    <Grid>
+    <Grid Background="#FFF99D14">
         
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="481*"/>
+            <ColumnDefinition Width="402*"/>
+
+        </Grid.ColumnDefinitions>
+
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition/>
+            <RowDefinition Height="83"/>
+            <RowDefinition Height="53"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="1" Margin="0,518,550,22" Grid.RowSpan="2" Grid.ColumnSpan="2">
+
+        </Grid>
+
+        <Label Content="Listas de Cursos " FontSize="24" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="233,10,0,0" Height="44" Width="359" Grid.ColumnSpan="2" FontWeight="Bold" FontFamily="Arial"/>
+        <Button x:Name="btMenu"  Content="Menu" FontSize="16" HorizontalAlignment="Left" Margin="17,8,0,0" VerticalAlignment="Top" Height="40" Width="76" FontWeight="Bold" FontFamily="Arial"  Cursor="Hand"/>
+
+        <Grid  Grid.ColumnSpan="2" Height="49" VerticalAlignment="Center" Grid.Row="1" Margin="1,0,31,0" Grid.RowSpan="2" RenderTransformOrigin="0.5,0.5">
+            <Grid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Grid.RenderTransform>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width ="541*"/>
+                <ColumnDefinition Width="565*"/>
+            </Grid.ColumnDefinitions>
+
+
+        </Grid>
+        <DataGrid Grid.Row="1" Margin="0,0,0,117" x:Name="dataGridCurso" IsReadOnly="true"
+                      AutoGenerateColumns="False" AlternatingRowBackground="#FFE5E5E5" AlternationCount="2" Grid.ColumnSpan="2">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding Id}"/>
+                <DataGridTextColumn Header="Nome Curso" Binding="{Binding Nome}"/>
+                <DataGridTextColumn Header="Carga Horária" Binding="{Binding Carga}"/>
+                <DataGridTextColumn Header="Turno" Binding="{Binding Turno}"/>
+                <DataGridTextColumn Header="Descrição" Binding="{Binding Desc}"/>
+                <DataGridTemplateColumn Header="Ações">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Button x:Name="btDeletar"  Content="Deletar" FontSize="16" HorizontalAlignment="Left" Margin="218,0,0,0" VerticalAlignment="Center" Height="51" Width="182" FontWeight="Bold" FontFamily="Arial"  Cursor="Hand" Grid.Row="2" />
+                                <Button x:Name="btUpdate"  Content="Update" FontSize="16" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center" Height="51" Width="162" FontWeight="Bold" FontFamily="Arial"  Cursor="Hand" Grid.Row="2" />
+
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+       
+
     </Grid>
 </Window>
