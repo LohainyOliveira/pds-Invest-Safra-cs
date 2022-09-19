@@ -28,5 +28,22 @@ namespace InvestSafra.Views
         {
 
         }
+
+        private void btCancelar_Click(object sender, RoutedEventArgs e)
+        {
+            txtCnpj.Clear();
+            txtComplemento.Clear();
+            txtLocalizacao.Clear();
+            txtNome.Clear();    
+            txtNomeFantasia.Clear();
+
+            ExibirMensagemLimpar();
+        }
+
+        private void ExibirMensagemLimpar()
+        {
+            MessageBox.Show($"Campos Limpos com Sucesso", "Limpeza Concluida",
+                MessageBoxButton.OK, MessageBoxImage.Information);
+        }
     }
 }
