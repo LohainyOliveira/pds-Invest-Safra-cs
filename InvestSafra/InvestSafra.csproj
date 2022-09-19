@@ -157,6 +157,9 @@
     <Compile Include="Views\CadastrarCaixa.xaml.cs">
       <DependentUpon>CadastrarCaixa.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\CadastrarCompra.xaml.cs">
+      <DependentUpon>CadastrarCompra.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\CadastrarFazenda.xaml.cs">
       <DependentUpon>CadastrarFazenda.xaml</DependentUpon>
     </Compile>
@@ -240,6 +243,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\CadastrarCaixa.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CadastrarCompra.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
