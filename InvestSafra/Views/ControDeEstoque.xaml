@@ -104,7 +104,7 @@
                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     AcceptsReturn="True"
                     MaxWidth="400"
-                    Margin="80 0 50 0"
+                    Margin="220 0 50 0"
                     materialDesign:HintAssist.Hint="Medida"
                     x:Name="txtMedida" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 

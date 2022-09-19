@@ -8,5 +8,7 @@ namespace InvestSafra.Models
 {
 	internal class EstoqueDAO
 	{
+
+		
 	}
 }
