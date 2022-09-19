@@ -196,9 +196,6 @@
     <Compile Include="Views\Produto.xaml.cs">
       <DependentUpon>Produto.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Recebiomentos.xaml.cs">
-      <DependentUpon>Recebiomentos.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\Sementes.xaml.cs">
       <DependentUpon>Sementes.xaml</DependentUpon>
     </Compile>
@@ -295,10 +292,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Produto.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\Recebiomentos.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
