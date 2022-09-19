@@ -11,28 +11,22 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using InvestSafra.Views;
-using System.Windows.Threading;
-using MS.Internal.WindowsBase;
 
 namespace InvestSafra.Views
 {
-	/// <summary>
-	/// Lógica interna para Entrar.xaml
-	/// </summary>
-	public partial class Entrar : Window
-	{
+    /// <summary>
+    /// Lógica interna para ClimaFazenda.xaml
+    /// </summary>
+    public partial class ClimaFazenda : Window
+    {
+        public ClimaFazenda()
+        {
+            InitializeComponent();
+        }
 
+        private void btSalvar_Click(object sender, RoutedEventArgs e)
+        {
 
-		public Entrar()
-		{
-
-			InitializeComponent();
-
-
-
-		}
-
-     
+        }
     }
 }

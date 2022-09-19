@@ -122,8 +122,8 @@
     <Compile Include="Models\ClimaDAO.cs" />
     <Compile Include="Models\Compra.cs" />
     <Compile Include="Models\CompraDAO.cs" />
-    <Compile Include="Models\Empresa.cs" />
-    <Compile Include="Models\EmpresaDAO.cs" />
+    <Compile Include="Models\ClienteJuridico.cs" />
+    <Compile Include="Models\ClienteJuridicoDAO.cs" />
     <Compile Include="Models\Estoque.cs" />
     <Compile Include="Models\EstoqueDAO.cs" />
     <Compile Include="Models\Fazenda.cs" />
@@ -162,6 +162,9 @@
     </Compile>
     <Compile Include="Views\CadastroDeEmpresa.xaml.cs">
       <DependentUpon>CadastroDeEmpresa.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ClimaFazenda.xaml.cs">
+      <DependentUpon>ClimaFazenda.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ControDeEstoque.xaml.cs">
       <DependentUpon>ControDeEstoque.xaml</DependentUpon>
@@ -233,6 +236,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\ClimaFazenda.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\ControDeEstoque.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -291,6 +298,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Icons\img_x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\X.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\MaterialDesignThemes.4.4.0\build\MaterialDesignThemes.targets" Condition="Exists('packages\MaterialDesignThemes.4.4.0\build\MaterialDesignThemes.targets')" />

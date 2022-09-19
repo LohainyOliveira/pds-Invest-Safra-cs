@@ -112,7 +112,7 @@
         </Grid>
 
         <Grid Grid.Row="1" Margin="0,517,10,10" Grid.RowSpan="2">
-            <Button x:Name="btSalvar" FontSize="19" Content="Salvar" Height="40" Width="119" HorizontalAlignment="Right" Margin="10 0 50 0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Click="btSalvar_Click"/>
+            <Button x:Name="btSalvar" FontSize="19" Content="Salvar" Height="40" Width="119" HorizontalAlignment="Right" Margin="10 0 50 0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" />
             <Button x:Name="btCancelar" FontSize="19" Content="Cancelar" Height="40" Width="119" HorizontalAlignment="Right" Margin="10 0 200 0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand"/>
         </Grid>
     </Grid>
