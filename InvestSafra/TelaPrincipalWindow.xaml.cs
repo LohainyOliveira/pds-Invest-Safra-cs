@@ -41,7 +41,7 @@ namespace InvestSafra
 
         private void TelaPrincipalWindow_Loaded(object sender, RoutedEventArgs e)
         {
-		    CadastrarMaquinas form = new CadastrarMaquinas();
+		    CadastrarFuncionario form = new CadastrarFuncionario();
 			form.ShowDialog();
 		}
 
