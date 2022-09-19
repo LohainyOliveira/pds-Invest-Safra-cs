@@ -74,7 +74,7 @@ create table Fornecedor (
 id_for int primary key auto_increment not null,
 nome_for varchar (100) not null,
 cnpj_for varchar (100) not null,
-razão_social_for varchar (100) not null,
+razao_social_for varchar (100) not null,
 bairro_for varchar (100) not null,
 rua_for varchar (100) not null,
 cidade_for varchar (100) not null,
@@ -106,10 +106,10 @@ descricao_ins varchar (100) not null
 
 create table Compra_Insumo (
 id_compins int primary key auto_increment not null,
-quantidade_compins int not null,
-valor_compins double not null,
-data_compins date not null,
-tipo_compins varchar (100) not null,
+quantidade_comp_ins int not null,
+valor_comp_ins double not null,
+data_comp_ins date not null,
+tipo_comp_ins varchar (100) not null,
 id_ins_fk int not null,
 id_com_fk int not null,
 foreign key (id_com_fk) references Compra (id_com),
@@ -155,11 +155,11 @@ foreign key (id_prod_fk) references Produto (id_prod)
 );
 
 create table Venda_Produto (
-id_venpro int primary key auto_increment not null,
-quantidade_venpro int not null,
-valor_venpro double not null,
-tipo_venpro varchar (100) not null,
-data_venpro date not null,
+id_ven_pro int primary key auto_increment not null,
+quantidade_ven_pro int not null,
+valor_ven_pro double not null,
+tipo_ven_pro varchar (100) not null,
+data_ven_pro date not null,
 id_ven_fk int not null,
 id_prod_fk int not null,
 foreign key (id_ven_fk) references Venda (id_ven),
@@ -194,7 +194,7 @@ localizacao_faze varchar (100) not null,
 complemento_faze varchar (100) not null
 );
 
-create table Área (
+create table Area (
 id_are int primary key auto_increment not null,
 nome_terren_are varchar (100) not null,
 responsavel_are varchar (100) not null,
@@ -215,11 +215,11 @@ id_are_fk int not null,
 foreign key (id_sem_fk) references Semente (id_sem),
 foreign key (id_fun_fk) references Funcionário (id_fun),
 foreign key (id_faze_fk) references Fazenda (id_faze),
-foreign key (id_are_fk) references Área (id_are)
+foreign key (id_are_fk) references Area (id_are)
 );
 
 create table Safra_Produto (
-id_safpro int primary key auto_increment not null,
+id_saf_pro int primary key auto_increment not null,
 id_saf_fk int not null,
 id_prod_fk int not null,
 foreign key (id_saf_fk) references Safra (id_saf),
@@ -227,7 +227,7 @@ foreign key (id_prod_fk) references Produto (id_prod)
 );
 
 create table Safra_Insumos (
-id_safins int primary key auto_increment not null,
+id_saf_ins int primary key auto_increment not null,
 id_saf_fk int not null,
 id_ins_fk int not null,
 foreign key (id_saf_fk) references Safra (id_saf),
@@ -242,10 +242,10 @@ clima_clim varchar (100) not null
 );
 
 create table Safra_Clima (
-id_safclim int primary key auto_increment not null,
-tipo_safclim varchar (100) not null,
-descricao_safclim varchar (100) not null,
-periodo_safclim varchar (100) not null,
+id_saf_clim int primary key auto_increment not null,
+tipo_saf_clim varchar (100) not null,
+descricao_saf_clim varchar (100) not null,
+periodo_saf_clim varchar (100) not null,
 id_saf_fk int not null,
 id_clim_fk int not null,
 foreign key (id_saf_fk) references Safra (id_saf),
@@ -263,8 +263,8 @@ valor_maq varchar (100) not null
 );
 
 create table Safra_Maquinas (
-id_safmaq int primary key auto_increment not null,
-descricao_safmaq varchar (100) not null,
+id_saf_maq int primary key auto_increment not null,
+descricao_saf_maq varchar (100) not null,
 id_saf_fk int not null,
 id_maq_fk int not null,
 foreign key (id_saf_fk) references Safra (id_saf),
