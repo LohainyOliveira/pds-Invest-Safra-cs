@@ -1,4 +1,4 @@
-﻿<Window x:Class="InvestSafra.Views.CadastrarMaquinas"
+﻿<Window x:Class="InvestSafra.Views.CadastrarCompra"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -12,16 +12,16 @@
         TextOptions.TextFormattingMode="Ideal" 
         TextOptions.TextRenderingMode="Auto"
         FontFamily="{DynamicResource MaterialDesignFont}"
-        Title="Inscrever" Height="542" Width="956">
+        Title="CadastrarCompra" Height="540" Width="956">
     <Grid Margin="0,0,0,-28" RenderTransformOrigin="0.5,0.5">
-
         <Grid.RenderTransform>
             <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
                 <RotateTransform Angle="0.043"/>
                 <TranslateTransform/>
             </TransformGroup>
         </Grid.RenderTransform>
-
         <Grid.RowDefinitions>
             <RowDefinition Height="115"/>
             <RowDefinition Height="*"/>
@@ -39,32 +39,27 @@
                     <ColumnDefinition Width="17*"/>
                     <ColumnDefinition Width="17*"/>
                 </Grid.ColumnDefinitions>
-                <Image HorizontalAlignment="Left" Height="200" Margin="38,15,0,0" VerticalAlignment="Top" Width="136" Source="/Imagens/LogoCanto.png"/>
-                <Label  Content="Cadastro de Máquinas" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Malik" FontSize="24" Foreground="#EFA82E" FontWeight="Bold" Height="49" Width="292" RenderTransformOrigin="0.336,0.452" Margin="329,44,0,0"/>
-
-                <Image HorizontalAlignment="Right" Height="200"  Width="200" VerticalAlignment="Top" Source="/Icons/Maquina.png"/>
+                <Image HorizontalAlignment="Left" Height="100" Margin="38,15,0,0" VerticalAlignment="Top" Width="136" Source="/Imagens/LogoCanto.png"/>
+                <Label  Content="Cadastro de Compra" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Malik" FontSize="24" Foreground="#EFA82E" FontWeight="Bold" Height="49" Width="292" RenderTransformOrigin="0.336,0.452" Margin="350,45,0,0"/>
             </Grid>
 
             <Grid VerticalAlignment="Top" HorizontalAlignment="Center" Height="535" >
                 <StackPanel Orientation="Horizontal" Margin="0 0 60 200">
-                    <TextBox 
-                Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                    <TextBox Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     AcceptsReturn="True"
                     MaxWidth="400"
-                    Margin="80 0 50 0"
-                    materialDesign:HintAssist.Hint="ID"
-                    x:Name="txtId" Padding="16" Grid.Row="1" 
+                    Margin="80 95 50 0"
+                    materialDesign:HintAssist.Hint="Descrição"
+                    x:Name="txtDescricao" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
                     Width="209" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
-                    <TextBox 
-                
-                Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                    <TextBox Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     AcceptsReturn="True"
                     MaxWidth="400"
-                    Margin="10 0 50 0"
-                    materialDesign:HintAssist.Hint="CNPJ"
-                    x:Name="txtCnpj" Padding="16" 
+                    Margin="10 95 50 0"
+                    materialDesign:HintAssist.Hint="Data"
+                    x:Name="txtData" Padding="16" 
                     TextWrapping="Wrap" 
                     Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
@@ -79,54 +74,18 @@
                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     AcceptsReturn="True"
                     MaxWidth="400"
-                    Margin="80 0 50 0"
+                    Margin="228 120 50 0"
                     materialDesign:HintAssist.Hint="Nome"
                     x:Name="txtnome" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
                     Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
-                    <TextBox 
                     
-                Style="{StaticResource MaterialDesignOutlinedTextBox}"
-                    AcceptsReturn="True"
-                    MaxWidth="400"
-                    Margin="10 0 50 0"
-                    materialDesign:HintAssist.Hint="Marca"
-                    x:Name="txtMarca" Padding="16" 
-                    TextWrapping="Wrap" 
-                    Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
-                  />
-
 
 
                 </StackPanel>
 
-                <StackPanel Orientation="Horizontal" Margin="0 200 60 0">
-                    <TextBox 
-                Style="{StaticResource MaterialDesignOutlinedTextBox}"
-                    AcceptsReturn="True"
-                    MaxWidth="400"
-                    Margin="80 0 50 0"
-                    materialDesign:HintAssist.Hint="Valor"
-                    x:Name="txtvalor" Padding="16" Grid.Row="1" 
-                    TextWrapping="Wrap" VerticalAlignment="Center" 
-                    Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
-                  />
-                    <TextBox 
-                    
-                Style="{StaticResource MaterialDesignOutlinedTextBox}"
-                    AcceptsReturn="True"
-                    MaxWidth="400"
-                    Margin="10 0 50 0"
-                    materialDesign:HintAssist.Hint="Medida"
-                    x:Name="txtmedida" Padding="16" 
-                    TextWrapping="Wrap" 
-                    Width="209" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
-                  />
 
-
-
-                </StackPanel>
 
                 <Grid Margin="0,465,10,10">
                     <Grid.ColumnDefinitions>
@@ -148,5 +107,4 @@
             </Grid>
         </Grid>
     </Grid>
-
 </Window>

@@ -157,6 +157,9 @@
     <Compile Include="Views\CadastrarCaixa.xaml.cs">
       <DependentUpon>CadastrarCaixa.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\CadastrarCompra.xaml.cs">
+      <DependentUpon>CadastrarCompra.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\CadastrarFazenda.xaml.cs">
       <DependentUpon>CadastrarFazenda.xaml</DependentUpon>
     </Compile>
@@ -240,6 +243,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\CadastrarCaixa.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CadastrarCompra.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -336,6 +343,36 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Icons\X.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\arroz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\clima.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\estoque.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\fazenda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\feijão.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\Maquina.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\milho.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\semente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\soja.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\trigo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\MaterialDesignThemes.4.4.0\build\MaterialDesignThemes.targets" Condition="Exists('packages\MaterialDesignThemes.4.4.0\build\MaterialDesignThemes.targets')" />
