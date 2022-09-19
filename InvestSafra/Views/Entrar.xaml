@@ -27,12 +27,12 @@
             <Grid.Background>
                 <ImageBrush ImageSource="/Imagens/ImgFundoDesfocado.png"/>
             </Grid.Background>
-            <Button
-                HorizontalAlignment="Right"
-                VerticalAlignment="Top"
-                Margin="10"
-                BorderBrush="{x:Null}"
-                Background="#EFA82E"/>
+
+            <Button x:Name="btVoltar" HorizontalAlignment="Right" Height="32"
+                    Margin="508,4,0,0"
+                    VerticalAlignment="Top" Background="#EFA82E" BorderBrush="#EFA82E"
+                    Cursor="Hand"  Width="32">
+            </Button>
 
 
             <StackPanel VerticalAlignment="Center"
@@ -66,7 +66,7 @@
                         </StackPanel>
                     </StackPanel>
                 </StackPanel>
-                
+
 
 
             </StackPanel>
