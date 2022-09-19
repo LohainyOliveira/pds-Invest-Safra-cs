@@ -151,8 +151,17 @@
     <Compile Include="TelaPrincipalWindow.xaml.cs">
       <DependentUpon>TelaPrincipalWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\CadastrarArea.xaml.cs">
+      <DependentUpon>CadastrarArea.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CadastrarCaixa.xaml.cs">
+      <DependentUpon>CadastrarCaixa.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\CadastrarFazenda.xaml.cs">
       <DependentUpon>CadastrarFazenda.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CadastrarFornecedor.xaml.cs">
+      <DependentUpon>CadastrarFornecedor.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\CadastrarFuncionario.xaml.cs">
       <DependentUpon>CadastrarFuncionario.xaml</DependentUpon>
@@ -160,8 +169,11 @@
     <Compile Include="Views\CadastrarMaquinas.xaml.cs">
       <DependentUpon>CadastrarMaquinas.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\CadastroDeEmpresa.xaml.cs">
-      <DependentUpon>CadastroDeEmpresa.xaml</DependentUpon>
+    <Compile Include="Views\CadastroClienteJuridico.xaml.cs">
+      <DependentUpon>CadastroClienteJuridico.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CadatrarCompra.xaml.cs">
+      <DependentUpon>CadatrarCompra.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ClimaFazenda.xaml.cs">
       <DependentUpon>ClimaFazenda.xaml</DependentUpon>
@@ -172,8 +184,8 @@
     <Compile Include="Views\Entrar.xaml.cs">
       <DependentUpon>Entrar.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\CadastroCliente.xaml.cs">
-      <DependentUpon>CadastroCliente.xaml</DependentUpon>
+    <Compile Include="Views\CadastroClienteFisico.xaml.cs">
+      <DependentUpon>CadastroClienteFisico.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Insumos.xaml.cs">
       <DependentUpon>Insumos.xaml</DependentUpon>
@@ -184,8 +196,17 @@
     <Compile Include="Views\MenuSafra.xaml.cs">
       <DependentUpon>MenuSafra.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Produto.xaml.cs">
+      <DependentUpon>Produto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Recebiomentos.xaml.cs">
+      <DependentUpon>Recebiomentos.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Sementes.xaml.cs">
       <DependentUpon>Sementes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Venda.xaml.cs">
+      <DependentUpon>Venda.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -220,7 +241,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\CadastrarArea.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CadastrarCaixa.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\CadastrarFazenda.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CadastrarFornecedor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -232,7 +265,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\CadastroDeEmpresa.xaml">
+    <Page Include="Views\CadastroClienteJuridico.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CadatrarCompra.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -248,7 +285,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\CadastroCliente.xaml">
+    <Page Include="Views\CadastroClienteFisico.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -264,7 +301,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\Produto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Recebiomentos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Sementes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Venda.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
