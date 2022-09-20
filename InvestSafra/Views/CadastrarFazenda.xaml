@@ -98,11 +98,21 @@
                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     AcceptsReturn="True"
                     MaxWidth="400"
-                    Margin="80 0 50 0"
-                    materialDesign:HintAssist.Hint="Complemento"
+                    Margin="-55 0 50 0"
+                    materialDesign:HintAssist.Hint="Proprietário"
                     x:Name="txtComplemento" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
                     Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
+                  />
+                    <TextBox 
+                Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                    AcceptsReturn="True"
+                    MaxWidth="400"
+                    Margin="10 0 50 0"
+                    materialDesign:HintAssist.Hint="Descrição"
+                    x:Name="txtDescricao" Padding="16" Grid.Row="1" 
+                    TextWrapping="Wrap" VerticalAlignment="Center" 
+                    Width="209" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
  
                 </StackPanel>

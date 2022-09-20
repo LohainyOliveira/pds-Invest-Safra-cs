@@ -27,7 +27,15 @@ namespace InvestSafra.Views
             InitializeComponent();
         }
 
-        private void btLimpar_Click(object sender, RoutedEventArgs e)
+        private void ExibirMensagemLimpar()
+        {
+            MessageBox.Show($"Campos Limpos com Sucesso", "Limpeza Concluida",
+                MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
+        
+
+        private void btLimpar_Click_1(object sender, RoutedEventArgs e)
         {
             txtBairro.Clear();
             txtComplemento.Clear();
@@ -36,19 +44,13 @@ namespace InvestSafra.Views
             txtNomeCompleto.Clear();
             txtRg.Clear();
             txtRua.Clear();
-            txtSalario.Clear();
-            txtSetor.Clear();
+            txtCep.Clear();
+            txtCidade.Clear();
             txtTelefone.Clear();
             cbEstado.SelectedItem = null;
             cbSexo.SelectedItem = null;
 
             ExibirMensagemLimpar();
-        }
-
-        private void ExibirMensagemLimpar()
-        {
-            MessageBox.Show($"Campos Limpos com Sucesso", "Limpeza Concluida",
-                MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
         private void btSalvar_Click(object sender, RoutedEventArgs e)
@@ -61,6 +63,20 @@ namespace InvestSafra.Views
             _clienteFisico.RG = txtRg.Text;
             _clienteFisico.Rua = txtRua.Text;
             _clienteFisico.Telefone = txtTelefone.Text;
+            _clienteFisico.CEP = txtCep.Text;
+            _clienteFisico.Cidade = txtCidade.Text;
+            _clienteFisico.Sexo = cbSexo.Text;
+            _clienteFisico.Estado = cbEstado.Text;
+
+            try
+            {
+                var dao = new ClienteFisicoDAO();
+                dao.Insert(_clienteFisico);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

@@ -105,7 +105,7 @@ descricao_ins varchar (100) not null
 );
 
 create table Compra_Insumo (
-id_compins int primary key auto_increment not null,
+id_comp_ins int primary key auto_increment not null,
 quantidade_comp_ins int not null,
 valor_comp_ins double not null,
 data_comp_ins date not null,
@@ -125,11 +125,11 @@ medida_sem double not null
 );
 
 create table Compra_Semente (
-id_comsem int primary key auto_increment not null,
-quantidade_comsem int not null,
-valor_comsem double not null,
-data_comsem date not null not null,
-tipo_comsem varchar (100) not null,
+id_com_sem int primary key auto_increment not null,
+quantidade_com_sem int not null,
+valor_com_sem double not null,
+data_com_sem date not null not null,
+tipo_com_sem varchar (100) not null,
 id_sem_fk int not null,
 id_com_fk int not null,
 foreign key (id_com_fk) references Compra (id_com),
@@ -166,7 +166,7 @@ foreign key (id_ven_fk) references Venda (id_ven),
 foreign key (id_prod_fk) references Produto (id_prod)
 );
 
-create table Funcionário (
+create table Funcionario (
 id_fun int primary key auto_increment not null,
 nome_fun varchar (100) not null,
 cpf_fun varchar (100) not null,
@@ -254,11 +254,11 @@ foreign key (id_clim_fk) references Clima (id_clim)
 
 create table Maquinas (
 id_maq int primary key auto_increment not null,
+nome_maq varchar (100),
 descricao_maq varchar (100) not null,
 modelo_maq varchar (100) not null,
 marca_maq varchar (100) not null,
-quantidade_maq varchar (100) not null,
-medida_maq varchar (100) not null,
+quantidade_maq int not null,
 valor_maq varchar (100) not null
 );
 
