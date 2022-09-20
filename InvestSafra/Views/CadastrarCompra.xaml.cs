@@ -28,7 +28,8 @@ namespace InvestSafra.Views
         {
             
             txtDescricao.Clear();
-            txtnome.Clear();
+            txtNome.Clear();
+            txtDescricao.Clear();
 
             ExibirMensagemLimpar();
         }

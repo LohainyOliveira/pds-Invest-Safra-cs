@@ -28,7 +28,7 @@ namespace InvestSafra.Views
         {
             txtDescricao1.Clear();
             txtMarca1.Clear();
-            txtMedida.Clear();
+            cbMedida.SelectedItem = null;
             txtQuantidade.Clear();
             txtTipoInsumo.Clear();
             txtValor.Clear();
