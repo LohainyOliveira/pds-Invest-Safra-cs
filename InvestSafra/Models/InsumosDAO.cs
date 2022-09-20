@@ -21,9 +21,10 @@ namespace InvestSafra.Models
                 
                 var comando = _conn.Query();
 
-                comando.CommandText = ("insert into Insumo  value (null, @tipo, @marca, @descricao ");
+                comando.CommandText = ("insert into Insumo  value (null, @nome,  @tipo, @marca, @descricao ");
 
 
+                comando.Parameters.AddWithValue("@nome", insumos.Nome);
                 comando.Parameters.AddWithValue("@tipo", insumos.Tipo);
                 comando.Parameters.AddWithValue("@marca", insumos.Marca);
                 comando.Parameters.AddWithValue("@descricao", insumos.Descricao);
@@ -64,6 +65,7 @@ namespace InvestSafra.Models
 
                     var insumos = new Insumos();
                     insumos.Id = reader.GetInt32("id_ins");
+                    insumos.Nome = DAOHelper.GetString(reader, "nome_ins");
                     insumos.Tipo = DAOHelper.GetString(reader, "tipo_ins");
                     insumos.Marca = DAOHelper.GetString(reader, "marca_ins");
                     insumos.Descricao= DAOHelper.GetString(reader, "descricao_ins");
@@ -84,13 +86,12 @@ namespace InvestSafra.Models
         {
             try
             {
-                
+               
                 var comando = _conn.Query();
 
-                comando.CommandText = "UPDATE Insumo set tipo_ins = @tipo, cpf_fun = @cpf, rg_fun = @rg, sexo_fun = @sexo, telefone_fun = @telefone, " +
-                    "cidade_fun = @cidade, estado_fun = @estado, rua_fun = @rua, bairro_fun = @bairo, cep_fun = @cep, complemento_fun = @complemento," +
-                    "email_fun = @email, funcao_fun = @funcao, salario_fun = @salario WHERE id_fun = @id";
+                comando.CommandText = "UPDATE Insumo set nome_ins = @nome, tipo_ins = @tipo, marca_ins = @marca, descricao_ins = @descricao  WHERE id_fun = @id";
 
+                comando.Parameters.AddWithValue("@nome", insumos.Nome);
                 comando.Parameters.AddWithValue("@tipo", insumos.Tipo);
                 comando.Parameters.AddWithValue("@marca", insumos.Marca);
                 comando.Parameters.AddWithValue("@descricao", insumos.Descricao);   
@@ -102,15 +103,15 @@ namespace InvestSafra.Models
                 throw ex;
             }
         }
-        public void Delete(Funcionario funcionario)
+        public void Delete(Insumos insumo)
         {
             try
             {
                 var comando = _conn.Query();
 
-                comando.CommandText = "Delete from Funcionario where id_fun = @id";
+                comando.CommandText = "Delete from Insumo where id_ins = @id";
 
-                comando.Parameters.AddWithValue("@id", funcionario.Id);
+                comando.Parameters.AddWithValue("@id", insumo.Id);
 
                 var resultado = comando.ExecuteNonQuery();
 
