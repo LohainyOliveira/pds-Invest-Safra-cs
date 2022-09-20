@@ -58,7 +58,7 @@
                        x:Name="dtPickerDataNascimento"
                        materialDesign:HintAssist.Hint="Data " 
                        Style="{StaticResource MaterialDesignOutlinedDatePicker}"
-                       Width="200" Height="60" Margin="20 95 0 0"/>
+                       Width="206" Height="61" Margin="20 95 0 0"/>
                   
 
 
@@ -70,7 +70,7 @@
                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     AcceptsReturn="True"
                     MaxWidth="400"
-                    Margin="80 120 50 0"
+                    Margin="79 120 50 0"
                     materialDesign:HintAssist.Hint="Quantidade"
                     x:Name="txtQuantidade" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
