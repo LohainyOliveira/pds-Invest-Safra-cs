@@ -54,6 +54,13 @@ namespace InvestSafra.Views
         private void btSalvar_Click(object sender, RoutedEventArgs e)
         {
             _clienteFisico.Nome = txtNomeCompleto.Text;
+            _clienteFisico.CPF = txtCPF.Text;
+            _clienteFisico.Complemento = txtComplemento.Text;
+            _clienteFisico.Email = txtEmail.Text;
+            _clienteFisico.Bairro = txtBairro.Text;
+            _clienteFisico.RG = txtRg.Text;
+            _clienteFisico.Rua = txtRua.Text;
+            _clienteFisico.Telefone = txtTelefone.Text;
         }
     }
 }
