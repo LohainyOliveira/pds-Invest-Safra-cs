@@ -8,9 +8,11 @@ namespace InvestSafra.Models
 {
 	internal class Fazenda
 	{
+		
 		public int Id { get; set; }
 		public string Nome { get; set; }
 		public string NomeFantasia { get; set; }
+		public string Proprietario { get; set; }
 		public string CNPJ { get; set; }
 		public string Localizacao { get; set; }
 		public string Complemento { get; set; }

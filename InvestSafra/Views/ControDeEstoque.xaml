@@ -39,7 +39,8 @@
                     <ColumnDefinition Width="17*"/>
                     <ColumnDefinition Width="17*"/>
                 </Grid.ColumnDefinitions>
-                <Image HorizontalAlignment="Left" Height="100" Margin="38,15,0,0" VerticalAlignment="Top" Width="136" Source="/Imagens/LogoCanto.png"/>
+                <Image HorizontalAlignment="Left" Height="200" Margin="38,15,0,0" VerticalAlignment="Top" Width="136" Source="/Imagens/LogoCanto.png"/>
+                <Image HorizontalAlignment="Right" Height="200" VerticalAlignment="Top" Width="200" Source="/Icons/estoque.png"/>
                 <Label  Content="Controle de Estoque" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Malik" FontSize="24" Foreground="#EFA82E" FontWeight="Bold" Height="49" Width="292" RenderTransformOrigin="0.336,0.452" Margin="338,44,0,0"/>
             </Grid>
 
@@ -126,7 +127,7 @@
                     <Grid Margin="334,7,-137,-7" Grid.ColumnSpan="4">
                         <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
                             <Button x:Name="btSalvar" FontSize="19" Content="Salvar" Height="40" Width="119"  Margin="0,0,20,0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Grid.Column="2" Grid.ColumnSpan="2"/>
-                            <Button x:Name="btCancelar" FontSize="19" Content="Cancelar" Height="40" Width="119"  Margin="0,0,0,0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Grid.ColumnSpan="4"/>
+                            <Button x:Name="btCancelar" FontSize="19" Content="Cancelar" Height="40" Width="119"  Margin="0,0,0,0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Grid.ColumnSpan="4" Click="btCancelar_Click"/>
                         </StackPanel>
                     </Grid>
                 </Grid>
