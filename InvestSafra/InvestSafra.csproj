@@ -172,8 +172,8 @@
     <Compile Include="Views\CadastrarMaquinas.xaml.cs">
       <DependentUpon>CadastrarMaquinas.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\ClienteFisico.xaml.cs">
-      <DependentUpon>ClienteFisico.xaml</DependentUpon>
+    <Compile Include="Views\ClienteFisicoWindow.xaml.cs">
+      <DependentUpon>ClienteFisicoWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ClienteJuridico.xaml.cs">
       <DependentUpon>ClienteJuridico.xaml</DependentUpon>
@@ -266,7 +266,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\ClienteFisico.xaml">
+    <Page Include="Views\ClienteFisicoWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

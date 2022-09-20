@@ -27,7 +27,6 @@ namespace InvestSafra.Views
         private void btCancelar_Click(object sender, RoutedEventArgs e)
         {
             txtClima.Clear();
-            txtDataFazenda.Clear();
             txtLocal.Clear();
             txtTemperatura.Clear();
 

@@ -26,7 +26,7 @@ namespace InvestSafra.Views
 
         private void btCancelar_Click(object sender, RoutedEventArgs e)
         {
-            txtData.Clear();
+            
             txtDescricao.Clear();
             txtnome.Clear();
 

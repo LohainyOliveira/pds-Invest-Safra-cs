@@ -54,16 +54,12 @@
                     TextWrapping="Wrap" VerticalAlignment="Center" 
                     Width="209" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
-                    <TextBox Style="{StaticResource MaterialDesignOutlinedTextBox}"
-                    AcceptsReturn="True"
-                    MaxWidth="400"
-                    Margin="10 95 50 0"
-                    materialDesign:HintAssist.Hint="Data"
-                    x:Name="txtData" Padding="16" 
-                    TextWrapping="Wrap" 
-                    Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
-                  />
-
+                   <DatePicker 
+                       x:Name="dtPickerDataNascimento"
+                       materialDesign:HintAssist.Hint="Data " 
+                       Style="{StaticResource MaterialDesignOutlinedDatePicker}"
+                       Width="200" Height="60" Margin="20 95 0 0"/>
+                  
 
 
 

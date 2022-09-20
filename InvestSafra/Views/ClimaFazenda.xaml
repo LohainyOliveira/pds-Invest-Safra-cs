@@ -47,19 +47,16 @@
 
             <Grid VerticalAlignment="Top" HorizontalAlignment="Center" Height="535" >
                 <StackPanel Orientation="Horizontal" Margin="0 0 60 200">
+                    <DatePicker 
+                       x:Name="dtPickerDataNascimento"
+                       materialDesign:HintAssist.Hint="Data" 
+                       Style="{StaticResource MaterialDesignOutlinedDatePicker}"
+                       Width="206" Height="60" Margin="80 95 0 0"/>
+                    
                     <TextBox Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     AcceptsReturn="True"
                     MaxWidth="400"
-                    Margin="80 80 50 0"
-                    materialDesign:HintAssist.Hint="Data"
-                    x:Name="txtDataFazenda" Padding="16" Grid.Row="1" 
-                    TextWrapping="Wrap" VerticalAlignment="Center" 
-                    Width="209" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
-                  />
-                    <TextBox Style="{StaticResource MaterialDesignOutlinedTextBox}"
-                    AcceptsReturn="True"
-                    MaxWidth="400"
-                    Margin="10 80 50 0"
+                    Margin="60 93 50 0"
                     materialDesign:HintAssist.Hint="Clima"
                     x:Name="txtClima" Padding="16" 
                     TextWrapping="Wrap" 

@@ -82,17 +82,18 @@
                     TextWrapping="Wrap" VerticalAlignment="Center" 
                     Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
-                    <TextBox 
                     
-                Style="{StaticResource MaterialDesignOutlinedTextBox}"
-                    AcceptsReturn="True"
-                    MaxWidth="400"
-                    Margin="10 0 50 0"
-                    materialDesign:HintAssist.Hint="Medida"
-                    x:Name="txtMedida" Padding="16" 
-                    TextWrapping="Wrap" 
-                    Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
-                  />
+                    
+                <ComboBox
+                    materialDesign:HintAssist.Hint="Medida" 
+                    Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                    HorizontalAlignment="Center"   
+                    Background="#0F040302" FontFamily="Arial" FontWeight="Bold"
+                    x:Name="cbSexo" Padding="8"  Width="208" Grid.Column="1" Grid.Row="1" Height="58">
+                        <ComboBoxItem></ComboBoxItem>
+                        <ComboBoxItem>Feminino</ComboBoxItem>
+                        <ComboBoxItem>Masculino</ComboBoxItem>
+                        </ComboBox>
 
 
 
