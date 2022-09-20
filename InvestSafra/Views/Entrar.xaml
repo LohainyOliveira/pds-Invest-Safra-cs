@@ -15,12 +15,12 @@
         </Grid.ColumnDefinitions>
         <Grid  Background="#EFA82E">
 
-            <TextBlock  VerticalAlignment="Top" HorizontalAlignment="Center" FontFamily="Monotype Corsiva" FontSize="36" RenderTransformOrigin="0.574,2.679" Margin="0,150,0,0">Invest Safra</TextBlock>
+
             <TextBlock   VerticalAlignment="Top" HorizontalAlignment="Center" FontFamily="Monotype Corsiva" FontSize="25" Margin="0,242,0,0" Height="31" Width="250">Faça Parte do Invest Safra</TextBlock>
 
             <TextBlock   VerticalAlignment="Top" HorizontalAlignment="Center" FontFamily="Monotype Corsiva" FontSize="25" Margin="0,273,0,0" Height="26" Width="211">O Software que facilita</TextBlock>
             <TextBlock   VerticalAlignment="Top" HorizontalAlignment="Center" FontFamily="Monotype Corsiva" FontSize="25" Margin="0,300,0,0" Height="26" Width="104">a sua vida.</TextBlock>
-            <Image Height="200" Margin="58,24,88,0" VerticalAlignment="Top" Width="105" Source="/Icons/logoEscuro.png"/>
+            <Image Height="177"  VerticalAlignment="Top" Source="/Icons/logoEscuro.png" Margin="10,48,10,0" RenderTransformOrigin="0.514,0.795"/>
 
         </Grid>
         <Grid Grid.Column="1">
