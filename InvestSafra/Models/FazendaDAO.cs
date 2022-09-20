@@ -21,7 +21,7 @@ namespace InvestSafra.Models
 
                 var comando = _conn.Query();
 
-                comando.CommandText = ("insert into Estoque value (null, @nome, @nomeFantasia, @proprietario, @cnpj, @localizacao, @complemento");
+                comando.CommandText = ("insert into Fazenda value (null, @nome, @nomeFantasia, @proprietario, @cnpj, @localizacao, @complemento");
 
 
 

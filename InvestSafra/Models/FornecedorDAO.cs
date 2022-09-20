@@ -114,21 +114,44 @@ namespace InvestSafra.Models
             }
         }
 
-        public void Update(Fazenda fazenda)
+        public void Update(Fornecedor fornecedor)
         {
             try
             {
                 var comando = _conn.Query();
 
+                /*
+        create table Fornecedor (
+        id_for int primary key auto_increment not null,
+        nome_for varchar (100) not null,
+        cnpj_for varchar (100) not null,
+        razao_social_for varchar (100) not null,
+        bairro_for varchar (100) not null,
+        rua_for varchar (100) not null,
+        cidade_for varchar (100) not null,
+        estado_for varchar (100) not null,
+        cep_for varchar (100) not null,
+        complemento_for varchar (100) not null,
+        telefone_pessoal_for varchar (100) not null,
+        telefone_firma_for varchar (100) not null,
+        email_for varchar (100) not null
+        );*/
 
-                comando.CommandText = "UPDATE Fazenda set nome_faze = @nome, nome_faze = @nomeFantasia, proprietario_faze = @proprietario, cnpj_faze = @cnpj, localizacao_faze = @localizacao, complemento_faze = @complemento  WHERE id_faze = @id";
+                comando.CommandText = "UPDATE Fornecedor set nome_for = @nome, cnpj_for = @cnpj, razao_social_for = @razao_social, bairro_for = @bairro, rua_for = @rua, cidade_for = @cidade," +
+                    "estado_for = @estado, cep_for = @cep, complemento_for = @complemento, telefone_pessoal_for = @telefone_pessoal, telefone_firma_for = @telefone_firma, email_for = @email WHERE id_for = @id";
 
-                comando.Parameters.AddWithValue("@nome", fazenda.Nome);
-                comando.Parameters.AddWithValue("@nomeFantasia", fazenda.NomeFantasia);
-                comando.Parameters.AddWithValue("@proprietario", fazenda.Proprietario);
-                comando.Parameters.AddWithValue("@cnpj", fazenda.CNPJ);
-                comando.Parameters.AddWithValue("@localizacao", fazenda.Localizacao);
-                comando.Parameters.AddWithValue("@complemento", fazenda.Complemento);
+                comando.Parameters.AddWithValue("@nomeFantasia", fornecedor.Nome_Fantasia);
+                comando.Parameters.AddWithValue("@cnpj", fornecedor.CNPJ);
+                comando.Parameters.AddWithValue("@razao_social", fornecedor.Razao_Social);
+                comando.Parameters.AddWithValue("@bairro", fornecedor.Bairro);
+                comando.Parameters.AddWithValue("@rua", fornecedor.Rua);
+                comando.Parameters.AddWithValue("@cidade", fornecedor.Cidade);
+                comando.Parameters.AddWithValue("@estado", fornecedor.Estado);
+                comando.Parameters.AddWithValue("@cep", fornecedor.CEP);
+                comando.Parameters.AddWithValue("@complemento", fornecedor.Complemento);
+                comando.Parameters.AddWithValue("@telefone_pessoal", fornecedor.Telefone_Pessoal);
+                comando.Parameters.AddWithValue("@telefone_firma", fornecedor.Telefone_Empresa);
+                comando.Parameters.AddWithValue("@email", fornecedor.Email);
 
                 comando.ExecuteNonQuery();
             }
@@ -137,15 +160,15 @@ namespace InvestSafra.Models
                 throw ex;
             }
         }
-        public void Delete(Fazenda fazenda)
+        public void Delete(Fornecedor fornecedor)
         {
             try
             {
                 var comando = _conn.Query();
 
-                comando.CommandText = "Delete from Fazenda where id_faze = @id";
+                comando.CommandText = "Delete from Fornecedor where id_for = @id";
 
-                comando.Parameters.AddWithValue("@id", fazenda.Id);
+                comando.Parameters.AddWithValue("@id", fornecedor.Id);
 
                 var resultado = comando.ExecuteNonQuery();
 
