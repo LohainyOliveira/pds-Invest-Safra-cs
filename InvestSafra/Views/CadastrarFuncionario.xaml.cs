@@ -39,7 +39,7 @@ namespace InvestSafra.Views
             txtSalario.Clear();
             txtSetor.Clear();
             txtTelefone.Clear();
-            cbEstado.SelectedItem = null;
+            cbEstado1.SelectedItem = null;
 
             ExibirMensagemLimpar();
         }
