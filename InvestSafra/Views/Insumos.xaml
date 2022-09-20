@@ -38,7 +38,7 @@
                     <ColumnDefinition Width="17*"/>
                 </Grid.ColumnDefinitions>
                 <Image HorizontalAlignment="Left" Height="200" Margin="38,15,0,0" VerticalAlignment="Top" Width="136" Source="/Imagens/LogoCanto.png"/>
-                
+                <Image HorizontalAlignment="Right" Height="200" VerticalAlignment="Top" Width="200" Source="/Icons/fertilizante.png"/>
                 <Label  Content="Cadastro de Insumos" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Malik" FontSize="24" Foreground="#EFA82E" FontWeight="Bold" Height="49" Width="292" RenderTransformOrigin="0.336,0.452" Margin="329,44,0,0"/>
             </Grid>
 
@@ -82,17 +82,18 @@
                     TextWrapping="Wrap" VerticalAlignment="Center" 
                     Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
-                    <TextBox 
                     
-                Style="{StaticResource MaterialDesignOutlinedTextBox}"
-                    AcceptsReturn="True"
-                    MaxWidth="400"
-                    Margin="10 0 50 0"
-                    materialDesign:HintAssist.Hint="Medida"
-                    x:Name="txtMedida" Padding="16" 
-                    TextWrapping="Wrap" 
-                    Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
-                  />
+                    
+                <ComboBox
+                    materialDesign:HintAssist.Hint="Medida" 
+                    Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                    HorizontalAlignment="Center"   
+                    Background="#0F040302" FontFamily="Arial" FontWeight="Bold"
+                    x:Name="cbSexo" Padding="8"  Width="208" Grid.Column="1" Grid.Row="1" Height="58">
+                        <ComboBoxItem></ComboBoxItem>
+                        <ComboBoxItem>Feminino</ComboBoxItem>
+                        <ComboBoxItem>Masculino</ComboBoxItem>
+                        </ComboBox>
 
 
 
