@@ -83,7 +83,7 @@
                     MaxWidth="400"
                     Margin="18 120 50 0"
                     materialDesign:HintAssist.Hint="Descrição"
-                    x:Name="txtNomeFantasia" Padding="16" 
+                    x:Name="txtDescricao" Padding="16" 
                     TextWrapping="Wrap" 
                     Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
