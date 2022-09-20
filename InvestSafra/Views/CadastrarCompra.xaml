@@ -39,7 +39,7 @@
                     <ColumnDefinition Width="17*"/>
                     <ColumnDefinition Width="17*"/>
                 </Grid.ColumnDefinitions>
-                <Image HorizontalAlignment="Left" Height="100" Margin="38,15,0,0" VerticalAlignment="Top" Width="136" Source="/Imagens/LogoCanto.png"/>
+                <Image HorizontalAlignment="Left" Height="200" Margin="38,15,0,0" VerticalAlignment="Top" Width="136" Source="/Imagens/LogoCanto.png"/>
                 <Label  Content="Cadastro de Compra" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Malik" FontSize="24" Foreground="#EFA82E" FontWeight="Bold" Height="49" Width="292" RenderTransformOrigin="0.336,0.452" Margin="350,45,0,0"/>
             </Grid>
 
@@ -49,8 +49,8 @@
                     AcceptsReturn="True"
                     MaxWidth="400"
                     Margin="80 95 50 0"
-                    materialDesign:HintAssist.Hint="Descrição"
-                    x:Name="txtDescricao" Padding="16" Grid.Row="1" 
+                    materialDesign:HintAssist.Hint="Nome"
+                    x:Name="txtNome" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
                     Width="209" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
@@ -58,7 +58,7 @@
                        x:Name="dtPickerDataNascimento"
                        materialDesign:HintAssist.Hint="Data " 
                        Style="{StaticResource MaterialDesignOutlinedDatePicker}"
-                       Width="200" Height="60" Margin="20 95 0 0"/>
+                       Width="206" Height="61" Margin="20 95 0 0"/>
                   
 
 
@@ -70,13 +70,23 @@
                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     AcceptsReturn="True"
                     MaxWidth="400"
-                    Margin="228 120 50 0"
-                    materialDesign:HintAssist.Hint="Nome"
-                    x:Name="txtnome" Padding="16" Grid.Row="1" 
+                    Margin="79 120 50 0"
+                    materialDesign:HintAssist.Hint="Quantidade"
+                    x:Name="txtQuantidade" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
                     Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
+                    <TextBox 
                     
+                Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                    AcceptsReturn="True"
+                    MaxWidth="400"
+                    Margin="18 120 50 0"
+                    materialDesign:HintAssist.Hint="Descrição"
+                    x:Name="txtNomeFantasia" Padding="16" 
+                    TextWrapping="Wrap" 
+                    Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
+                  />
 
 
                 </StackPanel>

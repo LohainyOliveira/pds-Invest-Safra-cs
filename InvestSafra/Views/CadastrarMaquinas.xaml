@@ -51,9 +51,9 @@
                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     AcceptsReturn="True"
                     MaxWidth="400"
-                    Margin="80 0 50 0"
-                    materialDesign:HintAssist.Hint="ID"
-                    x:Name="txtId" Padding="16" Grid.Row="1" 
+                    Margin="80 69 50 0"
+                    materialDesign:HintAssist.Hint="CNPJ"
+                    x:Name="txtCnpj" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
                     Width="209" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
@@ -62,9 +62,9 @@
                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     AcceptsReturn="True"
                     MaxWidth="400"
-                    Margin="10 0 50 0"
-                    materialDesign:HintAssist.Hint="CNPJ"
-                    x:Name="txtCnpj" Padding="16" 
+                    Margin="10 69 50 0"
+                    materialDesign:HintAssist.Hint="Nome"
+                    x:Name="txtNome" Padding="16" 
                     TextWrapping="Wrap" 
                     Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
@@ -79,36 +79,9 @@
                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     AcceptsReturn="True"
                     MaxWidth="400"
-                    Margin="80 0 50 0"
-                    materialDesign:HintAssist.Hint="Nome"
-                    x:Name="txtnome" Padding="16" Grid.Row="1" 
-                    TextWrapping="Wrap" VerticalAlignment="Center" 
-                    Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
-                  />
-                    <TextBox 
-                    
-                Style="{StaticResource MaterialDesignOutlinedTextBox}"
-                    AcceptsReturn="True"
-                    MaxWidth="400"
-                    Margin="10 0 50 0"
+                    Margin="80 90 50 0"
                     materialDesign:HintAssist.Hint="Marca"
-                    x:Name="txtMarca" Padding="16" 
-                    TextWrapping="Wrap" 
-                    Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
-                  />
-
-
-
-                </StackPanel>
-
-                <StackPanel Orientation="Horizontal" Margin="0 200 60 0">
-                    <TextBox 
-                Style="{StaticResource MaterialDesignOutlinedTextBox}"
-                    AcceptsReturn="True"
-                    MaxWidth="400"
-                    Margin="80 0 50 0"
-                    materialDesign:HintAssist.Hint="Valor"
-                    x:Name="txtvalor" Padding="16" Grid.Row="1" 
+                    x:Name="txtMarca" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
                     Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
@@ -117,16 +90,18 @@
                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     AcceptsReturn="True"
                     MaxWidth="400"
-                    Margin="10 0 50 0"
-                    materialDesign:HintAssist.Hint="Medida"
-                    x:Name="txtmedida" Padding="16" 
+                    Margin="10 90 50 0"
+                    materialDesign:HintAssist.Hint="Valor"
+                    x:Name="txtValor" Padding="16" 
                     TextWrapping="Wrap" 
-                    Width="209" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
+                    Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
 
 
 
                 </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0 200 60 0"/>
 
                 <Grid Margin="0,465,10,10">
                     <Grid.ColumnDefinitions>
