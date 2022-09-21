@@ -51,7 +51,7 @@ namespace InvestSafra.Models
             try
             {
 
-                var lista = new List<Maquinas>();
+                var lista = new List<Recebimentos>();
 
                 var query = _conn.Query();
                 query.CommandText = "SELECT * FROM Recebimento";
@@ -65,12 +65,8 @@ namespace InvestSafra.Models
                     var recebimento = new Recebimentos();
                     recebimento.Id = reader.GetInt32("id_rec");
                     recebimento.Valor_Venda_Safra= reader.GetDouble("valor_venda_rec");
-                    recebimento.Valor_Venda_Safra= reader.GetDateTime("valor_venda_rec");
-                    maquinas.Marca = DAOHelper.GetString(reader, "marca_maq");
-                    maquinas.Quantidade = reader.GetInt32("quantidade_maq");
-                    maquinas.Valor = reader.GetDouble("valor_maq");
 
-                    lista.Add(maquinas);
+                    lista.Add(recebimento);
                 }
                 reader.Close();
                 return lista;
@@ -128,4 +124,4 @@ namespace InvestSafra.Models
         }
     }
 }
-}
+

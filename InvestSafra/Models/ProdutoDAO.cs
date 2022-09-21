@@ -61,12 +61,7 @@ namespace InvestSafra.Models
                 while (reader.Read())
                 {
 
-                    /* public int Id { get; set; }
-         public string Nome { get; set; }
-         public string Descricao { get; set; }
-         public string Quantidade { get; set; }
-         public double Valor { get; set; }
-            */
+                  
                     var produto = new Produto();
                     produto.Id = reader.GetInt32("id_ins");
                     produto.Nome = DAOHelper.GetString(reader, "nome_prod");
@@ -86,7 +81,7 @@ namespace InvestSafra.Models
             }
         }
 
-        public void Update(Insumos insumos)
+        public void Update(Produto produto )
         {
             try
             {
@@ -95,10 +90,10 @@ namespace InvestSafra.Models
 
                 comando.CommandText = "UPDATE Insumo set nome_ins = @nome, tipo_ins = @tipo, marca_ins = @marca, descricao_ins = @descricao  WHERE id_fun = @id";
 
-                comando.Parameters.AddWithValue("@nome", insumos.Nome);
-                comando.Parameters.AddWithValue("@tipo", insumos.Tipo);
-                comando.Parameters.AddWithValue("@marca", insumos.Marca);
-                comando.Parameters.AddWithValue("@descricao", insumos.Descricao);
+                comando.Parameters.AddWithValue("@nome", produto.Nome);
+                comando.Parameters.AddWithValue("@descricao", produto.Descricao);
+                comando.Parameters.AddWithValue("@quantidade", produto.Quantidade);
+                comando.Parameters.AddWithValue("@valor", produto.Valor);
 
                 comando.ExecuteNonQuery();
             }
@@ -107,15 +102,15 @@ namespace InvestSafra.Models
                 throw ex;
             }
         }
-        public void Delete(Insumos insumo)
+        public void Delete(Produto produto)
         {
             try
             {
                 var comando = _conn.Query();
 
-                comando.CommandText = "Delete from Insumo where id_ins = @id";
+                comando.CommandText = "Delete from Produto where id_prod = @id";
 
-                comando.Parameters.AddWithValue("@id", insumo.Id);
+                comando.Parameters.AddWithValue("@id", produto.Id);
 
                 var resultado = comando.ExecuteNonQuery();
 
