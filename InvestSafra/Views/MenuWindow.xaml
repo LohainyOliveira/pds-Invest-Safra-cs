@@ -8,7 +8,7 @@
         
         mc:Ignorable="d"
         Title="MenuWindow" Height="450" Width="800">
-    <Grid Margin="0,0,0,-120">
+    <Grid >
         <Grid.Background>
         <ImageBrush ImageSource="/Imagens/ImgFundoDesfocado.png"/>
         </Grid.Background>
