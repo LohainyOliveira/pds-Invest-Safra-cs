@@ -29,17 +29,14 @@ namespace InvestSafra.Views
 
         private void btLimpar_Click(object sender, RoutedEventArgs e)
         {
-            txtBairro.Clear();
-            txtComplemento.Clear();
+            
             txtCPF.Clear();
             txtEmail.Clear();
             txtNomeCompleto.Clear();
             txtRg.Clear();
             txtRua.Clear();
             txtSalario.Clear();
-            txtSetor.Clear();
             txtTelefone.Clear();
-            cbEstado1.SelectedItem = null;
 
             ExibirMensagemLimpar();
         }

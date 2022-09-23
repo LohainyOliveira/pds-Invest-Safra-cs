@@ -1,0 +1,175 @@
+﻿<Window x:Class="InvestSafra.Views.MenuWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InvestSafra.Views"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        
+        mc:Ignorable="d"
+        Title="MenuWindow" Height="450" Width="800">
+    <Grid Margin="0,0,0,-483">
+        <Grid.Background>
+        <ImageBrush ImageSource="/Imagens/ImgFundoDesfocado.png"/>
+        </Grid.Background>
+
+        <Grid x:Name="painelHeader" VerticalAlignment="Top" Height="50"
+              Background="#EFA82E" MouseDown="painelHeader_MouseDown_1">
+
+            <TextBlock Text="Sejam Bem Vindos !!!" FontSize="24"
+                       FontFamily="Script MT Bold" HorizontalAlignment="Center"
+                       VerticalAlignment="Center"/>
+
+            
+        </Grid>
+        <Grid x:Name="SidePainel" Background="#EFA82E" HorizontalAlignment="Left" Width="150">
+            <StackPanel>
+                <Grid Height="90" Background="#EFA82E">
+                    <Button x:Name="btMenu" HorizontalAlignment="Right" Height="50"
+                            VerticalAlignment="Top" Background="Transparent" BorderBrush="Transparent"
+                            Click="btMenu_Click" Cursor="Hand" Margin="0 0 0 0" >
+                        <Image Source="/Icons/movedor.png"/>
+                    </Button>
+                </Grid>
+                <ListView FontFamily="Century Gothic" FontSize="14" Foreground="black"
+                          BorderBrush="Transparent" Background="Transparent">
+
+                    <ListViewItem Height="40" x:Name="slhome" Selected="slhome_Selected" >
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Icons/home.png"/>
+                            <TextBlock Margin="10 0 0 0" Text="Home" VerticalAlignment="center" FontWeight="bold" FontFamily="Arial"/>
+                        </StackPanel>
+                    </ListViewItem>
+
+                    <ListViewItem Height="40" x:Name="slArea" Selected="slArea_Selected">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Icons/area.png" Height="38" VerticalAlignment="Center" Width="28"/>
+                            <TextBlock Margin="10 0 0 0" Text="Área" VerticalAlignment="Center" FontWeight="Bold" FontFamily="Arial"/>
+                        </StackPanel>
+                    </ListViewItem>
+
+                    <ListViewItem Height="40" x:Name="slCaixa" Selected="slCaixa_Selected">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Icons/caixa.png" Height="42" VerticalAlignment="Center" Width="34"/>
+                            <TextBlock Margin="10 0 0 0" Text="Caixa" VerticalAlignment="Center" FontWeight="Bold" FontFamily="Arial"/>
+                        </StackPanel>
+                    </ListViewItem>
+
+                    <ListViewItem Height="40" x:Name="slCompra" Selected="slCompra_Selected">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Icons/compra.png" Height="26" VerticalAlignment="Center" Width="32"/>
+                            <TextBlock Margin="10 0 0 0" Text="Compras" VerticalAlignment="Center" FontWeight="Bold" FontFamily="Arial"/>
+                        </StackPanel>
+                    </ListViewItem>
+
+                    <ListViewItem Height="40" x:Name="slFornecedor" Selected="slFornecedor_Selected">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Icons/fornecedor.png" Height="26" VerticalAlignment="Center" Width="32"/>
+                            <TextBlock Margin="10 0 0 0" Text="Fornecedor" VerticalAlignment="Center" FontWeight="Bold" FontFamily="Arial"/>
+                        </StackPanel>
+                    </ListViewItem>
+
+                    <ListViewItem Height="40" x:Name="slFazenda" Selected="slFazenda_Selected">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Icons/fazenda.png" Height="38" VerticalAlignment="Center" Width="28"/>
+                            <TextBlock Margin="10 0 0 0" Text="Fazenda" VerticalAlignment="Center" FontWeight="Bold" FontFamily="Arial"/>
+                        </StackPanel>
+                    </ListViewItem>
+
+
+                    <ListViewItem Height="40">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Icons/funcionario.png" Height="26" VerticalAlignment="Center" Width="32"/>
+                            <TextBlock Margin="10 0 0 0" Text="Funcionários" VerticalAlignment="Center" FontWeight="Bold" FontFamily="Arial"/>
+                        </StackPanel>
+                    </ListViewItem>
+
+                    <ListViewItem Height="40" x:Name="slEmpresa" Selected="slEmpresa_Selected">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Icons/empresa.png" Height="26" VerticalAlignment="Center" Width="32"/>
+                            <TextBlock Margin="10 0 0 0" Text="Empresas" VerticalAlignment="Center" FontWeight="Bold" FontFamily="Arial"/>
+                        </StackPanel>
+                    </ListViewItem>
+
+                    <ListViewItem Height="40" x:Name="slMaquinas" Selected="slMaquinas_Selected">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Icons/maquinas.png" Height="26" VerticalAlignment="Center" Width="32"/>
+                            <TextBlock Margin="10 0 0 0" Text="Maquinários" VerticalAlignment="Center" FontWeight="Bold" FontFamily="Arial"/>
+                        </StackPanel>
+                    </ListViewItem>
+
+                    <ListViewItem Height="40" x:Name="slEstoque" Selected="slEstoque_Selected">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Icons/estoquePreto.png" Height="26" VerticalAlignment="Center" Width="32"/>
+                            <TextBlock Margin="10 0 0 0" Text="Estoque" VerticalAlignment="Center" FontWeight="Bold" FontFamily="Arial"/>
+                        </StackPanel>
+                    </ListViewItem>
+
+
+                    <ListViewItem Height="40" x:Name="slSafras" Selected="slSafras_Selected">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Icons/safra.png" Height="26" VerticalAlignment="Center" Width="32"/>
+                            <TextBlock Margin="10 0 0 0" Text="Safras" VerticalAlignment="Center" FontWeight="Bold" FontFamily="Arial"/>
+                        </StackPanel>
+                    </ListViewItem>
+
+                    <ListViewItem Height="40" x:Name="slSProduto">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Icons/produtos.png" Height="26" VerticalAlignment="Center" Width="32"/>
+                            <TextBlock Margin="10 0 0 0" Text="Produtos                                        " VerticalAlignment="Center" FontWeight="Bold" FontFamily="Arial"/>
+                        </StackPanel>
+                    </ListViewItem>
+
+                    <ListViewItem Height="40">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Icons/sementePreto.png" Height="26" VerticalAlignment="Center" Width="32"/>
+                            <TextBlock Margin="10 0 0 0" Text="Sementes" VerticalAlignment="Center" FontWeight="Bold" FontFamily="Arial"/>
+                        </StackPanel>
+                    </ListViewItem>
+
+                    <ListViewItem Height="40">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Icons/venda.png" Height="26" VerticalAlignment="Center" Width="32"/>
+                            <TextBlock Margin="10 0 0 0" Text="Vendas" VerticalAlignment="Center" FontWeight="Bold" FontFamily="Arial"/>
+                        </StackPanel>
+                    </ListViewItem>
+
+                    <ListViewItem Height="40">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Icons/insumo.png" Height="26" VerticalAlignment="Center" Width="32"/>
+                            <TextBlock Margin="10 0 0 0" Text="Insumos" VerticalAlignment="Center" FontWeight="Bold" FontFamily="Arial"/>
+                        </StackPanel>
+                    </ListViewItem>
+
+
+                    <ListViewItem Height="40">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Icons/conta.png" Height="26" VerticalAlignment="Center" Width="32"/>
+                            <TextBlock Margin="10 0 0 0" Text="Minha conta" VerticalAlignment="Center" FontWeight="Bold" FontFamily="Arial"/>
+                        </StackPanel>
+                    </ListViewItem>
+
+                    <ListViewItem Height="40">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Icons/contato.png" Height="20" VerticalAlignment="Center"/>
+                            <TextBlock Margin="10 0 0 0" Text="Contatos" VerticalAlignment="Center" FontWeight="Bold" FontFamily="Arial"/>
+                        </StackPanel>
+                    </ListViewItem>
+
+                    <ListViewItem Height="40">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Icons/curiosidade.png" Height="20" VerticalAlignment="Center"/>
+                            <TextBlock Margin=" 10 0 0 0" Text="Sobre nós" VerticalAlignment="Center" FontWeight="Bold" FontFamily="Arial"/>
+                        </StackPanel>
+                    </ListViewItem>
+
+                </ListView>
+            </StackPanel>
+        </Grid>
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Image Source="/Imagens/logo_pgnPrincipal.png" Height="400"/>
+        </StackPanel>
+
+
+    </Grid>
+</Window>

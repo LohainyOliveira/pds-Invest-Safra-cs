@@ -35,38 +35,54 @@
         <Grid x:Name="SidePainel" Background="#EFA82E" HorizontalAlignment="Left" Width="150">
             <StackPanel>
                 <Grid Height="150" Background="#EFA82E">
-                    <Button x:Name="btMenu" HorizontalAlignment="Right" Height="40"
+                    <Button x:Name="btMenu" HorizontalAlignment="Right" Height="50"
                             VerticalAlignment="Top" Background="Transparent" BorderBrush="Transparent"
-                            Click="btMenu_Click" Cursor="Hand" Margin="0 0 -8 0" Width="68">
-                        <Image Source="Icons/movedor.png"/>
+                            Click="btMenu_Click" Cursor="Hand" Margin="0 0 0 0" >
+                        <Image Source="/Icons/movedor.png"/>
                     </Button>
+
+                    <Image Source="/Icons/logoEscuro.png" Margin="0,44,14,16" />
                 </Grid>
                 <ListView FontFamily="Century Gothic" FontSize="14" Foreground="black"
                           BorderBrush="Transparent" Background="Transparent">
+
                     <ListViewItem Height="40" x:Name="slhome" Selected="ListViewItem_Selected_1">
                         <StackPanel Orientation="Horizontal">
-                            <Image Source="Icons/home.png"/>
-                            <TextBlock Margin="10 0 0 0" Text="Home" VerticalAlignment="center" FontWeight="bold"/>
+                            <Image Source="/Icons/home.png"/>
+                            <TextBlock Margin="10 0 0 0" Text="Home" VerticalAlignment="center" FontWeight="bold" FontFamily="Arial"/>
                         </StackPanel>
                     </ListViewItem>
+
+
                     <ListViewItem Height="40">
                         <StackPanel Orientation="Horizontal">
-                            <Image Source="Icons/contato.png" Height="20" VerticalAlignment="Center"/>
-                            <TextBlock Margin="10 0 0 0" Text="Contatos" VerticalAlignment="Center" FontWeight="Bold"/>
+                            <Image Source="/Icons/conta.png" Height="26" VerticalAlignment="Center" Width="21"/>
+                            <TextBlock Margin="10 0 0 0" Text="Conta" VerticalAlignment="Center" FontWeight="Bold" FontFamily="Arial"/>
                         </StackPanel>
                     </ListViewItem>
+
                     <ListViewItem Height="40">
                         <StackPanel Orientation="Horizontal">
-                            <Image Source="Icons/curiosidade.png" Height="20" VerticalAlignment="Center"/>
-                            <TextBlock Margin=" 10 0 0 0" Text="Sobre nós" VerticalAlignment="Center" FontWeight="Bold"/>
+                            <Image Source="/Icons/contato.png" Height="20" VerticalAlignment="Center"/>
+                            <TextBlock Margin="10 0 0 0" Text="Contatos" VerticalAlignment="Center" FontWeight="Bold" FontFamily="Arial"/>
                         </StackPanel>
                     </ListViewItem>
+
+                    <ListViewItem Height="40">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Icons/curiosidade.png" Height="20" VerticalAlignment="Center"/>
+                            <TextBlock Margin=" 10 0 0 0" Text="Sobre nós" VerticalAlignment="Center" FontWeight="Bold" FontFamily="Arial"/>
+                        </StackPanel>
+                    </ListViewItem>
+
                 </ListView>
             </StackPanel>
         </Grid>
         <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
             <Image Source="/Imagens/logo_pgnPrincipal.png" Height="400"/>
         </StackPanel>
+
+
 
     </Grid>
 </Window>

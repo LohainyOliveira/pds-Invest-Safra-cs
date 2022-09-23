@@ -193,8 +193,8 @@
     <Compile Include="Views\LevantamentoDeSafra.xaml.cs">
       <DependentUpon>LevantamentoDeSafra.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\MenuSafra.xaml.cs">
-      <DependentUpon>MenuSafra.xaml</DependentUpon>
+    <Compile Include="Views\MenuWindow.xaml.cs">
+      <DependentUpon>MenuWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Produto.xaml.cs">
       <DependentUpon>Produto.xaml</DependentUpon>
@@ -294,7 +294,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\MenuSafra.xaml">
+    <Page Include="Views\MenuWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -354,7 +354,7 @@
     <Resource Include="Icons\estoque.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Icons\fazenda.png" />
+    <Resource Include="Icons\fazendaClara.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Icons\feijão.png" />
@@ -382,6 +382,54 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Icons\logoEscuro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\fazenda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\area.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\caixa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\compra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\fornecedor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\funcionario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\maquinas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\Empresa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\estoquePreto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\conta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\insumo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\safra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\produtos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\sementePreto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\venda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\cancelar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\MaterialDesignThemes.4.4.0\build\MaterialDesignThemes.targets" Condition="Exists('packages\MaterialDesignThemes.4.4.0\build\MaterialDesignThemes.targets')" />

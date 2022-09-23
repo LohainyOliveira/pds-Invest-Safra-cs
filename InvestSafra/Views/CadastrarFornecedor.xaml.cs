@@ -31,9 +31,7 @@ namespace InvestSafra.Views
             txtComplemento.Clear();
             txtEmail.Clear();
             txtNomeFantasia.Clear();
-            txtRua.Clear();
             txtSalario.Clear();
-            txtSetor.Clear();
             txtTelefone.Clear();
             txtTelefoneF.Clear();
             cbEstado.SelectedItem = null;

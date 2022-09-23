@@ -41,8 +41,7 @@ namespace InvestSafra
 
         private void TelaPrincipalWindow_Loaded(object sender, RoutedEventArgs e)
         {
-		    ClienteFisicoWindow form = new ClienteFisicoWindow();
-			form.ShowDialog();
+		    
 		}
 
         private void Timer_Tick(object sender, EventArgs e)
