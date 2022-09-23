@@ -28,7 +28,7 @@ namespace InvestSafra.Views
 		{
 			InitializeComponent();
 			timer = new DispatcherTimer();
-			timer.Interval = new TimeSpan(0, 0, 0, 0, 10);
+			timer.Interval = new TimeSpan(0, 0, 0, 0, 5);
 			timer.Tick += Timer_Tick;
 
 			PainelWidth = SidePainel.Width;
@@ -61,7 +61,7 @@ namespace InvestSafra.Views
 			{
 
 				SidePainel.Width -= 1;
-				if (SidePainel.Width <= 30)
+				if (SidePainel.Width <= 40)
 				{
 					timer.Stop();
 					hidden = true;

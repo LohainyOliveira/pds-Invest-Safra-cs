@@ -8,7 +8,7 @@
         
         mc:Ignorable="d"
         Title="MenuWindow" Height="450" Width="800">
-    <Grid Margin="0,0,0,-483">
+    <Grid Margin="0,0,0,-120">
         <Grid.Background>
         <ImageBrush ImageSource="/Imagens/ImgFundoDesfocado.png"/>
         </Grid.Background>
@@ -22,7 +22,7 @@
 
             
         </Grid>
-        <Grid x:Name="SidePainel" Background="#EFA82E" HorizontalAlignment="Left" Width="150">
+        <Grid x:Name="SidePainel" Background="#EFA82E" HorizontalAlignment="Left" Width="200">
             <StackPanel>
                 <Grid Height="90" Background="#EFA82E">
                     <Button x:Name="btMenu" HorizontalAlignment="Right" Height="50"

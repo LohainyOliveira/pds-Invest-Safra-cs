@@ -14,7 +14,6 @@ using System.Windows.Shapes;
 using InvestSafra.Views;
 using System.Windows.Threading;
 using MS.Internal.WindowsBase;
-using InvestSafra.Views;
 
 namespace InvestSafra.Views
 {
@@ -36,7 +35,7 @@ namespace InvestSafra.Views
 
 		private void btLogar_Click(object sender, RoutedEventArgs e)
 		{
-			DialogResult = false;
+			
 			MenuWindow form = new MenuWindow();
 			form.ShowDialog();
 		}

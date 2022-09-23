@@ -4,9 +4,101 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:InvestSafra.Views"
+        xmlns:hc="https://handyorg.github.io/handycontrol" 
         mc:Ignorable="d"
-        Title="LevantamentoDeSafra" Height="450" Width="800">
+        Title="LevantamentoDeSafra" Height="450" Width="800" ResizeMode="NoResize" WindowStyle="None" WindowStartupLocation="CenterScreen">
+
+    <Window.Resources>
+        <Storyboard x:Key="Storyboard1">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="Basic_Details">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-441"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="Experience">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-435"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="Storyboard2">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="Basic_Details">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-432"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="Experience">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-437"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </Window.Resources>
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="UIElement.MouseDown" SourceName="image">
+            <BeginStoryboard Storyboard="{StaticResource Storyboard1}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseDown" SourceName="image1">
+            <BeginStoryboard x:Name="Storyboard2_BeginStoryboard" Storyboard="{StaticResource Storyboard2}"/>
+        </EventTrigger>
+    </Window.Triggers>
     <Grid>
-        
+
+
+        <Rectangle Fill="#FF0682FF" HorizontalAlignment="Left" Height="450" VerticalAlignment="Top" Width="178.795"/>
+        <Grid x:Name="Basic_Details" HorizontalAlignment="Left" Height="450" Margin="178.795,0,0,0" VerticalAlignment="Top" Width="621.205" RenderTransformOrigin="0.5,0.5">
+            <Grid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Grid.RenderTransform>
+            <TextBlock HorizontalAlignment="Left" Height="27.268" Margin="28.125,50,0,0" TextWrapping="Wrap" Text="Basic Details" VerticalAlignment="Top" Width="562.5" FontSize="20" FontFamily="Open Sans" Foreground="#FF0682FF"/>
+            <TextBox  HorizontalAlignment="Left" Height="35" Margin="27.205,104,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="266"/>
+            <TextBox  HorizontalAlignment="Left" Height="35" Margin="315.205,104,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="266"/>
+            <TextBox  HorizontalAlignment="Left" Height="35" Margin="28.125,161,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="266"/>
+            <TextBox  HorizontalAlignment="Left" Height="35" Margin="315.205,161,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="266"/>
+
+            <ComboBox  SelectedIndex="0"  Margin="28.125,216,328,171" Text="Country">
+                <ListBoxItem Content="Antartica"/>
+            </ComboBox>
+            <ComboBox  SelectedIndex="0"  Margin="315.205,216,167,171" Text="Country">
+                <ListBoxItem Content="Equador"/>
+                <ComboBox>
+                    <ComboBox  SelectedIndex="0"  Margin="470.205,216,40,171" Text="Country">
+                        <ListBoxItem Content="Las Ville"/>
+                        <ComboBox>
+                            <TextBox  HorizontalAlignment="Left" Height="35" Margin="28.125,299,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="266"/>
+                            <TextBox  HorizontalAlignment="Left" Height="35" Margin="315.205,299,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="266"/>
+                        </ComboBox>
+                    </ComboBox>
+                </ComboBox>
+            </ComboBox>
+        </Grid>
+        <Grid x:Name="Experience" HorizontalAlignment="Left" Height="450" Margin="178.795,436,0,-436" VerticalAlignment="Top" Width="621.205" RenderTransformOrigin="0.5,0.5">
+            <Grid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Grid.RenderTransform>
+            <TextBlock HorizontalAlignment="Left" Height="27.268" Margin="28.125,50,0,0" TextWrapping="Wrap" Text="Experience" VerticalAlignment="Top" Width="562.5" FontSize="20" FontFamily="Open Sans" Foreground="#FF0682FF"/>
+            <TextBox  HorizontalAlignment="Left" Height="35" Margin="27.205,104,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="266"/>
+            <TextBox  HorizontalAlignment="Left" Height="35" Margin="315.205,104,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="266"/>
+            <DatePicker Name="D1" Margin="28.125,167,328,250" />
+            <DatePicker Name="D2"  Margin="315.205,167,40,250"/>
+            <RichTextBox HorizontalAlignment="Left" Height="195" Margin="28.125,241,0,0"  VerticalAlignment="Top" Width="553.08"/>
+            <TextBlock HorizontalAlignment="Left" Height="17" Margin="29.205,219,0,0" TextWrapping="Wrap" Text="Description" VerticalAlignment="Top" Width="161"/>
+        </Grid>
+        <Image x:Name="image1" HorizontalAlignment="Left" Height="56.25" Margin="62.277,36.161,0,0" VerticalAlignment="Top" Width="56.25" Source="/Icons/arroz.png">
+            <Image.OpacityMask>
+                <ImageBrush/>
+            </Image.OpacityMask>
+        </Image>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="56.25" Margin="62.277,355.581,0,0" VerticalAlignment="Top" Width="56.25" Source="/Icons/area.png"/>
+
     </Grid>
+                
+           
+
 </Window>
