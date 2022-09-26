@@ -109,7 +109,7 @@
                     materialDesign:HintAssist.Hint="Medida"
                     x:Name="txtMedida" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
-                    Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
+                    Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Hand"
                   />
 
 

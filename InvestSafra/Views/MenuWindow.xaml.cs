@@ -61,7 +61,7 @@ namespace InvestSafra.Views
 			{
 
 				SidePainel.Width -= 1;
-				if (SidePainel.Width <= 40)
+				if (SidePainel.Width <= 50)
 				{
 					timer.Stop();
 					hidden = true;
@@ -177,11 +177,16 @@ namespace InvestSafra.Views
 
 		private void slSafras_Selected(object sender, RoutedEventArgs e)
 		{
-			LevantamentoDeSafra form = new LevantamentoDeSafra();
+			LevantamentoDeDadosDaSafra form = new LevantamentoDeDadosDaSafra();
 			form.ShowDialog();
 		}
 
 		private void ListViewItem_Selected_2(object sender, RoutedEventArgs e)
+		{
+
+		}
+
+		private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
 		{
 
 		}

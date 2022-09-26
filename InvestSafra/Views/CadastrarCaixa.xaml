@@ -51,7 +51,7 @@
                 materialDesign:TextFieldAssist.HasClearButton="True"
                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
                 Text="{Binding Descricao}"
-                Width="600"/>
+                Width="600" Cursor="Arrow"/>
 
             <Button x:Name="BtnSearch" Margin="20 0 0 0"
                     Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}"

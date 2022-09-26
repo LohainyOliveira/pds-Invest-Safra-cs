@@ -26,8 +26,8 @@
                 <ImageBrush ImageSource="/Imagens/ImgFundoDesfocado.png"/>
             </Grid.Background>
 
-            <Button x:Name="btVoltar" HorizontalAlignment="Right" 
-                    Margin="75,10,10,0"
+            <Button x:Name="btVoltar" 
+                    Margin="484,10,10,0"
                     VerticalAlignment="Top" Background="#EFA82E" BorderBrush="#EFA82E"
                     Cursor="Hand" Click="btVoltar_Click"  >
 

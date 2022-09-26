@@ -12,7 +12,7 @@
         TextOptions.TextRenderingMode="Auto"
         FontFamily="{DynamicResource MaterialDesignFont}"
         mc:Ignorable="d"
-        Title="LevantamentoDeDadosDaSafra" Height="450" Width="800">
+        Title="LevantamentoDeDadosDaSafra"  Height="450" Width="800" ResizeMode="NoResize" WindowStyle="None" WindowStartupLocation="CenterScreen">
     <Window.Resources>
         <Storyboard x:Key="Storyboard1">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="Basic_Details">
@@ -43,12 +43,29 @@
             <BeginStoryboard x:Name="Storyboard2_BeginStoryboard" Storyboard="{StaticResource Storyboard2}"/>
         </EventTrigger>
     </Window.Triggers>
+
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Imagens/ImgFundoDesfocado.png"/>
+        </Grid.Background>
+        <StackPanel Margin="190 20 20 20">
+
+            <StackPanel.Background>
+                <SolidColorBrush Color="#FF4C4D14" Opacity="0.5"/>
+            </StackPanel.Background>
+        </StackPanel>
+        <Button x:Name="btVoltar" Width="50" Height="50"
+                    Margin="700 25 0 0" 
+                    VerticalAlignment="Top" Background="#EFA82E" BorderBrush="#EFA82E"
+                    Cursor="Hand" Click="btVoltar_Click" >
+
+            <Image Source="/Icons/cancelar.png"/>
+        </Button>
 
 
 
-        <Rectangle Fill="#FF0682FF" HorizontalAlignment="Left" Height="450" VerticalAlignment="Top" Width="178.795"/>
-        <Grid x:Name="Basic_Details" HorizontalAlignment="Left" Height="450" Margin="178.795,0,0,0" VerticalAlignment="Top" Width="621.205" RenderTransformOrigin="0.5,0.5">
+        <Rectangle Fill="#EFA82E" HorizontalAlignment="Left" Height="450" VerticalAlignment="Top" Width="178.795"/>
+        <Grid x:Name="Basic_Details" HorizontalAlignment="Left" Height="412" Margin="179,0,0,0" VerticalAlignment="Top" Width="611" RenderTransformOrigin="0.5,0.5">
             <Grid.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -57,27 +74,37 @@
                     <TranslateTransform/>
                 </TransformGroup>
             </Grid.RenderTransform>
-            <TextBlock HorizontalAlignment="Left" Height="27.268" Margin="28.125,50,0,0" TextWrapping="Wrap" Text="Basic Details" VerticalAlignment="Top" Width="562.5" FontSize="20" FontFamily="Open Sans" Foreground="#FF0682FF"/>
-            <TextBox  HorizontalAlignment="Left" Height="35" Margin="27.205,104,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="266"/>
-            <TextBox  HorizontalAlignment="Left" Height="35" Margin="315.205,104,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="266"/>
-            <TextBox  HorizontalAlignment="Left" Height="35" Margin="28.125,161,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="266"/>
-            <TextBox  HorizontalAlignment="Left" Height="35" Margin="315.205,161,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="266"/>
 
-            <ComboBox  SelectedIndex="0"  Margin="28.125,216,328,171" Text="Country">
-                <ListBoxItem Content="Antartica"/>
-            </ComboBox>
-            <ComboBox  SelectedIndex="0"  Margin="315.205,216,167,171" Text="Country">
-                <ListBoxItem Content="Equador"/>
-                <ComboBox>
-                    <ComboBox  SelectedIndex="0"  Margin="470.205,216,40,171" Text="Country">
-                        <ListBoxItem Content="Las Ville"/>
-                        <ComboBox>
-                            <TextBox  HorizontalAlignment="Left" Height="35" Margin="28.125,299,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="266"/>
-                            <TextBox  HorizontalAlignment="Left" Height="35" Margin="315.205,299,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="266"/>
-                        </ComboBox>
-                    </ComboBox>
-                </ComboBox>
-            </ComboBox>
+
+
+            <TextBlock HorizontalAlignment="Left" Height="31" Margin="28,46,0,0" TextWrapping="Wrap" Text="Levantamento de Dados Safra" VerticalAlignment="Top" Width="383" FontSize="20" FontFamily="Open Sans" Foreground="#EFA82E"/>
+
+            <ListBox Width="150" HorizontalAlignment="Left" x:Name="listSafra1" Margin="30 100 30 30">
+                <ListBoxItem Height="130" Width="150" HorizontalAlignment="Left">
+                    <Image Source="/Icons/arroz.png"/>
+                </ListBoxItem>
+                <ListBoxItem Height="130" Width="150" HorizontalAlignment="Left">
+                    <Image Source="/Icons/feijão.png"/>
+                </ListBoxItem>
+
+            </ListBox>
+
+            <ListBox Width="150" HorizontalAlignment="Center" x:Name="listSafra2" Margin="30 100 30 30">
+                <ListBoxItem Height="130" Width="150" HorizontalAlignment="Left">
+                    <Image Source="/Icons/milho.png"/>
+                </ListBoxItem>
+                <ListBoxItem Height="130" Width="150" HorizontalAlignment="Left">
+                    <Image Source="/Icons/soja.png"/>
+                </ListBoxItem>
+
+            </ListBox>
+
+            <ListBox Width="150" HorizontalAlignment="Right" x:Name="listSafra3" Margin="30 100 30 30">
+                <ListBoxItem Height="150" Width="150" HorizontalAlignment="Left">
+                    <Image Source="/Icons/trigo.png"/>
+                </ListBoxItem>
+            </ListBox>
+
         </Grid>
         <Grid x:Name="Experience" HorizontalAlignment="Left" Height="450" Margin="178.795,436,0,-436" VerticalAlignment="Top" Width="621.205" RenderTransformOrigin="0.5,0.5">
             <Grid.RenderTransform>
@@ -88,20 +115,32 @@
                     <TranslateTransform/>
                 </TransformGroup>
             </Grid.RenderTransform>
-            <TextBlock HorizontalAlignment="Left" Height="27.268" Margin="28.125,50,0,0" TextWrapping="Wrap" Text="Experience" VerticalAlignment="Top" Width="562.5" FontSize="20" FontFamily="Open Sans" Foreground="#FF0682FF"/>
-            <TextBox  HorizontalAlignment="Left" Height="35" Margin="27.205,104,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="266"/>
-            <TextBox  HorizontalAlignment="Left" Height="35" Margin="315.205,104,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="266"/>
-            <DatePicker Name="D1" Margin="28.125,167,328,250" />
-            <DatePicker Name="D2"  Margin="315.205,167,40,250"/>
-            <RichTextBox HorizontalAlignment="Left" Height="195" Margin="28.125,241,0,0"  VerticalAlignment="Top" Width="553.08"/>
-            <TextBlock HorizontalAlignment="Left" Height="17" Margin="29.205,219,0,0" TextWrapping="Wrap" Text="Description" VerticalAlignment="Top" Width="161"/>
+
+            <DatePicker 
+                       x:Name="dtPickerDataInicio"
+                       materialDesign:HintAssist.Hint="Data do Inicio da Plantação" 
+                       Style="{StaticResource MaterialDesignOutlinedDatePicker}"
+                       Width="260" Height="60" Margin="0,75,310,0" VerticalAlignment="Top" />
+            <DatePicker 
+                       x:Name="dtPickerDataFim"
+                       materialDesign:HintAssist.Hint="Data Fim Plantação" 
+                       Style="{StaticResource MaterialDesignOutlinedDatePicker}"
+                       Width="260" Height="60" Margin="305,75,10,0" VerticalAlignment="Top" />
+            <TextBox HorizontalAlignment="Left" 
+                             Height="195"
+                             materialDesign:HintAssist.Hint="Descrição e Observações a serem Declaradas....." 
+                      Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                            
+                             VerticalAlignment="Top" 
+                             Width="565" Margin="20,179,0,0"/>
+
+            <StackPanel HorizontalAlignment="Right"  Orientation="Horizontal" >
+                <Button x:Name="btSalvar" FontSize="19" Content="Salvar" Height="40" Width="119"  Margin="0 350 20 0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Grid.Column="2" Grid.ColumnSpan="2"/>
+                <Button x:Name="btCancelar" FontSize="19" Content="Cancelar" Height="40" Width="119"  Margin="0 350 40 0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Grid.ColumnSpan="4"/>
+            </StackPanel>
         </Grid>
-        <Image x:Name="image1" HorizontalAlignment="Left" Height="56.25" Margin="62.277,36.161,0,0" VerticalAlignment="Top" Width="56.25" Source="/Icons/arroz.png">
-            <Image.OpacityMask>
-                <ImageBrush/>
-            </Image.OpacityMask>
-        </Image>
-        <Image x:Name="image" HorizontalAlignment="Left" Height="56.25" Margin="62.277,355.581,0,0" VerticalAlignment="Top" Width="56.25" Source="/Icons/area.png"/>
+        <Image x:Name="image1" HorizontalAlignment="Left" Height="56.25" Margin="62.277,36.161,0,0" VerticalAlignment="Top" Width="56.25" Source="/Icons/setaCima.png"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="56.25" Margin="62.277,355.581,0,0" VerticalAlignment="Top" Width="56.25" Source="/Icons/setaBaixa.png"/>
 
     </Grid>
 
