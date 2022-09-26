@@ -190,8 +190,8 @@
     <Compile Include="Views\Insumos.xaml.cs">
       <DependentUpon>Insumos.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\LevantamentoDeSafra.xaml.cs">
-      <DependentUpon>LevantamentoDeSafra.xaml</DependentUpon>
+    <Compile Include="Views\LevantamentoDeDadosDaSafra.xaml.cs">
+      <DependentUpon>LevantamentoDeDadosDaSafra.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MenuWindow.xaml.cs">
       <DependentUpon>MenuWindow.xaml</DependentUpon>
@@ -290,7 +290,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\LevantamentoDeSafra.xaml">
+    <Page Include="Views\LevantamentoDeDadosDaSafra.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

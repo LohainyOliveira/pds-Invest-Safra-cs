@@ -180,5 +180,10 @@ namespace InvestSafra.Views
 			LevantamentoDeSafra form = new LevantamentoDeSafra();
 			form.ShowDialog();
 		}
+
+		private void ListViewItem_Selected_2(object sender, RoutedEventArgs e)
+		{
+
+		}
 	}
 }

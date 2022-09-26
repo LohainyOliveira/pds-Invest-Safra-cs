@@ -77,7 +77,7 @@
                     </ListViewItem>
 
 
-                    <ListViewItem Height="40">
+                    <ListViewItem Height="40" Selected="ListViewItem_Selected_2">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="/Icons/funcionario.png" Height="26" VerticalAlignment="Center" Width="32"/>
                             <TextBlock Margin="10 0 0 0" Text="Funcionários" VerticalAlignment="Center" FontWeight="Bold" FontFamily="Arial"/>

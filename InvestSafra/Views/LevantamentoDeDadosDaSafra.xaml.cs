@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace InvestSafra.Views
 {
 	/// <summary>
-	/// Lógica interna para LevantamentoDeSafra.xaml
+	/// Lógica interna para LevantamentoDeDadosDaSafra.xaml
 	/// </summary>
-	public partial class LevantamentoDeSafra : Window
+	public partial class LevantamentoDeDadosDaSafra : Window
 	{
-		public LevantamentoDeSafra()
+		public LevantamentoDeDadosDaSafra()
 		{
 			InitializeComponent();
 		}
