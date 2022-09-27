@@ -21,6 +21,7 @@ namespace InvestSafra.Models
                 var comando = _conn.Query();
 
                 comando.CommandText = ("insert into Cliente_Fisico value (null, @nome, @cpf, @rg, @sexo, @telefone, @cidade, @estado, @rua, @bairro, @cep, @Complemento, @email)");
+ 
 
 
 

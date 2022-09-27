@@ -33,7 +33,13 @@ namespace InvestSafra.Views
                 MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
-        
+        private void ExibirMensagemSalvar()
+        {
+            MessageBox.Show($"Campos Salvos com Sucesso!", "Registros Salvos",
+                MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
+
 
         private void btLimpar_Click_1(object sender, RoutedEventArgs e)
         {
@@ -72,11 +78,26 @@ namespace InvestSafra.Views
             {
                 var dao = new ClienteFisicoDAO();
                 dao.Insert(_clienteFisico);
+
+                ExibirMensagemSalvar();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+
+            txtBairro.Clear();
+            txtComplemento.Clear();
+            txtCPF.Clear();
+            txtEmail.Clear();
+            txtNomeCompleto.Clear();
+            txtRg.Clear();
+            txtRua.Clear();
+            txtCep.Clear();
+            txtCidade.Clear();
+            txtTelefone.Clear();
+            cbEstado.SelectedItem = null;
+            cbSexo.SelectedItem = null;
         }
     }
 }
