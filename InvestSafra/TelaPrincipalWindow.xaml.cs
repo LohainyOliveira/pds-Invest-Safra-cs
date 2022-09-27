@@ -41,9 +41,9 @@ namespace InvestSafra
 
         private void TelaPrincipalWindow_Loaded(object sender, RoutedEventArgs e)
         {
-		 //   new ClienteFisicoWindow().Show();
-			//this.Close();
-		}
+            //new CadastrarFazenda().Show();
+            //this.Close();
+        }
 
         private void Timer_Tick(object sender, EventArgs e)
         {
