@@ -109,7 +109,7 @@
                     AcceptsReturn="True"
                     MaxWidth="400"
                     Margin="10 0 50 0"
-                    materialDesign:HintAssist.Hint="Descrição"
+                    materialDesign:HintAssist.Hint="Complemento"
                     x:Name="txtDescricao" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
                     Width="209" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
