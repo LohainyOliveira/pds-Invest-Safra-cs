@@ -46,15 +46,15 @@
 
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/Imagens/ImgFundoDesfocado.png"/>
+            <ImageBrush ImageSource="/Imagens/ImgDesfocada2.png"/>
         </Grid.Background>
         <StackPanel Margin="190 20 20 20">
 
             <StackPanel.Background>
-                <SolidColorBrush Color="#FF4C4D14" Opacity="0.5"/>
+                <SolidColorBrush Color="#FF849246" />
             </StackPanel.Background>
         </StackPanel>
-        <Button x:Name="btVoltar" Width="50" Height="50"
+        <Button x:Name="btVoltar" Width="45" Height="45"
                     Margin="700 25 0 0" 
                     VerticalAlignment="Top" Background="#EFA82E" BorderBrush="#EFA82E"
                     Cursor="Hand" Click="btVoltar_Click" >
