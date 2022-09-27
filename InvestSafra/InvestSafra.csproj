@@ -193,6 +193,57 @@
     <Compile Include="Views\LevantamentoDeDadosDaSafra.xaml.cs">
       <DependentUpon>LevantamentoDeDadosDaSafra.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\ListaArea.xaml.cs">
+      <DependentUpon>ListaArea.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ListaCaixa.xaml.cs">
+      <DependentUpon>ListaCaixa.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ListaClienteFisico.xaml.cs">
+      <DependentUpon>ListaClienteFisico.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ListaClienteJuridico.xaml.cs">
+      <DependentUpon>ListaClienteJuridico.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ListaClima.xaml.cs">
+      <DependentUpon>ListaClima.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ListaCompra.xaml.cs">
+      <DependentUpon>ListaCompra.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ListaEntrar.xaml.cs">
+      <DependentUpon>ListaEntrar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ListaEstoque.xaml.cs">
+      <DependentUpon>ListaEstoque.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ListaFazenda.xaml.cs">
+      <DependentUpon>ListaFazenda.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ListaFornecedor.xaml.cs">
+      <DependentUpon>ListaFornecedor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ListaFuncionario.xaml.cs">
+      <DependentUpon>ListaFuncionario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ListaInsumos.xaml.cs">
+      <DependentUpon>ListaInsumos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ListaLevantamentoSafra.xaml.cs">
+      <DependentUpon>ListaLevantamentoSafra.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ListaMaquinas.xaml.cs">
+      <DependentUpon>ListaMaquinas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ListaProduto.xaml.cs">
+      <DependentUpon>ListaProduto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ListaSemente.xaml.cs">
+      <DependentUpon>ListaSemente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ListaVenda.xaml.cs">
+      <DependentUpon>ListaVenda.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\MenuWindow.xaml.cs">
       <DependentUpon>MenuWindow.xaml</DependentUpon>
     </Compile>
@@ -293,6 +344,74 @@
     <Page Include="Views\LevantamentoDeDadosDaSafra.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ListaArea.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ListaCaixa.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ListaClienteFisico.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ListaClienteJuridico.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ListaClima.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ListaCompra.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ListaEntrar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ListaEstoque.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ListaFazenda.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ListaFornecedor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ListaFuncionario.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ListaInsumos.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ListaLevantamentoSafra.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ListaMaquinas.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ListaProduto.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ListaSemente.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ListaVenda.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\MenuWindow.xaml">
       <SubType>Designer</SubType>
