@@ -100,7 +100,7 @@
                     MaxWidth="400"
                     Margin="-55 0 50 0"
                     materialDesign:HintAssist.Hint="Proprietário"
-                    x:Name="txtComplemento" Padding="16" Grid.Row="1" 
+                    x:Name="txtProprietario" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
                     Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
@@ -110,7 +110,7 @@
                     MaxWidth="400"
                     Margin="10 0 50 0"
                     materialDesign:HintAssist.Hint="Complemento"
-                    x:Name="txtDescricao" Padding="16" Grid.Row="1" 
+                    x:Name="txtComplemento" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
                     Width="209" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
@@ -127,7 +127,7 @@
 
                     <Grid Margin="334,7,-137,-7" Grid.ColumnSpan="4">
                         <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
-                            <Button x:Name="btSalvar" FontSize="19" Content="Salvar" Height="40" Width="119"  Margin="0,0,20,0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Grid.Column="2" Grid.ColumnSpan="2"/>
+                            <Button x:Name="btSalvar" FontSize="19" Content="Salvar" Height="40" Width="119"  Margin="0,0,20,0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Grid.Column="2" Grid.ColumnSpan="2" Click="btSalvar_Click_1"/>
                             <Button x:Name="btCancelar" FontSize="19" Content="Cancelar" Height="40" Width="119"  Margin="0,0,0,0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Grid.ColumnSpan="4" Click="btCancelar_Click"/>
                         </StackPanel>
                     </Grid>
