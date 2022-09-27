@@ -20,7 +20,7 @@ namespace InvestSafra.Models
             {
                 var comando = _conn.Query();
 
-                comando.CommandText = ("insert into Area value (null, @nome_responsavel, @nome_terreno, @metros, @cnpj, @localizacao, @@descricao)");
+                comando.CommandText = ("insert into Area value (null, @nome_responsavel, @nome_terreno, @metros, @cnpj, @localizacao, @descricao)");
 
 
 

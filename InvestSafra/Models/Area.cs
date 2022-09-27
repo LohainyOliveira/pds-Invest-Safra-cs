@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InvestSafra.Models
 {
-	internal class Area
+	public class Area
 	{
 		public int Id { get; set; }
 		public string Nome_Responsavel { get; set; }
