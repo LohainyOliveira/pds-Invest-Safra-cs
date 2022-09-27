@@ -7,6 +7,28 @@
         mc:Ignorable="d"
         Title="ListaInsumos" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="70"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0">
+            <Menu>
+                <MenuItem Header="_Arquivo" Height="20">
+                    <MenuItem Header="_Novo">
+
+                    </MenuItem>
+
+                    <MenuItem Header="_Abrir"/>
+                    <Separator/>
+                    <MenuItem Header="_Sair" />
+                </MenuItem>
+                <MenuItem Header="_Sobre" Height="20">
+                    <MenuItem Header="_Versão"/>
+                </MenuItem>
+            </Menu>
+        </StackPanel>
     </Grid>
 </Window>
