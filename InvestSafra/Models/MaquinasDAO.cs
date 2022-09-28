@@ -20,7 +20,7 @@ namespace InvestSafra.Models
             {
                 var comando = _conn.Query();
 
-                comando.CommandText = ("insert into Maquina  value (null, @nome, @descricao, @modelo, @marca, @quantidade, @valor");
+                comando.CommandText = ("insert into Maquinas  value (null, @nome, @descricao, @modelo, @marca, @quantidade, @valor");
 
 
                 comando.Parameters.AddWithValue("@nome", maquinas.Nome);
@@ -91,7 +91,7 @@ namespace InvestSafra.Models
 
                 var comando = _conn.Query();
 
-                comando.CommandText = "UPDATE Insumo set nome_maq = @nome, descricao_maq = @descricao, modelo_maq = @modelo, marca_maq = @marca, quantidade_maq = @quantidade, valor_maq = @valor WHERE id_maq = @id";
+                comando.CommandText = "UPDATE Maquinas set nome_maq = @nome, descricao_maq = @descricao, modelo_maq = @modelo, marca_maq = @marca, quantidade_maq = @quantidade, valor_maq = @valor WHERE id_maq = @id";
 
                 comando.Parameters.AddWithValue("@nome", maquinas.Nome);
                 comando.Parameters.AddWithValue("@descricao", maquinas.Descricao);
@@ -113,7 +113,7 @@ namespace InvestSafra.Models
             {
                 var comando = _conn.Query();
 
-                comando.CommandText = "Delete from Maquina where id_maq = @id";
+                comando.CommandText = "Delete from Maquinas where id_maq = @id";
 
                 comando.Parameters.AddWithValue("@id", maquinas.Id);
 

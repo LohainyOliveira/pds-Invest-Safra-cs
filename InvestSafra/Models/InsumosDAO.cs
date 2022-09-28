@@ -12,7 +12,7 @@ namespace InvestSafra.Models
 	internal class InsumosDAO
 	{
         private static Conexao _conn = new Conexao();
-        public void Insert(Insumos insumos)
+        public void Insert(Insumos insumo)
         {
 
 
@@ -24,10 +24,10 @@ namespace InvestSafra.Models
                 comando.CommandText = ("insert into Insumo  value (null, @nome,  @tipo, @marca, @descricao ");
 
 
-                comando.Parameters.AddWithValue("@nome", insumos.Nome);
-                comando.Parameters.AddWithValue("@tipo", insumos.Tipo);
-                comando.Parameters.AddWithValue("@marca", insumos.Marca);
-                comando.Parameters.AddWithValue("@descricao", insumos.Descricao);
+                comando.Parameters.AddWithValue("@nome", insumo.Nome);
+                comando.Parameters.AddWithValue("@tipo", insumo.Tipo);
+                comando.Parameters.AddWithValue("@marca", insumo.Marca);
+                comando.Parameters.AddWithValue("@descricao", insumo.Descricao);
 
                 var resultado = comando.ExecuteNonQuery();
 
@@ -63,15 +63,15 @@ namespace InvestSafra.Models
                 {
                     
 
-                    var insumos = new Insumos();
-                    insumos.Id = reader.GetInt32("id_ins");
-                    insumos.Nome = DAOHelper.GetString(reader, "nome_ins");
-                    insumos.Tipo = DAOHelper.GetString(reader, "tipo_ins");
-                    insumos.Marca = DAOHelper.GetString(reader, "marca_ins");
-                    insumos.Descricao= DAOHelper.GetString(reader, "descricao_ins");
+                    var insumo = new Insumos();
+                    insumo.Id = reader.GetInt32("id_ins");
+                    insumo.Nome = DAOHelper.GetString(reader, "nome_ins");
+                    insumo.Tipo = DAOHelper.GetString(reader, "tipo_ins");
+                    insumo.Marca = DAOHelper.GetString(reader, "marca_ins");
+                    insumo.Descricao= DAOHelper.GetString(reader, "descricao_ins");
 
 
-                    lista.Add(insumos);
+                    lista.Add(insumo);
                 }
                 reader.Close();
                 return lista;
@@ -82,19 +82,19 @@ namespace InvestSafra.Models
             }
         }
 
-        public void Update(Insumos insumos)
+        public void Update(Insumos insumo)
         {
             try
             {
                
                 var comando = _conn.Query();
 
-                comando.CommandText = "UPDATE Insumo set nome_ins = @nome, tipo_ins = @tipo, marca_ins = @marca, descricao_ins = @descricao  WHERE id_fun = @id";
+                comando.CommandText = "UPDATE Insumo set nome_ins = @nome, tipo_ins = @tipo, marca_ins = @marca, descricao_ins = @descricao  WHERE id_ins = @id";
 
-                comando.Parameters.AddWithValue("@nome", insumos.Nome);
-                comando.Parameters.AddWithValue("@tipo", insumos.Tipo);
-                comando.Parameters.AddWithValue("@marca", insumos.Marca);
-                comando.Parameters.AddWithValue("@descricao", insumos.Descricao);   
+                comando.Parameters.AddWithValue("@nome", insumo.Nome);
+                comando.Parameters.AddWithValue("@tipo", insumo.Tipo);
+                comando.Parameters.AddWithValue("@marca", insumo.Marca);
+                comando.Parameters.AddWithValue("@descricao", insumo.Descricao);   
 
                 comando.ExecuteNonQuery();
             }
