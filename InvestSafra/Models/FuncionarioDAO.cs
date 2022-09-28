@@ -108,7 +108,7 @@ namespace InvestSafra.Models
             {
                 var comando = _conn.Query();
 
-                comando.CommandText = "UPDATE Fazenda set nome_fun = @nome, cpf_fun = @cpf, rg_fun = @rg, sexo_fun = @sexo, telefone_fun = @telefone, " +
+                comando.CommandText = "UPDATE Funcionario set nome_fun = @nome, cpf_fun = @cpf, rg_fun = @rg, sexo_fun = @sexo, telefone_fun = @telefone, " +
                     "cidade_fun = @cidade, estado_fun = @estado, rua_fun = @rua, bairro_fun = @bairo, cep_fun = @cep, complemento_fun = @complemento," +
                     "email_fun = @email, funcao_fun = @funcao, salario_fun = @salario WHERE id_fun = @id";
 
