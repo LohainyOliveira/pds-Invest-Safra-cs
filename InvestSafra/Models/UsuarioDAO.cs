@@ -22,12 +22,8 @@ namespace InvestSafra.Models
                 comando.CommandText = ("insert into Usuario  value (null, @user, @senha");
 
 
-                comando.Parameters.AddWithValue("@nome", produto.Nome);
-                comando.Parameters.AddWithValue("@descricao", produto.Descricao);
-                comando.Parameters.AddWithValue("@marca", produto.Marca);
-                comando.Parameters.AddWithValue("@quantidade", produto.Quantidade);
-                comando.Parameters.AddWithValue("@valor", produto.Valor);
-
+                comando.Parameters.AddWithValue("@user", usuario.User);
+                comando.Parameters.AddWithValue("@senha", usuario.User);
                 var resultado = comando.ExecuteNonQuery();
 
 
@@ -46,15 +42,15 @@ namespace InvestSafra.Models
         }
 
 
-        public List<Produto> List()
+        public List<Usuario> List()
         {
             try
             {
 
-                var lista = new List<Produto>();
+                var lista = new List<Usuario>();
 
                 var query = _conn.Query();
-                query.CommandText = "SELECT * FROM Produto";
+                query.CommandText = "SELECT * FROM Usuario";
 
                 MySqlDataReader reader = query.ExecuteReader();
 
@@ -62,16 +58,13 @@ namespace InvestSafra.Models
                 {
 
 
-                    var produto = new Produto();
-                    produto.Id = reader.GetInt32("id_prod");
-                    produto.Nome = DAOHelper.GetString(reader, "nome_prod");
-                    produto.Descricao = DAOHelper.GetString(reader, "descricao_prod");
-                    produto.Descricao = DAOHelper.GetString(reader, "marca_prod");
-                    produto.Quantidade = reader.GetInt32("quantidade_prod");
-                    produto.Valor = reader.GetDouble("valor_prod");
+                    var usuario = new Usuario();
+                    usuario.Id = reader.GetInt32("id_usu");
+                    usuario.User = reader.GetString("user_usu");
+                    usuario.Senha = reader.GetString("senha_usu");
 
 
-                    lista.Add(produto);
+                    lista.Add(usuario);
                 }
                 reader.Close();
                 return lista;
@@ -82,7 +75,7 @@ namespace InvestSafra.Models
             }
         }
 
-        public void Update(Produto produto)
+        public void Update(Usuario usuario)
         {
             try
             {
@@ -90,13 +83,10 @@ namespace InvestSafra.Models
 
                 var comando = _conn.Query();
 
-                comando.CommandText = "UPDATE Produto set nome_prod = @nome, descricao_prod = @descricao, marca_prod = @marca, quantidade_prod = @quantidade, valor_prod = @valor  WHERE id_prod = @id";
+                comando.CommandText = "UPDATE Usuario set user_usu = @user, senha_usu = @senha  WHERE id_usu = @id";
 
-                comando.Parameters.AddWithValue("@nome", produto.Nome);
-                comando.Parameters.AddWithValue("@descricao", produto.Descricao);
-                comando.Parameters.AddWithValue("marca", produto.Marca);
-                comando.Parameters.AddWithValue("@quantidade", produto.Quantidade);
-                comando.Parameters.AddWithValue("@valor", produto.Valor);
+                comando.Parameters.AddWithValue("@user", usuario.User);
+                comando.Parameters.AddWithValue("@senha", usuario.Senha);
 
                 comando.ExecuteNonQuery();
             }
@@ -105,15 +95,16 @@ namespace InvestSafra.Models
                 throw ex;
             }
         }
-        public void Delete(Produto produto)
+        public void Delete(Usuario usuario)
         {
+
             try
             {
                 var comando = _conn.Query();
 
-                comando.CommandText = "Delete from Produto where id_prod = @id";
+                comando.CommandText = "Delete from Usuario where id_prod = @id";
 
-                comando.Parameters.AddWithValue("@id", produto.Id);
+                comando.Parameters.AddWithValue("@id", usuario.Id);
 
                 var resultado = comando.ExecuteNonQuery();
 
