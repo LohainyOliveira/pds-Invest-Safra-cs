@@ -213,7 +213,7 @@ id_fun_fk int not null,
 id_faze_fk int not null,
 id_are_fk int not null,
 foreign key (id_sem_fk) references Semente (id_sem),
-foreign key (id_fun_fk) references Funcionário (id_fun),
+foreign key (id_fun_fk) references Funcionario (id_fun),
 foreign key (id_faze_fk) references Fazenda (id_faze),
 foreign key (id_are_fk) references Area (id_are)
 );

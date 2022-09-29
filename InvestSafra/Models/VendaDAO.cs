@@ -19,14 +19,13 @@ namespace InvestSafra.Models
 
                 var comando = _conn.Query();
 
-                comando.CommandText = ("insert into Venda  value (null, @nome, @descricao, @marca, @quantidade, @valor ");
+                comando.CommandText = ("insert into Venda  value (null, @valor, @data, @safra, @comprador");
 
 
-                comando.Parameters.AddWithValue("@nome", produto.Nome);
-                comando.Parameters.AddWithValue("@descricao", produto.Descricao);
-                comando.Parameters.AddWithValue("@marca", produto.Marca);
-                comando.Parameters.AddWithValue("@quantidade", produto.Quantidade);
-                comando.Parameters.AddWithValue("@valor", produto.Valor);
+                comando.Parameters.AddWithValue("@valor", venda.Valor);
+                comando.Parameters.AddWithValue("@data", venda.Data);
+                comando.Parameters.AddWithValue("@safra", venda.Safra);
+                comando.Parameters.AddWithValue("@comprador", venda.Comprador);
 
                 var resultado = comando.ExecuteNonQuery();
 
@@ -46,15 +45,15 @@ namespace InvestSafra.Models
         }
 
 
-        public List<Produto> List()
+        public List<Venda> List()
         {
             try
             {
 
-                var lista = new List<Produto>();
+                var lista = new List<Venda>();
 
                 var query = _conn.Query();
-                query.CommandText = "SELECT * FROM Produto";
+                query.CommandText = "SELECT * FROM Venda";
 
                 MySqlDataReader reader = query.ExecuteReader();
 
@@ -62,16 +61,15 @@ namespace InvestSafra.Models
                 {
 
 
-                    var produto = new Produto();
-                    produto.Id = reader.GetInt32("id_prod");
-                    produto.Nome = DAOHelper.GetString(reader, "nome_prod");
-                    produto.Descricao = DAOHelper.GetString(reader, "descricao_prod");
-                    produto.Descricao = DAOHelper.GetString(reader, "marca_prod");
-                    produto.Quantidade = reader.GetInt32("quantidade_prod");
-                    produto.Valor = reader.GetDouble("valor_prod");
+                    var venda = new Venda();
+                    venda.Id = reader.GetInt32("id_ven");
+                    venda.Valor = reader.GetDouble("valor_ven");
+                    venda.Data = reader.GetDateTime("data_ven");
+                    venda.Safra = reader.GetString( "safra_ven");
+                    venda.Comprador = reader.GetString("comprador_ven");
 
 
-                    lista.Add(produto);
+                    lista.Add(venda);
                 }
                 reader.Close();
                 return lista;
@@ -82,7 +80,7 @@ namespace InvestSafra.Models
             }
         }
 
-        public void Update(Produto produto)
+        public void Update(Venda venda)
         {
             try
             {
@@ -90,13 +88,12 @@ namespace InvestSafra.Models
 
                 var comando = _conn.Query();
 
-                comando.CommandText = "UPDATE Produto set nome_prod = @nome, descricao_prod = @descricao, marca_prod = @marca, quantidade_prod = @quantidade, valor_prod = @valor  WHERE id_prod = @id";
+                comando.CommandText = "UPDATE Venda set valor_ven = @valor, data_ven = @data, safra_ven = @safra, comprador_ven = @comprador WHERE id_ven = @id";
 
-                comando.Parameters.AddWithValue("@nome", produto.Nome);
-                comando.Parameters.AddWithValue("@descricao", produto.Descricao);
-                comando.Parameters.AddWithValue("marca", produto.Marca);
-                comando.Parameters.AddWithValue("@quantidade", produto.Quantidade);
-                comando.Parameters.AddWithValue("@valor", produto.Valor);
+                comando.Parameters.AddWithValue("@valor", venda.Valor);
+                comando.Parameters.AddWithValue("@data", venda.Data);
+                comando.Parameters.AddWithValue("safra", venda.Safra);
+                comando.Parameters.AddWithValue("@comprador", venda.Comprador);
 
                 comando.ExecuteNonQuery();
             }
@@ -105,15 +102,15 @@ namespace InvestSafra.Models
                 throw ex;
             }
         }
-        public void Delete(Produto produto)
+        public void Delete(Venda venda)
         {
             try
             {
                 var comando = _conn.Query();
 
-                comando.CommandText = "Delete from Produto where id_prod = @id";
+                comando.CommandText = "Delete from Venda where id_ven = @id";
 
-                comando.Parameters.AddWithValue("@id", produto.Id);
+                comando.Parameters.AddWithValue("@id", venda.Id);
 
                 var resultado = comando.ExecuteNonQuery();
 
