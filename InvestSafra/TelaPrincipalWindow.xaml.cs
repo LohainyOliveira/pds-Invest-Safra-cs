@@ -118,7 +118,7 @@ namespace InvestSafra
 
 		private void btHome_Click(object sender, RoutedEventArgs e)
 		{
-			ListaInsumos form = new ListaInsumos();
+			MenuWindow form = new MenuWindow();
 			form.ShowDialog();
 		}
 	}
