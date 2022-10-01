@@ -161,9 +161,17 @@
 
 
                         <DataGridTextColumn Header="Nome" Binding="{Binding Nome}"/>
-                        <DataGridTextColumn Header="Tipo" Binding="{Binding Tipo }"/>
-                        <DataGridTextColumn Header="Marca" Binding="{Binding Marca}"/>
-                        <DataGridTextColumn Header="Descrição" Binding="{Binding Descricao}"/>
+                        <DataGridTextColumn Header="Cpf" Binding="{Binding Cpf }"/>
+                        <DataGridTextColumn Header="Sexo" Binding="{Binding Sexo}"/>
+                        <DataGridTextColumn Header="Email" Binding="{Binding Descricao}"/>
+                        <DataGridTextColumn Header="RG" Binding="{Binding Rg}"/>
+                        <DataGridTextColumn Header="Telefone" Binding="{Binding Telefone}"/>
+                        <DataGridTextColumn Header="Cidade" Binding="{Binding Cidade}"/>
+                        <DataGridTextColumn Header="Estado" Binding="{Binding Estado}"/>
+                        <DataGridTextColumn Header="CEP" Binding="{Binding Cep}"/>
+                        <DataGridTextColumn Header="Rua" Binding="{Binding Rua}"/>
+                        <DataGridTextColumn Header="Bairro" Binding="{Binding Bairro}"/>
+                        <DataGridTextColumn Header="Complemento" Binding="{Binding Complemento}"/>
 
                         <DataGridTemplateColumn Header="Operation" IsReadOnly="True" Width="*">
                             <DataGridTemplateColumn.CellTemplate>

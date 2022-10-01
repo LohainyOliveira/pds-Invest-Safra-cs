@@ -160,10 +160,11 @@
 
 
 
-                        <DataGridTextColumn Header="Nome" Binding="{Binding Nome}"/>
-                        <DataGridTextColumn Header="Tipo" Binding="{Binding Tipo }"/>
-                        <DataGridTextColumn Header="Marca" Binding="{Binding Marca}"/>
+                        <DataGridTextColumn Header="Qtd.Sementes" Binding="{Binding Quantidade_Sementes}"/>
+                        <DataGridTextColumn Header="Qtd.Insumos" Binding="{Binding Quantidade_Insumos }"/>
+                        <DataGridTextColumn Header="Tipos de Sementes" Binding="{Binding Tipos_Sementes}"/>
                         <DataGridTextColumn Header="Descrição" Binding="{Binding Descricao}"/>
+                        <DataGridTextColumn Header="Medida" Binding="{Binding Medida}"/>
 
                         <DataGridTemplateColumn Header="Operation" IsReadOnly="True" Width="*">
                             <DataGridTemplateColumn.CellTemplate>

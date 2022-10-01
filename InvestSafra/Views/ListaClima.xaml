@@ -160,10 +160,10 @@
 
 
 
-                        <DataGridTextColumn Header="Nome" Binding="{Binding Nome}"/>
-                        <DataGridTextColumn Header="Tipo" Binding="{Binding Tipo }"/>
-                        <DataGridTextColumn Header="Marca" Binding="{Binding Marca}"/>
-                        <DataGridTextColumn Header="Descrição" Binding="{Binding Descricao}"/>
+                        <DataGridTextColumn Header="Data" Binding="{Binding Data}"/>
+                        <DataGridTextColumn Header="Clima" Binding="{Binding Clima }"/>
+                        <DataGridTextColumn Header="Temperatura" Binding="{Binding temperatura}"/>
+                        <DataGridTextColumn Header="Local" Binding="{Binding Local}"/>
 
                         <DataGridTemplateColumn Header="Operation" IsReadOnly="True" Width="*">
                             <DataGridTemplateColumn.CellTemplate>

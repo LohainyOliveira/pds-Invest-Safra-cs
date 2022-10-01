@@ -161,9 +161,11 @@
 
 
                         <DataGridTextColumn Header="Nome" Binding="{Binding Nome}"/>
-                        <DataGridTextColumn Header="Tipo" Binding="{Binding Tipo }"/>
-                        <DataGridTextColumn Header="Marca" Binding="{Binding Marca}"/>
-                        <DataGridTextColumn Header="Descrição" Binding="{Binding Descricao}"/>
+                        <DataGridTextColumn Header="CNPJ" Binding="{Binding Cnpj }"/>
+                        <DataGridTextColumn Header="Localização" Binding="{Binding Localizacao}"/>
+                        <DataGridTextColumn Header="Nome Fantasia" Binding="{Binding N_Fantasia}"/>
+                        <DataGridTextColumn Header="Proprietário" Binding="{Binding Proprietario}"/>
+                        <DataGridTextColumn Header="Complemento" Binding="{Binding Complemento}"/>
 
                         <DataGridTemplateColumn Header="Operation" IsReadOnly="True" Width="*">
                             <DataGridTemplateColumn.CellTemplate>

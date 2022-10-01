@@ -149,7 +149,7 @@
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
                                     <StackPanel Orientation="Horizontal">
-                                        <Border Width="25" Height="25" CornerRadius="50" Margin="0 0 10 0" Background="Red">
+                                        <Border Width="15" Height="25" CornerRadius="50" Margin="0 0 10 0" Background="Red">
                                             <TextBlock Text="...." VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Margin=" 0 0 0 1"/>
                                         </Border>
                                     </StackPanel>
@@ -160,10 +160,12 @@
 
 
 
-                        <DataGridTextColumn Header="Nome" Binding="{Binding Nome}"/>
-                        <DataGridTextColumn Header="Tipo" Binding="{Binding Tipo }"/>
-                        <DataGridTextColumn Header="Marca" Binding="{Binding Marca}"/>
-                        <DataGridTextColumn Header="Descrição" Binding="{Binding Descricao}"/>
+                        <DataGridTextColumn Header="Metros" Binding="{Binding Metros}"/>
+                        <DataGridTextColumn Header="Descrição" Binding="{Binding Descricao }"/>
+                        <DataGridTextColumn Header="Localização" Binding="{Binding Localizacao}"/>
+                        <DataGridTextColumn Header="Nome do Terreno" Binding="{Binding Nome_Terreno}"/>
+                        <DataGridTextColumn Header="CNPJ" Binding="{Binding CNPJ}"/>
+                        <DataGridTextColumn Header="Responsavel" Binding="{Binding Responsavel}"/>
 
                         <DataGridTemplateColumn Header="Operation" IsReadOnly="True" Width="*">
                             <DataGridTemplateColumn.CellTemplate>

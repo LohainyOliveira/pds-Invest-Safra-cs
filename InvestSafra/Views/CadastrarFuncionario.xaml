@@ -12,7 +12,7 @@
         TextOptions.TextFormattingMode="Ideal" 
         TextOptions.TextRenderingMode="Auto"
         FontFamily="{DynamicResource MaterialDesignFont}"
-        Title="Funcionario" Height="543" Width="956">
+        Title="Funcionario" Height="698" Width="956">
     <Grid Margin="0,0,0,-160">
         <Grid.RowDefinitions>
             <RowDefinition Height="115"/>
@@ -205,7 +205,7 @@
                      Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     AcceptsReturn="True"
                     MaxWidth="400"
-                    Margin="50 1 50 0"
+                    Margin="574 215 50 0"
                     materialDesign:HintAssist.Hint="Rua"
                     x:Name="txtRua" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
@@ -214,13 +214,39 @@
 
             </StackPanel>
 
+            <StackPanel Orientation="Horizontal" Margin="0,350,60,-76">
+                <TextBox 
+                     Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                    AcceptsReturn="True"
+                    MaxWidth="400"
+                    Margin="50 210 50 0"
+                    materialDesign:HintAssist.Hint="Bairro"
+                    x:Name="txtBairro" Padding="16" Grid.Row="1" 
+                    TextWrapping="Wrap" VerticalAlignment="Center" 
+                    Width="209" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
+                  />
+                <TextBox 
+                     Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                    AcceptsReturn="True"
+                    MaxWidth="400"
+                    Margin="266 210 50 0"
+                    materialDesign:HintAssist.Hint="Complemento"
+                    x:Name="txtComplemento" Padding="16" Grid.Row="1" 
+                    TextWrapping="Wrap" VerticalAlignment="Center" 
+                    Width="209" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
+                  />
+
+
+
+            </StackPanel>
+
 
 
         </Grid>
 
         <Grid Grid.Row="1" Margin="0,517,10,10" Grid.RowSpan="2">
-            <Button x:Name="btSalvar" FontSize="19" Content="Salvar" Height="40" Width="119" HorizontalAlignment="Right" Margin="10 0 50 0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand"/>
-            <Button x:Name="btLimpar" FontSize="19" Content="Limpar" Height="40" Width="119" HorizontalAlignment="Right" Margin="10 0 200 0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Click="btLimpar_Click"/>
+            <Button x:Name="btSalvar" FontSize="19" Content="Salvar" Height="40" Width="119" HorizontalAlignment="Right" Margin="10 110 50 0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand"/>
+            <Button x:Name="btLimpar" FontSize="19" Content="Limpar" Height="40" Width="119" HorizontalAlignment="Right" Margin="10 110 200 0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Click="btLimpar_Click"/>
         </Grid>
     </Grid>
 
