@@ -145,7 +145,7 @@
                         <!-- Fim CheckBox -->
                         <!-- Começo -->
                         <DataGridTextColumn Header="#" IsReadOnly="True" CanUserResize="False" Width="auto"/>
-                        <DataGridTemplateColumn Header="Insumos" IsReadOnly="True" Width="*">
+                        <DataGridTemplateColumn Header="Caixas" IsReadOnly="True" Width="*">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
                                     <StackPanel Orientation="Horizontal">
