@@ -124,7 +124,7 @@
 
                 <Grid Width="200" HorizontalAlignment="Right" Grid.Row="4">
                     <TextBlock Margin="15 0 " VerticalAlignment="Center" Foreground="black" IsHitTestVisible="False"
-                               Panel.ZIndex="1" Text="Propcurar por Insumos..." Visibility="Visible"/>
+                               Panel.ZIndex="1" Text="Procurar por Cliente Físico..." Visibility="Visible"/>
 
                     <TextBox x:Name="txtFilter" Style="{StaticResource textBoxFilter}"/>
 
