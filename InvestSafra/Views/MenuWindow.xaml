@@ -3,17 +3,16 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:InvestSafra.Views"
-        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        
+       xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        AllowsTransparency="True" Background="Transparent"
         mc:Ignorable="d"
         Title="MenuWindow" Height="450" Width="800">
     <Grid>
-        
+
         <Grid.Background>
             <ImageBrush ImageSource="/Imagens/ImgFundoDesfocado.png"/>
         </Grid.Background>
-        
+
         <Grid x:Name="painelHeader" VerticalAlignment="Top" Height="50"
               Background="#EFA82E" MouseDown="painelHeader_MouseDown_1">
             <Grid.ColumnDefinitions>
@@ -176,10 +175,29 @@
                 </ListView>
 
             </StackPanel>
+
+
         </Grid>
-        <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Image Source="/Imagens/logo_pgnPrincipal.png" Height="400"/>
-        </StackPanel>
+
+        
+
+            <StackPanel Grid.Column="1">
+
+                <Button BorderBrush="Black" BorderThickness="2"
+                    x:Name="btListaInsumo" Content="Lista de Insumos" 
+                    Height="95" Width="184" Foreground="#FF060101" Grid.Column="1" Margin="10,105,256,234" Click="btListaInsumo_Click" Cursor="Hand">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="AliceBlue"/>
+                            <GradientStop Color="#D2691E" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+
+                </Button>
+            </StackPanel>
+
+
+
 
 
     </Grid>

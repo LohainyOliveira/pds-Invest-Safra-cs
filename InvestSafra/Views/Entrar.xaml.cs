@@ -33,16 +33,17 @@ namespace InvestSafra.Views
 
 		}
 
-		private void btLogar_Click(object sender, RoutedEventArgs e)
-		{
-			
-			MenuWindow form = new MenuWindow();
-			form.ShowDialog();
-		}
+		
 
 		private void btVoltar_Click(object sender, RoutedEventArgs e)
 		{
 			DialogResult = false;
+		}
+
+		private void btLogar_Click(object sender, RoutedEventArgs e)
+		{
+			MenuWindow form = new MenuWindow();
+			form.ShowDialog();
 		}
 	}
 }

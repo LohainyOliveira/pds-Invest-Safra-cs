@@ -190,5 +190,11 @@ namespace InvestSafra.Views
 		{
 
 		}
+
+		private void btListaInsumo_Click(object sender, RoutedEventArgs e)
+		{
+			ListaInsumos form = new ListaInsumos();
+			form.ShowDialog();
+		}
 	}
 }

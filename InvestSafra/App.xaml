@@ -104,7 +104,7 @@
             </Style>
 
             <Style x:Key="addButton" TargetType="Button">
-                <Setter Property="Background" Value="#6741d9"/>
+                <Setter Property="Background" Value="#7b5cd6"/>
                 <Setter Property="Foreground" Value="AntiqueWhite"/>
                 <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
                 <Setter Property="Width" Value="150"/>
@@ -132,173 +132,6 @@
 
             </Style>
 
-            <Style x:Key="DataGridCellStyle1" TargetType="{x:Type DataGridCell}">
-                <Setter Property="Padding" Value="{Binding local:DataGridAssist.CellPadding, RelativeSource={RelativeSource Self}}"/>
-                <Setter Property="Background" Value="Transparent"/>
-                <Setter Property="BorderBrush" Value="Transparent"/>
-                <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
-                <Setter Property="Foreground" Value="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type DataGridRow}}}"/>
-                <Setter Property="Template">
-                    <Setter.Value>
-                        <ControlTemplate TargetType="{x:Type DataGridCell}">
-                            <Grid>
-                                <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="True"/>
-                                <ContentPresenter Margin="{TemplateBinding Padding}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
-                            </Grid>
-                        </ControlTemplate>
-                    </Setter.Value>
-                </Setter>
-                <Style.Triggers>
-                    <Trigger Property="IsKeyboardFocusWithin" Value="True">
-                        <Setter Property="BorderBrush" Value="{DynamicResource MaterialDesignTextBoxBorder}"/>
-                    </Trigger>
-                    <MultiDataTrigger>
-                        <MultiDataTrigger.Conditions>
-                            <Condition Binding="{Binding IsSelected, RelativeSource={RelativeSource Self}}" Value="True"/>
-                            <Condition Binding="{Binding IsMouseOver, RelativeSource={RelativeSource AncestorType={x:Type DataGridRow}}}" Value="False"/>
-                        </MultiDataTrigger.Conditions>
-                        <Setter Property="Background" Value="{DynamicResource MaterialDesignSelection}"/>
-                    </MultiDataTrigger>
-                    <Trigger Property="IsEnabled" Value="False">
-                        <Setter Property="Opacity" Value=".56"/>
-                    </Trigger>
-                </Style.Triggers>
-            </Style>
-            <Style x:Key="MaterialDesignThumb" TargetType="{x:Type Thumb}">
-                <Setter Property="SnapsToDevicePixels" Value="True"/>
-                <Setter Property="Padding" Value="8"/>
-                <Setter Property="Background" Value="Transparent"/>
-                <Setter Property="OverridesDefaultStyle" Value="True"/>
-                <Setter Property="Template">
-                    <Setter.Value>
-                        <ControlTemplate TargetType="{x:Type Thumb}">
-                            <Border x:Name="PART_Border" Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
-                        </ControlTemplate>
-                    </Setter.Value>
-                </Setter>
-            </Style>
-            <Style x:Key="MaterialDesignGridColumnHeaderGripper" BasedOn="{StaticResource MaterialDesignThumb}" TargetType="{x:Type Thumb}">
-                <Setter Property="Width" Value="8"/>
-                <Setter Property="Cursor" Value="SizeWE"/>
-                <Setter Property="Padding" Value="0"/>
-            </Style>
-
-            <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
-        </ResourceDictionary>
-
-        <Style x:Key="DataGridColumnHeaderStyle1" TargetType="{x:Type DataGridColumnHeader}">
-                <Setter Property="VerticalContentAlignment" Value="Center"/>
-                <Setter Property="FontWeight" Value="Medium"/>
-                <Setter Property="Padding" Value="{Binding (local:DataGridAssist.ColumnHeaderPadding), RelativeSource={RelativeSource Self}}"/>
-                <Setter Property="Foreground" Value="{DynamicResource MaterialDesignColumnHeader}"/>
-                <Setter Property="BorderBrush" Value="{Binding HorizontalGridLinesBrush, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"/>
-                <Setter Property="BorderThickness" Value="{Binding gridLinesVisibility, Converter={StaticResource GridLinesVisibilityBorderToThicknessConverter}, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"/>
-                <Setter Property="Template">
-                    <Setter.Value>
-                        <ControlTemplate TargetType="{x:Type dataGridColumnHeader}">
-
-                        <ControlTemplate.Resources>
-                            <Storyboard Storyboard.TargetName="GoToVisible">
-                                <DoubleAnimationUsingKeyFrames>
-                                    <EasingDoubleKeyFrame KeyTime="0:0:0.0" Value="0"/>
-                                    <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="12"/>
-                                </DoubleAnimationUsingKeyFrames>
-                            </Storyboard>
-                            <Storyboard Storyboard.TargetName="GoToHidden">
-                                <DoubleAnimationUsingKeyFrames>
-                                    <EasingDoubleKeyFrame KeyTime="0:0:0.0" Value="12"/>
-                                    <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
-                                </DoubleAnimationUsingKeyFrames>
-                            </Storyboard>
-                        </ControlTemplate.Resources>
-
-
-
-                            <Grid Background="Transparent">
-                                <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Padding="{TemplateBinding Padding}">
-                                    <Grid HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}">
-                                        <local:ListSortDirectionIndicator x:Name="SortDirectionIndicator" HorizontalAlignment="Left" Height="12" IsTabStop="False" ListSortDirection="{TemplateBinding SortDirection}" Margin="-16,0,0,0" Opacity="0.45" Visibility="{Binding CanUserSortColumns, Converter={StaticResource BooleanToVisibilityConverter}, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}" Width="0"/>
-                                        <ContentPresenter RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
-                                            <ContentPresenter.Resources>
-                                                <Style TargetType="{x:Type TextBlock}">
-                                                    <Setter Property="TextTrimming" Value="WordEllipsis"/>
-                                                    <Setter Value="True"/>
-                                                </Style>
-                                            </ContentPresenter.Resources>
-                                        </ContentPresenter>
-                                    </Grid>
-                                </Border>
-                                <Thumb x:Name="PART_LeftHeaderGripper" HorizontalAlignment="Left" Style="{StaticResource MaterialDesignGridColumnHeaderGripper}"/>
-                                <Thumb x:Name="PART_RightHeaderGripper" HorizontalAlignment="Right" Style="{StaticResource MaterialDesignGridColumnHeaderGripper}"/>
-                            </Grid>
-                            <ControlTemplate.Triggers>
-                                <Trigger Property="IsMouseOver" Value="True">
-                                    <Setter Property="Foreground" Value="{DynamicResource MaterialDesignBody}"/>
-                                </Trigger>
-                                <Trigger Property="SortDirection" Value="Ascending">
-                                    <Setter Property="Foreground" Value="{DynamicResource MaterialDesignBody}"/>
-                                </Trigger>
-                                <Trigger Property="SortDirection" Value="Descending">
-                                    <Setter Property="Foreground" Value="{DynamicResource MaterialDesignBody}"/>
-                                </Trigger>
-                                <Trigger Property="IsNeutral" SourceName="SortDirectionIndicator" Value="False">
-                                    <Trigger.ExitActions>
-                                        <RemoveStoryboard BeginStoryboardName="GoToVisible"/>
-                                        <BeginStoryboard Storyboard="{StaticResource GoToHidden}"/>
-                                    </Trigger.ExitActions>
-                                    <Trigger.EnterActions>
-                                        <BeginStoryboard x:Name="GoToVisible" Storyboard="{StaticResource GoToVisible}"/>
-                                    </Trigger.EnterActions>
-                                </Trigger>
-                            </ControlTemplate.Triggers>
-                        </ControlTemplate>
-                    </Setter.Value>
-                </Setter>
-            </Style>
-            <Style x:Key="DataGridRowStyle1" TargetType="{x:Type DataGridRow}">
-                <Setter Property="Background" Value="Transparent"/>
-                <Setter Property="SnapsToDevicePixels" Value="true"/>
-                <Setter Value="{x:Null}"/>
-                <Setter Property="ValidationErrorTemplate">
-                    <Setter.Value>
-                        <ControlTemplate>
-                            <TextBlock Foreground="#d50000" Margin="2,0,0,0" Text="!" VerticalAlignment="Center"/>
-                        </ControlTemplate>
-                    </Setter.Value>
-                </Setter>
-                <Setter Property="Template">
-                    <Setter.Value>
-                        <ControlTemplate TargetType="{x:Type DataGridRow}">
-                            <Border x:Name="DGR_Border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="True">
-                                <SelectiveScrollingGrid>
-                                    <SelectiveScrollingGrid.ColumnDefinitions>
-                                        <ColumnDefinition Width="Auto"/>
-                                        <ColumnDefinition Width="*"/>
-                                    </SelectiveScrollingGrid.ColumnDefinitions>
-                                    <SelectiveScrollingGrid.RowDefinitions>
-                                        <RowDefinition Height="*"/>
-                                        <RowDefinition Height="Auto"/>
-                                    </SelectiveScrollingGrid.RowDefinitions>
-                                    <DataGridCellsPresenter ItemsPanel="{TemplateBinding ItemsPanel}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
-                                    <DataGridDetailsPresenter Visibility="{TemplateBinding DetailsVisibility}"/>
-                                    <DataGridRowHeader Visibility="{Binding HeadersVisibility, ConverterParameter={x:Static DataGridHeadersVisibility.Row}, Converter={x:Static DataGrid.HeadersVisibilityConverter}, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"/>
-                                </SelectiveScrollingGrid>
-                            </Border>
-                        </ControlTemplate>
-                    </Setter.Value>
-                </Setter>
-                <Style.Triggers>
-                    <Trigger Property="IsSelected" Value="True">
-                        <Setter Property="Background" Value="{DynamicResource MaterialDesignSelection}"/>
-                    </Trigger>
-                    <Trigger Property="IsMouseOver" Value="True">
-                        <Setter Property="Background" Value="{DynamicResource MaterialDesignDataGridRowHoverBackground}"/>
-                    </Trigger>
-                    <Trigger Property="IsNewItem" Value="True">
-                        <Setter Property="Margin" Value="{Binding NewItemMargin, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"/>
-                    </Trigger>
-                </Style.Triggers>
-            </Style>
             <Style x:Key="tabButton" TargetType="Button">
                 <Setter Property="Background" Value="Transparent"/>
                 <Setter Property="Foreground" Value="Black"/>
@@ -314,7 +147,7 @@
                         <ControlTemplate TargetType="Button">
                             <Border  Background="{TemplateBinding Background}" BorderThickness="0 0 0 1" BorderBrush="{TemplateBinding BorderBrush}">
 
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                             </Border>
                         </ControlTemplate>
                     </Setter.Value>
@@ -325,14 +158,8 @@
                         <Setter Property="Background" Value="#784ff2"/>
                     </Trigger>
                 </Style.Triggers>
-                
 
-            </Style>
 
-            <Style x:Key="pagingButton" TargetType="Icon:PackIconMaterial">
-                <Setter Property="Width" Value="10"/>
-                <Setter Property="Height" Value="10"/>
-                <Setter Property="VerticalAlignment" Value="Center"/>
             </Style>
 
             <Style x:Key="textBoxFilter" TargetType="TextBox" BasedOn="{StaticResource textBoxsearch}">
@@ -391,16 +218,56 @@
             <Style x:Key="pagingButtonIcon" TargetType="Icon:PackIconMaterial">
                 <Setter Property="Width" Value="10" />
                 <Setter Property="Height" Value="10" />
-                <Setter Property="VerticalAlignment" Value="Center" />
+                <Setter Property="Background" Value="white" />
             </Style>
 
 
 
+            <Style x:Key="GridEditButton" TargetType="Button">
+                <Setter Property="Background" Value="#512ca8"/>
+                <Setter Property="BorderBrush" Value="#4a14Bc"/>
+                <Setter Property="Foreground" Value="#ffff"/>
+                <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+                <Setter Property="VerticalAlignment" Value="center"/>
+                <Setter Property="Template">
+
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border  Background="{TemplateBinding Background}" CornerRadius="5" Padding="5" BorderThickness="1" BorderBrush="{TemplateBinding BorderBrush}">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="Background" Value="#573ab7"/>
+                    </Trigger>
+                </Style.Triggers>
+
+
+            </Style>
+
+            <Style x:Key="GridRemoveButton" TargetType="Button" BasedOn="{StaticResource GridEditButton}">
+                <Setter Property="Background" Value="#d32f2f"/>
+                <Setter Property="BorderBrush" Value="#b71c1c"/>
+
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="Background" Value="#f44336"/>
+                    </Trigger>
+                </Style.Triggers>
+
+
+            </Style>
+
+            <Style x:Key="GridButtonIcon" TargetType="Icon:PackIconMaterial">
+                <Setter Property="Width" Value="12"/>
+                <Setter Property="Height" Value="12"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+            </Style>
 
         </ResourceDictionary>
-   
-  
     </Application.Resources>
-
-    
 </Application>

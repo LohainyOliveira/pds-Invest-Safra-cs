@@ -80,7 +80,6 @@ namespace InvestSafra
 		private void btEntrar_Click(object sender, RoutedEventArgs e)
 		{
 
-			
 		}
 
         private void ListViewItem_Selected(object sender, RoutedEventArgs e)
@@ -119,7 +118,7 @@ namespace InvestSafra
 
 		private void btHome_Click(object sender, RoutedEventArgs e)
 		{
-			Entrar form = new Entrar();
+			ListaInsumos form = new ListaInsumos();
 			form.ShowDialog();
 		}
 	}

@@ -45,5 +45,15 @@ namespace InvestSafra.Views
 				}
 			}
         }
-    }
+
+		private void Button_Click(object sender, RoutedEventArgs e)
+		{
+
+		}
+
+		private void membersDataGrid_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+		{
+
+		}
+	}
 }
