@@ -64,6 +64,6 @@ namespace InvestSafra.Views
         {
 
         }
-        }
+        
     }
 }
