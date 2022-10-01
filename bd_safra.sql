@@ -236,6 +236,7 @@ foreign key (id_ins_fk) references Insumo (id_ins)
 
 create table Clima (
 id_clim int primary key auto_increment not null,
+data_clim date not null,
 temperatura_clim varchar (100) not null,
 local_clim varchar (100) not null,
 clima_clim varchar (100) not null
