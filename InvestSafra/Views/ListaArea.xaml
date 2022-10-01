@@ -36,7 +36,7 @@
 
                     <TextBlock Text="Invest Safra" Foreground="white" FontSize="22" FontWeight="SemiBold"
                                DockPanel.Dock="Top" TextAlignment="Center" Margin="5 25 0 10"/>
-                    <TextBlock Text="Lista de área" Foreground="#d0bfff" FontSize="14" FontWeight="SemiBold"
+                    <TextBlock Text="Lista de Área" Foreground="#d0bfff" FontSize="14" FontWeight="SemiBold"
                                DockPanel.Dock="Top" TextAlignment="Center"/>
 
                     <Separator Margin="25" DockPanel.Dock="Top" Height="0.8" Background="#7b5cd6"/>
@@ -118,12 +118,12 @@
 
 
                 <TextBlock Text="Atualize ou Delete  Sua Área Aqui"  Grid.Row="2" FontSize="18"  FontWeight="SemiBold"
-                           Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="498,2,0,0" Width="330" Grid.RowSpan="2"/>
+                           Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="523,2,0,0" Width="330" Grid.RowSpan="2"/>
 
 
 
                 <Grid Width="200" HorizontalAlignment="Right" Grid.Row="4">
-                    <TextBlock Margin="15 0 " VerticalAlignment="Center" Foreground="black" IsHitTestVisible="False"
+                    <TextBlock Margin="65,12,31,0" VerticalAlignment="Top" Foreground="black" IsHitTestVisible="False"
                                Panel.ZIndex="1" Text="Procurar por Área..." Visibility="Visible"/>
 
                     <TextBox x:Name="txtFilter" Style="{StaticResource textBoxFilter}"/>

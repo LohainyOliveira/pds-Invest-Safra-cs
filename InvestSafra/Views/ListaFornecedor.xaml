@@ -118,12 +118,12 @@
 
 
                 <TextBlock Text="Atualize ou Delete o Seu Fornecedor Aqui"  Grid.Row="1" FontSize="18"  FontWeight="SemiBold"
-                           Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="434,60,0,0" Width="381" Grid.RowSpan="3"/>
+                           Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="458,60,0,0" Width="381" Grid.RowSpan="3"/>
 
 
 
                 <Grid Width="200" HorizontalAlignment="Right" Grid.Row="4">
-                    <TextBlock Margin="15 0 " VerticalAlignment="Center" Foreground="black" IsHitTestVisible="False"
+                    <TextBlock Margin="30,0,0,0" VerticalAlignment="Center" Foreground="black" IsHitTestVisible="False"
                                Panel.ZIndex="1" Text="Procurar por Fornecedor..." Visibility="Visible"/>
 
                     <TextBox x:Name="txtFilter" Style="{StaticResource textBoxFilter}"/>
