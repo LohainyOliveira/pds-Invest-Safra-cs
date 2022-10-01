@@ -217,9 +217,6 @@
     <Compile Include="Views\ListaCompra.xaml.cs">
       <DependentUpon>ListaCompra.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\ListaEntrar.xaml.cs">
-      <DependentUpon>ListaEntrar.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\ListaEstoque.xaml.cs">
       <DependentUpon>ListaEstoque.xaml</DependentUpon>
     </Compile>
@@ -372,10 +369,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\ListaCompra.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Views\ListaEntrar.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
