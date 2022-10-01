@@ -36,7 +36,7 @@
 
                     <TextBlock Text="Invest Safra" Foreground="white" FontSize="22" FontWeight="SemiBold"
                                DockPanel.Dock="Top" TextAlignment="Center" Margin="5 25 0 10"/>
-                    <TextBlock Text="Lista de Clientes Físico" Foreground="#d0bfff" FontSize="14" FontWeight="SemiBold"
+                    <TextBlock Text="Lista de Cliente Físico" Foreground="#d0bfff" FontSize="14" FontWeight="SemiBold"
                                DockPanel.Dock="Top" TextAlignment="Center"/>
 
                     <Separator Margin="25" DockPanel.Dock="Top" Height="0.8" Background="#7b5cd6"/>
