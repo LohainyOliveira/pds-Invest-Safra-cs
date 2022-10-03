@@ -184,8 +184,8 @@
     <Compile Include="Views\ClienteFisicoWindow.xaml.cs">
       <DependentUpon>ClienteFisicoWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\ClienteJuridico.xaml.cs">
-      <DependentUpon>ClienteJuridico.xaml</DependentUpon>
+    <Compile Include="Views\CadastrarClienteJuridico.xaml.cs">
+      <DependentUpon>CadastrarClienteJuridico.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ClimaFazenda.xaml.cs">
       <DependentUpon>ClimaFazenda.xaml</DependentUpon>
@@ -207,9 +207,6 @@
     </Compile>
     <Compile Include="Views\ListaCaixa.xaml.cs">
       <DependentUpon>ListaCaixa.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ListaClienteFisico.xaml.cs">
-      <DependentUpon>ListaClienteFisico.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ListaClienteJuridico.xaml.cs">
       <DependentUpon>ListaClienteJuridico.xaml</DependentUpon>
@@ -327,7 +324,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\ClienteJuridico.xaml">
+    <Page Include="Views\CadastrarClienteJuridico.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -356,10 +353,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\ListaCaixa.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Views\ListaClienteFisico.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

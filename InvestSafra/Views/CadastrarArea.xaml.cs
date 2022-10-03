@@ -20,10 +20,31 @@ namespace InvestSafra.Views
     /// </summary>
     public partial class CadastrarArea : Window
     {
-        private Area _area = new Area();
+         Area _area = new Area();
         public CadastrarArea()
         {
             InitializeComponent();
+            Loaded += AreaFormWindow_Loaded;
+        }
+        public CadastrarArea(Area area)
+        {
+            InitializeComponent();
+            
+            _area = area;
+            Loaded +=AreaFormWindow_Loaded;
+
+        }
+
+
+        private void AreaFormWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            txtcnpj.Text = _area.CNPJ;
+            txtMetros.Text = _area.Metros;
+            txtNomeTerreno.Text = _area.Nome_Terreno;
+            txtLocalizacao.Text = _area.Localizacao;
+            txtDescricao.Text = _area.Descricao;
+            txtresponsavel.Text = _area.Nome_Responsavel;
+
         }
 
         private void ExibirMensagemSalvar()

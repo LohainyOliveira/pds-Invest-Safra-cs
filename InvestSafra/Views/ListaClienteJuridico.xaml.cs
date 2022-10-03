@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using InvestSafra.Models;
 
 namespace InvestSafra.Views
 {
@@ -22,6 +23,61 @@ namespace InvestSafra.Views
         public ListaClienteJuridico()
         {
             InitializeComponent();
+            Loaded += ClienteJuridicoListaWindow_Loaded;
+        }
+
+        private void ClienteJuridicoListaWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            CarregarListagem();
+        }
+
+        private void CarregarListagem()
+        {
+            try
+            {
+                var dao = new ClienteJuridicoDAO();
+                List<ClienteJuridico> listaClienteJ = dao.List();
+
+                dataGridClienteJuridico.ItemsSource = listaClienteJ;
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+
+        private void btRemover_Click(object sender, RoutedEventArgs e)
+        {
+            var clientJSelecionada = dataGridClienteJuridico.SelectedItem as ClienteJuridico;
+
+            var resultado = MessageBox.Show($"Deseja realmente Remover a escola{clientJSelecionada.Nome}?", "Confirmação de Exclusão", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+
+            try
+            {
+                if (resultado == MessageBoxResult.Yes)
+                {
+                    var dao = new ClienteJuridicoDAO();
+                    dao.Delete(clientJSelecionada);
+
+                    MessageBox.Show("Registros Removidos!");
+                    CarregarListagem();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void btAtualizar_Click(object sender, RoutedEventArgs e)
+        {
+            var clientJSelecionada = dataGridClienteJuridico.SelectedItem as ClienteJuridico;
+
+            var form = new CadastrarClienteJuridico(clientJSelecionada);
+            form.ShowDialog();
         }
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
         {

@@ -11,18 +11,46 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using InvestSafra.Models;
 
 namespace InvestSafra.Views
 {
     /// <summary>
     /// Lógica interna para ClienteJuridico.xaml
     /// </summary>
-    public partial class ClienteJuridico : Window
+    public partial class CadastrarClienteJuridico : Window
     {
-        public ClienteJuridico()
+        ClienteJuridico _clienteJ = new ClienteJuridico();
+        public CadastrarClienteJuridico()
         {
             InitializeComponent();
+            Loaded += ClienteJuridicoFormWindow_Loaded;
         }
+        public CadastrarClienteJuridico(ClienteJuridico clienteJ)
+        {
+            InitializeComponent();
+
+            _clienteJ = clienteJ;
+            Loaded += ClienteJuridicoFormWindow_Loaded;
+
+        }
+
+
+        private void ClienteJuridicoFormWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            txtNomeCompleto.Text = _clienteJ.Nome;
+            txtNomeCompleto.Text = _clienteJ.Nome;
+            txtNomeCompleto.Text = _clienteJ.Nome;
+            txtNomeCompleto.Text = _clienteJ.Nome;
+            txtNomeCompleto.Text = _clienteJ.Nome;
+            txtNomeCompleto.Text = _clienteJ.Nome;
+            txtNomeCompleto.Text = _clienteJ.Nome;
+            txtNomeCompleto.Text = _clienteJ.Nome;
+            txtNomeCompleto.Text = _clienteJ.Nome;
+            txtNomeCompleto.Text = _clienteJ.Nome;
+
+        }
+
 
         private void btLimpar_Click(object sender, RoutedEventArgs e)
         {
