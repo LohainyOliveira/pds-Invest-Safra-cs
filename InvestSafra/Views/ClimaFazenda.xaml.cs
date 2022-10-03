@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using InvestSafra.Models;
+
 
 namespace InvestSafra.Views
 {
@@ -19,6 +21,35 @@ namespace InvestSafra.Views
     /// </summary>
     public partial class ClimaFazenda : Window
     {
+
+
+        private ClimaFazenda _climaFazenda= new ClimaFazenda();
+
+        public ClimaFazenda()
+        {
+            InitializeComponent();
+            Loaded += ClimaFazendaFormWindow_Loaded;
+        }
+        public ClimaFazenda(ClimaFazenda climaFazenda)
+        {
+            InitializeComponent();
+
+            _climaFazenda = climaFazenda;
+            Loaded += ClimaFazendaFormWindow_Loaded;
+
+        }
+
+
+        private void FazendaFormWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            txtData.Text = _climaFazenda.Data;
+            txtClima.Text = _climaFazenda.Clima;
+            txtTemperatura.Text = _climaFazenda.Temperatura;
+            txtLocal.Text = _climaFazenda.Local;
+            
+
+
+        }
         public ClimaFazenda()
         {
             InitializeComponent();
