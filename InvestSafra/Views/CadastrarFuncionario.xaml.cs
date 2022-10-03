@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+using InvestSafra.Models;
 
 namespace InvestSafra.Views
 {
@@ -20,10 +21,25 @@ namespace InvestSafra.Views
     /// </summary>
     public partial class CadastrarFuncionario : Window
     {
-
+        private Funcionario _funcionario = new Funcionario();
         public CadastrarFuncionario()
         {
             InitializeComponent();
+            Loaded += FuncionarioFormWindow_Loaded;
+        }
+        public CadastrarFuncionario(Funcionario funcionario)
+        {
+            InitializeComponent();
+
+            _funcionario = funcionario;
+            Loaded += FuncionarioFormWindow_Loaded;
+
+        }
+
+
+        private void FuncionarioFormWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            txtComplemento.Text = _funcionario.ToString();
 
         }
 

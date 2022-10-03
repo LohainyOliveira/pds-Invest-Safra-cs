@@ -24,8 +24,33 @@ namespace InvestSafra.Views
         public CadastrarFornecedor()
         {
             InitializeComponent();
+            Loaded += FornecedorFormWindow_Loaded;
+        }
+        public CadastrarFornecedor(Fornecedor fornecedor)
+        {
+            InitializeComponent();
+
+            _fornecedor = fornecedor;
+            Loaded += FornecedorFormWindow_Loaded;
+
         }
 
+
+        private void FornecedorFormWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            txtNomeFantasia.Text = _fornecedor.Nome_Fantasia;
+            txtRazaoSocial.Text = _fornecedor.Razao_Social;
+            txtBairro.Text = _fornecedor.Bairro;
+            txtCep.Text = _fornecedor.CEP;
+            txtCidade.Text = _fornecedor.Cidade;
+            txtCNPJ.Text = _fornecedor.CNPJ;
+            txtEmail.Text = _fornecedor.Email;
+            txtTelefone.Text = _fornecedor.Telefone_Pessoal;
+            txtTelefoneF.Text = _fornecedor.Telefone_Empresa;
+            txtRua.Text = _fornecedor.Rua;
+            txtComplemento = _fornecedor.Complemento;
+
+        }
         private void btLimpar_Click(object sender, RoutedEventArgs e)
         {
             txtBairro.Clear();

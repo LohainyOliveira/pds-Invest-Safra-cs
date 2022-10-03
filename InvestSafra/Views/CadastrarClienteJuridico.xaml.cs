@@ -39,15 +39,14 @@ namespace InvestSafra.Views
         private void ClienteJuridicoFormWindow_Loaded(object sender, RoutedEventArgs e)
         {
             txtNomeCompleto.Text = _clienteJ.Nome;
-            txtNomeCompleto.Text = _clienteJ.Nome;
-            txtNomeCompleto.Text = _clienteJ.Nome;
-            txtNomeCompleto.Text = _clienteJ.Nome;
-            txtNomeCompleto.Text = _clienteJ.Nome;
-            txtNomeCompleto.Text = _clienteJ.Nome;
-            txtNomeCompleto.Text = _clienteJ.Nome;
-            txtNomeCompleto.Text = _clienteJ.Nome;
-            txtNomeCompleto.Text = _clienteJ.Nome;
-            txtNomeCompleto.Text = _clienteJ.Nome;
+            txtCEP.Text = _clienteJ.CEP;
+            txtRg.Text = _clienteJ.RG;
+            txtBairro.Text = _clienteJ.Bairro;
+            txtCEP.Text = _clienteJ.CEP;
+            txtEmail.Text = _clienteJ.Email;
+            txtMunicipio = _clienteJ.Cidade;
+            txtTelefone = _clienteJ.Telefone;
+
 
         }
 

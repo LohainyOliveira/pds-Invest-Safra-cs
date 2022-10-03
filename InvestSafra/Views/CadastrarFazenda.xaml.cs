@@ -23,7 +23,30 @@ namespace InvestSafra.Views
         private Fazenda _fazenda = new Fazenda();
         public CadastrarFazenda()
         {
+            InitializeComponent(); 
+            Loaded += FazendaFormWindow_Loaded;
+        }
+        public CadastrarFazenda(Fazenda fazenda)
+        {
             InitializeComponent();
+
+            _fazenda = fazenda;
+            Loaded += FazendaFormWindow_Loaded;
+
+        }
+
+
+        private void FazendaFormWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            txtNome.Text = _fazenda.Nome;
+            txtCnpj.Text = _fazenda.CNPJ;
+            txtComplemento.Text = _fazenda.Complemento;
+            txtLocalizacao.Text = _fazenda.Localizacao;
+            txtProprietario.Text = _fazenda.Proprietario;
+            txtNomeFantasia.Text = _fazenda.NomeFantasia;
+
+
+
         }
 
         private void btCancelar_Click(object sender, RoutedEventArgs e)
