@@ -16,7 +16,8 @@
         Height="760" Width="1080" WindowStartupLocation="CenterScreen" WindowStyle="None"
         AllowsTransparency="True" Background="Transparent">
 
-    <Grid Margin="0,0,10,-151">
+    <Border Background="White" CornerRadius="30" MouseDown="Border_MouseDown" MouseLeftButtonDown="Border_MouseLeftButtonDown">
+    <Grid Margin="0,0,-23,-151">
         <Grid.RowDefinitions>
             <RowDefinition Height="115"/>
             <RowDefinition Height="*"/>
@@ -256,5 +257,6 @@
             <Button x:Name="btLimpar" FontSize="19" Content="Limpar" Height="40" Width="119" HorizontalAlignment="Right" Margin="10 110 200 0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Click="btLimpar_Click"/>
         </Grid>
     </Grid>
+    </Border>
 
 </Window>
