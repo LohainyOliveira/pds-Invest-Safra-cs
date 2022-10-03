@@ -124,7 +124,7 @@
                     MaxWidth="400"
                     Margin="50 0 50 0"
                     materialDesign:HintAssist.Hint="Município"
-                    x:Name="txtSetor" Padding="16" Grid.Row="1" 
+                    x:Name="txtMunicipio" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
                     Width="209" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
@@ -169,7 +169,7 @@
                     AcceptsReturn="True"
                     MaxWidth="400"
                     materialDesign:HintAssist.Hint="CEP"
-                    x:Name="txtSalario" Padding="16" Grid.Row="1" 
+                    x:Name="txtCEP" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" Margin="50 0 0 0" 
                     Width="210" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />

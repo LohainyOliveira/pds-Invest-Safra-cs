@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using InvestSafra.Models;
 
 namespace InvestSafra.Views
 {
@@ -22,7 +23,65 @@ namespace InvestSafra.Views
         public ListaClima()
         {
             InitializeComponent();
+            Loaded += ClimaListaWindow_Loaded;
         }
+
+        private void ClimaListaWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            CarregarListagem();
+        }
+
+        private void CarregarListagem()
+        {
+            try
+            {
+                var dao = new ClimaDAO();
+                List<Clima> liastaClima = dao.List();
+
+                dataGridClima.ItemsSource = liastaClima;
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+
+        private void btRemover_Click(object sender, RoutedEventArgs e)
+        {
+            var climaSelecionada = dataGridClima.SelectedItem as Clima;
+
+            var resultado = MessageBox.Show($"Deseja realmente Remover a escola{climaSelecionada.Temperatura}?", "Confirmação de Exclusão", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+
+            try
+            {
+                if (resultado == MessageBoxResult.Yes)
+                {
+                    var dao = new ClimaDAO();
+                    dao.Delete(climaSelecionada);
+
+                    MessageBox.Show("Registros Removidos!");
+                    CarregarListagem();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void btAtualizar_Click(object sender, RoutedEventArgs e)
+        {
+            var areaSeleclimaSelecionadaionada = dataGridClima.SelectedItem as Area;
+
+            var form = new ClimaFazenda(climaSelecionada);
+            form.ShowDialog();
+            form.Close();
+        }
+
+
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.ChangedButton == MouseButton.Left)
