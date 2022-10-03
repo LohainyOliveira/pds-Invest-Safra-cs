@@ -22,9 +22,9 @@
             <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Right"
                         Margin="20 0" Cursor="Hand">
 
-                <Button x:Name="btHome" Content="Entrar" BorderThickness="10"
+                <Button x:Name="btEntrar" Content="Entrar" BorderThickness="10"
                         Background="#EFA82E" BorderBrush="#EFA82E" Foreground="Black"
-                        Width="111" Height="41" Click="btHome_Click" Cursor="Hand"/>
+                        Width="111" Height="41" Cursor="Hand" Click="btEntrar_Click_1"/>
 
                 <Button x:Name="btCadastro" Content="Inscreva-se" Height="40" Width="160"
                         materialDesign:ButtonAssist.CornerRadius="8" Background="#EFA82E"

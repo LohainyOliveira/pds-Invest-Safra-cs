@@ -24,9 +24,9 @@ namespace InvestSafra.Models
 
                 
 
-                comando.Parameters.AddWithValue("@nome", recebimento.Valor_Venda_Safra);
-                comando.Parameters.AddWithValue("@descricao", recebimento.Data);
-                comando.Parameters.AddWithValue("@modelo", recebimento.Comprador);
+                comando.Parameters.AddWithValue("@valor_venda", recebimento.Valor_Venda_Safra);
+                comando.Parameters.AddWithValue("@ddata", recebimento.Data);
+                comando.Parameters.AddWithValue("@comprador", recebimento.Comprador);
 
                 var resultado = comando.ExecuteNonQuery();
 
@@ -64,7 +64,9 @@ namespace InvestSafra.Models
 
                     var recebimento = new Recebimentos();
                     recebimento.Id = reader.GetInt32("id_rec");
-                    recebimento.Valor_Venda_Safra= reader.GetDouble("valor_venda_rec");
+                    recebimento.Valor_Venda_Safra = reader.GetDouble("valor_venda_rec");
+                    recebimento.Data = reader.GetDateTime("data_rec");
+                    recebimento.Comprador = reader.GetString("comprador_rec");
 
                     lista.Add(recebimento);
                 }
@@ -77,22 +79,18 @@ namespace InvestSafra.Models
             }
         }
 
-        public void Update(Maquinas maquinas)
+        public void Update(Recebimentos recebimento)
         {
             try
             {
 
                 var comando = _conn.Query();
 
-                comando.CommandText = "UPDATE Insumo set nome_maq = @nome, descricao_maq = @descricao, modelo_maq = @modelo, marca_maq = @marca, quantidade_maq = @quantidade, valor_maq = @valor WHERE id_maq = @id";
+                comando.CommandText = "UPDATE Recebimento set valor_venda_rec = @valor_venda, data_rec = @data, comprador_rec = @comprador WHERE id_rec = @id";
 
-                comando.Parameters.AddWithValue("@nome", maquinas.Nome);
-                comando.Parameters.AddWithValue("@descricao", maquinas.Descricao);
-                comando.Parameters.AddWithValue("@modelo", maquinas.Modelo);
-                comando.Parameters.AddWithValue("@marca", maquinas.Marca);
-                comando.Parameters.AddWithValue("@quantidade", maquinas.Quantidade);
-                comando.Parameters.AddWithValue("@valor", maquinas.Valor);
-
+                comando.Parameters.AddWithValue("@valor_venda", recebimento.Valor_Venda_Safra);
+                comando.Parameters.AddWithValue("@data", recebimento.Data);
+                comando.Parameters.AddWithValue("@comprador", recebimento.Comprador);
                 comando.ExecuteNonQuery();
             }
             catch (Exception ex)
@@ -100,15 +98,15 @@ namespace InvestSafra.Models
                 throw ex;
             }
         }
-        public void Delete(Maquinas maquinas)
+        public void Delete(Recebimentos recebimento)
         {
             try
             {
                 var comando = _conn.Query();
 
-                comando.CommandText = "Delete from Maquina where id_maq = @id";
+                comando.CommandText = "Delete from Recebimento where id_maq = @id";
 
-                comando.Parameters.AddWithValue("@id", maquinas.Id);
+                comando.Parameters.AddWithValue("@id", recebimento.Id);
 
                 var resultado = comando.ExecuteNonQuery();
 

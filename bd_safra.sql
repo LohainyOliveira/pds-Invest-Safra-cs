@@ -213,7 +213,7 @@ id_fun_fk int not null,
 id_faze_fk int not null,
 id_are_fk int not null,
 foreign key (id_sem_fk) references Semente (id_sem),
-foreign key (id_fun_fk) references Funcionário (id_fun),
+foreign key (id_fun_fk) references Funcionario (id_fun),
 foreign key (id_faze_fk) references Fazenda (id_faze),
 foreign key (id_are_fk) references Area (id_are)
 );
@@ -236,6 +236,7 @@ foreign key (id_ins_fk) references Insumo (id_ins)
 
 create table Clima (
 id_clim int primary key auto_increment not null,
+data_clim date not null,
 temperatura_clim varchar (100) not null,
 local_clim varchar (100) not null,
 clima_clim varchar (100) not null

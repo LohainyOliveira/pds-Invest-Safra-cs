@@ -9,7 +9,7 @@ namespace InvestSafra.Models
 	internal class Sementes
 	{
 		public int Id { get; set; }
-		public int Quantidade { get; set; }
+		public double Quantidade { get; set; }
 		public string Marca { get; set; }
 		public string Descricao { get; set; }
 		public string Medida { get; set; }
