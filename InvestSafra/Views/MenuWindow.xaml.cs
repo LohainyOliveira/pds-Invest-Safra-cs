@@ -199,8 +199,7 @@ namespace InvestSafra.Views
 		}
 		private void SideMenuItemCaixa_Selected(object sender, RoutedEventArgs e)
 		{
-			CadastrarCaixa form = new CadastrarCaixa();
-			form.ShowDialog();
+			
 		}
 		private void SideMenuItemEmpresas_Selected(object sender, RoutedEventArgs e)
 		{

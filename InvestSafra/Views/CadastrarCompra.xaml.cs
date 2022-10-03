@@ -28,7 +28,7 @@ namespace InvestSafra.Views
 
         private void btCancelar_Click(object sender, RoutedEventArgs e)
         {
-            
+
             txtDescricao.Clear();
             txtNome.Clear();
             txtQuantidade.Clear();
@@ -42,6 +42,37 @@ namespace InvestSafra.Views
             MessageBox.Show($"Campos Limpos com Sucesso", "Limpeza Concluida",
                 MessageBoxButton.OK, MessageBoxImage.Information);
         }
+<<<<<<< HEAD
+
+        private void Border_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+            {
+                this.DragMove();
+            }
+
+        }
+
+        private bool IsMaxinized = false;
+        private void Border_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ClickCount == 2)
+            {
+                if (IsMaxinized)
+                {
+                    this.WindowState = WindowState.Normal;
+                    this.Width = 1080;
+                    this.Height = 720;
+
+                    IsMaxinized = false;
+                }
+                else
+                {
+                    this.WindowState = WindowState.Maximized;
+                    IsMaxinized = true;
+
+                }
+=======
         private void ExibirMensagemSalvar()
         {
             MessageBox.Show($"Campos Salvos com Sucesso!", "Registros Salvos",
@@ -65,6 +96,7 @@ namespace InvestSafra.Views
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+>>>>>>> bea8dd59b1da32099bd93a81f271bdcb084e20cc
             }
 
         }

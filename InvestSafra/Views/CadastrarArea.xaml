@@ -14,8 +14,13 @@
         TextOptions.TextFormattingMode="Ideal" 
         TextOptions.TextRenderingMode="Auto"
         FontFamily="{DynamicResource MaterialDesignFont}"
-        Title="Inscrever" Height="542" Width="956">
-    <Grid Margin="0,0,0,-28" RenderTransformOrigin="0.5,0.5">
+      
+        Height="560" Width="1080" WindowStartupLocation="CenterScreen" WindowStyle="None"
+        AllowsTransparency="True" Background="Transparent">
+
+
+    <Border Background="White" CornerRadius="30" MouseDown="Border_MouseDown" MouseLeftButtonDown="Border_MouseLeftButtonDown">
+        <Grid Margin="0,0,0,-28" RenderTransformOrigin="0.5,0.5">
 
         <Grid.RenderTransform>
             <TransformGroup>
@@ -30,7 +35,7 @@
             <RowDefinition Height="115"/>
         </Grid.RowDefinitions>
 
-        <Grid Grid.RowSpan="3" Margin="0,0,0,10">
+        <Grid Grid.RowSpan="3" Margin="0,-5,0,10">
             <Grid.Background>
                 <ImageBrush ImageSource="/Imagens/ImgDesfocada2.png"/>
             </Grid.Background>
@@ -43,7 +48,7 @@
                 </Grid.ColumnDefinitions>
                 <Image HorizontalAlignment="Left" Height="200" Margin="38,15,0,0" VerticalAlignment="Top" Width="136" Source="/Imagens/LogoCanto.png"/>
                 <Image HorizontalAlignment="Right" Height="200" VerticalAlignment="Top" Width="200" Source="/Icons/localização.png"/>
-                <Label  Content="Cadastro de Área" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Malik" FontSize="24" Foreground="#EFA82E" FontWeight="Bold" Height="49" Width="292" RenderTransformOrigin="0.336,0.452" Margin="329,44,0,0"/>
+                <Label  Content="Cadastro de Área" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Malik" FontSize="24" Foreground="#EFA82E" FontWeight="Bold" Height="59" Width="292" RenderTransformOrigin="0.336,0.452" Margin="423,47,0,0"/>
 
 
                 <Button Style="{StaticResource topButton}" Margin="877,0,0,497" Height="40" VerticalAlignment="Bottom" x:Name="btSair" Click="btSair_Click" Width="48">
@@ -145,8 +150,8 @@
 
                     <Grid Margin="334,7,-137,-7" Grid.ColumnSpan="4">
                         <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
-                            <Button x:Name="btSalvar" FontSize="19" Content="Salvar" Height="40" Width="119"  Margin="0,0,20,0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Grid.Column="2" Grid.ColumnSpan="2" Click="btSalvar_Click"/>
-                            <Button x:Name="btCancelar" FontSize="19" Content="Limpar" Height="40" Width="119"  Margin="0,0,0,0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Grid.ColumnSpan="4" Click="btCancelar_Click"/>
+                            <Button x:Name="btSalvar" FontSize="19" Content="Salvar" Height="40" Width="119"  Margin="0,20,20,0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Grid.Column="2" Grid.ColumnSpan="2" Click="btSalvar_Click"/>
+                            <Button x:Name="btCancelar" FontSize="19" Content="Limpar" Height="40" Width="119"  Margin="0,20,0,0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Grid.ColumnSpan="4" Click="btCancelar_Click"/>
                         </StackPanel>
                     </Grid>
                 </Grid>
@@ -155,6 +160,8 @@
             </Grid>
         </Grid>
     </Grid>
+        
+    </Border>
 
 </Window>
 
