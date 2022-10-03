@@ -25,6 +25,32 @@ namespace InvestSafra.Views
         public ClienteFisicoWindow()
         {
             InitializeComponent();
+            Loaded += ClienteFisicoFormWindow_Loaded;
+        }
+        public ClienteFisicoWindow(ClienteFisico clienteF)
+        {
+            InitializeComponent();
+
+            _clienteFisico = clienteF;
+            Loaded += ClienteFisicoFormWindow_Loaded;
+
+        }
+
+
+        private void ClienteFisicoFormWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            txtNomeCompleto.Text = _clienteFisico.Nome;
+            txtCep.Text = _clienteFisico.CEP;
+            txtRg.Text = _clienteFisico.RG;
+            txtBairro.Text = _clienteFisico.Bairro;
+            txtCPF.Text = _clienteFisico.CPF;
+            txtEmail.Text = _clienteFisico.Email;
+            txtCidade.Text = _clienteFisico.Cidade;
+            txtTelefone.Text = _clienteFisico.Telefone;
+            txtRua.Text = _clienteFisico.Rua;
+           
+
+
         }
 
         private void ExibirMensagemLimpar()

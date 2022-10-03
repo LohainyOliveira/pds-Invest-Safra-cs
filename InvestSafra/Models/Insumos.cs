@@ -13,5 +13,7 @@ namespace InvestSafra.Models
 		public string Tipo { get; set; }
 		public string Marca { get; set; }
 		public string Descricao { get; set; }
+		public int Quantidade { get; set; }
+		public double Valor { get; set; }
 	}
 }

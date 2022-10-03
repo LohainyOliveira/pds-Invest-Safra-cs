@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using InvestSafra.Models;
 
 namespace InvestSafra.Views
 {
@@ -19,9 +20,31 @@ namespace InvestSafra.Views
     /// </summary>
     public partial class CadastrarInsumos : Window
     {
+        private Insumos _insumos = new Insumos();
         public CadastrarInsumos()
         {
             InitializeComponent();
+            Loaded += insumosFormWindow_Loaded;
+        }
+        public CadastrarInsumos(Insumos insumos)
+        {
+            InitializeComponent();
+
+            _insumos = insumos;
+            Loaded += insumosFormWindow_Loaded;
+
+        }
+
+
+        private void insumosFormWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            txtDescricao1.Text = _insumos.Descricao;
+            txtMarca1.Text = _insumos.Marca;
+            txtQuantidade.Text = _insumos.Quantidade;
+            txtTipoInsumo.Text = _insumos.Tipo;
+            txtValor.Text = _insumos.Valor;
+           
+
         }
 
         private void btCancelar_Click(object sender, RoutedEventArgs e)

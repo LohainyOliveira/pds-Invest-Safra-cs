@@ -42,10 +42,10 @@ namespace InvestSafra.Views
             txtCEP.Text = _clienteJ.CEP;
             txtRg.Text = _clienteJ.RG;
             txtBairro.Text = _clienteJ.Bairro;
-            txtCEP.Text = _clienteJ.CEP;
+            txtCPF.Text = _clienteJ.CEP;
             txtEmail.Text = _clienteJ.Email;
-            txtMunicipio = _clienteJ.Cidade;
-            txtTelefone = _clienteJ.Telefone;
+            txtMunicipio.Text = _clienteJ.Cidade;
+            txtTelefone.Text = _clienteJ.Telefone;
 
 
         }

@@ -39,8 +39,17 @@ namespace InvestSafra.Views
 
         private void FuncionarioFormWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            txtComplemento.Text = _funcionario.ToString();
-
+            txtComplemento.Text = _funcionario.Complemento;
+            txtBairro.Text = _funcionario.Bairro;
+            txtCidade.Text = _funcionario.Cidade;
+            txtCPF.Text = _funcionario.CPF;
+            txtEmail.Text = _funcionario.Email;
+            txtfuncao.Text = _funcionario.Funcao;
+            txtNomeCompleto.Text = _funcionario.Nome;
+            txtRg.Text = _funcionario.RG;
+            txtRua.Text = _funcionario.Rua;
+            txtTelefone.Text = _funcionario.Telefone;
+            
         }
 
         private void btLimpar_Click(object sender, RoutedEventArgs e)

@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using InvestSafra.Models;
 
 namespace InvestSafra.Views
 {
@@ -19,10 +20,33 @@ namespace InvestSafra.Views
     /// </summary>
     public partial class CadastrarSementes : Window
     {
+        private Sementes _semente = new Sementes();
         public CadastrarSementes()
         {
             InitializeComponent();
+            Loaded += sementeFormWindow_Loaded;
         }
+        public CadastrarSementes(Sementes semente)
+        {
+            InitializeComponent();
+
+            _semente = semente;
+            Loaded += sementeFormWindow_Loaded;
+
+        }
+
+
+        private void sementeFormWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            txtdescricao.Text = _semente.Descricao;
+            txtMarca1.Text = _semente.Marca;
+            txtMedida.Text = _semente.Medida;
+            txtQuantidade1 = _semente.Quantidade;
+            txtValor.Text = _semente.Valor;
+
+
+        }
+
 
         private void btSalvar_Click(object sender, RoutedEventArgs e)
         {
