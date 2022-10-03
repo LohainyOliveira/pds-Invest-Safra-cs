@@ -133,7 +133,7 @@
                                            Foreground="black" HorizontalAlignment="Right"/>
                 </Grid>
 
-                <DataGrid  ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" RowStyle="{DynamicResource DataGridRowStyle1}" Grid.Row="5" x:Name="membersDataGrid" SelectionChanged="membersDataGrid_SelectionChanged">
+                <DataGrid  ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" RowStyle="{DynamicResource DataGridRowStyle1}" Grid.Row="5" x:Name="dataGridInsumo" SelectionChanged="membersDataGrid_SelectionChanged">
                     <DataGrid.Columns>
                         <!-- Começo CheckBox -->
                         <DataGridCheckBoxColumn CanUserResize="False" Width="auto">

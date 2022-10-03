@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using InvestSafra.Models;
 
 namespace InvestSafra.Views
 {
@@ -22,6 +23,63 @@ namespace InvestSafra.Views
         public ListaMaquinas()
         {
             InitializeComponent();
+
+            Loaded += MaquinasListaWindow_Loaded;
+        }
+
+        private void MaquinasListaWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            CarregarListagem();
+        }
+
+        private void CarregarListagem()
+        {
+            try
+            {
+                var dao = new MaquinasDAO();
+                List<Maquinas> listaMaquinas = dao.List();
+
+                dataGridMaquinas.ItemsSource = listaMaquinas;
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+
+        private void btRemover_Click(object sender, RoutedEventArgs e)
+        {
+            var maquinasSelecionada = dataGridMaquinas.SelectedItem as Maquinas;
+
+            var resultado = MessageBox.Show($"Deseja realmente Remover a escola{maquinasSelecionada.Id}?", "Confirmação de Exclusão", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+
+            try
+            {
+                if (resultado == MessageBoxResult.Yes)
+                {
+                    var dao = new MaquinasDAO();
+                    dao.Delete(maquinasSelecionada);
+
+                    MessageBox.Show("Registros Removidos!");
+                    CarregarListagem();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void btAtualizar_Click(object sender, RoutedEventArgs e)
+        {
+            var maquinasSelecionada = dataGridMaquinas.SelectedItem as Maquinas;
+
+            var form = new CadastrarMaquinas(maquinasSelecionada);
+            form.ShowDialog();
+            form.Close();
         }
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
         {

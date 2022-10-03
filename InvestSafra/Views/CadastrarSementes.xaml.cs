@@ -15,22 +15,26 @@ using System.Windows.Shapes;
 namespace InvestSafra.Views
 {
     /// <summary>
-    /// Lógica interna para Insumos.xaml
+    /// Lógica interna para Sementes.xaml
     /// </summary>
-    public partial class Insumos : Window
+    public partial class CadastrarSementes : Window
     {
-        public Insumos()
+        public CadastrarSementes()
         {
             InitializeComponent();
         }
 
+        private void btSalvar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         private void btCancelar_Click(object sender, RoutedEventArgs e)
         {
-            txtDescricao1.Clear();
+            txtdescricao.Clear();
             txtMarca1.Clear();
-            cbMedida.SelectedItem = null;
-            txtQuantidade.Clear();
-            txtTipoInsumo.Clear();
+            txtMedida.Clear();  
+            txtQuantidade1.Clear();
             txtValor.Clear();
 
             ExibirMensagemLimpar();

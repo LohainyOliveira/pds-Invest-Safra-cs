@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using InvestSafra.Models;
 
 namespace InvestSafra.Views
 {
@@ -22,6 +23,62 @@ namespace InvestSafra.Views
         public ListaVenda()
         {
             InitializeComponent();
+            Loaded += VendaListaWindow_Loaded;
+        }
+
+        private void VendaListaWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            CarregarListagem();
+        }
+
+        private void CarregarListagem()
+        {
+            try
+            {
+                var dao = new VendaDAO();
+                List<Venda> listaVenda = dao.List();
+
+                dataGridVenda.ItemsSource = listaVenda;
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+
+        private void btRemover_Click(object sender, RoutedEventArgs e)
+        {
+            var vendaSelecionada = dataGridVenda.SelectedItem as Venda;
+
+            var resultado = MessageBox.Show($"Deseja realmente Remover a escola{vendaSelecionada.Id}?", "Confirmação de Exclusão", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+
+            try
+            {
+                if (resultado == MessageBoxResult.Yes)
+                {
+                    var dao = new VendaDAO();
+                    dao.Delete(vendaSelecionada);
+
+                    MessageBox.Show("Registros Removidos!");
+                    CarregarListagem();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void btAtualizar_Click(object sender, RoutedEventArgs e)
+        {
+            var vendaSelecionada = dataGridVenda.SelectedItem as Venda;
+
+            var form = new CadastrarVenda(vendaSelecionada);
+            form.ShowDialog();
+            form.Close();
         }
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
         {

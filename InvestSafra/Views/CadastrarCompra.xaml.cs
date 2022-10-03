@@ -24,7 +24,27 @@ namespace InvestSafra.Views
         private Compra _compra = new Compra();
         public CadastrarCompra()
         {
+            InitializeComponent(); 
+            Loaded += CompraFormWindow_Loaded;
+        }
+        public CadastrarCompra(Compra compra)
+        {
             InitializeComponent();
+
+            _compra = compra;
+            Loaded += CompraFormWindow_Loaded;
+
+        }
+
+
+        private void CompraFormWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            txtDescricao.Text = _compra.Descricao;
+            txtNome.Text = _compra.Nome;
+            Convert.ToInt32(txtQuantidade.Text) = _compra.Quantidade;
+
+
+
         }
 
         private void btCancelar_Click(object sender, RoutedEventArgs e)
@@ -72,6 +92,8 @@ namespace InvestSafra.Views
                     IsMaxinized = true;
 
                 }
+            }
+        }
         private void ExibirMensagemSalvar()
         {
             MessageBox.Show($"Campos Salvos com Sucesso!", "Registros Salvos",

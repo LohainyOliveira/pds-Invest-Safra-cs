@@ -2,6 +2,7 @@
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
+using InvestSafra.Models;
 
 namespace InvestSafra.Views
 {
@@ -13,6 +14,63 @@ namespace InvestSafra.Views
         public ListaInsumos()
         {
             InitializeComponent();
+
+            Loaded += InsumoListaWindow_Loaded;
+        }
+
+        private void InsumoListaWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            CarregarListagem();
+        }
+
+        private void CarregarListagem()
+        {
+            try
+            {
+                var dao = new InsumosDAO();
+                List<Insumos> listaInsumos = dao.List();
+
+                dataGridInsumo.ItemsSource = listaInsumos;
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+
+        private void btRemover_Click(object sender, RoutedEventArgs e)
+        {
+            var insumosSelecionada = dataGridInsumo.SelectedItem as Insumos;
+
+            var resultado = MessageBox.Show($"Deseja realmente Remover a escola{insumosSelecionada.Id}?", "Confirmação de Exclusão", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+
+            try
+            {
+                if (resultado == MessageBoxResult.Yes)
+                {
+                    var dao = new InsumosDAO();
+                    dao.Delete(insumosSelecionada);
+
+                    MessageBox.Show("Registros Removidos!");
+                    CarregarListagem();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void btAtualizar_Click(object sender, RoutedEventArgs e)
+        {
+            var insumosSelecionada = dataGridInsumo.SelectedItem as Insumos;
+
+            var form = new CadastrarInsumos(insumosSelecionada);
+            form.ShowDialog();
+            form.Close();
         }
 
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
