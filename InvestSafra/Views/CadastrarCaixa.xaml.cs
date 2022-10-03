@@ -23,5 +23,10 @@ namespace InvestSafra.Views
         {
             InitializeComponent();
         }
+
+        private void btSair_Click(object sender, RoutedEventArgs e)
+        {
+            DialogResult = false;
+        }
     }
 }

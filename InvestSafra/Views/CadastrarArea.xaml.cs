@@ -100,5 +100,10 @@ namespace InvestSafra.Views
 
             ExibirMensagemLimpar();
         }
+
+        private void btSair_Click(object sender, RoutedEventArgs e)
+        {
+            DialogResult = false;
+        }
     }
 }

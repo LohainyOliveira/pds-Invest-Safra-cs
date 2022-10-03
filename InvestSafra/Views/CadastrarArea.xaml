@@ -5,6 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:InvestSafra.Views"
         mc:Ignorable="d"
+        
+        xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
@@ -43,7 +45,14 @@
                 <Image HorizontalAlignment="Right" Height="200" VerticalAlignment="Top" Width="200" Source="/Icons/localização.png"/>
                 <Label  Content="Cadastro de Área" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Malik" FontSize="24" Foreground="#EFA82E" FontWeight="Bold" Height="49" Width="292" RenderTransformOrigin="0.336,0.452" Margin="329,44,0,0"/>
 
+
+                <Button Style="{StaticResource topButton}" Margin="877,0,0,497" Height="40" VerticalAlignment="Bottom" x:Name="btSair" Click="btSair_Click" Width="48">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/Icons/logout.png"/>
+                    </Button.Background>
+                </Button>
             </Grid>
+
 
             <Grid VerticalAlignment="Top" HorizontalAlignment="Center" Height="535" >
                 <StackPanel Orientation="Horizontal" Margin="0 0 60 200">
@@ -68,8 +77,6 @@
                     TextWrapping="Wrap" 
                     Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
-
-
 
 
                 </StackPanel>
