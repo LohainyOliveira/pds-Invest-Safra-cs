@@ -61,8 +61,8 @@ namespace InvestSafra.Views
             txtNomeCompleto.Clear();
             txtRg.Clear();
             txtRua.Clear();
-            txtSalario.Clear();
-            txtSetor.Clear();
+            txtMunicipio.Clear();
+            txtCEP.Clear();
             txtTelefone.Clear();
             cbEstado.SelectedItem = null;
             cbSexo.SelectedItem = null;
@@ -76,8 +76,51 @@ namespace InvestSafra.Views
                 MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
+        private void ExibirMensagemSalvar()
+        {
+            MessageBox.Show($"Campos Salvos com Sucesso!", "Registros Salvos",
+                MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
         private void btSalvar_Click(object sender, RoutedEventArgs e)
         {
+            _clienteJ.Nome = txtNomeCompleto.Text;
+            _clienteJ.CEP = txtCEP.Text;
+            _clienteJ.Bairro = txtBairro.Text;
+            _clienteJ.Cidade = txtMunicipio.Text;
+            _clienteJ.Complemento = txtComplemento.Text;
+            _clienteJ.CPF = txtCPF.Text;
+            _clienteJ.Email = txtEmail.Text;
+            _clienteJ.RG = txtRg.Text;
+            _clienteJ.Rua = txtRua.Text;
+            _clienteJ.Telefone = txtTelefone.Text;
+            _clienteJ.Estado = cbEstado.Text;
+            _clienteJ.Sexo = cbSexo.Text;
+
+            try
+            {
+                var dao = new ClienteJuridicoDAO();
+                dao.Insert(_clienteJ);
+
+                ExibirMensagemSalvar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            txtBairro.Clear();
+            txtComplemento.Clear();
+            txtCPF.Clear();
+            txtEmail.Clear();
+            txtNomeCompleto.Clear();
+            txtRg.Clear();
+            txtRua.Clear();
+            txtMunicipio.Clear();
+            txtCEP.Clear();
+            txtTelefone.Clear();
+            cbEstado.SelectedItem = null;
+            cbSexo.SelectedItem = null;
 
         }
     }
