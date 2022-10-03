@@ -16,8 +16,9 @@ using InvestSafra.Models;
 namespace InvestSafra.Views
 {
     /// <summary>
-    /// Lógica interna para CadastrarCompra.xaml
+    /// Lógica interna para ClienteJuridico.xaml
     /// </summary>
+
     public partial class CadastrarCompra : Window
     {
         private Compra _compra = new Compra();
@@ -42,7 +43,6 @@ namespace InvestSafra.Views
             MessageBox.Show($"Campos Limpos com Sucesso", "Limpeza Concluida",
                 MessageBoxButton.OK, MessageBoxImage.Information);
         }
-<<<<<<< HEAD
 
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -72,7 +72,6 @@ namespace InvestSafra.Views
                     IsMaxinized = true;
 
                 }
-=======
         private void ExibirMensagemSalvar()
         {
             MessageBox.Show($"Campos Salvos com Sucesso!", "Registros Salvos",
@@ -96,9 +95,13 @@ namespace InvestSafra.Views
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
->>>>>>> bea8dd59b1da32099bd93a81f271bdcb084e20cc
             }
 
+        }
+
+        private void btSair_Click(object sender, RoutedEventArgs e)
+        {
+            DialogResult = false;
         }
     }
 }
