@@ -104,79 +104,79 @@
                         </hc:SideMenuItem.Icon>
                     </hc:SideMenuItem>
 
-                    <hc:SideMenuItem Header="Lista Empresa" Background="Transparent" Foreground="Black" Command="{Binding SelectCmd}" CommandParameter="{Binding Header,RelativeSource={RelativeSource Self}}">
+                    <hc:SideMenuItem Selected="SideMenuItemListaEmpresa_Selected" Header="Lista Empresa" Background="Transparent" Foreground="Black" Command="{Binding SelectCmd}" CommandParameter="{Binding Header,RelativeSource={RelativeSource Self}}">
                         <hc:SideMenuItem.Icon>
                             <Image Height="30"  Source="/Icons/marcador.png"/>
                         </hc:SideMenuItem.Icon>
                     </hc:SideMenuItem>
 
-                    <hc:SideMenuItem Header="Lista Clima" Background="Transparent" Foreground="Black" Command="{Binding SelectCmd}" CommandParameter="{Binding Header,RelativeSource={RelativeSource Self}}">
+                    <hc:SideMenuItem Header="Lista Clima" Selected="SideMenuItemListaClima_Selected" Background="Transparent" Foreground="Black" Command="{Binding SelectCmd}" CommandParameter="{Binding Header,RelativeSource={RelativeSource Self}}">
                         <hc:SideMenuItem.Icon>
                             <Image Height="30"  Source="/Icons/marcador.png"/>
                         </hc:SideMenuItem.Icon>
                     </hc:SideMenuItem>
 
-                    <hc:SideMenuItem Header="Lista Compra" Background="Transparent" Foreground="Black" Command="{Binding SelectCmd}" CommandParameter="{Binding Header,RelativeSource={RelativeSource Self}}">
+                    <hc:SideMenuItem Header="Lista Compra" Selected="SideMenuItemListaCompra_Selected" Background="Transparent" Foreground="Black" Command="{Binding SelectCmd}" CommandParameter="{Binding Header,RelativeSource={RelativeSource Self}}">
                         <hc:SideMenuItem.Icon>
                             <Image Height="30"  Source="/Icons/marcador.png"/>
                         </hc:SideMenuItem.Icon>
                     </hc:SideMenuItem>
 
-                    <hc:SideMenuItem Header="Lista Estoque" Background="Transparent" Foreground="Black" Command="{Binding SelectCmd}" CommandParameter="{Binding Header,RelativeSource={RelativeSource Self}}">
+                    <hc:SideMenuItem Header="Lista Estoque" Selected="SideMenuItemListaEstoque_Selected" Background="Transparent" Foreground="Black" Command="{Binding SelectCmd}" CommandParameter="{Binding Header,RelativeSource={RelativeSource Self}}">
                         <hc:SideMenuItem.Icon>
                             <Image Height="30"  Source="/Icons/marcador.png"/>
                         </hc:SideMenuItem.Icon>
                     </hc:SideMenuItem>
 
-                    <hc:SideMenuItem Header="Lista Fazenda" Background="Transparent" Foreground="Black" Command="{Binding SelectCmd}" CommandParameter="{Binding Header,RelativeSource={RelativeSource Self}}">
+                    <hc:SideMenuItem Header="Lista Fazenda" Background="Transparent" Selected="SideMenuItemListaFazenda_Selected" Foreground="Black" Command="{Binding SelectCmd}" CommandParameter="{Binding Header,RelativeSource={RelativeSource Self}}">
                         <hc:SideMenuItem.Icon>
                             <Image Height="30"  Source="/Icons/marcador.png"/>
                         </hc:SideMenuItem.Icon>
                     </hc:SideMenuItem>
 
-                    <hc:SideMenuItem Header="Lista Fornecedor" Background="Transparent" Foreground="Black" Command="{Binding SelectCmd}" CommandParameter="{Binding Header,RelativeSource={RelativeSource Self}}">
+                    <hc:SideMenuItem Header="Lista Fornecedor" Selected="SideMenuItemListaFornecedor_Selected" Background="Transparent" Foreground="Black" Command="{Binding SelectCmd}" CommandParameter="{Binding Header,RelativeSource={RelativeSource Self}}">
                         <hc:SideMenuItem.Icon>
                             <Image Height="30"  Source="/Icons/marcador.png"/>
                         </hc:SideMenuItem.Icon>
                     </hc:SideMenuItem>
 
-                    <hc:SideMenuItem Header="Lista Funcionário" Background="Transparent" Foreground="Black" Command="{Binding SelectCmd}" CommandParameter="{Binding Header,RelativeSource={RelativeSource Self}}">
+                    <hc:SideMenuItem Header="Lista Funcionário" Selected="SideMenuItemListaFuncionario_Selected" Background="Transparent" Foreground="Black" Command="{Binding SelectCmd}" CommandParameter="{Binding Header,RelativeSource={RelativeSource Self}}">
                         <hc:SideMenuItem.Icon>
                             <Image Height="30"  Source="/Icons/marcador.png"/>
                         </hc:SideMenuItem.Icon>
                     </hc:SideMenuItem>
 
-                    <hc:SideMenuItem Header="Lista Insumos" Background="Transparent" Foreground="Black" Command="{Binding SelectCmd}" CommandParameter="{Binding Header,RelativeSource={RelativeSource Self}}">
+                    <hc:SideMenuItem Header="Lista Insumos" Selected="SideMenuItemListaInsumo_Selected" Background="Transparent" Foreground="Black" Command="{Binding SelectCmd}" CommandParameter="{Binding Header,RelativeSource={RelativeSource Self}}">
                         <hc:SideMenuItem.Icon>
                             <Image Height="30"  Source="/Icons/marcador.png"/>
                         </hc:SideMenuItem.Icon>
                     </hc:SideMenuItem>
 
-                    <hc:SideMenuItem Header="Lista Safra" Background="Transparent" Foreground="Black" Command="{Binding SelectCmd}" CommandParameter="{Binding Header,RelativeSource={RelativeSource Self}}">
+                    <hc:SideMenuItem Header="Lista Safra" Selected="SideMenuItemListaSafra_Selected" Background="Transparent" Foreground="Black" Command="{Binding SelectCmd}" CommandParameter="{Binding Header,RelativeSource={RelativeSource Self}}">
                         <hc:SideMenuItem.Icon>
                             <Image Height="30"  Source="/Icons/marcador.png"/>
                         </hc:SideMenuItem.Icon>
                     </hc:SideMenuItem>
 
-                    <hc:SideMenuItem Background="Transparent" Foreground="Black" Header="Lista Maquinas" Command="{Binding SelectCmd}" CommandParameter="{Binding Header,RelativeSource={RelativeSource Self}}">
+                    <hc:SideMenuItem Background="Transparent" Selected="SideMenuItemListaMaquinas_Selected" Foreground="Black" Header="Lista Maquinas" Command="{Binding SelectCmd}" CommandParameter="{Binding Header,RelativeSource={RelativeSource Self}}">
                         <hc:SideMenuItem.Icon>
                             <Image Height="30"  Source="/Icons/marcador.png"/>
                         </hc:SideMenuItem.Icon>
                     </hc:SideMenuItem>
 
-                    <hc:SideMenuItem Background="Transparent" Foreground="Black" Header="Lista Produto" Command="{Binding SelectCmd}" CommandParameter="{Binding Header,RelativeSource={RelativeSource Self}}">
+                    <hc:SideMenuItem Background="Transparent" Foreground="Black" Header="Lista Produto" Selected="SideMenuItemListaProduto_Selected" Command="{Binding SelectCmd}" CommandParameter="{Binding Header,RelativeSource={RelativeSource Self}}">
                         <hc:SideMenuItem.Icon>
                             <Image Height="30"  Source="/Icons/marcador.png"/>
                         </hc:SideMenuItem.Icon>
                     </hc:SideMenuItem>
 
-                    <hc:SideMenuItem Background="Transparent" Foreground="Black" Header="Lista Sementes" Command="{Binding SelectCmd}" CommandParameter="{Binding Header,RelativeSource={RelativeSource Self}}">
+                    <hc:SideMenuItem Background="Transparent" Foreground="Black" Header="Lista Sementes" Selected="SideMenuItemListaSementes_Selected" Command="{Binding SelectCmd}" CommandParameter="{Binding Header,RelativeSource={RelativeSource Self}}">
                         <hc:SideMenuItem.Icon>
                             <Image Height="30"  Source="/Icons/marcador.png"/>
                         </hc:SideMenuItem.Icon>
                     </hc:SideMenuItem>
 
-                    <hc:SideMenuItem Header="Lista Venda" Background="Transparent" Foreground="Black" Command="{Binding SelectCmd}" CommandParameter="{Binding Header,RelativeSource={RelativeSource Self}}">
+                    <hc:SideMenuItem Header="Lista Venda" Selected="SideMenuItemListaVenda_Selected" Background="Transparent" Foreground="Black" Command="{Binding SelectCmd}" CommandParameter="{Binding Header,RelativeSource={RelativeSource Self}}">
                         <hc:SideMenuItem.Icon>
                             <Image Height="30"  Source="/Icons/marcador.png"/>
                         </hc:SideMenuItem.Icon>
