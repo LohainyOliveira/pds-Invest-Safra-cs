@@ -36,13 +36,13 @@
                     <MenuItem Header="_Versão"/>
                 </MenuItem>
             </Menu>
-            
+
             <Button Style="{StaticResource topButton}" Margin="877,0,0,497" Height="40" VerticalAlignment="Bottom" x:Name="btSair" Click="btSair_Click" Width="48">
                 <Button.Background>
                     <ImageBrush ImageSource="/Icons/logout.png"/>
                 </Button.Background>
             </Button>
-            
+
             <TextBlock Grid.Row="0" Grid.ColumnSpan="2" x:Name="txtBlockTitle" Text="Produtos" 
                    FontSize="30" Background="BurlyWood"
                    Padding="15 8 10 0"/>
