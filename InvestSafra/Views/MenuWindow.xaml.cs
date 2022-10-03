@@ -95,6 +95,7 @@ namespace InvestSafra.Views
 		}
 
 
+
 		private void painelHeader_MouseDown_1(object sender, MouseButtonEventArgs e)
 		{
 			if (e.LeftButton == MouseButtonState.Pressed)
@@ -104,5 +105,73 @@ namespace InvestSafra.Views
 
 		}
 
+		private void SideMenuItemHome_Selected(object sender, RoutedEventArgs e)
+		{
+
+		}
+
+		private void SideMenuItemListaArea_Selected(object sender, RoutedEventArgs e)
+		{
+			ListaArea form = new ListaArea();
+			form.ShowDialog();
+		}
+		private void SideMenuItemListaCaixa_Selected(object sender, RoutedEventArgs e)
+		{
+			ListaCaixa form = new ListaCaixa();
+			form.ShowDialog();
+		}
+		private void SideMenuItemListaEmpresa_Selected(object sender, RoutedEventArgs e)
+		{
+
+		}
+
+		private void SideMenuItemListaClima_Selected(object sender, RoutedEventArgs e)
+		{
+
+		}
+		private void SideMenuItemListaCompra_Selected(object sender, RoutedEventArgs e)
+		{
+
+		}
+		private void SideMenuItemListaEstoque_Selected(object sender, RoutedEventArgs e)
+		{
+
+		}
+		private void SideMenuItemListaFazenda_Selected(object sender, RoutedEventArgs e)
+		{
+
+		}
+		private void SideMenuItemListaFornecedor_Selected(object sender, RoutedEventArgs e)
+		{
+
+		}
+		private void SideMenuItemListaFuncionario_Selected(object sender, RoutedEventArgs e)
+		{
+
+		}
+		private void SideMenuItemListaInsumo_Selected(object sender, RoutedEventArgs e)
+		{
+
+		}
+		private void SideMenuItemListaSafra_Selected(object sender, RoutedEventArgs e)
+		{
+
+		}
+		private void SideMenuItemListaMaquinas_Selected(object sender, RoutedEventArgs e)
+		{
+
+		}
+		private void SideMenuItemListaProduto_Selected(object sender, RoutedEventArgs e)
+		{
+
+		}
+		private void SideMenuItemListaSementes_Selected(object sender, RoutedEventArgs e)
+		{
+
+		}
+		private void SideMenuItemListaVenda_Selected(object sender, RoutedEventArgs e)
+		{
+
+		}
 	}
 }

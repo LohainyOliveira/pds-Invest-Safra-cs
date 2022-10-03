@@ -72,14 +72,15 @@
                     </hc:EventTrigger>
                 </hc:Interaction.Triggers>
 
-                <hc:SideMenuItem Background="Transparent" Foreground="black" Header="Home" FontFamily="Arial" FontWeight="Bold">
+                <hc:SideMenuItem Background="Transparent" Foreground="black" Selected="SideMenuItemHome_Selected"
+                                 Header="Home" FontFamily="Arial" FontWeight="Bold">
                     <hc:SideMenuItem.Icon>
                         <Image Height="30"  Source="/Icons/home.png"/>
                     </hc:SideMenuItem.Icon>
                 </hc:SideMenuItem>
 
 
-                <hc:SideMenuItem Background="Transparent" Foreground="Black" Header="Listagem "
+                <hc:SideMenuItem Background="Transparent" Foreground="Black" Header="Listagem" 
                                  FontFamily="Arial" FontWeight="Bold">
                     <hc:SideMenuItem.Icon>
                         <Image Height="30"  Source="/Icons/lista.png" />
@@ -91,13 +92,13 @@
 
                     <!-- Começo das  Listas -->
 
-                    <hc:SideMenuItem Header="Lista Área " Background="Transparent" Foreground="Black" Command="{Binding SelectCmd}" CommandParameter="{Binding Header,RelativeSource={RelativeSource Self}}">
+                    <hc:SideMenuItem Selected="SideMenuItemListaArea_Selected" Header="Lista Área " Background="Transparent" Foreground="Black" Command="{Binding SelectCmd}" CommandParameter="{Binding Header,RelativeSource={RelativeSource Self}}">
                         <hc:SideMenuItem.Icon>
                             <Image Height="30"  Source="/Icons/marcador.png"/>
                         </hc:SideMenuItem.Icon>
                     </hc:SideMenuItem>
 
-                    <hc:SideMenuItem Header="Lista Caixa" Background="Transparent" Foreground="Black" Command="{Binding SelectCmd}" CommandParameter="{Binding Header,RelativeSource={RelativeSource Self}}">
+                    <hc:SideMenuItem Header="Lista Caixa"  Selected="SideMenuItemListaCaixa_Selected" Background="Transparent" Foreground="Black" Command="{Binding SelectCmd}" CommandParameter="{Binding Header,RelativeSource={RelativeSource Self}}">
                         <hc:SideMenuItem.Icon>
                             <Image Height="30"  Source="/Icons/marcador.png"/>
                         </hc:SideMenuItem.Icon>
