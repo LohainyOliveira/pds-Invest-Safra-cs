@@ -196,8 +196,8 @@
     <Compile Include="Views\Entrar.xaml.cs">
       <DependentUpon>Entrar.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Insumos.xaml.cs">
-      <DependentUpon>Insumos.xaml</DependentUpon>
+    <Compile Include="Views\CadastrarInsumos.xaml.cs">
+      <DependentUpon>CadastrarInsumos.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\LevantamentoDeDadosDaSafra.xaml.cs">
       <DependentUpon>LevantamentoDeDadosDaSafra.xaml</DependentUpon>
@@ -250,14 +250,14 @@
     <Compile Include="Views\MenuWindow.xaml.cs">
       <DependentUpon>MenuWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Produto.xaml.cs">
-      <DependentUpon>Produto.xaml</DependentUpon>
+    <Compile Include="Views\CadastrarProduto.xaml.cs">
+      <DependentUpon>CadastrarProduto.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Sementes.xaml.cs">
-      <DependentUpon>Sementes.xaml</DependentUpon>
+    <Compile Include="Views\CadastrarSementes.xaml.cs">
+      <DependentUpon>CadastrarSementes.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Venda.xaml.cs">
-      <DependentUpon>Venda.xaml</DependentUpon>
+    <Compile Include="Views\CadastrarVenda.xaml.cs">
+      <DependentUpon>CadastrarVenda.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -340,7 +340,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Insumos.xaml">
+    <Page Include="Views\CadastrarInsumos.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -412,15 +412,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Produto.xaml">
+    <Page Include="Views\CadastrarProduto.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Sementes.xaml">
+    <Page Include="Views\CadastrarSementes.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Venda.xaml">
+    <Page Include="Views\CadastrarVenda.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

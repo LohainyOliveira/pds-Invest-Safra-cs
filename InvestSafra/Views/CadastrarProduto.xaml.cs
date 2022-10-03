@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace InvestSafra.Views
 {
     /// <summary>
-    /// Lógica interna para Venda.xaml
+    /// Lógica interna para Produto.xaml
     /// </summary>
-    public partial class Venda : Window
+    public partial class CadastrarProduto : Window
     {
-        public Venda()
+        public CadastrarProduto()
         {
             InitializeComponent();
         }

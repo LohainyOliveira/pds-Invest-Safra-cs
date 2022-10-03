@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using InvestSafra.Models;
 
 namespace InvestSafra.Views
 {
@@ -21,7 +22,72 @@ namespace InvestSafra.Views
     {
         public ListaLevantamentoSafra()
         {
-            InitializeComponent();
+            InitializeComponent(); 
+            Loaded += SafraListaWindow_Loaded;
+        }
+
+        private void SafraListaWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            CarregarListagem();
+        }
+
+        private void CarregarListagem()
+        {
+            try
+            {
+                var dao = new SafraDAO();
+                List<Safra> listaSafra = dao.List();
+
+                dataGridSafra.ItemsSource = listaSafra;
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+
+        private void btRemover_Click(object sender, RoutedEventArgs e)
+        {
+            var safraSelecionada = dataGridSafra.SelectedItem as Safra;
+
+            var resultado = MessageBox.Show($"Deseja realmente Remover a escola{safraSelecionada.Id}?", "Confirmação de Exclusão", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+
+            try
+            {
+                if (resultado == MessageBoxResult.Yes)
+                {
+                    var dao = new SafraDAO();
+                    dao.Delete(safraSelecionada);
+
+                    MessageBox.Show("Registros Removidos!");
+                    CarregarListagem();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void btAtualizar_Click(object sender, RoutedEventArgs e)
+        {
+            var safraSelecionada = dataGridSafra.SelectedItem as Safra;
+
+            var form = new LevantamentoDeDadosDaSafra(safraSelecionada);
+            form.ShowDialog();
+            form.Close();
+        }
+
+        private void Border_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+            {
+                this.DragMove();
+            }
+
         }
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
         {

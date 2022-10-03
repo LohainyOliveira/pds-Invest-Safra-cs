@@ -240,7 +240,7 @@ namespace InvestSafra.Views
 		}
 		private void SideMenuItemInsumo_Selected(object sender, RoutedEventArgs e)
 		{
-			Insumos form = new Insumos();
+			CadastrarInsumos form = new CadastrarInsumos();
 			form.ShowDialog();
 		}
 		private void SideMenuItemSafra_Selected(object sender, RoutedEventArgs e)
@@ -255,17 +255,17 @@ namespace InvestSafra.Views
 		}
 		private void SideMenuItemProdutos_Selected(object sender, RoutedEventArgs e)
 		{
-			Produto form = new Produto();
+			CadastrarProduto form = new CadastrarProduto();
 			form.ShowDialog();
 		}
 		private void SideMenuItemSementes_Selected(object sender, RoutedEventArgs e)
 		{
-			Sementes form = new Sementes();
+			CadastrarSementes form = new CadastrarSementes();
 			form.ShowDialog();
 		}
 		private void SideMenuItemVenda_Selected(object sender, RoutedEventArgs e)
 		{
-			Venda form = new Venda();
+			CadastrarVenda form = new CadastrarVenda();
 			form.ShowDialog();
 		}
 	}

@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using InvestSafra.Models;
 
 namespace InvestSafra.Views
 {
@@ -22,7 +23,64 @@ namespace InvestSafra.Views
         public ListaEstoque()
         {
             InitializeComponent();
+            Loaded += EstoqueListaWindow_Loaded;
         }
+
+        private void EstoqueListaWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            CarregarListagem();
+        }
+
+        private void CarregarListagem()
+        {
+            try
+            {
+                var dao = new EstoqueDAO();
+                List<Estoque> listaEstoque = dao.List();
+
+                dataGridEstoque.ItemsSource = listaEstoque;
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+
+        private void btRemover_Click(object sender, RoutedEventArgs e)
+        {
+            var estoqueSelecionada = dataGridEstoque.SelectedItem as Estoque;
+
+            var resultado = MessageBox.Show($"Deseja realmente Remover a escola{estoqueSelecionada.Temperatura}?", "Confirmação de Exclusão", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+
+            try
+            {
+                if (resultado == MessageBoxResult.Yes)
+                {
+                    var dao = new EstoqueDAO();
+                    dao.Delete(estoqueSelecionada);
+
+                    MessageBox.Show("Registros Removidos!");
+                    CarregarListagem();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void btAtualizar_Click(object sender, RoutedEventArgs e)
+        {
+            var estoqueSelecionada = dataGridEstoque.SelectedItem as Area;
+
+            var form = new ControDeEstoque(estoqueSelecionada);
+            form.ShowDialog();
+            form.Close();
+        }
+
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.ChangedButton == MouseButton.Left)
