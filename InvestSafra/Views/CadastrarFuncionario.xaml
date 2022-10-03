@@ -12,8 +12,11 @@
         TextOptions.TextFormattingMode="Ideal" 
         TextOptions.TextRenderingMode="Auto"
         FontFamily="{DynamicResource MaterialDesignFont}"
-        Title="Funcionario" Height="698" Width="956">
-    <Grid Margin="0,0,0,-160">
+       
+        Height="760" Width="1080" WindowStartupLocation="CenterScreen" WindowStyle="None"
+        AllowsTransparency="True" Background="Transparent">
+
+    <Grid Margin="0,0,10,-151">
         <Grid.RowDefinitions>
             <RowDefinition Height="115"/>
             <RowDefinition Height="*"/>
@@ -31,7 +34,7 @@
                 <ColumnDefinition Width="17*"/>
             </Grid.ColumnDefinitions>
             <Image HorizontalAlignment="Left" Height="200" Margin="38,15,0,0" VerticalAlignment="Top" Width="136" Source="/Imagens/LogoCanto.png"/>
-            <Label  Content="Cadastro Funcionário" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Malik" FontSize="24" Foreground="#EFA82E" FontWeight="Bold" Height="50" Width="292" RenderTransformOrigin="0.326,0.452" Margin="376,39,0,0"/>
+            <Label  Content="Cadastro Funcionário" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Malik" FontSize="24" Foreground="#EFA82E" FontWeight="Bold" Height="50" Width="292" RenderTransformOrigin="0.326,0.452" Margin="394,55,0,0"/>
         </Grid>
 
         <Grid VerticalAlignment="Top" Grid.Row="1" HorizontalAlignment="Center" >
@@ -40,7 +43,7 @@
                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     AcceptsReturn="True"
                     MaxWidth="400"
-                    Margin="50 0 50 0"
+                    Margin="70 -130 50 0"
                     materialDesign:HintAssist.Hint="Nome Completo"
                     x:Name="txtNomeCompleto" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
@@ -51,7 +54,7 @@
                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     AcceptsReturn="True"
                     MaxWidth="400"
-                    Margin="10 0 50 0"
+                    Margin="10 -130 50 0"
                     materialDesign:HintAssist.Hint="CPF"
                     x:Name="txtCPF" Padding="16" 
                     TextWrapping="Wrap" 
@@ -62,6 +65,7 @@
                     materialDesign:HintAssist.Hint="Sexo" 
                     Style="{StaticResource MaterialDesignOutlinedComboBox}"
                     HorizontalAlignment="Center"   
+                    Margin="10 -130 50 0"
                     Background="#0F040302" FontFamily="Arial" FontWeight="Bold"
                     x:Name="cbSexo" Padding="8"  Width="208" Grid.Column="1" Grid.Row="1" Height="58">
                     <ComboBoxItem></ComboBoxItem>
@@ -76,7 +80,7 @@
                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     AcceptsReturn="True"
                     MaxWidth="400"
-                    Margin="50 0 50 0"
+                    Margin="70 -130 50 0"
                     materialDesign:HintAssist.Hint="Email"
                     x:Name="txtEmail" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
@@ -87,7 +91,7 @@
                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     AcceptsReturn="True"
                     MaxWidth="400"
-                    Margin="10 0 50 0"
+                    Margin="10 -130 50 0"
                     materialDesign:HintAssist.Hint="RG"
                     x:Name="txtRg" Padding="16" 
                     TextWrapping="Wrap" 
@@ -98,6 +102,7 @@
                     Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     AcceptsReturn="True"
                     MaxWidth="400"
+                    Margin="12 -130 50 0"
                     materialDesign:HintAssist.Hint="Telefone"
                     x:Name="txtTelefone" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
@@ -111,7 +116,7 @@
                      Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     AcceptsReturn="True"
                     MaxWidth="400"
-                    Margin="50 0 50 0"
+                    Margin="70 -130 50 0"
                     materialDesign:HintAssist.Hint="Função"
                     x:Name="txtfuncao" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
@@ -122,7 +127,7 @@
                      Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     AcceptsReturn="True"
                     MaxWidth="400"
-                    Margin="10 0 50 0"
+                    Margin="10 -130 50 0"
                     materialDesign:HintAssist.Hint="Salario"
                     x:Name="txtsalario" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
@@ -135,9 +140,10 @@
                    Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     AcceptsReturn="True"
                     MaxWidth="400"
+                    Margin="10 -130 50 0"
                     materialDesign:HintAssist.Hint="CEP"
                     x:Name="txtSalario" Padding="16" Grid.Row="1" 
-                    TextWrapping="Wrap" VerticalAlignment="Center" Margin="-2 0 0 0" 
+                    TextWrapping="Wrap" VerticalAlignment="Center" 
                     Width="210" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
 
@@ -149,7 +155,7 @@
                      Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     AcceptsReturn="True"
                     MaxWidth="400"
-                    Margin="50 0 50 0"
+                    Margin="70 -130 50 0"
                     materialDesign:HintAssist.Hint="Cidade"
                     x:Name="txtCidade" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
@@ -157,12 +163,12 @@
                   />
 
 
-               
+
                 <ComboBox
                     materialDesign:HintAssist.Hint="Estado" 
                     Style="{StaticResource MaterialDesignOutlinedComboBox}"   
                     Background="#0F040302" FontFamily="Arial" FontWeight="Bold"
-                    x:Name="cbEstado" Padding="8"  Margin="10 0 0 0" Width="209" Grid.Column="1" Grid.Row="1" Height="58">
+                    x:Name="cbEstado" Padding="8"  Margin="10 -130 0 0" Width="209" Grid.Column="1" Grid.Row="1" Height="58">
 
                     <ComboBoxItem></ComboBoxItem>
                     <ComboBoxItem>AC</ComboBoxItem>
@@ -194,18 +200,18 @@
                     <ComboBoxItem>TO</ComboBoxItem>
                 </ComboBox>
 
-               
 
-                
+
+
 
             </StackPanel>
 
-            <StackPanel Orientation="Horizontal" Margin="0 210 60 0">
+            <StackPanel Orientation="Horizontal" Margin="0 210 0 0">
                 <TextBox 
                      Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     AcceptsReturn="True"
                     MaxWidth="400"
-                    Margin="574 215 50 0"
+                    Margin="607 80 50 0"
                     materialDesign:HintAssist.Hint="Rua"
                     x:Name="txtRua" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
@@ -219,17 +225,18 @@
                      Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     AcceptsReturn="True"
                     MaxWidth="400"
-                    Margin="50 210 50 0"
+                    Margin="70 90 50 0"
                     materialDesign:HintAssist.Hint="Bairro"
                     x:Name="txtBairro" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
                     Width="209" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
+
                 <TextBox 
                      Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     AcceptsReturn="True"
                     MaxWidth="400"
-                    Margin="266 210 50 0"
+                    Margin="280 90 50 0"
                     materialDesign:HintAssist.Hint="Complemento"
                     x:Name="txtComplemento" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
@@ -244,7 +251,7 @@
 
         </Grid>
 
-        <Grid Grid.Row="1" Margin="0,517,10,10" Grid.RowSpan="2">
+        <Grid Grid.Row="1" Margin="0,517,10,63">
             <Button x:Name="btSalvar" FontSize="19" Content="Salvar" Height="40" Width="119" HorizontalAlignment="Right" Margin="10 110 50 0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand"/>
             <Button x:Name="btLimpar" FontSize="19" Content="Limpar" Height="40" Width="119" HorizontalAlignment="Right" Margin="10 110 200 0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Click="btLimpar_Click"/>
         </Grid>
