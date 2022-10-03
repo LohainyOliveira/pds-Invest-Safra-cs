@@ -41,7 +41,7 @@ namespace InvestSafra
 
         private void TelaPrincipalWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            new CadastrarCompra().Show();
+            new CadastrarFornecedor().Show();
             this.Close();
         }
 
