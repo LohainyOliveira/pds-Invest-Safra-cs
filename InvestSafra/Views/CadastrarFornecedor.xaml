@@ -163,7 +163,7 @@
                     AcceptsReturn="True"
                     MaxWidth="400"
                     materialDesign:HintAssist.Hint="CEP"
-                    x:Name="txtSalario" Padding="16" Grid.Row="1" 
+                    x:Name="txtCep" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" Margin="50 0 0 0" 
                     Width="210" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
