@@ -26,7 +26,7 @@
             <Border Background="#7b5cd6" CornerRadius="0 50 0 30" Margin="0,117,0,0">
                 <DockPanel>
                     <Border Width="80" Height="80" Padding="3" Background="white" CornerRadius="100"
-                            DockPanel.Dock="Top" HorizontalAlignment="Center" Margin="0 -30 0 0">
+                            DockPanel.Dock="Top" HorizontalAlignment="Center" Margin="0 -25 0 0">
                         <Ellipse>
                             <Ellipse.Fill>
                                 <ImageBrush/>

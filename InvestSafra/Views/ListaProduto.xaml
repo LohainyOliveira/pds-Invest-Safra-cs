@@ -42,7 +42,7 @@
                     <Separator Margin="25" DockPanel.Dock="Top" Height="0.8" Background="#7b5cd6"/>
 
                     <StackPanel DockPanel.Dock="Top">
-                        <Button Height="56" Background="#7b5cd6">
+                        <Button Height="56" Background="#7b5cd6" Cursor="Hand">
                             <DockPanel>
                                 <Icon:PackIconMaterial Kind="HomeVariant" Style="{StaticResource ResourceKey=menuButtonIcon}" RenderTransformOrigin="0.133,0.48"/>
                                 <TextBlock Text="Menu" Width="49"/>

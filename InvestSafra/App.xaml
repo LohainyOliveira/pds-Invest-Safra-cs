@@ -4,7 +4,8 @@
              xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
              StartupUri="TelaPrincipalWindow.xaml"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-    xmlns:local="clr-namespace:MaterialDesignThemes.Wpf;assembly=MaterialDesignThemes.Wpf">
+             xmlns:local="clr-namespace:MaterialDesignThemes.Wpf;assembly=MaterialDesignThemes.Wpf"
+             xmlns:hc="https://handyorg.github.io/handycontrol">
 
     <Application.Resources>
         <ResourceDictionary>
@@ -12,6 +13,10 @@
                 <materialDesign:BundledTheme BaseTheme="Light" PrimaryColor="DeepPurple" SecondaryColor="Lime" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
             </ResourceDictionary.MergedDictionaries>
+            
+           
+       
+            
 
             <Style x:Key="topButton" TargetType="Button">
                 <Setter Property="Background" Value="Transparent"/>
@@ -267,7 +272,300 @@
                 <Setter Property="Height" Value="12"/>
                 <Setter Property="VerticalAlignment" Value="Center"/>
             </Style>
+            
+            
+            
+            <!-- Instalação No Git -->
 
+            
+            <!-- Other app resources here -->
+
+
+            <!-- Teste
+            <ControlTemplate x:Key="Menu_SubMenu_Template"
+                     TargetType="{x:Type MenuItem}">
+
+                <Border x:Name="border"
+                Background="Transparent"
+                BorderBrush="Transparent"
+                BorderThickness="0"
+                Height="50"
+                Width="230">
+
+                    <Grid>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition MinWidth="22"
+                                      Width="Auto" />
+                            <ColumnDefinition Width="13" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="30" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="20" />
+                        </Grid.ColumnDefinitions>
+
+
+
+                        <ContentPresenter x:Name="Icon"
+                                  ContentSource="Icon"
+                                  HorizontalAlignment="Left"
+                                  Height="35"
+                                  Width="35"
+                                  Margin="10,0,0,0"
+                                  VerticalAlignment="Center" />
+
+                        
+
+                        <ContentPresenter ContentSource="Header"
+                                  Grid.Column="2"
+                                  TextBlock.Foreground="Black"
+                                  TextBlock.FontFamily="Fonts/#Roboto Light"
+                                  TextBlock.FontSize="20"
+                                  HorizontalAlignment="Left"
+                                  RecognizesAccessKey="True"
+                                  Margin="3,0,0,0"
+                                  VerticalAlignment="Center" />
+
+                        <Image Source="Assets/img_arrow.png"
+                       Stretch="None"
+                       Grid.Column="4"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Center" />
+
+
+                        <Popup x:Name="PART_Popup"
+                       AllowsTransparency="true"
+                       Focusable="false"
+                       HorizontalOffset="-2"
+                       IsOpen="{Binding IsSubmenuOpen, RelativeSource={RelativeSource TemplatedParent}}"
+                       Placement="Right"
+                       PopupAnimation="{DynamicResource {x:Static SystemParameters.MenuPopupAnimationKey}}"
+                       VerticalOffset="0">
+
+                            <Border x:Name="SubMenuBorder"
+                            Background="Transparent"
+                            BorderBrush="Transparent">
+
+                                <ScrollViewer x:Name="SubMenuScrollViewer"
+                                      Style="{DynamicResource {ComponentResourceKey ResourceId=MenuScrollViewer, TypeInTargetAssembly={x:Type FrameworkElement}}}">
+
+                                    <Grid RenderOptions.ClearTypeHint="Enabled">
+
+                                        <Canvas HorizontalAlignment="Left"
+                                        VerticalAlignment="Top" />
+
+                                        <ItemsPresenter x:Name="ItemsPresenter"
+                                                KeyboardNavigation.DirectionalNavigation="Cycle"
+                                                Grid.IsSharedSizeScope="true"
+                                                KeyboardNavigation.TabNavigation="Cycle" />
+                                    </Grid>
+                                </ScrollViewer>
+                            </Border>
+                        </Popup>
+
+                    </Grid>
+                </Border>
+
+
+                <ControlTemplate.Triggers>
+
+                    <Trigger Property="IsSuspendingPopupAnimation"
+                     Value="true">
+                        <Setter Property="PopupAnimation"
+                        TargetName="PART_Popup"
+                        Value="None" />
+                    </Trigger>
+
+                    <Trigger Property="Icon"
+                     Value="{x:Null}">
+                        <Setter Property="Visibility"
+                        TargetName="Icon"
+                        Value="Visible" />
+                    </Trigger>
+
+                    <Trigger Property="IsChecked"
+                     Value="True">
+                        <Setter Property="Visibility"
+                        TargetName="Icon"
+                        Value="Visible" />
+                    </Trigger>
+
+                    <Trigger Property="IsHighlighted"
+                     Value="True">
+                        <Setter Property="Background"
+                        TargetName="border"
+                        Value="White" />
+                        <Setter Property="BorderBrush"
+                        TargetName="border"
+                        Value="white" />
+                    </Trigger>
+
+                </ControlTemplate.Triggers>
+            </ControlTemplate>
+
+
+            <ControlTemplate x:Key="Menu_Template"
+                     TargetType="{x:Type MenuItem}">
+
+                <Border x:Name="border"
+                Background="Transparent"
+                BorderBrush="Transparent"
+                BorderThickness="0"
+                Height="50"
+                Width="230"
+                >
+
+                    <Grid>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition MinWidth="22"
+                                      Width="Auto" />
+                            <ColumnDefinition Width="13" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="30" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="20" />
+                        </Grid.ColumnDefinitio
+
+                        <ContentPresenter x:Name="Icon"
+                                  ContentSource="Icon"
+                                  HorizontalAlignment="Left"
+                                  Height="35"
+                                  Width="35"
+                                  Margin="10,0,0,0"
+                                  VerticalAlignment=
+
+                        <ContentPresenter ContentSource="Header"
+                                  Grid.Column="2"
+                                  TextBlock.Foreground="Black"
+                                  TextBlock.FontFamily="Fonts/#Roboto Light"
+                                  TextBlock.FontSize="20"
+                                  HorizontalAlignment="Left"
+                                  RecognizesAccessKey="True"
+                                  Margin="3,0,0,0"
+                                  VerticalAlignment="Center" />
+
+                    </Grid>
+                </Border>
+
+
+                <ControlTemplate.Triggers>
+
+                    <Trigger Property="Icon"
+                     Value="{x:Null}">
+                        <Setter Property="Visibility"
+                        TargetName="Icon"
+                        Value="Visible" />
+                    </Trigger>
+
+                    <Trigger Property="IsChecked"
+                     Value="True">
+                        <Setter Property="Visibility"
+                        TargetName="Icon"
+                        Value="Visible" />
+                    </Trigger>
+
+                    <Trigger Property="IsHighlighted"
+                     Value="True">
+                        <Setter Property="Background"
+                        TargetName="border"
+                        Value="Transparent" />
+                        <Setter Property="BorderBrush"
+                        TargetName="border"
+                        Value="Transparent" />
+                    </Trigger>
+
+
+                </ControlTemplate.Triggers>
+            </ControlTemplate>
+
+
+            <ControlTemplate x:Key="Item_Template"
+                     TargetType="{x:Type MenuItem}">
+
+                <Border x:Name="border"
+                Background="White"
+                BorderBrush="White"
+                BorderThickness="{TemplateBinding BorderThickness}"
+                Height="50"
+                Width="230"
+               >
+
+                    <Grid>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition MinWidth="22"
+                                      Width="Auto" />
+                            <ColumnDefinition Width="13" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="30" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="20" />
+                        </Grid.ColumnDefinitions>
+
+
+                        <ContentPresenter x:Name="Icon"
+                                  ContentSource="Icon"
+                                  HorizontalAlignment="Center"
+                                  Height="35"
+                                  Width="35"
+                                  Margin="10,0,0,0"
+                                  VerticalAlignment="Center" />
+
+
+                        <ContentPresenter ContentSource="Header"
+                                  Grid.Column="2"
+                                  TextBlock.Foreground="black"
+                                  TextBlock.FontFamily="Fonts/#Roboto Light"
+                                  TextBlock.FontSize="20"
+                                  HorizontalAlignment="Left"
+                                  RecognizesAccessKey="True"
+                                  Margin="3,0,0,0"
+                                  VerticalAlignment="Center" />
+
+
+                    </Grid>
+                </Border>
+
+
+                <ControlTemplate.Triggers>
+
+                    <Trigger Property="Icon"
+                     Value="{x:Null}">
+                        <Setter Property="Visibility"
+                        TargetName="Icon"
+                        Value="Visible" />
+                    </Trigger>
+
+                    <Trigger Property="IsChecked"
+                     Value="True">
+                        <Setter Property="Visibility"
+                        TargetName="Icon"
+                        Value="Visible" />
+                    </Trigger>
+
+                    <Trigger Property="IsHighlighted"
+                     Value="True">
+                        <Setter Property="Background"
+                        TargetName="border"
+                        Value="Transparent" />
+                        <Setter Property="BorderBrush"
+                        TargetName="border"
+                        Value="Transparent" />
+                    </Trigger>
+
+                </ControlTemplate.Triggers>
+            </ControlTemplate>
+
+
+            -->
+
+            
+
+            
+
+
+            
         </ResourceDictionary>
     </Application.Resources>
 </Application>

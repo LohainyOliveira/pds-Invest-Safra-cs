@@ -91,9 +91,12 @@
                 </Grid>
 
 
-                <Button Style="{StaticResource topButton}" Margin="0 0 20 0" Background="white"
-                        HorizontalAlignment="Right">
-                    <Icon:PackIconMaterial Kind="Bell"/>
+                <Button Style="{StaticResource topButton}" Margin="780,0,0,0" Height="30" VerticalAlignment="Bottom">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/Icons/X.png"/>
+                    </Button.Background>
+
+
                 </Button>
 
                 <TextBlock Text="Insumos" Grid.Row="1" FontSize="32" FontWeight="SemiBold" Margin="0 20 0 0"

@@ -61,7 +61,7 @@ namespace InvestSafra.Views
 			{
 
 				SidePainel.Width -= 1;
-				if (SidePainel.Width <= 50)
+				if (SidePainel.Width <= 45)
 				{
 					timer.Stop();
 					hidden = true;
@@ -70,36 +70,30 @@ namespace InvestSafra.Views
 
 		}
 
-		private void btCadastra_Click(object sender, RoutedEventArgs e)
+		private void MaxBtn_Click(object sender, RoutedEventArgs e)
 		{
-			CadastrarMaquinas form = new CadastrarMaquinas();
-			form.ShowDialog();
+			if (WindowState == WindowState.Normal)
+			{
+				WindowState = WindowState.Maximized;
+			}
+			else
+			{
+				if (WindowState == WindowState.Maximized)
+				{
+					WindowState = WindowState.Normal;
+				}
+			}
 		}
 
-		private void btEntrar_Click(object sender, RoutedEventArgs e)
+		private void CloseBtn_Click(object sender, RoutedEventArgs e)
 		{
-
-
+			Close();
 		}
-
-		private void ListViewItem_Selected(object sender, RoutedEventArgs e)
-		{
-
-
-			Entrar form = new Entrar();
-			form.ShowDialog();
-		}
-
 		private void btMenu_Click(object sender, RoutedEventArgs e)
 		{
 			timer.Start();
 		}
 
-
-		private void ListViewItem_Selected_1(object sender, RoutedEventArgs e)
-		{
-
-		}
 
 		private void painelHeader_MouseDown_1(object sender, MouseButtonEventArgs e)
 		{
@@ -110,91 +104,5 @@ namespace InvestSafra.Views
 
 		}
 
-		private void btCadastrar_Click(object sender, RoutedEventArgs e)
-		{
-			Insumos form = new Insumos();
-			form.ShowDialog();
-		}
-
-		
-
-		private void slhome_Selected(object sender, RoutedEventArgs e)
-		{
-			
-			TelaPrincipalWindow form = new TelaPrincipalWindow();
-			form.ShowDialog();
-			
-		}
-
-		private void slArea_Selected(object sender, RoutedEventArgs e)
-		{
-			CadastrarArea form = new CadastrarArea();
-			form.ShowDialog();
-		}
-
-		private void slCaixa_Selected(object sender, RoutedEventArgs e)
-		{
-			CadastrarCaixa form = new CadastrarCaixa();
-			form.ShowDialog();
-		}
-
-		private void slCompra_Selected(object sender, RoutedEventArgs e)
-		{
-			CadastrarCompra form = new CadastrarCompra();
-			form.ShowDialog();
-
-		}
-
-		private void slFornecedor_Selected(object sender, RoutedEventArgs e)
-		{
-			CadastrarFornecedor form = new CadastrarFornecedor();
-			form.ShowDialog();
-		}
-
-		private void slFazenda_Selected(object sender, RoutedEventArgs e)
-		{
-			CadastrarFazenda form = new CadastrarFazenda();
-			form.ShowDialog();
-		}
-
-		private void slEmpresa_Selected(object sender, RoutedEventArgs e)
-		{
-			ClienteJuridico form = new ClienteJuridico();
-			form.ShowDialog();
-		}
-
-		private void slMaquinas_Selected(object sender, RoutedEventArgs e)
-		{
-			CadastrarMaquinas form = new CadastrarMaquinas();
-			form.ShowDialog();
-		}
-
-		private void slEstoque_Selected(object sender, RoutedEventArgs e)
-		{
-			ControDeEstoque form = new ControDeEstoque();
-			form.ShowDialog();
-		}
-
-		private void slSafras_Selected(object sender, RoutedEventArgs e)
-		{
-			LevantamentoDeDadosDaSafra form = new LevantamentoDeDadosDaSafra();
-			form.ShowDialog();
-		}
-
-		private void ListViewItem_Selected_2(object sender, RoutedEventArgs e)
-		{
-
-		}
-
-		private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
-		{
-
-		}
-
-		private void btListaInsumo_Click(object sender, RoutedEventArgs e)
-		{
-			ListaInsumos form = new ListaInsumos();
-			form.ShowDialog();
-		}
 	}
 }

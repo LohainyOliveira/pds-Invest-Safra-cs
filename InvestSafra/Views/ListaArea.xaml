@@ -91,9 +91,11 @@
                 </Grid>
 
 
-                <Button Style="{StaticResource topButton}" Margin="0 0 20 0" Background="white"
+                <Button Style="{StaticResource topButton}" Margin="0 0 20 0"
                         HorizontalAlignment="Right">
-                    <Icon:PackIconMaterial Kind="Bell"/>
+                    <Button.Background>
+                        <ImageBrush ImageSource="/Icons/X.png"/>
+                    </Button.Background>
                 </Button>
 
                 <TextBlock Text="Área" Grid.Row="1" FontSize="32" FontWeight="SemiBold" Margin="0 20 0 0"
