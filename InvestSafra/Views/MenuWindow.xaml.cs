@@ -122,56 +122,69 @@ namespace InvestSafra.Views
 		}
 		private void SideMenuItemListaEmpresa_Selected(object sender, RoutedEventArgs e)
 		{
-
+			ListaClienteJuridico form = new ListaClienteJuridico();
+			form.ShowDialog();
 		}
 
 		private void SideMenuItemListaClima_Selected(object sender, RoutedEventArgs e)
 		{
-
+			ListaClima form = new ListaClima();
+			form.ShowDialog();
 		}
 		private void SideMenuItemListaCompra_Selected(object sender, RoutedEventArgs e)
 		{
-
+			ListaCompra form = new ListaCompra();
+			form.ShowDialog();
 		}
 		private void SideMenuItemListaEstoque_Selected(object sender, RoutedEventArgs e)
 		{
-
+			ListaEstoque form = new ListaEstoque();
+			form.ShowDialog();
 		}
 		private void SideMenuItemListaFazenda_Selected(object sender, RoutedEventArgs e)
 		{
-
+			ListaFazenda form = new ListaFazenda();
+			form.ShowDialog();
 		}
 		private void SideMenuItemListaFornecedor_Selected(object sender, RoutedEventArgs e)
 		{
-
+			ListaFornecedor form = new ListaFornecedor();
+			form.ShowDialog();
 		}
 		private void SideMenuItemListaFuncionario_Selected(object sender, RoutedEventArgs e)
 		{
-
+			ListaFuncionario form = new ListaFuncionario();
+			form.ShowDialog();
 		}
 		private void SideMenuItemListaInsumo_Selected(object sender, RoutedEventArgs e)
 		{
-
+			ListaInsumos form = new ListaInsumos();
+			form.ShowDialog();
 		}
 		private void SideMenuItemListaSafra_Selected(object sender, RoutedEventArgs e)
 		{
-
+			ListaLevantamentoSafra form = new ListaLevantamentoSafra();
+			form.ShowDialog();
 		}
 		private void SideMenuItemListaMaquinas_Selected(object sender, RoutedEventArgs e)
 		{
-
+			ListaMaquinas form = new ListaMaquinas();
+			form.ShowDialog();
 		}
 		private void SideMenuItemListaProduto_Selected(object sender, RoutedEventArgs e)
 		{
-
+			ListaProduto form = new ListaProduto();
+			form.ShowDialog();
 		}
 		private void SideMenuItemListaSementes_Selected(object sender, RoutedEventArgs e)
 		{
-
+			ListaSemente form = new ListaSemente();
+			form.ShowDialog();
 		}
 		private void SideMenuItemListaVenda_Selected(object sender, RoutedEventArgs e)
 		{
-
+			ListaVenda form = new ListaVenda();
+			form.ShowDialog();
 		}
 	}
 }
