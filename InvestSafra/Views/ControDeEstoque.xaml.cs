@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using InvestSafra.Models;
 
 namespace InvestSafra.Views
 {
@@ -19,9 +20,29 @@ namespace InvestSafra.Views
     /// </summary>
     public partial class ControDeEstoque : Window
     {
+        private Estoque _estoque = new Estoque();
         public ControDeEstoque()
         {
             InitializeComponent();
+            Loaded += EstoqueFormWindow_Loaded;
+        }
+
+        public ControDeEstoque(Estoque estoque)
+        {
+            InitializeComponent();
+
+            _estoque = estoque;
+            Loaded += EstoqueFormWindow_Loaded;
+
+        }
+
+        private void EstoqueFormWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            txtDescricao.Text = _estoque.Descricao;
+            txtMedida.Text = _estoque.Medida;
+            txtQuantInsumos.Text = _estoque.Quantidade_Insumos;
+            txtQuantSementes.Text = _estoque.Quantidade_Semente;
+            txtTipoInsumo.Text = _estoque.Tipo_Insumo;
         }
 
         private void btCancelar_Click(object sender, RoutedEventArgs e)
