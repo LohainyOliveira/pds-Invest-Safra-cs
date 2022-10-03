@@ -11,7 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-
+using InvestSafra.Models;
 namespace InvestSafra.Views
 {
     /// <summary>
@@ -19,9 +19,37 @@ namespace InvestSafra.Views
     /// </summary>
     public partial class CadastrarMaquinas : Window
     {
+
+
+        private Maquinas _maquinas = new Maquinas();
+
+
         public CadastrarMaquinas()
         {
             InitializeComponent();
+        }
+
+
+        public CadastrarMaquinas(Maquinas maquinas)
+        {
+            InitializeComponent();
+
+            _maquinas = maquinas;
+            Loaded += MaquinasFormWindow_Loaded;
+
+        }
+
+
+        private void MaquinasFormWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            txtNome.Text = _maquinas.Nome;
+            txtCnpj1.Text = _maquinas.CNPJ;
+            txtMarca.Text = _maquinas.Marca;
+            txtValor.Text = _maquinas.Valor;
+            
+
+
+
         }
 
 
