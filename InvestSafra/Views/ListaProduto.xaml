@@ -36,7 +36,7 @@
 
                     <TextBlock Text="Invest Safra" Foreground="white" FontSize="22" FontWeight="SemiBold"
                                DockPanel.Dock="Top" TextAlignment="Center" Margin="5 25 0 10"/>
-                    <TextBlock Text="Lista de Produto" Foreground="#d0bfff" FontSize="14" FontWeight="SemiBold"
+                    <TextBlock Text="Lista de Produtos" Foreground="#d0bfff" FontSize="14" FontWeight="SemiBold"
                                DockPanel.Dock="Top" TextAlignment="Center"/>
 
                     <Separator Margin="25" DockPanel.Dock="Top" Height="0.8" Background="#7b5cd6"/>
@@ -96,13 +96,13 @@
                     <Icon:PackIconMaterial Kind="Bell"/>
                 </Button>
 
-                <TextBlock Text="Produto" Grid.Row="1" FontSize="32" FontWeight="SemiBold" Margin="0 20 0 0"
+                <TextBlock Text="Produtos" Grid.Row="1" FontSize="32" FontWeight="SemiBold" Margin="0 20 0 0"
                            HorizontalAlignment="Left" Foreground="black"/>
 
                 <Button Style="{StaticResource addButton}">
                     <StackPanel Orientation="Horizontal">
                         <Icon:PackIconMaterial Kind="Plus" VerticalAlignment="Center" Width="11" Height="11" Margin="0 20 0 0"/>
-                        <TextBlock Text="Add New Produto" Height="19"/>
+                        <TextBlock Text="Add New Produtos" Height="19"/>
                     </StackPanel>
                 </Button>
 
@@ -117,14 +117,14 @@
                 </StackPanel>-->
 
 
-                <TextBlock Text="Atualize ou Delete o Seu Produto Aqui"  Grid.Row="1" FontSize="18"  FontWeight="SemiBold"
-                           Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="480,60,0,0" Width="381" Grid.RowSpan="3"/>
+                <TextBlock Text="Atualize ou Delete os Seus Produtos Aqui"  Grid.Row="1" FontSize="18"  FontWeight="SemiBold"
+                           Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="470,60,0,0" Width="381" Grid.RowSpan="3"/>
 
 
 
                 <Grid Width="200" HorizontalAlignment="Right" Grid.Row="4">
                     <TextBlock Margin="44,0,-14,0" VerticalAlignment="Center" Foreground="black" IsHitTestVisible="False"
-                               Panel.ZIndex="1" Text="Procurar por Produto..." Visibility="Visible"/>
+                               Panel.ZIndex="1" Text="Procurar por Produtos..." Visibility="Visible"/>
 
                     <TextBox x:Name="txtFilter" Style="{StaticResource textBoxFilter}"/>
 

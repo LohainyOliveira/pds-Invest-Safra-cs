@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using InvestSafra.Models;
 
 namespace InvestSafra.Views
 {
@@ -19,6 +20,7 @@ namespace InvestSafra.Views
     /// </summary>
     public partial class CadastrarCompra : Window
     {
+        private Compra _compra = new Compra();
         public CadastrarCompra()
         {
             InitializeComponent();
@@ -26,10 +28,11 @@ namespace InvestSafra.Views
 
         private void btCancelar_Click(object sender, RoutedEventArgs e)
         {
-            
+
             txtDescricao.Clear();
             txtNome.Clear();
-            txtDescricao.Clear();
+            txtQuantidade.Clear();
+            dtPickerDataNascimento.SelectedDate= null;
 
             ExibirMensagemLimpar();
         }
@@ -38,6 +41,66 @@ namespace InvestSafra.Views
         {
             MessageBox.Show($"Campos Limpos com Sucesso", "Limpeza Concluida",
                 MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
+
+        private void Border_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+            {
+                this.DragMove();
+            }
+
+        }
+
+        private bool IsMaxinized = false;
+        private void Border_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ClickCount == 2)
+            {
+                if (IsMaxinized)
+                {
+                    this.WindowState = WindowState.Normal;
+                    this.Width = 1080;
+                    this.Height = 720;
+
+                    IsMaxinized = false;
+                }
+                else
+                {
+                    this.WindowState = WindowState.Maximized;
+                    IsMaxinized = true;
+
+                }
+            }
+        }
+
+        private void ExibirMensagemSalvar()
+        {
+            MessageBox.Show($"Campos Salvos com Sucesso!", "Registros Salvos",
+                MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
+        private void btSalvar_Click(object sender, RoutedEventArgs e)
+        {
+            _compra.Nome = txtNome.Text;
+            _compra.Quantidade = Convert.ToInt32(txtQuantidade.Text);
+            _compra.Descricao = txtDescricao.Text;
+            _compra.Data = dtPickerDataNascimento.SelectedDate;
+
+            try
+            {
+                var dao = new CompraDAO();
+                dao.Insert(_compra);
+
+                ExibirMensagemSalvar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+
         }
     }
 }

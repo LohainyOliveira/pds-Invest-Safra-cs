@@ -95,8 +95,6 @@
                     <Button.Background>
                         <ImageBrush ImageSource="/Icons/X.png"/>
                     </Button.Background>
-
-
                 </Button>
 
                 <TextBlock Text="Insumos" Grid.Row="1" FontSize="32" FontWeight="SemiBold" Margin="0 20 0 0"
