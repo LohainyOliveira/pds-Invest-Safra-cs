@@ -186,86 +186,86 @@
                 <!-- Fim das  Listas -->
 
 
-                <hc:SideMenuItem Background="Transparent" Header="Áreas" Foreground="black" FontFamily="Arial" FontWeight="Bold">
+                <hc:SideMenuItem Background="Transparent" Header="Áreas" Selected="SideMenuItemArea_Selected" Foreground="black" FontFamily="Arial" FontWeight="Bold">
                     <hc:SideMenuItem.Icon>
                         <Image Height="30"  Source="/Icons/area.png"/>
                     </hc:SideMenuItem.Icon>
                 </hc:SideMenuItem>
 
-                <hc:SideMenuItem Background="Transparent" Header="Caixa" Foreground="black" FontFamily="Arial" FontWeight="Bold">
+                <hc:SideMenuItem Background="Transparent" Header="Caixa" Selected="SideMenuItemCaixa_Selected" Foreground="black" FontFamily="Arial" FontWeight="Bold">
                     <hc:SideMenuItem.Icon>
                         <Image Height="30"  Source="/Icons/caixa.png"/>
                     </hc:SideMenuItem.Icon>
                 </hc:SideMenuItem>
 
-                <hc:SideMenuItem Background="Transparent" Header="Clima" Foreground="black" FontFamily="Arial" FontWeight="Bold">
+                <hc:SideMenuItem Background="Transparent" Header="Clima" Selected="SideMenuItemClima_Selected" Foreground="black" FontFamily="Arial" FontWeight="Bold">
                     <hc:SideMenuItem.Icon>
                         <Image Height="30"  Source="/Icons/clima2.png"/>
                     </hc:SideMenuItem.Icon>
                 </hc:SideMenuItem>
 
-                <hc:SideMenuItem Background="Transparent" Header="Compra" Foreground="black" FontFamily="Arial" FontWeight="Bold">
+                <hc:SideMenuItem Background="Transparent" Header="Compra" Selected="SideMenuItemCompra_Selected" Foreground="black" FontFamily="Arial" FontWeight="Bold">
                     <hc:SideMenuItem.Icon>
                         <Image Height="30"  Source="/Icons/compra.png"/>
                     </hc:SideMenuItem.Icon>
                 </hc:SideMenuItem>
 
-                <hc:SideMenuItem Background="Transparent" Header="Empresas" Foreground="black" FontFamily="Arial" FontWeight="Bold">
+                <hc:SideMenuItem Background="Transparent" Selected="SideMenuItemEmpresas_Selected" Header="Empresas" Foreground="black" FontFamily="Arial" FontWeight="Bold">
                     <hc:SideMenuItem.Icon>
                         <Image Height="30"  Source="/Icons/Empresa.png"/>
                     </hc:SideMenuItem.Icon>
                 </hc:SideMenuItem>
 
-                <hc:SideMenuItem Background="Transparent" Header="Estoque" Foreground="black" FontFamily="Arial" FontWeight="Bold">
+                <hc:SideMenuItem Background="Transparent" Selected="SideMenuItemEstoque_Selected" Header="Estoque" Foreground="black" FontFamily="Arial" FontWeight="Bold">
                     <hc:SideMenuItem.Icon>
                         <Image Height="30"  Source="/Icons/estoquePreto.png"/>
                     </hc:SideMenuItem.Icon>
                 </hc:SideMenuItem>
 
-                <hc:SideMenuItem Background="Transparent" Header="Fazendas" Foreground="black" FontFamily="Arial" FontWeight="Bold">
+                <hc:SideMenuItem Background="Transparent" Selected="SideMenuItemFazenda_Selected" Header="Fazendas" Foreground="black" FontFamily="Arial" FontWeight="Bold">
                     <hc:SideMenuItem.Icon>
                         <Image Height="30"  Source="/Icons/fazenda.png"/>
                     </hc:SideMenuItem.Icon>
                 </hc:SideMenuItem>
 
-                <hc:SideMenuItem Background="Transparent" Header="Fornecedores" Foreground="black" FontFamily="Arial" FontWeight="Bold">
+                <hc:SideMenuItem Background="Transparent" Header="Fornecedores" Selected="SideMenuItemFornecedores_Selected" Foreground="black" FontFamily="Arial" FontWeight="Bold">
                     <hc:SideMenuItem.Icon>
                         <Image Height="30"  Source="/Icons/fornecedor.png"/>
                     </hc:SideMenuItem.Icon>
                 </hc:SideMenuItem>
 
-                <hc:SideMenuItem Background="Transparent" Header="Funcionários" FontFamily="Arial" FontWeight="Bold">
+                <hc:SideMenuItem Background="Transparent" Header="Funcionários" Selected="SideMenuItemFuncionarios_Selected" FontFamily="Arial" FontWeight="Bold">
                     <hc:SideMenuItem.Icon>
                         <Image Height="30"  Source="/Icons/funcionario.png"/>
                     </hc:SideMenuItem.Icon>
                 </hc:SideMenuItem>
 
-                <hc:SideMenuItem Background="Transparent" Header="Maquinas" FontFamily="Arial" FontWeight="Bold">
+                <hc:SideMenuItem Background="Transparent" Header="Maquinas" Selected="SideMenuItemMaquinas_Selected" FontFamily="Arial" FontWeight="Bold">
                     <hc:SideMenuItem.Icon>
                         <Image Height="30"  Source="/Icons/maquinas.png"/>
                     </hc:SideMenuItem.Icon>
                 </hc:SideMenuItem>
 
-                <hc:SideMenuItem Background="Transparent" Header="Safra" FontFamily="Arial" FontWeight="Bold">
+                <hc:SideMenuItem Background="Transparent" Header="Safra" Selected="SideMenuItemSafra_Selected" FontFamily="Arial" FontWeight="Bold">
                     <hc:SideMenuItem.Icon>
                         <Image Height="30"  Source="/Icons/safra.png"/>
                     </hc:SideMenuItem.Icon>
                 </hc:SideMenuItem>
 
-                <hc:SideMenuItem Background="Transparent" Header="Semente" FontFamily="Arial" FontWeight="Bold">
+                <hc:SideMenuItem Background="Transparent" Header="Semente" Selected="SideMenuItemSementes_Selected" FontFamily="Arial" FontWeight="Bold">
                     <hc:SideMenuItem.Icon>
                         <Image Height="30"  Source="/Icons/sementePreto.png"/>
                     </hc:SideMenuItem.Icon>
                 </hc:SideMenuItem>
 
-                <hc:SideMenuItem Background="Transparent" Header="Venda" FontFamily="Arial" FontWeight="Bold">
+                <hc:SideMenuItem Background="Transparent" Header="Venda" Selected="SideMenuItemVenda_Selected" FontFamily="Arial" FontWeight="Bold">
                     <hc:SideMenuItem.Icon>
                         <Image  Height="30"  Source="/Icons/venda.png"/>
                     </hc:SideMenuItem.Icon>
                 </hc:SideMenuItem>
 
 
-                <hc:SideMenuItem Background="Transparent" Header="Produtos" FontFamily="Arial" FontWeight="Bold">
+                <hc:SideMenuItem Background="Transparent" Header="Produtos" Selected="SideMenuItemProdutos_Selected" FontFamily="Arial" FontWeight="Bold">
                     <hc:SideMenuItem.Icon>
                         <Image  Height="30" Source="/Icons/produtos.png"/>
                     </hc:SideMenuItem.Icon>

@@ -186,5 +186,87 @@ namespace InvestSafra.Views
 			ListaVenda form = new ListaVenda();
 			form.ShowDialog();
 		}
+
+
+
+		//Telas Principais
+
+
+		private void SideMenuItemArea_Selected(object sender, RoutedEventArgs e)
+		{
+			ListaArea form = new ListaArea();
+			form.ShowDialog();
+		}
+		private void SideMenuItemCaixa_Selected(object sender, RoutedEventArgs e)
+		{
+			ListaCaixa form = new ListaCaixa();
+			form.ShowDialog();
+		}
+		private void SideMenuItemEmpresas_Selected(object sender, RoutedEventArgs e)
+		{
+			ListaClienteJuridico form = new ListaClienteJuridico();
+			form.ShowDialog();
+		}
+
+		private void SideMenuItemClima_Selected(object sender, RoutedEventArgs e)
+		{
+			ListaClima form = new ListaClima();
+			form.ShowDialog();
+		}
+		private void SideMenuItemCompra_Selected(object sender, RoutedEventArgs e)
+		{
+			ListaCompra form = new ListaCompra();
+			form.ShowDialog();
+		}
+		private void SideMenuItemEstoque_Selected(object sender, RoutedEventArgs e)
+		{
+			ListaEstoque form = new ListaEstoque();
+			form.ShowDialog();
+		}
+		private void SideMenuItemFazenda_Selected(object sender, RoutedEventArgs e)
+		{
+			ListaFazenda form = new ListaFazenda();
+			form.ShowDialog();
+		}
+		private void SideMenuItemFornecedores_Selected(object sender, RoutedEventArgs e)
+		{
+			ListaFornecedor form = new ListaFornecedor();
+			form.ShowDialog();
+		}
+		private void SideMenuItemFuncionarios_Selected(object sender, RoutedEventArgs e)
+		{
+			ListaFuncionario form = new ListaFuncionario();
+			form.ShowDialog();
+		}
+		private void SideMenuItemInsumo_Selected(object sender, RoutedEventArgs e)
+		{
+			ListaInsumos form = new ListaInsumos();
+			form.ShowDialog();
+		}
+		private void SideMenuItemSafra_Selected(object sender, RoutedEventArgs e)
+		{
+			ListaLevantamentoSafra form = new ListaLevantamentoSafra();
+			form.ShowDialog();
+		}
+		private void SideMenuItemMaquinas_Selected(object sender, RoutedEventArgs e)
+		{
+			ListaMaquinas form = new ListaMaquinas();
+			form.ShowDialog();
+		}
+		private void SideMenuItemProdutos_Selected(object sender, RoutedEventArgs e)
+		{
+			ListaProduto form = new ListaProduto();
+			form.ShowDialog();
+		}
+		private void SideMenuItemSementes_Selected(object sender, RoutedEventArgs e)
+		{
+			ListaSemente form = new ListaSemente();
+			form.ShowDialog();
+		}
+		private void SideMenuItemVenda_Selected(object sender, RoutedEventArgs e)
+		{
+			ListaVenda form = new ListaVenda();
+			form.ShowDialog();
+		}
 	}
 }
