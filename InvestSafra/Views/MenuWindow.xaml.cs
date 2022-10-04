@@ -267,5 +267,9 @@ namespace InvestSafra.Views
 			CadastrarVenda form = new CadastrarVenda();
 			form.ShowDialog();
 		}
+		private void btSair_Click(object sender, RoutedEventArgs e)
+		{
+			DialogResult = false;
+		}
 	}
 }

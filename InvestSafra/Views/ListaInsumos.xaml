@@ -91,11 +91,13 @@
                 </Grid>
 
 
-                <Button Style="{StaticResource topButton}" Margin="780,0,0,0" Height="30" VerticalAlignment="Bottom">
-                    <Button.Background>
-                        <ImageBrush ImageSource="/Icons/X.png"/>
-                    </Button.Background>
-                </Button>
+                <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Right">
+                    <Button Style="{StaticResource topButton}"  Height="40"  x:Name="btSair" Width="48" Click="btSair_Click">
+                        <Button.Background>
+                            <ImageBrush ImageSource="/Icons/logout.png"/>
+                        </Button.Background>
+                    </Button>
+                </StackPanel>
 
                 <TextBlock Text="Insumos" Grid.Row="1" FontSize="32" FontWeight="SemiBold" Margin="0 20 0 0"
                            HorizontalAlignment="Left" Foreground="black"/>

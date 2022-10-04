@@ -141,9 +141,17 @@
                         </StackPanel>
                     </Grid>
                 </Grid>
+                
 
 
             </Grid>
+            <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Right">
+                <Button Style="{StaticResource topButton}"  Height="40"  x:Name="btSair" Width="48" Click="btSair_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/Icons/logout.png"/>
+                    </Button.Background>
+                </Button>
+            </StackPanel>
         </Grid>
     </Grid>
 

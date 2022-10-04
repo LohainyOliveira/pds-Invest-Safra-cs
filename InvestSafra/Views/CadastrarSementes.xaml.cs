@@ -67,5 +67,9 @@ namespace InvestSafra.Views
             MessageBox.Show($"Campos Limpos com Sucesso", "Limpeza Concluida",
                 MessageBoxButton.OK, MessageBoxImage.Information);
         }
+        private void btSair_Click(object sender, RoutedEventArgs e)
+        {
+            DialogResult = false;
+        }
     }
 }

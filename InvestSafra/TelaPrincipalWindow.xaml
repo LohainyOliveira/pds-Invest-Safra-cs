@@ -6,9 +6,15 @@
         xmlns:local="clr-namespace:InvestSafra"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="TelaPrincipalWindow" Height="653" Width="890">
+        Title="TelaPrincipalWindow" Height="653" Width="890"
+        >
     <Grid>
-       
+        <Grid.Background>
+            <ImageBrush ImageSource="/Imagens/ImgFundoDesfocado.png"/>
+        </Grid.Background>
+        
+
+
 
         <Grid x:Name="painelHeader" VerticalAlignment="Top" Height="50"
               Background="#EFA82E" MouseDown="painelHeader_MouseDown_1">

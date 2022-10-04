@@ -42,7 +42,7 @@ namespace InvestSafra.Views
 		}
 
 
-		private void btVoltar_Click(object sender, RoutedEventArgs e)
+		private void btSair_Click(object sender, RoutedEventArgs e)
 		{
 			DialogResult = false;
 		}

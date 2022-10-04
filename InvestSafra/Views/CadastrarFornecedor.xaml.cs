@@ -122,5 +122,9 @@ namespace InvestSafra.Views
             txtEmail.Clear();
             txtRua.Clear();
         }
+        private void btSair_Click(object sender, RoutedEventArgs e)
+        {
+            DialogResult = false;
+        }
     }
 }
