@@ -125,5 +125,10 @@ namespace InvestSafra.Views
         {
             DialogResult = false;
         }
+
+        private void txtNome_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

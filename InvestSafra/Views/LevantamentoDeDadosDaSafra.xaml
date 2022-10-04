@@ -131,7 +131,7 @@
                       Style="{StaticResource MaterialDesignOutlinedTextBox}"
                             
                              VerticalAlignment="Top" 
-                             Width="565" Margin="20,179,0,0"/>
+                             Width="565" Margin="20,179,0,0" Cursor="Arrow"/>
 
             <StackPanel HorizontalAlignment="Right"  Orientation="Horizontal" >
                 <Button x:Name="btSalvar" FontSize="19" Content="Salvar" Height="40" Width="119"  Margin="0 350 20 0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Grid.Column="2" Grid.ColumnSpan="2"/>

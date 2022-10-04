@@ -137,5 +137,10 @@ namespace InvestSafra.Views
 		{
             DialogResult = false;
         }
-	}
+
+        private void txtresponsavel_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+    }
 }

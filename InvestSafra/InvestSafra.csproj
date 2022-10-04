@@ -178,6 +178,9 @@
     <Compile Include="Views\CadastrarMaquinas.xaml.cs">
       <DependentUpon>CadastrarMaquinas.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\CadastrarRecebimentoWindow.xaml.cs">
+      <DependentUpon>CadastrarRecebimentoWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ClienteFisicoWindow.xaml.cs">
       <DependentUpon>ClienteFisicoWindow.xaml</DependentUpon>
     </Compile>
@@ -310,6 +313,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\CadastrarMaquinas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CadastrarRecebimentoWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -558,6 +565,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Icons\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\recebimentoClaro.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\MaterialDesignThemes.4.4.0\build\MaterialDesignThemes.targets" Condition="Exists('packages\MaterialDesignThemes.4.4.0\build\MaterialDesignThemes.targets')" />

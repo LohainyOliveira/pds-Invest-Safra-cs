@@ -133,7 +133,7 @@
                     materialDesign:HintAssist.Hint="Responsável"
                     x:Name="txtresponsavel" Padding="16" 
                     TextWrapping="Wrap" 
-                    Width="209" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
+                    Width="209" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow" TextChanged="txtresponsavel_TextChanged"
                   />
 
 
