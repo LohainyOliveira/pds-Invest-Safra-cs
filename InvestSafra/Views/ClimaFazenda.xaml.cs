@@ -47,9 +47,11 @@ namespace InvestSafra.Views
         {
          
             txtClima.Text = _climaFazenda.Climatizacao;
-            txtTemperatura.Text = _climaFazenda.Temperatura;
+            txtTemperatura.Text = Convert.ToString(_climaFazenda.Temperatura);
             txtLocal.Text = _climaFazenda.Local;
-            
+
+            dtDia.SelectedDate = _climaFazenda.Data;
+
 
 
         }
@@ -114,10 +116,12 @@ namespace InvestSafra.Views
 
         private void btSalvar_Click(object sender, RoutedEventArgs e)
         {
-            _climaFazenda.Climatizacao = txtClima.Text;
-            _climaFazenda.Local = txtLocal.Text;
-            _climaFazenda.Temperatura = txtTemperatura.Text;
+           
             _climaFazenda.Data = dtDia.SelectedDate;
+            _climaFazenda.Temperatura = Convert.ToDouble(txtTemperatura.Text);
+            _climaFazenda.Local = txtLocal.Text;
+            _climaFazenda.Climatizacao = txtClima.Text;
+
 
 
             try

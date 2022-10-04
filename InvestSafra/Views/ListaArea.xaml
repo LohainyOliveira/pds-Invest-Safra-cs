@@ -135,33 +135,34 @@
                                            Foreground="black" HorizontalAlignment="Right"/>
                 </Grid>
 
-                <DataGrid  ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" RowStyle="{DynamicResource DataGridRowStyle1}" Grid.Row="5" x:Name="dataGridArea" SelectionChanged="membersDataGrid_SelectionChanged">
+                <DataGrid ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" RowStyle="{DynamicResource DataGridRowStyle1}" Grid.Row="5" x:Name="dataGridArea" IsReadOnly="true" AlternatingRowBackground="#FFE5E5E5" AlternationCount="2" AutoGenerateColumns="False" Background="#FFFAFAFA">
                     <DataGrid.Columns>
+
                         <!-- Começo CheckBox -->
-                        <DataGridCheckBoxColumn CanUserResize="False" Width="auto">
+                        <DataGridCheckBoxColumn CanUserResize="True" Width="auto">
                             <DataGridCheckBoxColumn.HeaderTemplate>
                                 <DataTemplate>
                                     <CheckBox/>
                                 </DataTemplate>
                             </DataGridCheckBoxColumn.HeaderTemplate>
                         </DataGridCheckBoxColumn>
-                        
-
+                        <!-- Fim CheckBox -->
+                        <!-- Começo -->
+                        <DataGridTextColumn Header="Nome do Terreno" Binding="{Binding Nome_Terreno }"/>
+                        <DataGridTextColumn Header="Responsável" Binding="{Binding Nome_Responsavel }"/>
                         <DataGridTextColumn Header="Metros" Binding="{Binding Metros}"/>
-                        <DataGridTextColumn Header="Descrição" Binding="{Binding Descricao }"/>
-                        <DataGridTextColumn Header="Localização" Binding="{Binding Localizacao}"/>
-                        <DataGridTextColumn Header="Nome do Terreno" Binding="{Binding Nome_Terreno}"/>
                         <DataGridTextColumn Header="CNPJ" Binding="{Binding CNPJ}"/>
-                        <DataGridTextColumn Header="Responsavel" Binding="{Binding Responsavel}"/>
+                        <DataGridTextColumn Header="Localizção" Binding="{Binding Localizacao}"/>
+                        <DataGridTextColumn Header="Descrição" Binding="{Binding Descricao}"/>
 
-                        <DataGridTemplateColumn Header="Ações">
+                        <DataGridTemplateColumn Header="Operation" IsReadOnly="True" Width="*">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
                                     <StackPanel Orientation="Horizontal">
-                                        <Button  Click="btAtualizar_Click" Style="{StaticResource GridEditButton}">
+                                        <Button Click="btAtualizar_Click" Style="{StaticResource GridEditButton}">
                                             <Icon:PackIconMaterial Kind="PencilOutline" Style="{StaticResource GridButtonIcon}"/>
                                         </Button>
-                                        <Button Margin="10 0 0 0" Style="{StaticResource GridRemoveButton}" Click="btAtualizar_Click">
+                                        <Button Click="btRemover_Click" Margin="20 0 0 0" Style="{StaticResource GridRemoveButton}">
                                             <Icon:PackIconMaterial Kind="DeleteOutline" Style="{StaticResource GridButtonIcon}"/>
                                         </Button>
 
@@ -173,9 +174,9 @@
                 </DataGrid>
                 <!-- Fim CheckBox -->
 
-                    
-            
-            <Border Grid.Row="6" HorizontalAlignment="Right" BorderBrush="#dee4ec" BorderThickness="1"
+
+
+                <Border Grid.Row="6" HorizontalAlignment="Right" BorderBrush="#dee4ec" BorderThickness="1"
                         CornerRadius="5" Padding="5" Background="White" Margin="0 10 10 10">
                     <StackPanel Orientation="Horizontal">
                         <Button Style="{StaticResource pagingButton}">

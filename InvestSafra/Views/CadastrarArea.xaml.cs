@@ -71,7 +71,15 @@ namespace InvestSafra.Views
             try
             {
                 var dao = new AreaDAO();
-                dao.Insert(_area);
+
+                if (_area.Id > 0)
+                {
+                    dao.Update(_area);
+                }
+                else
+                {
+                    dao.Insert(_area);
+                }
 
                 ExibirMensagemSalvar();
             }

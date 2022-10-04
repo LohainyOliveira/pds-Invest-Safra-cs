@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using InvestSafra.Database;
 using InvestSafra.Helpers;
+using HandyControl.Controls;
+using System.Windows.Input;
 
 namespace InvestSafra.Models
 {
@@ -20,14 +22,14 @@ namespace InvestSafra.Models
             {
                 var comando = _conn.Query();
 
-                comando.CommandText = ("insert into Clima value (null, @temperatura, @data, @local, @clima)");
+                comando.CommandText = ("insert into Clima value (null, @data, @temperatura, @local, @clima)");
 
 
 
+                comando.Parameters.AddWithValue("@data", clima.Data?.ToString("yyyy-MM-dd"));
                 comando.Parameters.AddWithValue("@temperatura", clima.Temperatura);
                 comando.Parameters.AddWithValue("@local", clima.Local);
                 comando.Parameters.AddWithValue("@clima", clima.Climatizacao);
-                comando.Parameters.AddWithValue("@data", clima.Data?.ToString("yyyy-MM-dd"));
 
                 var resultado = comando.ExecuteNonQuery();
 
@@ -65,7 +67,7 @@ namespace InvestSafra.Models
                
                     var clima = new Clima();
                     clima.Id = reader.GetInt32("id_clim");
-                    clima.Temperatura = DAOHelper.GetString(reader,"temperatura_clim");
+                    clima.Temperatura = reader.GetDouble("temperatura_clim");
                     clima.Local = DAOHelper.GetString(reader, "local_clim");
                     clima.Climatizacao = DAOHelper.GetString(reader, "clima_clim");
                    
@@ -88,15 +90,14 @@ namespace InvestSafra.Models
                 var comando = _conn.Query();
 
 
-                comando.CommandText = "UPDATE Clima set  temperatura_clim = @temperatura, local_clim = @local, clima_clim = @clima WHERE id_clim = @id";
+                comando.CommandText = "UPDATE Clima set  data_clim = @data, temperatura_clim = @temperatura, local_clim = @local, clima_clim = @clima WHERE id_clim = @id";
 
-
-
+                comando.Parameters.AddWithValue("@data", clima.Data?.ToString("yyyy-MM-dd"));
                 comando.Parameters.AddWithValue("@temperatura", clima.Temperatura);
                 comando.Parameters.AddWithValue("@local", clima.Local);
                 comando.Parameters.AddWithValue("@clima", clima.Climatizacao);
 
-              
+
 
                 comando.ExecuteNonQuery();
             }

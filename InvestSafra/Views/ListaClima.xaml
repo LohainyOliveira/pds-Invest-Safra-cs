@@ -172,10 +172,10 @@
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
                                     <StackPanel Orientation="Horizontal">
-                                        <Button Style="{StaticResource GridEditButton}">
+                                        <Button Click="btAtualizar_Click" Style="{StaticResource GridEditButton}">
                                             <Icon:PackIconMaterial Kind="PencilOutline" Style="{StaticResource GridButtonIcon}"/>
                                         </Button>
-                                        <Button Style="{StaticResource GridRemoveButton}">
+                                        <Button Click="btRemover_Click" Style="{StaticResource GridRemoveButton}">
                                             <Icon:PackIconMaterial Kind="DeleteOutline" Style="{StaticResource GridButtonIcon}"/>
                                         </Button>
 
