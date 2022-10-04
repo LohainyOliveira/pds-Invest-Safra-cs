@@ -84,7 +84,15 @@ namespace InvestSafra.Views
             try
             {
                 var dao = new FazendaDAO();
-                dao.Insert(_fazenda);
+
+                if (_fazenda.Id > 0)
+                {
+                    dao.Update(_fazenda);
+                }
+                else
+                {
+                    dao.Insert(_fazenda);
+                }
 
                 ExibirMensagemSalvar();
             }

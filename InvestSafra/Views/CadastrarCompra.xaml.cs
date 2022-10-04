@@ -110,7 +110,15 @@ namespace InvestSafra.Views
             try
             {
                 var dao = new CompraDAO();
-                dao.Insert(_compra);
+
+                if (_compra.Id > 0)
+                {
+                    dao.Update(_compra);
+                }
+                else
+                {
+                    dao.Insert(_compra);
+                }
 
                 ExibirMensagemSalvar();
             }

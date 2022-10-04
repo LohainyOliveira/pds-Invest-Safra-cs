@@ -99,7 +99,15 @@ namespace InvestSafra.Views
             try
             {
                 var dao = new FornecedorDAO();
-                dao.Insert(_fornecedor);
+
+                if (_fornecedor.Id > 0)
+                {
+                    dao.Update(_fornecedor);
+                }
+                else
+                {
+                    dao.Insert(_fornecedor);
+                }
 
                 ExibirMensagemSalvar();
             }

@@ -97,7 +97,15 @@ namespace InvestSafra.Views
             try
             {
                 var dao = new ClienteJuridicoDAO();
-                dao.Insert(_clienteJ);
+
+                if (_clienteJ.Id > 0)
+                {
+                    dao.Update(_clienteJ);
+                }
+                else
+                {
+                    dao.Insert(_clienteJ);
+                }
 
                 ExibirMensagemSalvar();
             }
