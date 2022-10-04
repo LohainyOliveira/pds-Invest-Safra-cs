@@ -3,19 +3,34 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:InvestSafra.Views"
-        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        
         mc:Ignorable="d"
-        Title="MenuWindow" Height="450" Width="800">
+        xmlns:hc="https://handyorg.github.io/handycontrol"
+        Height="653" Width="890" 
+        >
     <Grid>
-        
+        <Grid.Resources>
+            <ResourceDictionary>
+                <ResourceDictionary.MergedDictionaries>
+                    <hc:ThemeResources/>
+                    <hc:Theme/>
+                </ResourceDictionary.MergedDictionaries>
+
+            </ResourceDictionary>
+        </Grid.Resources>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="871*"/>
+            <ColumnDefinition Width="19*"/>
+        </Grid.ColumnDefinitions>
+
+
         <Grid.Background>
             <ImageBrush ImageSource="/Imagens/ImgFundoDesfocado.png"/>
         </Grid.Background>
-        
+
+
+
         <Grid x:Name="painelHeader" VerticalAlignment="Top" Height="50"
-              Background="#EFA82E" MouseDown="painelHeader_MouseDown_1">
+              Background="#EFA82E" MouseDown="painelHeader_MouseDown_1" Grid.ColumnSpan="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="747*"/>
                 <ColumnDefinition Width="0*"/>
@@ -23,7 +38,7 @@
             </Grid.ColumnDefinitions>
 
             <TextBlock Text="Sejam Bem Vindos !!!" FontSize="24"
-                       FontFamily="Script MT Bold" HorizontalAlignment="Left"
+                       FontFamily="Script MT Bold" HorizontalAlignment="Center"
                        VerticalAlignment="Center" Margin="294,0,0,0"/>
 
 
@@ -38,149 +53,264 @@
                     </Button>
                 </Grid>
 
-
-                <ListView FontFamily="Century Gothic" FontSize="14" Foreground="black"
-                          BorderBrush="Transparent" Background="Transparent" Height="600">
-
-
-
-                    <ListViewItem Height="40" x:Name="slhome" Selected="slhome_Selected" >
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="/Icons/home.png"/>
-                            <TextBlock Margin="10 0 0 0" Text="Home" VerticalAlignment="center" FontWeight="bold" FontFamily="Arial"/>
-                        </StackPanel>
-                    </ListViewItem>
-
-                    <ListViewItem Height="40" x:Name="slArea" Selected="slArea_Selected">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="/Icons/area.png" Height="38" VerticalAlignment="Center" Width="28"/>
-                            <TextBlock Margin="10 0 0 0" Text="Área" VerticalAlignment="Center" FontWeight="Bold" FontFamily="Arial"/>
-                        </StackPanel>
-                    </ListViewItem>
-
-                    <ListViewItem Height="40" x:Name="slCaixa" Selected="slCaixa_Selected">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="/Icons/caixa.png" Height="42" VerticalAlignment="Center" Width="34"/>
-                            <TextBlock Margin="10 0 0 0" Text="Caixa" VerticalAlignment="Center" FontWeight="Bold" FontFamily="Arial"/>
-                        </StackPanel>
-                    </ListViewItem>
-
-                    <ListViewItem Height="40" x:Name="slCompra" Selected="slCompra_Selected">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="/Icons/compra.png" Height="26" VerticalAlignment="Center" Width="32"/>
-                            <TextBlock Margin="10 0 0 0" Text="Compras" VerticalAlignment="Center" FontWeight="Bold" FontFamily="Arial"/>
-                        </StackPanel>
-                    </ListViewItem>
-
-                    <ListViewItem Height="40" x:Name="slFornecedor" Selected="slFornecedor_Selected">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="/Icons/fornecedor.png" Height="26" VerticalAlignment="Center" Width="32"/>
-                            <TextBlock Margin="10 0 0 0" Text="Fornecedor" VerticalAlignment="Center" FontWeight="Bold" FontFamily="Arial"/>
-                        </StackPanel>
-                    </ListViewItem>
-
-                    <ListViewItem Height="40" x:Name="slFazenda" Selected="slFazenda_Selected">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="/Icons/fazenda.png" Height="38" VerticalAlignment="Center" Width="28"/>
-                            <TextBlock Margin="10 0 0 0" Text="Fazenda" VerticalAlignment="Center" FontWeight="Bold" FontFamily="Arial"/>
-                        </StackPanel>
-                    </ListViewItem>
-
-
-                    <ListViewItem Height="40" Selected="ListViewItem_Selected_2">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="/Icons/funcionario.png" Height="26" VerticalAlignment="Center" Width="32"/>
-                            <TextBlock Margin="10 0 0 0" Text="Funcionários" VerticalAlignment="Center" FontWeight="Bold" FontFamily="Arial"/>
-                        </StackPanel>
-                    </ListViewItem>
-
-                    <ListViewItem Height="40" x:Name="slEmpresa" Selected="slEmpresa_Selected">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="/Icons/empresa.png" Height="26" VerticalAlignment="Center" Width="32"/>
-                            <TextBlock Margin="10 0 0 0" Text="Empresas" VerticalAlignment="Center" FontWeight="Bold" FontFamily="Arial"/>
-                        </StackPanel>
-                    </ListViewItem>
-
-                    <ListViewItem Height="40" x:Name="slMaquinas" Selected="slMaquinas_Selected">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="/Icons/maquinas.png" Height="26" VerticalAlignment="Center" Width="32"/>
-                            <TextBlock Margin="10 0 0 0" Text="Maquinários" VerticalAlignment="Center" FontWeight="Bold" FontFamily="Arial"/>
-                        </StackPanel>
-                    </ListViewItem>
-
-                    <ListViewItem Height="40" x:Name="slEstoque" Selected="slEstoque_Selected">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="/Icons/estoquePreto.png" Height="26" VerticalAlignment="Center" Width="32"/>
-                            <TextBlock Margin="10 0 0 0" Text="Estoque" VerticalAlignment="Center" FontWeight="Bold" FontFamily="Arial"/>
-                        </StackPanel>
-                    </ListViewItem>
-
-
-                    <ListViewItem Height="40" x:Name="slSafras" Selected="slSafras_Selected">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="/Icons/safra.png" Height="26" VerticalAlignment="Center" Width="32"/>
-                            <TextBlock Margin="10 0 0 0" Text="Safras" VerticalAlignment="Center" FontWeight="Bold" FontFamily="Arial"/>
-                        </StackPanel>
-                    </ListViewItem>
-
-                    <ListViewItem Height="40" x:Name="slSProduto">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="/Icons/produtos.png" Height="26" VerticalAlignment="Center" Width="32"/>
-                            <TextBlock Margin="10 0 0 0" Text="Produtos                                        " VerticalAlignment="Center" FontWeight="Bold" FontFamily="Arial"/>
-                        </StackPanel>
-                    </ListViewItem>
-
-                    <ListViewItem Height="40">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="/Icons/sementePreto.png" Height="26" VerticalAlignment="Center" Width="32"/>
-                            <TextBlock Margin="10 0 0 0" Text="Sementes" VerticalAlignment="Center" FontWeight="Bold" FontFamily="Arial"/>
-                        </StackPanel>
-                    </ListViewItem>
-
-                    <ListViewItem Height="40">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="/Icons/venda.png" Height="26" VerticalAlignment="Center" Width="32"/>
-                            <TextBlock Margin="10 0 0 0" Text="Vendas" VerticalAlignment="Center" FontWeight="Bold" FontFamily="Arial"/>
-                        </StackPanel>
-                    </ListViewItem>
-
-                    <ListViewItem Height="40">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="/Icons/insumo.png" Height="26" VerticalAlignment="Center" Width="32"/>
-                            <TextBlock Margin="10 0 0 0" Text="Insumos" VerticalAlignment="Center" FontWeight="Bold" FontFamily="Arial"/>
-                        </StackPanel>
-                    </ListViewItem>
-
-
-                    <ListViewItem Height="40">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="/Icons/conta.png" Height="26" VerticalAlignment="Center" Width="32"/>
-                            <TextBlock Margin="10 0 0 0" Text="Minha conta" VerticalAlignment="Center" FontWeight="Bold" FontFamily="Arial"/>
-                        </StackPanel>
-                    </ListViewItem>
-
-                    <ListViewItem Height="40">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="/Icons/contato.png" Height="20" VerticalAlignment="Center"/>
-                            <TextBlock Margin="10 0 0 0" Text="Contatos" VerticalAlignment="Center" FontWeight="Bold" FontFamily="Arial"/>
-                        </StackPanel>
-                    </ListViewItem>
-
-                    <ListViewItem Height="40">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="/Icons/curiosidade.png" Height="20" VerticalAlignment="Center"/>
-                            <TextBlock Margin=" 10 0 0 0" Text="Sobre nós" VerticalAlignment="Center" FontWeight="Bold" FontFamily="Arial"/>
-                        </StackPanel>
-                    </ListViewItem>
-
-                </ListView>
+                <!-- Imagm Cliente
+                    <DockPanel>
+                        <Border Width="80" Height="80" Padding="3" Background="Black" CornerRadius="100"
+                            DockPanel.Dock="Top" HorizontalAlignment="Center" Margin="0 -65 0 0">
+                            <Ellipse>
+                                <Ellipse.Fill>
+                                    <ImageBrush/>
+                                </Ellipse.Fill>
+                            </Ellipse>
+                        </Border>
+                    </DockPanel>
+                    -->
 
             </StackPanel>
+
+            <hc:SideMenu Margin="0 150 0 0" FontSize="14" Foreground="black"
+                          BorderBrush="Transparent" Background="Transparent" Height="600"
+>
+                <hc:Interaction.Triggers>
+                    <hc:EventTrigger EventName="SelectionChanged">
+                        <hc:EventToCommand Command="{Binding SwitchItemCmd}" PassEventArgsToCommand="True" />
+                    </hc:EventTrigger>
+                </hc:Interaction.Triggers>
+
+                <hc:SideMenuItem Background="Transparent" Foreground="black" Selected="SideMenuItemHome_Selected"
+                                 Header="Home" FontFamily="Arial" FontWeight="Bold">
+                    <hc:SideMenuItem.Icon>
+                        <Image Height="30"  Source="/Icons/home.png"/>
+                    </hc:SideMenuItem.Icon>
+                </hc:SideMenuItem>
+
+
+                <hc:SideMenuItem Background="Transparent" Foreground="Black" Header="Listagem" 
+                                 FontFamily="Arial" FontWeight="Bold">
+                    <hc:SideMenuItem.Icon>
+                        <Image Height="30"  Source="/Icons/lista.png" />
+
+                    </hc:SideMenuItem.Icon>
+
+
+
+
+                    <!-- Começo das  Listas -->
+
+                    <hc:SideMenuItem Selected="SideMenuItemListaArea_Selected" Header="Lista Área " Background="Transparent" Foreground="Black" Command="{Binding SelectCmd}" CommandParameter="{Binding Header,RelativeSource={RelativeSource Self}}">
+                        <hc:SideMenuItem.Icon>
+                            <Image Height="30"  Source="/Icons/marcador.png"/>
+                        </hc:SideMenuItem.Icon>
+                    </hc:SideMenuItem>
+
+                    <hc:SideMenuItem Header="Lista Caixa"  Selected="SideMenuItemListaCaixa_Selected" Background="Transparent" Foreground="Black" Command="{Binding SelectCmd}" CommandParameter="{Binding Header,RelativeSource={RelativeSource Self}}">
+                        <hc:SideMenuItem.Icon>
+                            <Image Height="30"  Source="/Icons/marcador.png"/>
+                        </hc:SideMenuItem.Icon>
+                    </hc:SideMenuItem>
+
+                    <hc:SideMenuItem Selected="SideMenuItemListaEmpresa_Selected" Header="Lista Empresa" Background="Transparent" Foreground="Black" Command="{Binding SelectCmd}" CommandParameter="{Binding Header,RelativeSource={RelativeSource Self}}">
+                        <hc:SideMenuItem.Icon>
+                            <Image Height="30"  Source="/Icons/marcador.png"/>
+                        </hc:SideMenuItem.Icon>
+                    </hc:SideMenuItem>
+
+                    <hc:SideMenuItem Header="Lista Clima" Selected="SideMenuItemListaClima_Selected" Background="Transparent" Foreground="Black" Command="{Binding SelectCmd}" CommandParameter="{Binding Header,RelativeSource={RelativeSource Self}}">
+                        <hc:SideMenuItem.Icon>
+                            <Image Height="30"  Source="/Icons/marcador.png"/>
+                        </hc:SideMenuItem.Icon>
+                    </hc:SideMenuItem>
+
+                    <hc:SideMenuItem Header="Lista Compra" Selected="SideMenuItemListaCompra_Selected" Background="Transparent" Foreground="Black" Command="{Binding SelectCmd}" CommandParameter="{Binding Header,RelativeSource={RelativeSource Self}}">
+                        <hc:SideMenuItem.Icon>
+                            <Image Height="30"  Source="/Icons/marcador.png"/>
+                        </hc:SideMenuItem.Icon>
+                    </hc:SideMenuItem>
+
+                    <hc:SideMenuItem Header="Lista Estoque" Selected="SideMenuItemListaEstoque_Selected" Background="Transparent" Foreground="Black" Command="{Binding SelectCmd}" CommandParameter="{Binding Header,RelativeSource={RelativeSource Self}}">
+                        <hc:SideMenuItem.Icon>
+                            <Image Height="30"  Source="/Icons/marcador.png"/>
+                        </hc:SideMenuItem.Icon>
+                    </hc:SideMenuItem>
+
+                    <hc:SideMenuItem Header="Lista Fazenda" Background="Transparent" Selected="SideMenuItemListaFazenda_Selected" Foreground="Black" Command="{Binding SelectCmd}" CommandParameter="{Binding Header,RelativeSource={RelativeSource Self}}">
+                        <hc:SideMenuItem.Icon>
+                            <Image Height="30"  Source="/Icons/marcador.png"/>
+                        </hc:SideMenuItem.Icon>
+                    </hc:SideMenuItem>
+
+                    <hc:SideMenuItem Header="Lista Fornecedor" Selected="SideMenuItemListaFornecedor_Selected" Background="Transparent" Foreground="Black" Command="{Binding SelectCmd}" CommandParameter="{Binding Header,RelativeSource={RelativeSource Self}}">
+                        <hc:SideMenuItem.Icon>
+                            <Image Height="30"  Source="/Icons/marcador.png"/>
+                        </hc:SideMenuItem.Icon>
+                    </hc:SideMenuItem>
+
+                    <hc:SideMenuItem Header="Lista Funcionário" Selected="SideMenuItemListaFuncionario_Selected" Background="Transparent" Foreground="Black" Command="{Binding SelectCmd}" CommandParameter="{Binding Header,RelativeSource={RelativeSource Self}}">
+                        <hc:SideMenuItem.Icon>
+                            <Image Height="30"  Source="/Icons/marcador.png"/>
+                        </hc:SideMenuItem.Icon>
+                    </hc:SideMenuItem>
+
+                    <hc:SideMenuItem Header="Lista Insumos" Selected="SideMenuItemListaInsumo_Selected" Background="Transparent" Foreground="Black" Command="{Binding SelectCmd}" CommandParameter="{Binding Header,RelativeSource={RelativeSource Self}}">
+                        <hc:SideMenuItem.Icon>
+                            <Image Height="30"  Source="/Icons/marcador.png"/>
+                        </hc:SideMenuItem.Icon>
+                    </hc:SideMenuItem>
+
+                    <hc:SideMenuItem Header="Lista Safra" Selected="SideMenuItemListaSafra_Selected" Background="Transparent" Foreground="Black" Command="{Binding SelectCmd}" CommandParameter="{Binding Header,RelativeSource={RelativeSource Self}}">
+                        <hc:SideMenuItem.Icon>
+                            <Image Height="30"  Source="/Icons/marcador.png"/>
+                        </hc:SideMenuItem.Icon>
+                    </hc:SideMenuItem>
+
+                    <hc:SideMenuItem Background="Transparent" Selected="SideMenuItemListaMaquinas_Selected" Foreground="Black" Header="Lista Maquinas" Command="{Binding SelectCmd}" CommandParameter="{Binding Header,RelativeSource={RelativeSource Self}}">
+                        <hc:SideMenuItem.Icon>
+                            <Image Height="30"  Source="/Icons/marcador.png"/>
+                        </hc:SideMenuItem.Icon>
+                    </hc:SideMenuItem>
+
+                    <hc:SideMenuItem Background="Transparent" Foreground="Black" Header="Lista Produto" Selected="SideMenuItemListaProduto_Selected" Command="{Binding SelectCmd}" CommandParameter="{Binding Header,RelativeSource={RelativeSource Self}}">
+                        <hc:SideMenuItem.Icon>
+                            <Image Height="30"  Source="/Icons/marcador.png"/>
+                        </hc:SideMenuItem.Icon>
+                    </hc:SideMenuItem>
+
+                    <hc:SideMenuItem Background="Transparent" Foreground="Black" Header="Lista Sementes" Selected="SideMenuItemListaSementes_Selected" Command="{Binding SelectCmd}" CommandParameter="{Binding Header,RelativeSource={RelativeSource Self}}">
+                        <hc:SideMenuItem.Icon>
+                            <Image Height="30"  Source="/Icons/marcador.png"/>
+                        </hc:SideMenuItem.Icon>
+                    </hc:SideMenuItem>
+
+                    <hc:SideMenuItem Header="Lista Venda" Selected="SideMenuItemListaVenda_Selected" Background="Transparent" Foreground="Black" Command="{Binding SelectCmd}" CommandParameter="{Binding Header,RelativeSource={RelativeSource Self}}">
+                        <hc:SideMenuItem.Icon>
+                            <Image Height="30"  Source="/Icons/marcador.png"/>
+                        </hc:SideMenuItem.Icon>
+                    </hc:SideMenuItem>
+                </hc:SideMenuItem>
+
+                <!-- Fim das  Listas -->
+
+
+                <hc:SideMenuItem Background="Transparent" Header="Áreas" Selected="SideMenuItemArea_Selected" Foreground="black" FontFamily="Arial" FontWeight="Bold">
+                    <hc:SideMenuItem.Icon>
+                        <Image Height="30"  Source="/Icons/area.png"/>
+                    </hc:SideMenuItem.Icon>
+                </hc:SideMenuItem>
+
+                <hc:SideMenuItem Background="Transparent" Header="Caixa" Selected="SideMenuItemCaixa_Selected" Foreground="black" FontFamily="Arial" FontWeight="Bold">
+                    <hc:SideMenuItem.Icon>
+                        <Image Height="30"  Source="/Icons/caixa.png"/>
+                    </hc:SideMenuItem.Icon>
+                </hc:SideMenuItem>
+
+                <hc:SideMenuItem Background="Transparent" Header="Clima" Selected="SideMenuItemClima_Selected" Foreground="black" FontFamily="Arial" FontWeight="Bold">
+                    <hc:SideMenuItem.Icon>
+                        <Image Height="30"  Source="/Icons/clima2.png"/>
+                    </hc:SideMenuItem.Icon>
+                </hc:SideMenuItem>
+
+                <hc:SideMenuItem Background="Transparent" Header="Compra" Selected="SideMenuItemCompra_Selected" Foreground="black" FontFamily="Arial" FontWeight="Bold">
+                    <hc:SideMenuItem.Icon>
+                        <Image Height="30"  Source="/Icons/compra.png"/>
+                    </hc:SideMenuItem.Icon>
+                </hc:SideMenuItem>
+
+                <hc:SideMenuItem Background="Transparent" Selected="SideMenuItemEmpresas_Selected" Header="Empresas" Foreground="black" FontFamily="Arial" FontWeight="Bold">
+                    <hc:SideMenuItem.Icon>
+                        <Image Height="30"  Source="/Icons/Empresa.png"/>
+                    </hc:SideMenuItem.Icon>
+                </hc:SideMenuItem>
+
+                <hc:SideMenuItem Background="Transparent" Selected="SideMenuItemEstoque_Selected" Header="Estoque" Foreground="black" FontFamily="Arial" FontWeight="Bold">
+                    <hc:SideMenuItem.Icon>
+                        <Image Height="30"  Source="/Icons/estoquePreto.png"/>
+                    </hc:SideMenuItem.Icon>
+                </hc:SideMenuItem>
+
+                <hc:SideMenuItem Background="Transparent" Selected="SideMenuItemFazenda_Selected" Header="Fazendas" Foreground="black" FontFamily="Arial" FontWeight="Bold">
+                    <hc:SideMenuItem.Icon>
+                        <Image Height="30"  Source="/Icons/fazenda.png"/>
+                    </hc:SideMenuItem.Icon>
+                </hc:SideMenuItem>
+
+                <hc:SideMenuItem Background="Transparent" Header="Fornecedores" Selected="SideMenuItemFornecedores_Selected" Foreground="black" FontFamily="Arial" FontWeight="Bold">
+                    <hc:SideMenuItem.Icon>
+                        <Image Height="30"  Source="/Icons/fornecedor.png"/>
+                    </hc:SideMenuItem.Icon>
+                </hc:SideMenuItem>
+
+                <hc:SideMenuItem Background="Transparent" Header="Funcionários" Selected="SideMenuItemFuncionarios_Selected" FontFamily="Arial" FontWeight="Bold">
+                    <hc:SideMenuItem.Icon>
+                        <Image Height="30"  Source="/Icons/funcionario.png"/>
+                    </hc:SideMenuItem.Icon>
+                </hc:SideMenuItem>
+
+                <hc:SideMenuItem Background="Transparent" Header="Maquinas" Selected="SideMenuItemMaquinas_Selected" FontFamily="Arial" FontWeight="Bold">
+                    <hc:SideMenuItem.Icon>
+                        <Image Height="30"  Source="/Icons/maquinas.png"/>
+                    </hc:SideMenuItem.Icon>
+                </hc:SideMenuItem>
+
+                <hc:SideMenuItem Background="Transparent" Header="Safra" Selected="SideMenuItemSafra_Selected" FontFamily="Arial" FontWeight="Bold">
+                    <hc:SideMenuItem.Icon>
+                        <Image Height="30"  Source="/Icons/safra.png"/>
+                    </hc:SideMenuItem.Icon>
+                </hc:SideMenuItem>
+
+                <hc:SideMenuItem Background="Transparent" Header="Semente" Selected="SideMenuItemSementes_Selected" FontFamily="Arial" FontWeight="Bold">
+                    <hc:SideMenuItem.Icon>
+                        <Image Height="30"  Source="/Icons/sementePreto.png"/>
+                    </hc:SideMenuItem.Icon>
+                </hc:SideMenuItem>
+
+                <hc:SideMenuItem Background="Transparent" Header="Venda" Selected="SideMenuItemVenda_Selected" FontFamily="Arial" FontWeight="Bold">
+                    <hc:SideMenuItem.Icon>
+                        <Image  Height="30"  Source="/Icons/venda.png"/>
+                    </hc:SideMenuItem.Icon>
+                </hc:SideMenuItem>
+
+
+                <hc:SideMenuItem Background="Transparent" Header="Produtos" Selected="SideMenuItemProdutos_Selected" FontFamily="Arial" FontWeight="Bold">
+                    <hc:SideMenuItem.Icon>
+                        <Image  Height="30" Source="/Icons/produtos.png"/>
+                    </hc:SideMenuItem.Icon>
+                </hc:SideMenuItem>
+
+                <hc:SideMenuItem Background="Transparent" Header="Recebimentos" Selected="SideMenuItemRecebimento_Selected" FontFamily="Arial" FontWeight="Bold">
+                    <hc:SideMenuItem.Icon>
+                        <Image  Height="30" Source="/Icons/recebimentoPreto.png"/>
+                    </hc:SideMenuItem.Icon>
+                </hc:SideMenuItem>
+
+
+                <hc:SideMenuItem Background="Transparent" Header="Conta" FontFamily="Arial" FontWeight="Bold">
+                    <hc:SideMenuItem.Icon>
+                        <Image Height="30"  Source="/Icons/conta.png"/>
+                    </hc:SideMenuItem.Icon>
+                </hc:SideMenuItem>
+
+
+                <hc:SideMenuItem Background="Transparent" Header="Contatos" FontFamily="Arial" FontWeight="Bold">
+                    <hc:SideMenuItem.Icon>
+                        <Image Height="30"  Source="/Icons/contato.png"/>
+                    </hc:SideMenuItem.Icon>
+                </hc:SideMenuItem>
+
+                <hc:SideMenuItem Background="Transparent" Header="Curiosidades" FontFamily="Arial" FontWeight="Bold">
+                    <hc:SideMenuItem.Icon>
+                        <Image Height="30" Source="/Icons/curiosidade.png"/>
+                    </hc:SideMenuItem.Icon>
+                </hc:SideMenuItem> ;
+
+
+            </hc:SideMenu>
         </Grid>
-        <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Image Source="/Imagens/logo_pgnPrincipal.png" Height="400"/>
+        <StackPanel HorizontalAlignment="Right" Grid.ColumnSpan="2" >
+            <Button Style="{StaticResource topButton}"  Height="40"  x:Name="btSair" Width="48" Click="btSair_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Icons/logout.png"/>
+                </Button.Background>
+            </Button>
         </StackPanel>
-
-
     </Grid>
 </Window>

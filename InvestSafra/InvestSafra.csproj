@@ -43,6 +43,9 @@
     <Reference Include="Google.Protobuf, Version=3.14.0.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
       <HintPath>packages\Google.Protobuf.3.14.0\lib\net45\Google.Protobuf.dll</HintPath>
     </Reference>
+    <Reference Include="HandyControl, Version=3.3.0.0, Culture=neutral, PublicKeyToken=45be8712787a1e5b, processorArchitecture=MSIL">
+      <HintPath>packages\HandyControls.3.4.2\lib\net472\HandyControl.dll</HintPath>
+    </Reference>
     <Reference Include="K4os.Compression.LZ4, Version=1.2.6.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
       <HintPath>packages\K4os.Compression.LZ4.1.2.6\lib\net46\K4os.Compression.LZ4.dll</HintPath>
     </Reference>
@@ -51,6 +54,12 @@
     </Reference>
     <Reference Include="K4os.Hash.xxHash, Version=1.0.6.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
       <HintPath>packages\K4os.Hash.xxHash.1.0.6\lib\net46\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>packages\MahApps.Metro.IconPacks.Material.4.11.0\lib\net47\MahApps.Metro.IconPacks.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.Material, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>packages\MahApps.Metro.IconPacks.Material.4.11.0\lib\net47\MahApps.Metro.IconPacks.Material.dll</HintPath>
     </Reference>
     <Reference Include="MaterialDesignColors, Version=2.0.5.0, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
       <HintPath>packages\MaterialDesignColors.2.0.5\lib\net452\MaterialDesignColors.dll</HintPath>
@@ -154,9 +163,6 @@
     <Compile Include="Views\CadastrarArea.xaml.cs">
       <DependentUpon>CadastrarArea.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\CadastrarCaixa.xaml.cs">
-      <DependentUpon>CadastrarCaixa.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\CadastrarCompra.xaml.cs">
       <DependentUpon>CadastrarCompra.xaml</DependentUpon>
     </Compile>
@@ -172,11 +178,14 @@
     <Compile Include="Views\CadastrarMaquinas.xaml.cs">
       <DependentUpon>CadastrarMaquinas.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\CadastrarRecebimentoWindow.xaml.cs">
+      <DependentUpon>CadastrarRecebimentoWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ClienteFisicoWindow.xaml.cs">
       <DependentUpon>ClienteFisicoWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\ClienteJuridico.xaml.cs">
-      <DependentUpon>ClienteJuridico.xaml</DependentUpon>
+    <Compile Include="Views\CadastrarClienteJuridico.xaml.cs">
+      <DependentUpon>CadastrarClienteJuridico.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ClimaFazenda.xaml.cs">
       <DependentUpon>ClimaFazenda.xaml</DependentUpon>
@@ -187,8 +196,8 @@
     <Compile Include="Views\Entrar.xaml.cs">
       <DependentUpon>Entrar.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Insumos.xaml.cs">
-      <DependentUpon>Insumos.xaml</DependentUpon>
+    <Compile Include="Views\CadastrarInsumos.xaml.cs">
+      <DependentUpon>CadastrarInsumos.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\LevantamentoDeDadosDaSafra.xaml.cs">
       <DependentUpon>LevantamentoDeDadosDaSafra.xaml</DependentUpon>
@@ -199,9 +208,6 @@
     <Compile Include="Views\ListaCaixa.xaml.cs">
       <DependentUpon>ListaCaixa.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\ListaClienteFisico.xaml.cs">
-      <DependentUpon>ListaClienteFisico.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\ListaClienteJuridico.xaml.cs">
       <DependentUpon>ListaClienteJuridico.xaml</DependentUpon>
     </Compile>
@@ -210,9 +216,6 @@
     </Compile>
     <Compile Include="Views\ListaCompra.xaml.cs">
       <DependentUpon>ListaCompra.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ListaEntrar.xaml.cs">
-      <DependentUpon>ListaEntrar.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ListaEstoque.xaml.cs">
       <DependentUpon>ListaEstoque.xaml</DependentUpon>
@@ -247,14 +250,14 @@
     <Compile Include="Views\MenuWindow.xaml.cs">
       <DependentUpon>MenuWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Produto.xaml.cs">
-      <DependentUpon>Produto.xaml</DependentUpon>
+    <Compile Include="Views\CadastrarProduto.xaml.cs">
+      <DependentUpon>CadastrarProduto.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Sementes.xaml.cs">
-      <DependentUpon>Sementes.xaml</DependentUpon>
+    <Compile Include="Views\CadastrarSementes.xaml.cs">
+      <DependentUpon>CadastrarSementes.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Venda.xaml.cs">
-      <DependentUpon>Venda.xaml</DependentUpon>
+    <Compile Include="Views\CadastrarVenda.xaml.cs">
+      <DependentUpon>CadastrarVenda.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -293,10 +296,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\CadastrarCaixa.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Views\CadastrarCompra.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -317,11 +316,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\CadastrarRecebimentoWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\ClienteFisicoWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\ClienteJuridico.xaml">
+    <Page Include="Views\CadastrarClienteJuridico.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -337,7 +340,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Insumos.xaml">
+    <Page Include="Views\CadastrarInsumos.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -353,10 +356,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Views\ListaClienteFisico.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="Views\ListaClienteJuridico.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -366,10 +365,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\ListaCompra.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Views\ListaEntrar.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -417,15 +412,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Produto.xaml">
+    <Page Include="Views\CadastrarProduto.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Sementes.xaml">
+    <Page Include="Views\CadastrarSementes.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Venda.xaml">
+    <Page Include="Views\CadastrarVenda.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -555,6 +550,27 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Icons\setaCima.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\lista.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\clima2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\setaLista.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\marcador.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\recebimentoClaro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\recebimentoPreto.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\MaterialDesignThemes.4.4.0\build\MaterialDesignThemes.targets" Condition="Exists('packages\MaterialDesignThemes.4.4.0\build\MaterialDesignThemes.targets')" />

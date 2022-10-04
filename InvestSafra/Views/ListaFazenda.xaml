@@ -1,12 +1,223 @@
 ﻿<Window x:Class="InvestSafra.Views.ListaFazenda"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:InvestSafra.Views"
-        mc:Ignorable="d"
-        Title="ListaFazenda" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        Height="720" Width="1080" WindowStartupLocation="CenterScreen" WindowStyle="None"
+        AllowsTransparency="True" Background="Transparent">
+
+    <Border Background="White" CornerRadius="30" MouseDown="Border_MouseDown" MouseLeftButtonDown="Border_MouseLeftButtonDown">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+            </Grid>
+
+            <Button VerticalAlignment="Top" HorizontalAlignment="Right" Style="{StaticResource topButton}" Width="90">
+                <Icon:PackIconMaterial Kind="Menu" Width="15" Height="15"/>
+            </Button>
+
+            <Border Background="#7b5cd6" CornerRadius="0 50 0 30" Margin="0,117,0,0">
+                <DockPanel>
+                    <Border Width="80" Height="80" Padding="3" Background="white" CornerRadius="100"
+                            DockPanel.Dock="Top" HorizontalAlignment="Center" Margin="0 -30 0 0">
+                        <Ellipse>
+                            <Ellipse.Fill>
+                                <ImageBrush/>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                    </Border>
+
+                    <TextBlock Text="Invest Safra" Foreground="white" FontSize="22" FontWeight="SemiBold"
+                               DockPanel.Dock="Top" TextAlignment="Center" Margin="5 25 0 10"/>
+                    <TextBlock Text="Lista de Fazenda" Foreground="#d0bfff" FontSize="14" FontWeight="SemiBold"
+                               DockPanel.Dock="Top" TextAlignment="Center"/>
+
+                    <Separator Margin="25" DockPanel.Dock="Top" Height="0.8" Background="#7b5cd6"/>
+
+                    <StackPanel DockPanel.Dock="Top">
+                        <Button Height="56" Background="#7b5cd6">
+                            <DockPanel>
+                                <Icon:PackIconMaterial Kind="HomeVariant" Style="{StaticResource ResourceKey=menuButtonIcon}" RenderTransformOrigin="0.133,0.48"/>
+                                <TextBlock Text="Menu" Width="49"/>
+                            </DockPanel>
+                        </Button>
+                    </StackPanel>
+
+                    <StackPanel DockPanel.Dock="Top">
+                        <Button Height="56" Background="#7b5cd6">
+                            <DockPanel>
+                                <Icon:PackIconMaterial Kind="ForumOutline" Style="{StaticResource ResourceKey=menuButtonIcon}" RenderTransformOrigin="0.133,0.48"/>
+                                <TextBlock Text="Chat" Width="49"/>
+                            </DockPanel>
+                        </Button>
+                    </StackPanel>
+
+                    <DockPanel>
+                        <Button Style="{StaticResource menuButton}" VerticalAlignment="Bottom" DockPanel.Dock="Bottom">
+                            <DockPanel>
+                                <Icon:PackIconMaterial Kind="Logout" Style="{StaticResource ResourceKey=menuButtonIcon}" RenderTransformOrigin="0.133,0.48"/>
+                                <TextBlock Text="Logout" Foreground="white" Width="49"/>
+                            </DockPanel>
+                        </Button>
+                    </DockPanel>
+
+                </DockPanel>
+            </Border>
+
+            <Grid Grid.Column="1" Margin="30 20 20 20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+
+
+                <Grid Width="300" HorizontalAlignment="Left">
+                    <TextBlock Margin="20 0 " VerticalAlignment="Center" Foreground="#b0b9c6" IsHitTestVisible="False"
+                               Panel.ZIndex="1" Text="Search hare..." Visibility="Visible"/>
+
+
+                </Grid>
+
+
+                <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Right">
+                    <Button Style="{StaticResource topButton}"  Height="40"  x:Name="btSair" Width="48" Click="btSair_Click">
+                        <Button.Background>
+                            <ImageBrush ImageSource="/Icons/logout.png"/>
+                        </Button.Background>
+                    </Button>
+                </StackPanel>
+
+                <TextBlock Text="Fazenda" Grid.Row="1" FontSize="32" FontWeight="SemiBold" Margin="0 20 0 0"
+                           HorizontalAlignment="Left" Foreground="black"/>
+
+                <Button Style="{StaticResource addButton}">
+                    <StackPanel Orientation="Horizontal">
+                        <Icon:PackIconMaterial Kind="Plus" VerticalAlignment="Center" Width="11" Height="11" Margin="0 20 0 0"/>
+                        <TextBlock Text="Add New Fazenda" Height="19"/>
+                    </StackPanel>
+                </Button>
+
+
+
+                <Separator Height="1" Grid.Row="3" Background="white" Margin="0 -1 0 10"/>
+
+                <!--<StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0 10 0 0">
+                    <Button Content="Club Staff" Style="{StaticResource tabButton}"/>
+                    <Button Content="Players" Style="{StaticResource tabButton}"/>
+                    <Button Content="Archived" Style="{StaticResource tabButton}"/>
+                </StackPanel>-->
+
+
+                <TextBlock Text="Atualize ou Delete a sua Fazenda Aqui"  Grid.Row="1" FontSize="18"  FontWeight="SemiBold"
+                           Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="485,60,0,0" Width="381" Grid.RowSpan="3"/>
+
+
+
+                <Grid Width="200" HorizontalAlignment="Right" Grid.Row="4">
+                    <TextBlock Margin="44,0,-14,0" VerticalAlignment="Center" Foreground="black" IsHitTestVisible="False"
+                               Panel.ZIndex="1" Text="Procurar por Fazenda..." Visibility="Visible"/>
+
+                    <TextBox x:Name="txtFilter" Style="{StaticResource textBoxFilter}"/>
+
+                    <Icon:PackIconMaterial Kind="Magnify" Height="15" VerticalAlignment="Center" Margin="0 0 15 0"
+                                           Foreground="black" HorizontalAlignment="Right"/>
+                </Grid>
+
+                <DataGrid  ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" RowStyle="{DynamicResource DataGridRowStyle1}" Grid.Row="5" x:Name="dataGridFazenda" SelectionChanged="membersDataGrid_SelectionChanged">
+                    <DataGrid.Columns>
+                        <!-- Começo CheckBox -->
+                        <DataGridCheckBoxColumn CanUserResize="False" Width="auto">
+                            <DataGridCheckBoxColumn.HeaderTemplate>
+                                <DataTemplate>
+                                    <CheckBox/>
+                                </DataTemplate>
+                            </DataGridCheckBoxColumn.HeaderTemplate>
+                        </DataGridCheckBoxColumn>
+                        <!-- Fim CheckBox -->
+                        <!-- Começo -->
+                        <DataGridTextColumn Header="#" IsReadOnly="True" CanUserResize="False" Width="auto"/>
+                        <DataGridTemplateColumn Header="Fazendas" IsReadOnly="True" Width="*">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Border Width="25" Height="25" CornerRadius="50" Margin="0 0 10 0" Background="Red">
+                                            <TextBlock Text="...." VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Margin=" 0 0 0 1"/>
+                                        </Border>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <!-- Fim -->
+
+
+
+                        <DataGridTextColumn Header="Nome" Binding="{Binding Nome}"/>
+                        <DataGridTextColumn Header="CNPJ" Binding="{Binding Cnpj }"/>
+                        <DataGridTextColumn Header="Localização" Binding="{Binding Localizacao}"/>
+                        <DataGridTextColumn Header="Nome Fantasia" Binding="{Binding N_Fantasia}"/>
+                        <DataGridTextColumn Header="Proprietário" Binding="{Binding Proprietario}"/>
+                        <DataGridTextColumn Header="Complemento" Binding="{Binding Complemento}"/>
+
+                        <DataGridTemplateColumn Header="Operation" IsReadOnly="True" Width="*">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button Style="{StaticResource GridEditButton}">
+                                            <Icon:PackIconMaterial Kind="PencilOutline" Style="{StaticResource GridButtonIcon}"/>
+                                        </Button>
+                                        <Button Style="{StaticResource GridRemoveButton}">
+                                            <Icon:PackIconMaterial Kind="DeleteOutline" Style="{StaticResource GridButtonIcon}"/>
+                                        </Button>
+
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+
+                    </DataGrid.Columns>
+                </DataGrid>
+                <Border Grid.Row="6" HorizontalAlignment="Right" BorderBrush="#dee4ec" BorderThickness="1"
+                        CornerRadius="5" Padding="5" Background="White" Margin="0 10 10 10">
+                    <StackPanel Orientation="Horizontal">
+                        <Button Style="{StaticResource pagingButton}">
+                            <Icon:PackIconMaterial Kind="ChevronLeft" Style="{StaticResource pagingButtonIcon}"/>
+                        </Button>
+
+                        <Rectangle Width="1" Fill="#dee4ec" Margin="3 7 "/>
+
+                        <Button Style="{StaticResource pagingButton}" Content="1"/>
+                        <Button Style="{StaticResource pagingButton}" Content="2" Background="#7950f2" Foreground="#ffffff"/>
+                        <Button Style="{StaticResource pagingButton}" Content="3"/>
+
+                        <TextBlock Text="..." Foreground="#6c7682" VerticalAlignment="Center" FontSize="15" Margin="10 0"/>
+
+                        <Button Style="{StaticResource pagingButton}" Content="7"/>
+                        <Button Style="{StaticResource pagingButton}" Content="8"/>
+                        <Button Style="{StaticResource pagingButton}" Content="9"/>
+
+                        <Rectangle Width="1" Fill="#dee4ec" Margin="3 7 "/>
+
+                        <Button Style="{StaticResource pagingButton}">
+                            <Icon:PackIconMaterial Kind="ChevronRight" Style="{StaticResource pagingButtonIcon}"/>
+                        </Button>
+
+                    </StackPanel>
+
+                </Border>
+            </Grid>
+        </Grid>
+    </Border>
+
 </Window>

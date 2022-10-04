@@ -12,9 +12,12 @@
         TextOptions.TextFormattingMode="Ideal" 
         TextOptions.TextRenderingMode="Auto"
         FontFamily="{DynamicResource MaterialDesignFont}"
-        Title="Clima Fazenda" Height="542" Width="956">
+        Height="570" Width="1000" WindowStartupLocation="CenterScreen" WindowStyle="None"
+        AllowsTransparency="True" Background="Transparent">
 
-    <Grid Margin="0,0,0,-28" RenderTransformOrigin="0.5,0.5">
+    <Border Background="White" CornerRadius="30" MouseDown="Border_MouseDown" MouseLeftButtonDown="Border_MouseLeftButtonDown">
+
+        <Grid Margin="0,0,0,-28" RenderTransformOrigin="0.5,0.5">
         <Grid.RenderTransform>
             <TransformGroup>
                 <ScaleTransform/>
@@ -48,7 +51,7 @@
             <Grid VerticalAlignment="Top" HorizontalAlignment="Center" Height="535" >
                 <StackPanel Orientation="Horizontal" Margin="0 0 60 200">
                     <DatePicker 
-                       x:Name="dtPickerDataNascimento"
+                       x:Name="dtDia"
                        materialDesign:HintAssist.Hint="Data" 
                        Style="{StaticResource MaterialDesignOutlinedDatePicker}"
                        Width="206" Height="60" Margin="80 95 0 0"/>
@@ -107,7 +110,7 @@
 
                     <Grid Margin="334,7,-137,-7" Grid.ColumnSpan="4">
                         <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
-                            <Button x:Name="btSalvar" FontSize="19" Content="Salvar" Height="40" Width="119"  Margin="0,0,20,0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Grid.Column="2" Grid.ColumnSpan="2"/>
+                            <Button x:Name="btSalvar" FontSize="19" Content="Salvar" Height="40" Width="119"  Margin="0,0,20,0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Grid.Column="2" Grid.ColumnSpan="2" Click="btSalvar_Click"/>
                             <Button x:Name="btCancelar" FontSize="19" Content="Cancelar" Height="40" Width="119"  Margin="0,0,0,0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Grid.ColumnSpan="4" Click="btCancelar_Click"/>
                         </StackPanel>
                     </Grid>
@@ -116,5 +119,13 @@
 
             </Grid>
         </Grid>
-    </Grid>
+            <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Right">
+                <Button Style="{StaticResource topButton}"  Height="40"  x:Name="btSair" Width="48" Click="btSair_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/Icons/logout.png"/>
+                    </Button.Background>
+                </Button>
+            </StackPanel>
+        </Grid>
+    </Border>
 </Window>

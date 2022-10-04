@@ -11,18 +11,46 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using InvestSafra.Models;
 
 namespace InvestSafra.Views
 {
     /// <summary>
     /// Lógica interna para Insumos.xaml
     /// </summary>
-    public partial class Insumos : Window
+    public partial class CadastrarInsumos : Window
     {
-        public Insumos()
+        private Insumos _insumos = new Insumos();
+        public CadastrarInsumos()
         {
             InitializeComponent();
+            Loaded +=InsumosFormWindow_Loaded;
         }
+        public CadastrarInsumos(Insumos insumo)
+        {
+            InitializeComponent();
+
+            _insumos = insumo;
+            Loaded += InsumosFormWindow_Loaded;
+
+        }
+
+
+        private void InsumosFormWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            txtDescricao1.Text = _insumos.Descricao;
+            txtMarca1.Text = _insumos.Marca;
+            txtTipoInsumo.Text = _insumos.Tipo;
+
+        }
+
+        private void ExibirMensagemSalvar()
+        {
+            MessageBox.Show($"Campos Salvos com Sucesso!", "Registros Salvos",
+                MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
+       
 
         private void btCancelar_Click(object sender, RoutedEventArgs e)
         {
@@ -40,6 +68,15 @@ namespace InvestSafra.Views
         {
             MessageBox.Show($"Campos Limpos com Sucesso", "Limpeza Concluida",
                 MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
+        private void btSalvar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void btSair_Click(object sender, RoutedEventArgs e)
+        {
+            DialogResult = false;
         }
     }
 }

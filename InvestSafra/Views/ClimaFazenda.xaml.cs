@@ -10,7 +10,10 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Media.TextFormatting;
 using System.Windows.Shapes;
+using InvestSafra.Models;
+
 
 namespace InvestSafra.Views
 {
@@ -19,9 +22,38 @@ namespace InvestSafra.Views
     /// </summary>
     public partial class ClimaFazenda : Window
     {
+        private Clima _climaFazenda= new Clima();
+
         public ClimaFazenda()
         {
             InitializeComponent();
+            Loaded += ClimaFazendaFormWindow_Loaded;
+        }
+        public ClimaFazenda(Clima climaFazenda)
+        {
+            InitializeComponent();
+
+            _climaFazenda = climaFazenda;
+            Loaded += ClimaFazendaFormWindow_Loaded;
+
+        }
+
+		public ClimaFazenda(Area climaSelecionado)
+		{
+			this.climaSelecionado = climaSelecionado;
+		}
+
+		private void ClimaFazendaFormWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+         
+            txtClima.Text = _climaFazenda.Climatizacao;
+            txtTemperatura.Text = Convert.ToString(_climaFazenda.Temperatura);
+            txtLocal.Text = _climaFazenda.Local;
+
+            dtDia.SelectedDate = _climaFazenda.Data;
+
+
+
         }
 
         private void btCancelar_Click(object sender, RoutedEventArgs e)
@@ -38,5 +70,80 @@ namespace InvestSafra.Views
             MessageBox.Show($"Campos Limpos com Sucesso", "Limpeza Concluida",
                 MessageBoxButton.OK, MessageBoxImage.Information);
         }
+
+        private void ExibirMensagemSalvar()
+        {
+            MessageBox.Show($"Campos Salvos com Sucesso!", "Registros Salvos",
+                MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
+        private void Border_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+            {
+                this.DragMove();
+            }
+
+        }
+
+        private bool IsMaxinized = false;
+		private Area climaSelecionado;
+
+		private void Border_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ClickCount == 2)
+            {
+                if (IsMaxinized)
+                {
+                    this.WindowState = WindowState.Normal;
+                    this.Width = 1080;
+                    this.Height = 720;
+
+                    IsMaxinized = false;
+                }
+                else
+                {
+                    this.WindowState = WindowState.Maximized;
+                    IsMaxinized = true;
+
+                }
+            }
+        }
+        private void btSair_Click(object sender, RoutedEventArgs e)
+        {
+            DialogResult = false;
+        }
+
+        private void btSalvar_Click(object sender, RoutedEventArgs e)
+        {
+           
+            _climaFazenda.Data = dtDia.SelectedDate;
+            _climaFazenda.Temperatura = Convert.ToDouble(txtTemperatura.Text);
+            _climaFazenda.Local = txtLocal.Text;
+            _climaFazenda.Climatizacao = txtClima.Text;
+
+
+
+            try
+            {
+                var dao = new ClimaDAO();
+                dao.Insert(_climaFazenda);
+
+                ExibirMensagemSalvar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            txtTemperatura.Clear();
+            txtLocal.Clear();
+            txtClima.Clear();
+            dtDia.SelectedDate = null;
+
+
+        }
     }
+
+    
 }

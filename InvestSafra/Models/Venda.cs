@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InvestSafra.Models
 {
-	internal class Venda
+	public class Venda
 	{
 		public int Id { get; set; }
 		public double Valor { get; set; }

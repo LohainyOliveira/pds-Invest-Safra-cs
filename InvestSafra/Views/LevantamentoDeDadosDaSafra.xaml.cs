@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using InvestSafra.Models;
 
 namespace InvestSafra.Views
 {
@@ -19,12 +20,29 @@ namespace InvestSafra.Views
 	/// </summary>
 	public partial class LevantamentoDeDadosDaSafra : Window
 	{
+		private Safra _safra = new Safra();
 		public LevantamentoDeDadosDaSafra()
 		{
 			InitializeComponent();
+			Loaded += SafraFormWindow_Loaded;
 		}
 
-		private void btVoltar_Click(object sender, RoutedEventArgs e)
+		public LevantamentoDeDadosDaSafra(Safra safra)
+		{
+			InitializeComponent();
+
+			_safra = safra;
+			Loaded += SafraFormWindow_Loaded;
+
+		}
+
+		private void SafraFormWindow_Loaded(object sender, RoutedEventArgs e)
+		{
+			
+		}
+
+
+		private void btSair_Click(object sender, RoutedEventArgs e)
 		{
 			DialogResult = false;
 		}

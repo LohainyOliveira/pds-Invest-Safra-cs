@@ -12,8 +12,13 @@
         TextOptions.TextFormattingMode="Ideal" 
         TextOptions.TextRenderingMode="Auto"
         FontFamily="{DynamicResource MaterialDesignFont}"
-        Title="Inscrever" Height="542" Width="956">
-    <Grid Margin="0,0,0,-28" RenderTransformOrigin="0.5,0.5">
+
+        Height="520" Width="900" WindowStartupLocation="CenterScreen" WindowStyle="None"
+        AllowsTransparency="True" Background="Transparent">
+
+       <Border Background="White" CornerRadius="30" MouseDown="Border_MouseDown" MouseLeftButtonDown="Border_MouseLeftButtonDown">
+
+        <Grid Margin="0,0,0,-28" RenderTransformOrigin="0.5,0.5">
 
         <Grid.RenderTransform>
             <TransformGroup>
@@ -45,98 +50,98 @@
                 <Image HorizontalAlignment="Right" Height="200"  Width="200" VerticalAlignment="Top" Source="/Icons/Maquina.png"/>
             </Grid>
 
-            <Grid VerticalAlignment="Top" HorizontalAlignment="Center" Height="124" Width="900"  Margin="0,157,0,0"  >
-                <TextBox 
+
+            <Grid VerticalAlignment="Top" HorizontalAlignment="Center" Height="535" >
+                <StackPanel Orientation="Horizontal" Margin="0 0 60 200">
+                    <TextBox 
                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     AcceptsReturn="True"
                     MaxWidth="400"
-                    materialDesign:HintAssist.Hint="CNPJ"
-                    x:Name="txtCnpj" Padding="16" 
-                    TextWrapping="Wrap" 
-                    Width="209" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow" RenderTransformOrigin="0.186,0.51" Margin="236,14,455,50"
+                    Margin="80 70 50 0"
+                    materialDesign:HintAssist.Hint="Nome"
+                    x:Name="txtNome" Padding="16" Grid.Row="1" 
+                    TextWrapping="Wrap" VerticalAlignment="Center" 
+                    Width="209" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
-                <TextBox 
+                    <TextBox 
                 
                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     AcceptsReturn="True"
                     MaxWidth="400"
-                    materialDesign:HintAssist.Hint="Nome"
-                    x:Name="txtNome" Padding="16" 
+                    Margin="10 70 50 0"
+                    materialDesign:HintAssist.Hint="CNPJ"
+                    x:Name="txtCnpj1" Padding="16" 
                     TextWrapping="Wrap" 
-                    Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow" Margin="15,16,677,48"
+                    Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
-                <TextBox 
+
+
+
+
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0 0 60 0">
+                    <TextBox 
                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     AcceptsReturn="True"
                     MaxWidth="400"
+                    Margin="80 70 50 0"
                     materialDesign:HintAssist.Hint="Marca"
-                    x:Name="txtMarca" Padding="16" 
-                    TextWrapping="Wrap" 
-                    Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow" Margin="463,12,229,52"
+                    x:Name="txtMarca" Padding="16" Grid.Row="1" 
+                    TextWrapping="Wrap" VerticalAlignment="Center" 
+                    Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
-                <TextBox 
+                    <TextBox 
                     
                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     AcceptsReturn="True"
                     MaxWidth="400"
-                    Margin="684,12,8,52"
+                    Margin="10 70 50 0"
                     materialDesign:HintAssist.Hint="Valor"
                     x:Name="txtValor" Padding="16" 
                     TextWrapping="Wrap" 
                     Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
-            </Grid>
-            <Grid Margin="0,288,12,0">
+
+                </StackPanel>
 
 
-
-                <ScrollViewer Grid.Row="2" Margin="10" 
-                      ScrollViewer.VerticalScrollBarVisibility="Auto">
-
-                    <DataGrid  Margin="5,5,5,5" x:Name="dataGrid" CanUserAddRows="False" CanUserDeleteRows="False" 
-                       AutoGenerateColumns="False" AlternatingRowBackground="#FFE5E5" AlternationCount="2"
-                       ColumnWidth="*" Background="#FFFFB83F" Width="836" Height="212">
-                        <DataGrid.Columns>
-                            <DataGridTextColumn Header="Id" IsReadOnly="True" Binding="{Binding Id}"/>
-                            <DataGridTextColumn Header="Produto" IsReadOnly="True" Binding="{Binding Nome}"/>
-                            <DataGridTextColumn Header="Unidade" IsReadOnly="True" Binding="{Binding Unidade}"/>
-                            <DataGridTextColumn Header="Valor" IsReadOnly="True" Binding="{Binding ValorCompra, ConverterCulture='pt-BR', StringFormat=C}"/>
-
-                            <DataGridTemplateColumn Header="Adicionar?">
-                                <DataGridTemplateColumn.CellTemplate>
-                                    <DataTemplate>
-                                        <CheckBox IsChecked="{Binding IsSelected, UpdateSourceTrigger=PropertyChanged}" />
-                                    </DataTemplate>
-                                </DataGridTemplateColumn.CellTemplate>
-                            </DataGridTemplateColumn>
-                        </DataGrid.Columns>
-                    </DataGrid>
-                </ScrollViewer>
+                <Grid Margin="0,288,12,0">
 
 
 
 
 
+                    <Grid >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="391*"/>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="0*"/>
+                            <ColumnDefinition Width="195*"/>
+                        </Grid.ColumnDefinitions>
 
-                <Grid Margin="0,465,10,10">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="391*"/>
-                        <ColumnDefinition Width="2*"/>
-                        <ColumnDefinition Width="0*"/>
-                        <ColumnDefinition Width="195*"/>
-                    </Grid.ColumnDefinitions>
-
-                    <Grid Margin="334,7,-137,-7" Grid.ColumnSpan="4">
-                        <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
-                            <Button x:Name="btSalvar" FontSize="19" Content="Salvar" Height="40" Width="119"  Margin="0,0,20,0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Grid.Column="2" Grid.ColumnSpan="2"/>
-                            <Button x:Name="btCancelar" FontSize="19" Content="Cancelar" Height="40" Width="119"  Margin="0,0,0,0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Grid.ColumnSpan="4"/>
-                        </StackPanel>
+                        <Grid Margin="334,7,-137,-7" Grid.ColumnSpan="4">
+                            <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Margin="123,0,0,0" Width="335">
+                                <Button x:Name="btSalvar" FontSize="19" Content="Salvar" Height="40" Width="119"  Margin="0,80,20,0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Grid.Column="2" Grid.ColumnSpan="2" />
+                                <Button x:Name="btCancelar" FontSize="19" Content="Limpar" Height="40" Width="119"  Margin="0,80,0,0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Grid.ColumnSpan="4" />
+                            </StackPanel>
+                        </Grid>
                     </Grid>
+
+
                 </Grid>
-
-
             </Grid>
         </Grid>
-    </Grid>
+            <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Right">
+                <Button Style="{StaticResource topButton}"  Height="40"  x:Name="btSair" Width="48" Click="btSair_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/Icons/logout.png"/>
+                    </Button.Background>
+                </Button>
+            </StackPanel>
+
+        </Grid>
+           
+    </Border>
 
 </Window>

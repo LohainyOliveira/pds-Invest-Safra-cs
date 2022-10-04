@@ -23,7 +23,30 @@ namespace InvestSafra.Views
         private Fazenda _fazenda = new Fazenda();
         public CadastrarFazenda()
         {
+            InitializeComponent(); 
+            Loaded += FazendaFormWindow_Loaded;
+        }
+        public CadastrarFazenda(Fazenda fazenda)
+        {
             InitializeComponent();
+
+            _fazenda = fazenda;
+            Loaded += FazendaFormWindow_Loaded;
+
+        }
+
+
+        private void FazendaFormWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            txtNome.Text = _fazenda.Nome;
+            txtCnpj.Text = _fazenda.CNPJ;
+            txtComplemento.Text = _fazenda.Complemento;
+            txtLocalizacao.Text = _fazenda.Localizacao;
+            txtProprietario.Text = _fazenda.Proprietario;
+            txtNomeFantasia.Text = _fazenda.NomeFantasia;
+
+
+
         }
 
         private void btCancelar_Click(object sender, RoutedEventArgs e)
@@ -31,7 +54,7 @@ namespace InvestSafra.Views
             txtCnpj.Clear();
             txtComplemento.Clear();
             txtLocalizacao.Clear();
-            txtNome.Clear();    
+            txtNome.Clear();
             txtNomeFantasia.Clear();
             txtProprietario.Clear();
 
@@ -61,7 +84,15 @@ namespace InvestSafra.Views
             try
             {
                 var dao = new FazendaDAO();
-                dao.Insert(_fazenda);
+
+                if (_fazenda.Id > 0)
+                {
+                    dao.Update(_fazenda);
+                }
+                else
+                {
+                    dao.Insert(_fazenda);
+                }
 
                 ExibirMensagemSalvar();
             }
@@ -76,6 +107,42 @@ namespace InvestSafra.Views
             txtNome.Clear();
             txtNomeFantasia.Clear();
             txtProprietario.Clear();
+        }
+
+        private void Border_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+            {
+                this.DragMove();
+            }
+
+        }
+
+        private bool IsMaxinized = false;
+        private void Border_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ClickCount == 2)
+            {
+                if (IsMaxinized)
+                {
+                    this.WindowState = WindowState.Normal;
+                    this.Width = 1080;
+                    this.Height = 720;
+
+                    IsMaxinized = false;
+                }
+                else
+                {
+                    this.WindowState = WindowState.Maximized;
+                    IsMaxinized = true;
+
+                }
+            }
+
+        }
+        private void btSair_Click(object sender, RoutedEventArgs e)
+        {
+            DialogResult = false;
         }
     }
 }

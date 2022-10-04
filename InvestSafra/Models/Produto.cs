@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace InvestSafra.Models
 {
-    internal class Produto
+    public class Produto
     {
         public int Id { get; set; }
         public string Nome { get; set; }
         public string Descricao { get; set; }
+        public string Marca { get; set; }
+
         public int Quantidade { get; set; }
         public double Valor { get; set; }
     }

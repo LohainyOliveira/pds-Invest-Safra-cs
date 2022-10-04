@@ -20,11 +20,12 @@ namespace InvestSafra.Models
 
                 var comando = _conn.Query();
 
-                comando.CommandText = ("insert into Produto  value (null, @nome, @descricao, @quantidade, @valor ");
+                comando.CommandText = ("insert into Produto  value (null, @nome, @descricao, @marca, @quantidade, @valor ");
 
 
                 comando.Parameters.AddWithValue("@nome", produto.Nome);
                 comando.Parameters.AddWithValue("@descricao", produto.Descricao);
+                comando.Parameters.AddWithValue("@marca", produto.Marca);
                 comando.Parameters.AddWithValue("@quantidade", produto.Quantidade);
                 comando.Parameters.AddWithValue("@valor", produto.Valor);
 
@@ -63,9 +64,10 @@ namespace InvestSafra.Models
 
                   
                     var produto = new Produto();
-                    produto.Id = reader.GetInt32("id_ins");
+                    produto.Id = reader.GetInt32("id_prod");
                     produto.Nome = DAOHelper.GetString(reader, "nome_prod");
                     produto.Descricao = DAOHelper.GetString(reader, "descricao_prod");
+                    produto.Descricao = DAOHelper.GetString(reader, "marca_prod");
                     produto.Quantidade = reader.GetInt32("quantidade_prod");
                     produto.Valor = reader.GetDouble("valor_prod");
 
@@ -86,12 +88,14 @@ namespace InvestSafra.Models
             try
             {
 
+
                 var comando = _conn.Query();
 
-                comando.CommandText = "UPDATE Insumo set nome_ins = @nome, tipo_ins = @tipo, marca_ins = @marca, descricao_ins = @descricao  WHERE id_fun = @id";
+                comando.CommandText = "UPDATE Produto set nome_prod = @nome, descricao_prod = @descricao, marca_prod = @marca, quantidade_prod = @quantidade, valor_prod = @valor  WHERE id_prod = @id";
 
                 comando.Parameters.AddWithValue("@nome", produto.Nome);
                 comando.Parameters.AddWithValue("@descricao", produto.Descricao);
+                comando.Parameters.AddWithValue("marca", produto.Marca);
                 comando.Parameters.AddWithValue("@quantidade", produto.Quantidade);
                 comando.Parameters.AddWithValue("@valor", produto.Valor);
 

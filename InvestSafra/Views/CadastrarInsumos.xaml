@@ -1,18 +1,18 @@
-﻿<Window x:Class="InvestSafra.Views.Sementes"
+﻿<Window x:Class="InvestSafra.Views.CadastrarInsumos"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:InvestSafra.Views"
         mc:Ignorable="d"
-         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
         TextElement.FontSize="13"
         TextOptions.TextFormattingMode="Ideal" 
         TextOptions.TextRenderingMode="Auto"
         FontFamily="{DynamicResource MaterialDesignFont}"
-        Title="Inscrever" Height="543" Width="956">
+        Title="Insumos" Height="542" Width="956">
     <Grid Margin="0,0,0,-28" RenderTransformOrigin="0.5,0.5">
         <Grid.RenderTransform>
             <TransformGroup>
@@ -38,8 +38,8 @@
                     <ColumnDefinition Width="17*"/>
                 </Grid.ColumnDefinitions>
                 <Image HorizontalAlignment="Left" Height="200" Margin="38,15,0,0" VerticalAlignment="Top" Width="136" Source="/Imagens/LogoCanto.png"/>
-                <Image HorizontalAlignment="Right" Height="200" VerticalAlignment="Top" Width="200" Source="/Icons/Semente.png"/>
-                <Label  Content="Cadastro de Sementes" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Malik" FontSize="24" Foreground="#EFA82E" FontWeight="Bold" Height="49" Width="292" RenderTransformOrigin="0.336,0.452" Margin="329,44,0,0"/>
+                <Image HorizontalAlignment="Right" Height="200" VerticalAlignment="Top" Width="200" Source="/Icons/fertilizante.png"/>
+                <Label  Content="Cadastro de Insumos" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Malik" FontSize="24" Foreground="#EFA82E" FontWeight="Bold" Height="49" Width="292" RenderTransformOrigin="0.336,0.452" Margin="329,44,0,0"/>
             </Grid>
 
             <Grid VerticalAlignment="Top" HorizontalAlignment="Center" Height="535" >
@@ -49,8 +49,8 @@
                     AcceptsReturn="True"
                     MaxWidth="400"
                     Margin="80 0 50 0"
-                    materialDesign:HintAssist.Hint="Descrição"
-                    x:Name="txtdescricao" Padding="16" Grid.Row="1" 
+                    materialDesign:HintAssist.Hint="Tipos de Insumo"
+                    x:Name="txtTipoInsumo" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
                     Width="209" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
@@ -77,8 +77,36 @@
                     AcceptsReturn="True"
                     MaxWidth="400"
                     Margin="80 0 50 0"
+                    materialDesign:HintAssist.Hint="Descrição"
+                    x:Name="txtDescricao1" Padding="16" Grid.Row="1" 
+                    TextWrapping="Wrap" VerticalAlignment="Center" 
+                    Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
+                  />
+                    
+                    
+                <ComboBox
+                    materialDesign:HintAssist.Hint="Medida" 
+                    Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                    HorizontalAlignment="Center"   
+                    Background="#0F040302" FontFamily="Arial" FontWeight="Bold"
+                    x:Name="cbMedida" Padding="8"  Width="208" Grid.Column="1" Grid.Row="1" Height="58">
+                        <ComboBoxItem></ComboBoxItem>
+                        <ComboBoxItem>Feminino</ComboBoxItem>
+                        <ComboBoxItem>Masculino</ComboBoxItem>
+                        </ComboBox>
+
+
+
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0 200 60 0">
+                    <TextBox 
+                Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                    AcceptsReturn="True"
+                    MaxWidth="400"
+                    Margin="80 0 50 0"
                     materialDesign:HintAssist.Hint="Quantidade"
-                    x:Name="txtQuantidade1" Padding="16" Grid.Row="1" 
+                    x:Name="txtQuantidade" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
                     Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
@@ -88,24 +116,6 @@
                     AcceptsReturn="True"
                     MaxWidth="400"
                     Margin="10 0 50 0"
-                    materialDesign:HintAssist.Hint="Medida"
-                    x:Name="txtMedida" Padding="16" 
-                    TextWrapping="Wrap" 
-                    Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
-                  />
-
-
-
-                </StackPanel>
-
-                <StackPanel Orientation="Horizontal" Margin="0 200 60 0">
-                    
-                    <TextBox 
-                    
-                Style="{StaticResource MaterialDesignOutlinedTextBox}"
-                    AcceptsReturn="True"
-                    MaxWidth="400"
-                    Margin="210 0 50 0"
                     materialDesign:HintAssist.Hint="Valor"
                     x:Name="txtValor" Padding="16" 
                     TextWrapping="Wrap" 
@@ -126,14 +136,22 @@
 
                     <Grid Margin="334,7,-137,-7" Grid.ColumnSpan="4">
                         <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
-                            <Button x:Name="btSalvar" FontSize="19" Content="Salvar" Height="40" Width="119"  Margin="0,0,20,0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Grid.Column="2" Grid.ColumnSpan="2"/>
+                            <Button x:Name="btSalvar" FontSize="19" Content="Salvar" Height="40" Width="119"  Margin="0,0,20,0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Grid.Column="2" Grid.ColumnSpan="2" Click="btSalvar_Click"/>
                             <Button x:Name="btCancelar" FontSize="19" Content="Cancelar" Height="40" Width="119"  Margin="0,0,0,0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Grid.ColumnSpan="4" Click="btCancelar_Click"/>
                         </StackPanel>
                     </Grid>
                 </Grid>
+                
 
 
             </Grid>
+            <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Right">
+                <Button Style="{StaticResource topButton}"  Height="40"  x:Name="btSair" Width="48" Click="btSair_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/Icons/logout.png"/>
+                    </Button.Background>
+                </Button>
+            </StackPanel>
         </Grid>
     </Grid>
 
