@@ -20,13 +20,14 @@ namespace InvestSafra.Models
             {
                 var comando = _conn.Query();
 
-                comando.CommandText = ("insert into Caixa value (null, @temperatura, @local, @clima)");
+                comando.CommandText = ("insert into Clima value (null, @temperatura, @data, @local, @clima)");
 
 
 
                 comando.Parameters.AddWithValue("@temperatura", clima.Temperatura);
                 comando.Parameters.AddWithValue("@local", clima.Local);
                 comando.Parameters.AddWithValue("@clima", clima.Climatizacao);
+                comando.Parameters.AddWithValue("@data", clima.Data?.ToString("yyyy-MM-dd"));
 
                 var resultado = comando.ExecuteNonQuery();
 

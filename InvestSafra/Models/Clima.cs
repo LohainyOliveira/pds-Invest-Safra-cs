@@ -11,8 +11,9 @@ namespace InvestSafra.Models
 
 		
 		public int Id { get; set; }
-		public string Temperatura { get; set; }
+		public int Temperatura { get; set; }
 		public string Climatizacao { get; set; }
 		public string Local { get; set; }
+		public DateTime? Data { get; set; }
 	}
 }

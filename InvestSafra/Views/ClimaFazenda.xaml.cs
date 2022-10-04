@@ -10,6 +10,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Media.TextFormatting;
 using System.Windows.Shapes;
 using InvestSafra.Models;
 
@@ -21,8 +22,6 @@ namespace InvestSafra.Views
     /// </summary>
     public partial class ClimaFazenda : Window
     {
-
-
         private Clima _climaFazenda= new Clima();
 
         public ClimaFazenda()
@@ -70,6 +69,12 @@ namespace InvestSafra.Views
                 MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
+        private void ExibirMensagemSalvar()
+        {
+            MessageBox.Show($"Campos Salvos com Sucesso!", "Registros Salvos",
+                MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.ChangedButton == MouseButton.Left)
@@ -105,6 +110,34 @@ namespace InvestSafra.Views
         private void btSair_Click(object sender, RoutedEventArgs e)
         {
             DialogResult = false;
+        }
+
+        private void btSalvar_Click(object sender, RoutedEventArgs e)
+        {
+            _climaFazenda.Climatizacao = txtClima.Text;
+            _climaFazenda.Local = txtLocal.Text;
+            _climaFazenda.Temperatura = txtTemperatura.Text;
+            _climaFazenda.Data = dtDia.SelectedDate;
+
+
+            try
+            {
+                var dao = new ClimaDAO();
+                dao.Insert(_climaFazenda);
+
+                ExibirMensagemSalvar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            txtTemperatura.Clear();
+            txtLocal.Clear();
+            txtClima.Clear();
+            dtDia.SelectedDate = null;
+
+
         }
     }
 
