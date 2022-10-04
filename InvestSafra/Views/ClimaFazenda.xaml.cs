@@ -23,14 +23,14 @@ namespace InvestSafra.Views
     {
 
 
-        private ClimaFazenda _climaFazenda= new ClimaFazenda();
+        private Clima _climaFazenda= new Clima();
 
         public ClimaFazenda()
         {
             InitializeComponent();
             Loaded += ClimaFazendaFormWindow_Loaded;
         }
-        public ClimaFazenda(ClimaFazenda climaFazenda)
+        public ClimaFazenda(Clima climaFazenda)
         {
             InitializeComponent();
 
@@ -39,20 +39,20 @@ namespace InvestSafra.Views
 
         }
 
+		public ClimaFazenda(Area climaSelecionado)
+		{
+			this.climaSelecionado = climaSelecionado;
+		}
 
-        private void FazendaFormWindow_Loaded(object sender, RoutedEventArgs e)
+		private void ClimaFazendaFormWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            txtData.Text = _climaFazenda.Data;
-            txtClima.Text = _climaFazenda.Clima;
+         
+            txtClima.Text = _climaFazenda.Climatizacao;
             txtTemperatura.Text = _climaFazenda.Temperatura;
             txtLocal.Text = _climaFazenda.Local;
             
 
 
-        }
-        public ClimaFazenda()
-        {
-            InitializeComponent();
         }
 
         private void btCancelar_Click(object sender, RoutedEventArgs e)
@@ -80,7 +80,9 @@ namespace InvestSafra.Views
         }
 
         private bool IsMaxinized = false;
-        private void Border_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+		private Area climaSelecionado;
+
+		private void Border_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             if (e.ClickCount == 2)
             {

@@ -27,25 +27,22 @@ namespace InvestSafra.Views
         public CadastrarMaquinas()
         {
             InitializeComponent();
+            Loaded += MaquinasFormWindow_Loaded;
         }
 
-
         public CadastrarMaquinas(Maquinas maquinas)
-        {
+		{
             InitializeComponent();
 
             _maquinas = maquinas;
             Loaded += MaquinasFormWindow_Loaded;
-
         }
 
 
         private void MaquinasFormWindow_Loaded(object sender, RoutedEventArgs e)
         {
             txtNome.Text = _maquinas.Nome;
-            txtCnpj1.Text = _maquinas.CNPJ;
             txtMarca.Text = _maquinas.Marca;
-            txtValor.Text = _maquinas.Valor;
             
 
 

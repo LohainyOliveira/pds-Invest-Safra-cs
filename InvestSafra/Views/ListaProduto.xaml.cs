@@ -75,8 +75,9 @@ namespace InvestSafra.Views
         private void btAtualizar_Click(object sender, RoutedEventArgs e)
         {
             var safraSelecionada = dataGridProdutos.SelectedItem as Produto;
+           
 
-            var form = CadastrarProduto new (safraSelecionada);
+            var form = new CadastrarProduto(safraSelecionada);
             form.ShowDialog();
             form.Close();
         }

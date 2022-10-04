@@ -122,8 +122,8 @@
 
                         <Grid Margin="334,7,-137,-7" Grid.ColumnSpan="4">
                             <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Margin="123,0,0,0" Width="335">
-                                <Button x:Name="btSalvar" FontSize="19" Content="Salvar" Height="40" Width="119"  Margin="0,80,20,0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Grid.Column="2" Grid.ColumnSpan="2" Click="btSalvar_Click"/>
-                                <Button x:Name="btCancelar" FontSize="19" Content="Limpar" Height="40" Width="119"  Margin="0,80,0,0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Grid.ColumnSpan="4" Click="btCancelar_Click"/>
+                                <Button x:Name="btSalvar" FontSize="19" Content="Salvar" Height="40" Width="119"  Margin="0,80,20,0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Grid.Column="2" Grid.ColumnSpan="2" />
+                                <Button x:Name="btCancelar" FontSize="19" Content="Limpar" Height="40" Width="119"  Margin="0,80,0,0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Grid.ColumnSpan="4" />
                             </StackPanel>
                         </Grid>
                     </Grid>

@@ -43,8 +43,6 @@ namespace InvestSafra.Views
             txtDescricao.Text = _produto.Descricao;
             txtMarca.Text = _produto.Marca;
             txtNome.Text = _produto.Nome;
-            txtQuantidade = _produto.Nome;
-            txtvalor = _produto.Valor;
 
         }
 

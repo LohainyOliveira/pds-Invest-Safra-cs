@@ -52,7 +52,7 @@ namespace InvestSafra.Views
         {
             var fazendaSelecionada = dataGridFazenda.SelectedItem as Fazenda;
 
-            var resultado = MessageBox.Show($"Deseja realmente Remover a escola{fazendaSelecionada.Temperatura}?", "Confirmação de Exclusão", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+            var resultado = MessageBox.Show($"Deseja realmente Remover a escola{fazendaSelecionada.Id}?", "Confirmação de Exclusão", MessageBoxButton.YesNo, MessageBoxImage.Warning);
 
             try
             {

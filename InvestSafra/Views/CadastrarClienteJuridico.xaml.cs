@@ -44,8 +44,6 @@ namespace InvestSafra.Views
             txtBairro.Text = _clienteJ.Bairro;
             txtCEP.Text = _clienteJ.CEP;
             txtEmail.Text = _clienteJ.Email;
-            txtMunicipio = _clienteJ.Cidade;
-            txtTelefone = _clienteJ.Telefone;
 
 
         }

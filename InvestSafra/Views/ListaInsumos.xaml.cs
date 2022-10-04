@@ -14,7 +14,6 @@ namespace InvestSafra.Views
         public ListaInsumos()
         {
             InitializeComponent();
-
             Loaded += InsumoListaWindow_Loaded;
         }
 
@@ -25,18 +24,7 @@ namespace InvestSafra.Views
 
         private void CarregarListagem()
         {
-            try
-            {
-                var dao = new InsumosDAO();
-                List<Insumos> listaInsumos = dao.List();
-
-                dataGridInsumo.ItemsSource = listaInsumos;
-            }
-
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+         
         }
 
 
@@ -46,21 +34,7 @@ namespace InvestSafra.Views
 
             var resultado = MessageBox.Show($"Deseja realmente Remover a escola{insumosSelecionada.Id}?", "Confirmação de Exclusão", MessageBoxButton.YesNo, MessageBoxImage.Warning);
 
-            try
-            {
-                if (resultado == MessageBoxResult.Yes)
-                {
-                    var dao = new InsumosDAO();
-                    dao.Delete(insumosSelecionada);
-
-                    MessageBox.Show("Registros Removidos!");
-                    CarregarListagem();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+           
 
         }
 

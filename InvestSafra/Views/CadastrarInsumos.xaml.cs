@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using InvestSafra.Models;
 
 namespace InvestSafra.Views
 {
@@ -19,10 +20,37 @@ namespace InvestSafra.Views
     /// </summary>
     public partial class CadastrarInsumos : Window
     {
+        private Insumos _insumos = new Insumos();
         public CadastrarInsumos()
         {
             InitializeComponent();
+            Loaded +=InsumosFormWindow_Loaded;
         }
+        public CadastrarInsumos(Insumos insumo)
+        {
+            InitializeComponent();
+
+            _insumos = insumo;
+            Loaded += InsumosFormWindow_Loaded;
+
+        }
+
+
+        private void InsumosFormWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            txtDescricao1.Text = _insumos.Descricao;
+            txtMarca1.Text = _insumos.Marca;
+            txtTipoInsumo.Text = _insumos.Tipo;
+
+        }
+
+        private void ExibirMensagemSalvar()
+        {
+            MessageBox.Show($"Campos Salvos com Sucesso!", "Registros Salvos",
+                MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
+       
 
         private void btCancelar_Click(object sender, RoutedEventArgs e)
         {

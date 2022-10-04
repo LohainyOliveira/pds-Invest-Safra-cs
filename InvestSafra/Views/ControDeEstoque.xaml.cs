@@ -36,12 +36,15 @@ namespace InvestSafra.Views
 
         }
 
-        private void EstoqueFormWindow_Loaded(object sender, RoutedEventArgs e)
+		public ControDeEstoque(Area estoqueSelecionada)
+		{
+			this.estoqueSelecionada = estoqueSelecionada;
+		}
+
+		private void EstoqueFormWindow_Loaded(object sender, RoutedEventArgs e)
         {
             txtDescricao.Text = _estoque.Descricao;
             txtMedida.Text = _estoque.Medida;
-            txtQuantInsumos.Text = _estoque.Quantidade_Insumos;
-            txtQuantSementes.Text = _estoque.Quantidade_Semente;
             txtTipoInsumo.Text = _estoque.Tipo_Insumo;
         }
 
@@ -74,7 +77,9 @@ namespace InvestSafra.Views
         }
 
         private bool IsMaxinized = false;
-        private void Border_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+		private Area estoqueSelecionada;
+
+		private void Border_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             if (e.ClickCount == 2)
             {

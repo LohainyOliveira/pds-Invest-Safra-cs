@@ -40,7 +40,6 @@ namespace InvestSafra.Views
         {
             txtDescricao.Text = _compra.Descricao;
             txtNome.Text = _compra.Nome;
-            txtQuantidade = _compra.Quantidade;
 
 
 

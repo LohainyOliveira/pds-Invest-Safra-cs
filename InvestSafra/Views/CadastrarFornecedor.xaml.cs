@@ -48,7 +48,6 @@ namespace InvestSafra.Views
             txtTelefone.Text = _fornecedor.Telefone_Pessoal;
             txtTelefoneF.Text = _fornecedor.Telefone_Empresa;
             txtRua.Text = _fornecedor.Rua;
-            txtComplemento = _fornecedor.Complemento;
 
         }
         private void btLimpar_Click(object sender, RoutedEventArgs e)
