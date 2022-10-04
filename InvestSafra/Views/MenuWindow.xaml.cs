@@ -267,7 +267,12 @@ namespace InvestSafra.Views
 			CadastrarVenda form = new CadastrarVenda();
 			form.ShowDialog();
 		}
-		private void btSair_Click(object sender, RoutedEventArgs e)
+        private void SideMenuItemRecebimento_Selected(object sender, RoutedEventArgs e)
+        {
+            CadastrarRecebimentoWindow form = new CadastrarRecebimentoWindow();
+            form.ShowDialog();
+        }
+        private void btSair_Click(object sender, RoutedEventArgs e)
 		{
 			DialogResult = false;
 		}

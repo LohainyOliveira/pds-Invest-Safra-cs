@@ -276,6 +276,12 @@
                     </hc:SideMenuItem.Icon>
                 </hc:SideMenuItem>
 
+                <hc:SideMenuItem Background="Transparent" Header="Recebimentos" Selected="SideMenuItemRecebimento_Selected" FontFamily="Arial" FontWeight="Bold">
+                    <hc:SideMenuItem.Icon>
+                        <Image  Height="30" Source="/Icons/recebimentoPreto.png"/>
+                    </hc:SideMenuItem.Icon>
+                </hc:SideMenuItem>
+
 
                 <hc:SideMenuItem Background="Transparent" Header="Conta" FontFamily="Arial" FontWeight="Bold">
                     <hc:SideMenuItem.Icon>
