@@ -23,7 +23,7 @@
                 <Icon:PackIconMaterial Kind="Menu" Width="15" Height="15"/>
             </Button>
 
-            <Border Background="#7b5cd6" CornerRadius="0 50 0 30" Margin="0,117,0,0">
+            <Border Background="#EFA82E" CornerRadius="0 50 0 30" Margin="0,117,0,0">
                 <DockPanel>
                     <Border Width="80" Height="80" Padding="3" Background="white" CornerRadius="100"
                             DockPanel.Dock="Top" HorizontalAlignment="Center" Margin="0 -30 0 0">
@@ -42,7 +42,7 @@
                     <Separator Margin="25" DockPanel.Dock="Top" Height="0.8" Background="#7b5cd6"/>
 
                     <StackPanel DockPanel.Dock="Top">
-                        <Button Height="56" Background="#7b5cd6">
+                        <Button Height="56" Background="#EFA82E">
                             <DockPanel>
                                 <Icon:PackIconMaterial Kind="HomeVariant" Style="{StaticResource ResourceKey=menuButtonIcon}" RenderTransformOrigin="0.133,0.48"/>
                                 <TextBlock Text="Menu" Width="49"/>
@@ -51,7 +51,7 @@
                     </StackPanel>
 
                     <StackPanel DockPanel.Dock="Top">
-                        <Button Height="56" Background="#7b5cd6">
+                        <Button Height="56" Background="#EFA82E">
                             <DockPanel>
                                 <Icon:PackIconMaterial Kind="ForumOutline" Style="{StaticResource ResourceKey=menuButtonIcon}" RenderTransformOrigin="0.133,0.48"/>
                                 <TextBlock Text="Chat" Width="49"/>
@@ -197,7 +197,7 @@
                         <Rectangle Width="1" Fill="#dee4ec" Margin="3 7 "/>
 
                         <Button Style="{StaticResource pagingButton}" Content="1"/>
-                        <Button Style="{StaticResource pagingButton}" Content="2" Background="#7950f2" Foreground="#ffffff"/>
+                        <Button Style="{StaticResource pagingButton}" Content="2" Background="#EFA82E" Foreground="#ffffff"/>
                         <Button Style="{StaticResource pagingButton}" Content="3"/>
 
                         <TextBlock Text="..." Foreground="#6c7682" VerticalAlignment="Center" FontSize="15" Margin="10 0"/>
