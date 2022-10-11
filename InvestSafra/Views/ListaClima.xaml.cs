@@ -74,9 +74,9 @@ namespace InvestSafra.Views
 
         private void btAtualizar_Click(object sender, RoutedEventArgs e)
         {
-            var areaSeleclimaSelecionadaionada = dataGridClima.SelectedItem as Area;
+            var climaSelecionado = dataGridClima.SelectedItem as Clima;
 
-            var form = new ClimaFazenda(climaSelecionada);
+            var form = new ClimaFazenda (climaSelecionado);
             form.ShowDialog();
             form.Close();
         }
@@ -121,6 +121,10 @@ namespace InvestSafra.Views
         private void membersDataGrid_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
 
+        }
+        private void btSair_Click(object sender, RoutedEventArgs e)
+        {
+            DialogResult = false;
         }
     }
 }

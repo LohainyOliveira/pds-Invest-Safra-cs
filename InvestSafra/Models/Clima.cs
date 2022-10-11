@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace InvestSafra.Models
 {
-	internal class Clima
+	public class Clima
 	{
 
 		
 		public int Id { get; set; }
-		public string Temperatura { get; set; }
+		public double Temperatura { get; set; }
 		public string Climatizacao { get; set; }
 		public string Local { get; set; }
+		public DateTime? Data { get; set; }
 	}
 }

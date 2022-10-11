@@ -15,14 +15,17 @@ using System.Windows.Shapes;
 namespace InvestSafra.Views
 {
     /// <summary>
-    /// Lógica interna para ListaCaixa.xaml
+    /// Lógica interna para CadastrarRecebimentoWindow.xaml
     /// </summary>
-    public partial class ListaCaixa : Window
+    public partial class CadastrarRecebimentoWindow : Window
     {
-        public ListaCaixa()
+        public CadastrarRecebimentoWindow()
         {
             InitializeComponent();
         }
+
+
+
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.ChangedButton == MouseButton.Left)
@@ -53,19 +56,19 @@ namespace InvestSafra.Views
                 }
             }
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void membersDataGrid_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
-        {
-
-        }
         private void btSair_Click(object sender, RoutedEventArgs e)
         {
             DialogResult = false;
+        }
+
+        private void btSalvar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btCancelar_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

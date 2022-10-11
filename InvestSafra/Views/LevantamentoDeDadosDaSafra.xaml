@@ -54,14 +54,13 @@
                 <SolidColorBrush Color="#FF849246" />
             </StackPanel.Background>
         </StackPanel>
-        <Button x:Name="btVoltar" Width="45" Height="45"
-                    Margin="700 25 0 0" 
-                    VerticalAlignment="Top" Background="#EFA82E" BorderBrush="#EFA82E"
-                    Cursor="Hand" Click="btVoltar_Click" >
-
-            <Image Source="/Icons/cancelar.png"/>
-        </Button>
-
+       
+            <Button Style="{StaticResource topButton}"  Height="40" Margin="730 -360 0 0" x:Name="btSair" Width="48" Click="btSair_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Icons/logout.png"/>
+                </Button.Background>
+            </Button>
+       
 
 
         <Rectangle Fill="#EFA82E" HorizontalAlignment="Left" Height="450" VerticalAlignment="Top" Width="178.795"/>
@@ -132,7 +131,7 @@
                       Style="{StaticResource MaterialDesignOutlinedTextBox}"
                             
                              VerticalAlignment="Top" 
-                             Width="565" Margin="20,179,0,0"/>
+                             Width="565" Margin="20,179,0,0" Cursor="Arrow"/>
 
             <StackPanel HorizontalAlignment="Right"  Orientation="Horizontal" >
                 <Button x:Name="btSalvar" FontSize="19" Content="Salvar" Height="40" Width="119"  Margin="0 350 20 0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Grid.Column="2" Grid.ColumnSpan="2"/>

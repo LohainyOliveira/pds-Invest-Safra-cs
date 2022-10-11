@@ -71,7 +71,15 @@ namespace InvestSafra.Views
             try
             {
                 var dao = new AreaDAO();
-                dao.Insert(_area);
+
+                if (_area.Id > 0)
+                {
+                    dao.Update(_area);
+                }
+                else
+                {
+                    dao.Insert(_area);
+                }
 
                 ExibirMensagemSalvar();
             }
@@ -131,6 +139,16 @@ namespace InvestSafra.Views
 
                 }
             }
+        }
+
+		private void btSair_Click(object sender, RoutedEventArgs e)
+		{
+            DialogResult = false;
+        }
+
+        private void txtresponsavel_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

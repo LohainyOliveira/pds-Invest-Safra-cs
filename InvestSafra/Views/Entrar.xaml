@@ -30,8 +30,10 @@
                     Margin="484,10,10,0"
                     VerticalAlignment="Top" Background="#EFA82E" BorderBrush="#EFA82E"
                     Cursor="Hand" Click="btVoltar_Click"  >
-
-                <Image Source="/Icons/cancelar.png"/>
+                      
+                            <Image Source="/Icons/logout.png"/>
+                        
+                    
             </Button>
 
             <StackPanel VerticalAlignment="Center"

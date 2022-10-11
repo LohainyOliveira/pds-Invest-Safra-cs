@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using InvestSafra.Models;
 
 namespace InvestSafra.Views
 {
@@ -19,9 +20,30 @@ namespace InvestSafra.Views
     /// </summary>
     public partial class CadastrarVenda : Window
     {
+        private Venda _venda = new Venda();
         public CadastrarVenda()
         {
             InitializeComponent();
+            Loaded += VendaFormWindow_Loaded;
+        }
+        public CadastrarVenda(Venda venda)
+        {
+            InitializeComponent();
+
+            _venda = venda;
+            Loaded += VendaFormWindow_Loaded;
+
+        }
+
+
+        private void VendaFormWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+          
+
+        }
+        private void btSair_Click(object sender, RoutedEventArgs e)
+        {
+            DialogResult = false;
         }
     }
 }

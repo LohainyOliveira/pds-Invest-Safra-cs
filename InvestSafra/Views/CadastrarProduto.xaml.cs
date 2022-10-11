@@ -43,14 +43,16 @@ namespace InvestSafra.Views
             txtDescricao.Text = _produto.Descricao;
             txtMarca.Text = _produto.Marca;
             txtNome.Text = _produto.Nome;
-            txtQuantidade = _produto.Nome;
-            txtvalor = _produto.Valor;
 
         }
 
         private void btSalvar_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+        private void btSair_Click(object sender, RoutedEventArgs e)
+        {
+            DialogResult = false;
         }
     }
 }

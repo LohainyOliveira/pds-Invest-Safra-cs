@@ -52,7 +52,7 @@ namespace InvestSafra.Views
         {
             var estoqueSelecionada = dataGridEstoque.SelectedItem as Estoque;
 
-            var resultado = MessageBox.Show($"Deseja realmente Remover a escola{estoqueSelecionada.Temperatura}?", "Confirmação de Exclusão", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+            var resultado = MessageBox.Show($"Deseja realmente Remover a escola{estoqueSelecionada.Id}?", "Confirmação de Exclusão", MessageBoxButton.YesNo, MessageBoxImage.Warning);
 
             try
             {
@@ -120,6 +120,10 @@ namespace InvestSafra.Views
         private void membersDataGrid_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
 
+        }
+        private void btSair_Click(object sender, RoutedEventArgs e)
+        {
+            DialogResult = false;
         }
     }
 }

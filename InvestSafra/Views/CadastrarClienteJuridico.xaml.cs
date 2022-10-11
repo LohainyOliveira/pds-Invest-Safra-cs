@@ -44,8 +44,6 @@ namespace InvestSafra.Views
             txtBairro.Text = _clienteJ.Bairro;
             txtCEP.Text = _clienteJ.CEP;
             txtEmail.Text = _clienteJ.Email;
-            txtMunicipio = _clienteJ.Cidade;
-            txtTelefone = _clienteJ.Telefone;
 
 
         }
@@ -99,7 +97,15 @@ namespace InvestSafra.Views
             try
             {
                 var dao = new ClienteJuridicoDAO();
-                dao.Insert(_clienteJ);
+
+                if (_clienteJ.Id > 0)
+                {
+                    dao.Update(_clienteJ);
+                }
+                else
+                {
+                    dao.Insert(_clienteJ);
+                }
 
                 ExibirMensagemSalvar();
             }
@@ -154,6 +160,10 @@ namespace InvestSafra.Views
 
                 }
             }
+        }
+        private void btSair_Click(object sender, RoutedEventArgs e)
+        {
+            DialogResult = false;
         }
     }
 }
