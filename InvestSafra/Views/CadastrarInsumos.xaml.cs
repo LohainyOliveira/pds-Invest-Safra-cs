@@ -24,7 +24,7 @@ namespace InvestSafra.Views
         public CadastrarInsumos()
         {
             InitializeComponent();
-            Loaded += insumosFormWindow_Loaded;
+            Loaded += InsumosFormWindow_Loaded;
         }
 
         public CadastrarInsumos(Insumos insumos)
@@ -32,33 +32,17 @@ namespace InvestSafra.Views
             InitializeComponent();
 
             _insumos = insumos;
-            Loaded += insumosFormWindow_Loaded;
-
-        }
-
-        private void insumosFormWindow_Loaded(object sender, RoutedEventArgs e)
-        {
-            txtDescricao1.Text = _insumos.Descricao;
-            txtMarca1.Text = _insumos.Marca;
-            txtQuantidade.Text = _insumos.Quantidade;
-            txtTipoInsumo.Text = _insumos.Tipo;
-            txtValor.Text = _insumos.Valor;
-        }
-
-        public CadastrarInsumos(Insumos insumo)
-        {
-            InitializeComponent();
-
-            _insumos = insumo;
             Loaded += InsumosFormWindow_Loaded;
 
         }
 
         private void InsumosFormWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            txtDescricao1.Text = _insumos.Descricao;
-            txtMarca1.Text = _insumos.Marca;
-            txtTipoInsumo.Text = _insumos.Tipo;
+            //txtDescricao1.Text = _insumos.Descricao;
+            //txtMarca1.Text = _insumos.Marca;
+            //txtQuantidade.Text = _insumos.Quantidade;
+            //txtTipoInsumo.Text = _insumos.Tipo;
+            //txtValor.Text = _insumos.Valor;
 
         }
 

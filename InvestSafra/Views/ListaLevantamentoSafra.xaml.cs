@@ -76,9 +76,9 @@ namespace InvestSafra.Views
         {
             var safraSelecionada = dataGridSafra.SelectedItem as Safra;
 
-            var form = new LevantamentoDeDadosDaSafra(safraSelecionada, safraSelecionada);
-            form.ShowDialog();
-            form.Close();
+            //var form = new LevantamentoDeDadosDaSafra(safraSelecionada, safraSelecionada);
+            //form.ShowDialog();
+            //form.Close();
         }
 
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)

@@ -26,7 +26,7 @@ namespace InvestSafra.Views
         public LevantamentoDeDadosDaSafra()
 		{
 			InitializeComponent();
-            Loaded += safraFisicoFormWindow_Loaded;
+            Loaded += SafraFormWindow_Loaded;
         }
 
         public LevantamentoDeDadosDaSafra(Safra safras)

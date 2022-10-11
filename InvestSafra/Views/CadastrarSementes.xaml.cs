@@ -33,26 +33,18 @@ namespace InvestSafra.Views
         {
             InitializeComponent();
 
-            _sementes = semente;
+            _semente = semente;
             Loaded += SementesFormWindow_Loaded;
         }
 
         private void SementesFormWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            txtdescricao.Text = _sementes.Descricao;
-            txtMarca1.Text = _sementes.Marca;
-            txtMedida.Text = _sementes.Medida;
-        }
-
-        private void sementeFormWindow_Loaded(object sender, RoutedEventArgs e)
-        {
             txtdescricao.Text = _semente.Descricao;
             txtMarca1.Text = _semente.Marca;
             txtMedida.Text = _semente.Medida;
-            txtQuantidade1 = _semente.Quantidade;
-            txtValor.Text = _semente.Valor;
+            //txtQuantidade1 = _semente.Quantidade;
+            //txtValor.Text = _semente.Valor;
         }
-
 
         private void btSalvar_Click(object sender, RoutedEventArgs e)
         {
