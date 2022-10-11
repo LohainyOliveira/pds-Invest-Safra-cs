@@ -11,7 +11,8 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="250"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="547*"/>
+            <ColumnDefinition Width="3*"/>
         </Grid.ColumnDefinitions>
         <Grid  Background="#EFA82E">
 
@@ -21,7 +22,7 @@
             <Image Height="177"  VerticalAlignment="Top" Source="/Icons/logoEscuro.png" Margin="10,48,10,0" RenderTransformOrigin="0.514,0.795"/>
 
         </Grid>
-        <Grid Grid.Column="1">
+        <Grid Grid.Column="1" Grid.ColumnSpan="2">
             <Grid.Background>
                 <ImageBrush ImageSource="/Imagens/ImgFundoDesfocado.png"/>
             </Grid.Background>
@@ -30,10 +31,10 @@
                     Margin="484,10,10,0"
                     VerticalAlignment="Top" Background="#EFA82E" BorderBrush="#EFA82E"
                     Cursor="Hand" Click="btVoltar_Click"  >
-                      
-                            <Image Source="/Icons/logout.png"/>
-                        
-                    
+
+                <Image Source="/Icons/logout.png"/>
+
+
             </Button>
 
             <StackPanel VerticalAlignment="Center"

@@ -26,6 +26,9 @@
         <Grid.Background>
             <ImageBrush ImageSource="/Imagens/ImgFundoDesfocado.png"/>
         </Grid.Background>
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Image Source="/Imagens/logo_pgnPrincipal.png" Height="400"/>
+        </StackPanel>
 
 
 
