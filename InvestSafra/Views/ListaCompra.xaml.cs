@@ -52,7 +52,7 @@ namespace InvestSafra.Views
         {
             var compraSelecionada = datagridCompra.SelectedItem as Compra;
 
-            var resultado = MessageBox.Show($"Deseja realmente Remover a escola{compraSelecionada.Temperatura}?", "Confirmação de Exclusão", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+            var resultado = MessageBox.Show($"Deseja realmente Remover a escola{compraSelecionada.Id}?", "Confirmação de Exclusão", MessageBoxButton.YesNo, MessageBoxImage.Warning);
 
             try
             {
@@ -118,7 +118,11 @@ namespace InvestSafra.Views
         {
 
         }
-
+        private void btSair_Click(object sender, RoutedEventArgs e)
+        {
+            DialogResult = false;
+        }
         
+
     }
 }

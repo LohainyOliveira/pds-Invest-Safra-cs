@@ -110,6 +110,10 @@ namespace InvestSafra.Views
                 }
             }
         }
+        private void btSair_Click(object sender, RoutedEventArgs e)
+        {
+            DialogResult = false;
+        }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {

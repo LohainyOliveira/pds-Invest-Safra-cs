@@ -76,7 +76,7 @@ namespace InvestSafra.Views
         {
             var safraSelecionada = dataGridProdutos.SelectedItem as Produto;
 
-            var form = new CadastrarProduto  (safraSelecionada);
+            var form = new CadastrarProduto(safraSelecionada);
             form.ShowDialog();
             form.Close();
         }
@@ -120,6 +120,10 @@ namespace InvestSafra.Views
         private void membersDataGrid_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
 
+        }
+        private void btSair_Click(object sender, RoutedEventArgs e)
+        {
+            DialogResult = false;
         }
     }
 }

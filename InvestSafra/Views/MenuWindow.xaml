@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         xmlns:hc="https://handyorg.github.io/handycontrol"
-        Height="653" Width="890">
+        Height="653" Width="890" 
+        >
     <Grid>
         <Grid.Resources>
             <ResourceDictionary>
@@ -16,6 +17,10 @@
 
             </ResourceDictionary>
         </Grid.Resources>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="871*"/>
+            <ColumnDefinition Width="19*"/>
+        </Grid.ColumnDefinitions>
 
 
         <Grid.Background>
@@ -25,7 +30,7 @@
 
 
         <Grid x:Name="painelHeader" VerticalAlignment="Top" Height="50"
-              Background="#EFA82E" MouseDown="painelHeader_MouseDown_1">
+              Background="#EFA82E" MouseDown="painelHeader_MouseDown_1" Grid.ColumnSpan="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="747*"/>
                 <ColumnDefinition Width="0*"/>
@@ -35,7 +40,7 @@
             <TextBlock Text="Sejam Bem Vindos !!!" FontSize="24"
                        FontFamily="Script MT Bold" HorizontalAlignment="Center"
                        VerticalAlignment="Center" Margin="294,0,0,0"/>
-            
+
 
         </Grid>
         <Grid x:Name="SidePainel" Background="#EFA82E" HorizontalAlignment="Left" Width="160">
@@ -271,6 +276,12 @@
                     </hc:SideMenuItem.Icon>
                 </hc:SideMenuItem>
 
+                <hc:SideMenuItem Background="Transparent" Header="Recebimentos" Selected="SideMenuItemRecebimento_Selected" FontFamily="Arial" FontWeight="Bold">
+                    <hc:SideMenuItem.Icon>
+                        <Image  Height="30" Source="/Icons/recebimentoPreto.png"/>
+                    </hc:SideMenuItem.Icon>
+                </hc:SideMenuItem>
+
 
                 <hc:SideMenuItem Background="Transparent" Header="Conta" FontFamily="Arial" FontWeight="Bold">
                     <hc:SideMenuItem.Icon>
@@ -294,5 +305,12 @@
 
             </hc:SideMenu>
         </Grid>
+        <StackPanel HorizontalAlignment="Right" Grid.ColumnSpan="2" >
+            <Button Style="{StaticResource topButton}"  Height="40"  x:Name="btSair" Width="48" Click="btSair_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Icons/logout.png"/>
+                </Button.Background>
+            </Button>
+        </StackPanel>
     </Grid>
 </Window>

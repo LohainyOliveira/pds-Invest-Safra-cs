@@ -20,21 +20,29 @@ namespace InvestSafra.Views
     /// </summary>
     public partial class CadastrarSementes : Window
     {
+
         private Sementes _semente = new Sementes();
+
         public CadastrarSementes()
         {
             InitializeComponent();
-            Loaded += sementeFormWindow_Loaded;
+            Loaded += SementesFormWindow_Loaded;
         }
+
         public CadastrarSementes(Sementes semente)
         {
             InitializeComponent();
 
-            _semente = semente;
-            Loaded += sementeFormWindow_Loaded;
-
+            _sementes = semente;
+            Loaded += SementesFormWindow_Loaded;
         }
 
+        private void SementesFormWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            txtdescricao.Text = _sementes.Descricao;
+            txtMarca1.Text = _sementes.Marca;
+            txtMedida.Text = _sementes.Medida;
+        }
 
         private void sementeFormWindow_Loaded(object sender, RoutedEventArgs e)
         {
@@ -43,8 +51,6 @@ namespace InvestSafra.Views
             txtMedida.Text = _semente.Medida;
             txtQuantidade1 = _semente.Quantidade;
             txtValor.Text = _semente.Valor;
-
-
         }
 
 
@@ -68,6 +74,10 @@ namespace InvestSafra.Views
         {
             MessageBox.Show($"Campos Limpos com Sucesso", "Limpeza Concluida",
                 MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+        private void btSair_Click(object sender, RoutedEventArgs e)
+        {
+            DialogResult = false;
         }
     }
 }

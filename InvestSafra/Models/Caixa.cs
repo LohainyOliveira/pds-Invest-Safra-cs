@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InvestSafra.Models
 {
-    internal class Caixa
+    public class Caixa
     {
 
         public int Id { get; set; }

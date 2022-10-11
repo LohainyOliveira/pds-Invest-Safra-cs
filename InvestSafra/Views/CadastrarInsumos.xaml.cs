@@ -26,6 +26,7 @@ namespace InvestSafra.Views
             InitializeComponent();
             Loaded += insumosFormWindow_Loaded;
         }
+
         public CadastrarInsumos(Insumos insumos)
         {
             InitializeComponent();
@@ -35,7 +36,6 @@ namespace InvestSafra.Views
 
         }
 
-
         private void insumosFormWindow_Loaded(object sender, RoutedEventArgs e)
         {
             txtDescricao1.Text = _insumos.Descricao;
@@ -43,9 +43,32 @@ namespace InvestSafra.Views
             txtQuantidade.Text = _insumos.Quantidade;
             txtTipoInsumo.Text = _insumos.Tipo;
             txtValor.Text = _insumos.Valor;
-           
+        }
+
+        public CadastrarInsumos(Insumos insumo)
+        {
+            InitializeComponent();
+
+            _insumos = insumo;
+            Loaded += InsumosFormWindow_Loaded;
 
         }
+
+        private void InsumosFormWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            txtDescricao1.Text = _insumos.Descricao;
+            txtMarca1.Text = _insumos.Marca;
+            txtTipoInsumo.Text = _insumos.Tipo;
+
+        }
+
+        private void ExibirMensagemSalvar()
+        {
+            MessageBox.Show($"Campos Salvos com Sucesso!", "Registros Salvos",
+                MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
+       
 
         private void btCancelar_Click(object sender, RoutedEventArgs e)
         {
@@ -63,6 +86,15 @@ namespace InvestSafra.Views
         {
             MessageBox.Show($"Campos Limpos com Sucesso", "Limpeza Concluida",
                 MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
+        private void btSalvar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void btSair_Click(object sender, RoutedEventArgs e)
+        {
+            DialogResult = false;
         }
     }
 }

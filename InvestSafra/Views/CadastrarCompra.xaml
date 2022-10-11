@@ -52,7 +52,7 @@
                     materialDesign:HintAssist.Hint="Nome"
                     x:Name="txtNome" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
-                    Width="209" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
+                    Width="209" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow" TextChanged="txtNome_TextChanged"
                   />
                    <DatePicker 
                        x:Name="dtPickerDataNascimento"
@@ -108,9 +108,18 @@
                         </StackPanel>
                     </Grid>
                 </Grid>
+               
+                
 
 
             </Grid>
         </Grid>
+        <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Right">
+            <Button Style="{StaticResource topButton}"  Height="40"  x:Name="btSair" Width="48" Click="btSair_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Icons/logout.png"/>
+                </Button.Background>
+            </Button>
+        </StackPanel>
     </Grid>
 </Window>

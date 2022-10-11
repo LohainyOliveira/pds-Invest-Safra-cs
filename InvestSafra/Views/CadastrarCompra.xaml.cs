@@ -40,7 +40,6 @@ namespace InvestSafra.Views
         {
             txtDescricao.Text = _compra.Descricao;
             txtNome.Text = _compra.Nome;
-            txtQuantidade = _compra.Quantidade;
 
 
 
@@ -111,7 +110,15 @@ namespace InvestSafra.Views
             try
             {
                 var dao = new CompraDAO();
-                dao.Insert(_compra);
+
+                if (_compra.Id > 0)
+                {
+                    dao.Update(_compra);
+                }
+                else
+                {
+                    dao.Insert(_compra);
+                }
 
                 ExibirMensagemSalvar();
             }
@@ -120,6 +127,15 @@ namespace InvestSafra.Views
                 MessageBox.Show(ex.Message);
 
             }
+
+        }
+        private void btSair_Click(object sender, RoutedEventArgs e)
+        {
+            DialogResult = false;
+        }
+
+        private void txtNome_TextChanged(object sender, TextChangedEventArgs e)
+        {
 
         }
     }

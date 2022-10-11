@@ -60,7 +60,7 @@ namespace InvestSafra.Views
             txtNomeCompleto.Clear();
             txtRg.Clear();
             txtRua.Clear();
-            txtSalario.Clear();
+            txtsalario.Clear();
             txtTelefone.Clear();
 
             ExibirMensagemLimpar();
@@ -102,6 +102,73 @@ namespace InvestSafra.Views
 
                 }
             }
+        }
+        private void btSair_Click(object sender, RoutedEventArgs e)
+        {
+            DialogResult = false;
+        }
+
+        private void btSalvar_Click(object sender, RoutedEventArgs e)
+        {
+            _funcionario.Nome = txtNomeCompleto.Text;
+            _funcionario.CPF = txtCPF.Text;
+            _funcionario.RG = txtRg.Text;
+            _funcionario.Sexo = cbSexo.Text;
+            _funcionario.Telefone = txtTelefone.Text;
+            _funcionario.Cidade = txtCidade.Text;
+            _funcionario.Estado = cbEstado.Text;
+            _funcionario.Rua = txtRua.Text;
+            _funcionario.Bairro = txtBairro.Text;
+            _funcionario.CEP = txtCEP.Text;
+            _funcionario.Complemento = txtComplemento.Text;
+            _funcionario.Email = txtEmail.Text;
+            _funcionario.Funcao = txtfuncao.Text;
+            _funcionario.Tipo = txtTipo.Text;
+            _funcionario.Salario = Convert.ToDouble(txtsalario.Text);
+
+           
+
+            try
+            {
+                var dao = new FuncionarioDAO();
+
+                if (_funcionario.Id > 0)
+                {
+                    dao.Update(_funcionario);
+                }
+                else
+                {
+                    dao.Insert(_funcionario);
+                }
+
+                ExibirMensagemSalvar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+           
+            txtRua.Clear();
+            txtNomeCompleto.Clear();
+            txtCPF.Clear();
+            txtRg.Clear();
+            cbSexo = null;
+            txtTelefone.Clear();
+            txtCidade.Clear();
+            cbEstado = null;
+            txtRua.Clear();
+            txtBairro.Clear();
+            txtCEP.Clear();
+            txtEmail.Clear();
+            txtfuncao.Clear();
+            txtTipo.Clear();
+            txtsalario.Clear();
+        }
+        private void ExibirMensagemSalvar()
+        {
+            MessageBox.Show($"Campos Salvos com Sucesso!", "Registros Salvos",
+                MessageBoxButton.OK, MessageBoxImage.Information);
         }
     }
 }

@@ -14,7 +14,6 @@ namespace InvestSafra.Views
         public ListaInsumos()
         {
             InitializeComponent();
-
             Loaded += InsumoListaWindow_Loaded;
         }
 
@@ -25,18 +24,7 @@ namespace InvestSafra.Views
 
         private void CarregarListagem()
         {
-            try
-            {
-                var dao = new InsumosDAO();
-                List<Insumos> listaInsumos = dao.List();
-
-                dataGridInsumo.ItemsSource = listaInsumos;
-            }
-
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+         
         }
 
 
@@ -46,21 +34,7 @@ namespace InvestSafra.Views
 
             var resultado = MessageBox.Show($"Deseja realmente Remover a escola{insumosSelecionada.Id}?", "Confirmação de Exclusão", MessageBoxButton.YesNo, MessageBoxImage.Warning);
 
-            try
-            {
-                if (resultado == MessageBoxResult.Yes)
-                {
-                    var dao = new InsumosDAO();
-                    dao.Delete(insumosSelecionada);
-
-                    MessageBox.Show("Registros Removidos!");
-                    CarregarListagem();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+           
 
         }
 
@@ -113,5 +87,39 @@ namespace InvestSafra.Views
 		{
 
 		}
-	}
+        private void btSair_Click(object sender, RoutedEventArgs e)
+        {
+            DialogResult = false;
+        }
+
+        private void Border_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if(e.ChangedButton == MouseButton.Left)
+            {
+                this.DragMove();
+            }
+
+        }
+
+        private bool IsMaximized = false;
+        private void Border_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ClickCount == 2)
+            {
+                if(IsMaximized)
+                {
+                    this.WindowState = WindowState.Normal;
+                    this.Width = 1080;
+                    this.Height = 720;
+
+                    IsMaximized = false;
+                }
+                else
+                {
+                    this.WindowState = WindowState.Maximized;
+                    IsMaximized = true;
+                }
+            }
+        }
+    }
 }

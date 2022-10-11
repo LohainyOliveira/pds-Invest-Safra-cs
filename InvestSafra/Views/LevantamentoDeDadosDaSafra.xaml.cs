@@ -20,30 +20,32 @@ namespace InvestSafra.Views
 	/// </summary>
 	public partial class LevantamentoDeDadosDaSafra : Window
 	{
+
         private Safra _safra = new Safra();
+
         public LevantamentoDeDadosDaSafra()
 		{
 			InitializeComponent();
             Loaded += safraFisicoFormWindow_Loaded;
         }
+
         public LevantamentoDeDadosDaSafra(Safra safras)
         {
             InitializeComponent();
 
             _safra = safras;
-            Loaded += safraFisicoFormWindow_Loaded;
-
+            Loaded += SafraFormWindow_Loaded;
         }
+	
 
-
-        private void safraFisicoFormWindow_Loaded(object sender, RoutedEventArgs e)
-        {
-            dtPickerDataFim.SelectedDate = _safra.DataFim;
+		private void SafraFormWindow_Loaded(object sender, RoutedEventArgs e)
+		{
+			dtPickerDataFim.SelectedDate = _safra.DataFim;
             dtPickerDataInicio.SelectedDate = _safra.DataInicio;
+		}
 
-        }
 
-		private void btVoltar_Click(object sender, RoutedEventArgs e)
+		private void btSair_Click(object sender, RoutedEventArgs e)
 		{
 			DialogResult = false;
 		}

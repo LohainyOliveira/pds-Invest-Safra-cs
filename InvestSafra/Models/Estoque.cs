@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InvestSafra.Models
 {
-	internal class Estoque
+	public class Estoque
 	{
 		public int Id { get; set; }
 		public int Quantidade_Semente { get; set; }

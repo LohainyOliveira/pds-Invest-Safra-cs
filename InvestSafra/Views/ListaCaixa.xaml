@@ -90,11 +90,13 @@
 
                 </Grid>
 
-
-                <Button Style="{StaticResource topButton}" Margin="0 0 20 0" Background="white"
-                        HorizontalAlignment="Right">
-                    <Icon:PackIconMaterial Kind="Bell"/>
-                </Button>
+                <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Right">
+                    <Button Style="{StaticResource topButton}"  Height="40"  x:Name="btSair" Width="48" Click="btSair_Click">
+                        <Button.Background>
+                            <ImageBrush ImageSource="/Icons/logout.png"/>
+                        </Button.Background>
+                    </Button>
+                </StackPanel>
 
                 <TextBlock Text="Caixa" Grid.Row="1" FontSize="32" FontWeight="SemiBold" Margin="0 20 0 0"
                            HorizontalAlignment="Left" Foreground="black"/>
