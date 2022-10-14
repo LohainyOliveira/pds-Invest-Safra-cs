@@ -111,7 +111,9 @@ namespace InvestSafra
 
 		private void btCadastrar_Click(object sender, RoutedEventArgs e)
 		{
-			
+			ClienteFisicoWindow form = new ClienteFisicoWindow();
+			form.ShowDialog();
+
 		}
 
 

@@ -39,15 +39,6 @@ namespace InvestSafra.Views
 
         private void ClienteFisicoFormWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            txtNomeCompleto.Text = _clienteFisico.Nome;
-            txtCep.Text = _clienteFisico.CEP;
-            txtRg.Text = _clienteFisico.RG;
-            txtBairro.Text = _clienteFisico.Bairro;
-            txtCPF.Text = _clienteFisico.CPF;
-            txtEmail.Text = _clienteFisico.Email;
-            txtCidade.Text = _clienteFisico.Cidade;
-            txtTelefone.Text = _clienteFisico.Telefone;
-            txtRua.Text = _clienteFisico.Rua;
            
 
 
@@ -69,36 +60,14 @@ namespace InvestSafra.Views
 
         private void btLimpar_Click_1(object sender, RoutedEventArgs e)
         {
-            txtBairro.Clear();
-            txtComplemento.Clear();
-            txtCPF.Clear();
-            txtEmail.Clear();
-            txtNomeCompleto.Clear();
-            txtRg.Clear();
-            txtRua.Clear();
-            txtCep.Clear();
-            txtCidade.Clear();
-            txtTelefone.Clear();
-            cbEstado.SelectedItem = null;
-            cbSexo.SelectedItem = null;
+            
 
             ExibirMensagemLimpar();
         }
 
         private void btSalvar_Click(object sender, RoutedEventArgs e)
         {
-            _clienteFisico.Nome = txtNomeCompleto.Text;
-            _clienteFisico.CPF = txtCPF.Text;
-            _clienteFisico.Complemento = txtComplemento.Text;
-            _clienteFisico.Email = txtEmail.Text;
-            _clienteFisico.Bairro = txtBairro.Text;
-            _clienteFisico.RG = txtRg.Text;
-            _clienteFisico.Rua = txtRua.Text;
-            _clienteFisico.Telefone = txtTelefone.Text;
-            _clienteFisico.CEP = txtCep.Text;
-            _clienteFisico.Cidade = txtCidade.Text;
-            _clienteFisico.Sexo = cbSexo.Text;
-            _clienteFisico.Estado = cbEstado.Text;
+           
 
             try
             {
@@ -112,18 +81,7 @@ namespace InvestSafra.Views
                 MessageBox.Show(ex.Message);
             }
 
-            txtBairro.Clear();
-            txtComplemento.Clear();
-            txtCPF.Clear();
-            txtEmail.Clear();
-            txtNomeCompleto.Clear();
-            txtRg.Clear();
-            txtRua.Clear();
-            txtCep.Clear();
-            txtCidade.Clear();
-            txtTelefone.Clear();
-            cbEstado.SelectedItem = null;
-            cbSexo.SelectedItem = null;
+           
         }
 
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)

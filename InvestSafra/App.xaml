@@ -59,7 +59,7 @@
 
                 <Style.Triggers>
                     <Trigger Property="IsMouseOver" Value="True">
-                        <Setter Property="Background" Value="#7b5cd6"/>
+                        <Setter Property="Background" Value="#EFA82E"/>
                         <Setter Property="Foreground" Value="#ffff"/>
                     </Trigger>
                 </Style.Triggers>
@@ -107,7 +107,7 @@
             </Style>
 
             <Style x:Key="addButton" TargetType="Button">
-                <Setter Property="Background" Value="#7b5cd6"/>
+                <Setter Property="Background" Value="#EFA82E"/>
                 <Setter Property="Foreground" Value="AntiqueWhite"/>
                 <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
                 <Setter Property="Width" Value="150"/>
@@ -128,7 +128,7 @@
 
                 <Style.Triggers>
                     <Trigger Property="IsMouseOver" Value="True">
-                        <Setter Property="Background" Value="#7b5cd6"/>
+                        <Setter Property="Background" Value="#EFA82E"/>
                         <Setter Property="Foreground" Value="White"/>
                     </Trigger>
                 </Style.Triggers>
@@ -158,7 +158,7 @@
 
                 <Style.Triggers>
                     <Trigger Property="IsMouseOver" Value="True">
-                        <Setter Property="Background" Value="#784ff2"/>
+                        <Setter Property="Background" Value="#EFA82E"/>
                     </Trigger>
                 </Style.Triggers>
 
@@ -210,7 +210,7 @@
 
                 <Style.Triggers>
                     <Trigger Property="IsMouseOver" Value="True">
-                        <Setter Property="Background" Value="#7950f2"/>
+                        <Setter Property="Background" Value="#EFA82E"/>
                         <Setter Property="Foreground" Value="#ffffff"/>
                     </Trigger>
                 </Style.Triggers>
@@ -227,8 +227,8 @@
 
 
             <Style x:Key="GridEditButton" TargetType="Button">
-                <Setter Property="Background" Value="#512ca8"/>
-                <Setter Property="BorderBrush" Value="#4a14Bc"/>
+                <Setter Property="Background" Value="black"/>
+                <Setter Property="BorderBrush" Value="black"/>
                 <Setter Property="Foreground" Value="#ffff"/>
                 <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
                 <Setter Property="VerticalAlignment" Value="center"/>
@@ -245,7 +245,7 @@
 
                 <Style.Triggers>
                     <Trigger Property="IsMouseOver" Value="True">
-                        <Setter Property="Background" Value="#573ab7"/>
+                        <Setter Property="Background" Value="#EFA82E"/>
                     </Trigger>
                 </Style.Triggers>
 
@@ -253,12 +253,12 @@
             </Style>
 
             <Style x:Key="GridRemoveButton" TargetType="Button" BasedOn="{StaticResource GridEditButton}">
-                <Setter Property="Background" Value="#d32f2f"/>
-                <Setter Property="BorderBrush" Value="#b71c1c"/>
+                <Setter Property="Background" Value="black"/>
+                <Setter Property="BorderBrush" Value="black"/>
 
                 <Style.Triggers>
                     <Trigger Property="IsMouseOver" Value="True">
-                        <Setter Property="Background" Value="#f44336"/>
+                        <Setter Property="Background" Value="black"/>
                     </Trigger>
                 </Style.Triggers>
 

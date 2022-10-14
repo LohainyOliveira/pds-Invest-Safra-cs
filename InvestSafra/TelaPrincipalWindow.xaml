@@ -6,7 +6,10 @@
         xmlns:local="clr-namespace:InvestSafra"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="TelaPrincipalWindow" Height="653" Width="890"
+       
+        Background="Transparent"  Width="auto"
+        
+      
         >
     <Grid>
         <Grid.Background>

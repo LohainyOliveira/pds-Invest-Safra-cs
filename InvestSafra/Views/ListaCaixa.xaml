@@ -34,27 +34,27 @@
                         </Ellipse>
                     </Border>
 
-                    <TextBlock Text="Invest Safra" Foreground="white" FontSize="22" FontWeight="SemiBold"
+                    <TextBlock Text="Invest Safra" Foreground="Black" FontSize="22" FontWeight="SemiBold"
                                DockPanel.Dock="Top" TextAlignment="Center" Margin="5 25 0 10"/>
-                    <TextBlock Text="Lista de Caixa" Foreground="#d0bfff" FontSize="14" FontWeight="SemiBold"
+                    <TextBlock Text="Lista de Caixa" Foreground="#FF04020A" FontSize="14" FontWeight="SemiBold"
                                DockPanel.Dock="Top" TextAlignment="Center"/>
 
-                    <Separator Margin="25" DockPanel.Dock="Top" Height="0.8" Background="#7b5cd6"/>
+                    <Separator Margin="25" DockPanel.Dock="Top" Height="0.8" Background="Black"/>
 
                     <StackPanel DockPanel.Dock="Top">
-                        <Button Height="56" Background="#EFA82E">
+                        <Button Height="56" Background="#EFA82E" BorderBrush="#EFA82E">
                             <DockPanel>
-                                <Icon:PackIconMaterial Kind="HomeVariant" Style="{StaticResource ResourceKey=menuButtonIcon}" RenderTransformOrigin="0.133,0.48"/>
-                                <TextBlock Text="Menu" Width="49"/>
+                                <Icon:PackIconMaterial Kind="HomeVariant" Style="{StaticResource ResourceKey=menuButtonIcon}" RenderTransformOrigin="0.133,0.48" Foreground="#FF1D0A0A"/>
+                                <TextBlock Text="Menu" Width="49" Foreground="Black"/>
                             </DockPanel>
                         </Button>
                     </StackPanel>
 
                     <StackPanel DockPanel.Dock="Top">
-                        <Button Height="56" Background="#EFA82E" Cursor="Hand">
+                        <Button Height="56" Background="#EFA82E" Cursor="Hand" BorderBrush="#EFA82E">
                             <DockPanel>
-                                <Icon:PackIconMaterial Kind="ForumOutline" Style="{StaticResource ResourceKey=menuButtonIcon}" RenderTransformOrigin="0.133,0.48"/>
-                                <TextBlock Text="Chat" Width="49"/>
+                                <Icon:PackIconMaterial Kind="ForumOutline" Style="{StaticResource ResourceKey=menuButtonIcon}" RenderTransformOrigin="0.133,0.48" Foreground="Black"/>
+                                <TextBlock Text="Chat" Width="49" Foreground="Black"/>
                             </DockPanel>
                         </Button>
                     </StackPanel>
@@ -62,8 +62,8 @@
                     <DockPanel>
                         <Button Style="{StaticResource menuButton}" VerticalAlignment="Bottom" DockPanel.Dock="Bottom">
                             <DockPanel>
-                                <Icon:PackIconMaterial Kind="Logout" Style="{StaticResource ResourceKey=menuButtonIcon}" RenderTransformOrigin="0.133,0.48"/>
-                                <TextBlock Text="Logout" Foreground="white" Width="49"/>
+                                <Icon:PackIconMaterial Kind="Logout" Style="{StaticResource ResourceKey=menuButtonIcon}" RenderTransformOrigin="0.133,0.48" Foreground="Black"/>
+                                <TextBlock Text="Logout" Foreground="#FF0E0606" Width="49"/>
                             </DockPanel>
                         </Button>
                     </DockPanel>
@@ -101,7 +101,7 @@
                 <TextBlock Text="Caixa" Grid.Row="1" FontSize="32" FontWeight="SemiBold" Margin="0 20 0 0"
                            HorizontalAlignment="Left" Foreground="black"/>
 
-                <Button Style="{StaticResource addButton}">
+                <Button Style="{StaticResource addButton}" Background="#FF040306">
                     <StackPanel Orientation="Horizontal">
                         <Icon:PackIconMaterial Kind="Plus" VerticalAlignment="Center" Width="11" Height="11" Margin="0 20 0 0"/>
                         <TextBlock Text="Add New Caixa" Height="19"/>
@@ -134,7 +134,7 @@
                                            Foreground="black" HorizontalAlignment="Right"/>
                 </Grid>
 
-                <DataGrid  ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" RowStyle="{DynamicResource DataGridRowStyle1}" Grid.Row="5" x:Name="membersDataGrid" SelectionChanged="membersDataGrid_SelectionChanged">
+                <DataGrid  ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" RowStyle="{DynamicResource DataGridRowStyle1}" Grid.Row="5" x:Name="dataGridCaixa">
                     <DataGrid.Columns>
                         <!-- Começo CheckBox -->
                         <DataGridCheckBoxColumn CanUserResize="False" Width="auto">
@@ -146,19 +146,9 @@
                         </DataGridCheckBoxColumn>
                         <!-- Fim CheckBox -->
                         <!-- Começo -->
-                        <DataGridTextColumn Header="#" IsReadOnly="True" CanUserResize="False" Width="auto"/>
-                        <DataGridTemplateColumn Header="Caixas" IsReadOnly="True" Width="*">
-                            <DataGridTemplateColumn.CellTemplate>
-                                <DataTemplate>
-                                    <StackPanel Orientation="Horizontal">
-                                        <Border Width="25" Height="25" CornerRadius="50" Margin="0 0 10 0" Background="Red">
-                                            <TextBlock Text="...." VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Margin=" 0 0 0 1"/>
-                                        </Border>
-                                    </StackPanel>
-                                </DataTemplate>
-                            </DataGridTemplateColumn.CellTemplate>
-                        </DataGridTemplateColumn>
+
                         <!-- Fim -->
+
 
 
 

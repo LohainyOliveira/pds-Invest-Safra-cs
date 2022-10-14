@@ -34,36 +34,36 @@
                         </Ellipse>
                     </Border>
 
-                    <TextBlock Text="Invest Safra" Foreground="white" FontSize="22" FontWeight="SemiBold"
+                    <TextBlock Text="Invest Safra" Foreground="black" FontSize="22" FontWeight="SemiBold"
                                DockPanel.Dock="Top" TextAlignment="Center" Margin="5 25 0 10"/>
-                    <TextBlock Text="Lista de Área" Foreground="#d0bfff" FontSize="14" FontWeight="SemiBold"
+                    <TextBlock Text="Lista de Área" Foreground="black" FontSize="14" FontWeight="SemiBold"
                                DockPanel.Dock="Top" TextAlignment="Center"/>
 
-                    <Separator Margin="25" DockPanel.Dock="Top" Height="0.8" Background="#7b5cd6"/>
+                    <Separator Margin="25" DockPanel.Dock="Top" Height="0.8" Background="black"/>
 
                     <StackPanel DockPanel.Dock="Top">
-                        <Button Height="56" Background="#EFA82E">
+                        <Button Height="56" Background="#EFA82E" BorderBrush="#EFA82E">
                             <DockPanel>
-                                <Icon:PackIconMaterial Kind="HomeVariant" Style="{StaticResource ResourceKey=menuButtonIcon}" RenderTransformOrigin="0.133,0.48"/>
-                                <TextBlock Text="Menu" Width="49"/>
+                                <Icon:PackIconMaterial Kind="HomeVariant" Style="{StaticResource ResourceKey=menuButtonIcon}" RenderTransformOrigin="0.133,0.48" Foreground="#FF020101"/>
+                                <TextBlock Text="Menu" Width="49" Foreground="black"/>
                             </DockPanel>
                         </Button>
                     </StackPanel>
 
                     <StackPanel DockPanel.Dock="Top">
-                        <Button Height="56" Background="#EFA82E">
+                        <Button Height="56" Background="#EFA82E" BorderBrush="#EFA82E">
                             <DockPanel>
-                                <Icon:PackIconMaterial Kind="ForumOutline" Style="{StaticResource ResourceKey=menuButtonIcon}" RenderTransformOrigin="0.133,0.48"/>
-                                <TextBlock Text="Chat" Width="49"/>
+                                <Icon:PackIconMaterial Kind="ForumOutline" Style="{StaticResource ResourceKey=menuButtonIcon}" RenderTransformOrigin="0.133,0.48" Foreground="Black"/>
+                                <TextBlock Text="Chat" Width="49" Foreground="#FF1B0C0C"/>
                             </DockPanel>
                         </Button>
                     </StackPanel>
 
                     <DockPanel>
-                        <Button Style="{StaticResource menuButton}" VerticalAlignment="Bottom" DockPanel.Dock="Bottom">
+                        <Button Style="{StaticResource menuButton}" VerticalAlignment="Bottom" DockPanel.Dock="Bottom" BorderBrush="#FF270D0D">
                             <DockPanel>
-                                <Icon:PackIconMaterial Kind="Logout" Style="{StaticResource ResourceKey=menuButtonIcon}" RenderTransformOrigin="0.133,0.48"/>
-                                <TextBlock Text="Logout" Foreground="white" Width="49"/>
+                                <Icon:PackIconMaterial Kind="Logout" Style="{StaticResource ResourceKey=menuButtonIcon}" RenderTransformOrigin="0.133,0.48" Foreground="Black"/>
+                                <TextBlock Text="Logout" Foreground="Black" Width="49"/>
                             </DockPanel>
                         </Button>
                     </DockPanel>
@@ -71,7 +71,7 @@
                 </DockPanel>
             </Border>
 
-            <Grid Grid.Column="1" Margin="30 20 20 20">
+            <Grid  Grid.Column="1" Margin="30 20 20 20">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
@@ -102,7 +102,7 @@
                 <TextBlock Text="Área" Grid.Row="1" FontSize="32" FontWeight="SemiBold" Margin="0 20 0 0"
                            HorizontalAlignment="Left" Foreground="black"/>
 
-                <Button Style="{StaticResource addButton}">
+                <Button Style="{StaticResource addButton}" Background="#FF0C0917">
                     <StackPanel Orientation="Horizontal">
                         <Icon:PackIconMaterial Kind="Plus" VerticalAlignment="Center" Width="11" Height="11" Margin="0 20 0 0"/>
                         <TextBlock Text="Add New Área" Height="19"/>
@@ -139,7 +139,7 @@
                     <DataGrid.Columns>
 
                         <!-- Começo CheckBox -->
-                        <DataGridCheckBoxColumn CanUserResize="True" Width="auto">
+                        <DataGridCheckBoxColumn CanUserResize="False" Width="auto">
                             <DataGridCheckBoxColumn.HeaderTemplate>
                                 <DataTemplate>
                                     <CheckBox/>
