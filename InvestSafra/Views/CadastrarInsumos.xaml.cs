@@ -74,7 +74,39 @@ namespace InvestSafra.Views
 
         private void btSalvar_Click(object sender, RoutedEventArgs e)
         {
+            _insumos.Descricao = txtDescricao1.Text;
+            _insumos.Marca = txtMarca1.Text;
+            _insumos.Quantidade = Convert.ToInt32(txtQuantidade.Text);  
+            _insumos.Tipo = txtTipoInsumo.Text;
+            _insumos.Valor = Convert.ToInt32(txtValor.Text);
 
+
+            try
+            {
+                var dao = new InsumosDAO();
+
+                if (_insumos.Id > 0)
+                {
+                    dao.Update(_insumos);
+                }
+                else
+                {
+                    dao.Insert(_insumos);
+                }
+
+                ExibirMensagemSalvar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            txtDescricao1.Clear();
+            txtMarca1.Clear();
+            cbMedida.SelectedItem = null;
+            txtQuantidade.Clear();
+            txtTipoInsumo.Clear();
+            txtValor.Clear();
         }
         private void btSair_Click(object sender, RoutedEventArgs e)
         {

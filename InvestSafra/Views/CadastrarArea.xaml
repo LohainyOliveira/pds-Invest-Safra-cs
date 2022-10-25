@@ -18,10 +18,8 @@
         Height="560" Width="1080" WindowStartupLocation="CenterScreen" Background="Transparent" Visibility="Visible" AllowsTransparency="True" WindowStyle="None">
 
 
-    <Border CornerRadius="30" MouseDown="Border_MouseDown" MouseLeftButtonDown="Border_MouseLeftButtonDown">
-        <Border.Background>
-            <ImageBrush ImageSource="/Imagens/imgDesfocada2.png"/>
-        </Border.Background>
+    <Border CornerRadius="30" Background="#f7fbfc" MouseDown="Border_MouseDown" MouseLeftButtonDown="Border_MouseLeftButtonDown">
+        
         <Grid Margin="0,0,0,-28" RenderTransformOrigin="0.5,0.5">
 
             <Grid.RenderTransform>
@@ -46,8 +44,8 @@
                         <ColumnDefinition Width="17*"/>
                         <ColumnDefinition Width="17*"/>
                     </Grid.ColumnDefinitions>
-                    <Image HorizontalAlignment="Left" Height="200" Margin="38,15,0,0" VerticalAlignment="Top" Width="136" Source="/Imagens/LogoCanto.png"/>
-                    <Image HorizontalAlignment="Right" Height="172" VerticalAlignment="Top" Width="173" Source="/Icons/localização.png" Grid.ColumnSpan="2" Margin="0,0,11,0">
+                    <Image HorizontalAlignment="Left" Height="200" Margin="38,15,0,0" VerticalAlignment="Top" Width="170" Source="/Imagens/LogoCanto.png"/>
+                    <Image HorizontalAlignment="Right" Height="172" VerticalAlignment="Top" Width="173"  Grid.ColumnSpan="2" Margin="0,0,11,0">
                         <Image.OpacityMask>
                             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                                 <GradientStop Color="Black"/>

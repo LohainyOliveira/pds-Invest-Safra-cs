@@ -38,7 +38,6 @@
                     <ColumnDefinition Width="17*"/>
                 </Grid.ColumnDefinitions>
                 <Image HorizontalAlignment="Left" Height="200" Margin="38,15,0,0" VerticalAlignment="Top" Width="136" Source="/Imagens/LogoCanto.png"/>
-                <Image HorizontalAlignment="Right" Height="200" VerticalAlignment="Top" Width="200" Source="/Icons/fertilizante.png"/>
                 <Label  Content="Cadastro de Insumos" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Malik" FontSize="24" Foreground="#EFA82E" FontWeight="Bold" Height="49" Width="292" RenderTransformOrigin="0.336,0.452" Margin="329,44,0,0"/>
             </Grid>
 

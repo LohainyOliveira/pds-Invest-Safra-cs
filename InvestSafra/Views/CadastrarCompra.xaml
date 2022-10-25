@@ -43,12 +43,6 @@
                 <Label  Content="Cadastro de Compra" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Malik" FontSize="24" Foreground="#EFA82E" FontWeight="Bold" Height="49" Width="292" RenderTransformOrigin="0.336,0.452" Margin="350,45,0,0"/>
             </Grid>
 
-            <Button Style="{StaticResource topButton}" Margin="807,0,80,477" Height="40" VerticalAlignment="Bottom" x:Name="btSair" Click="btSair_Click" Width="48" Cursor="Hand">
-                <Button.Background>
-                    <ImageBrush ImageSource="/Icons/logout.png"/>
-                </Button.Background>
-            </Button>
-
             <Grid VerticalAlignment="Top" HorizontalAlignment="Center" Height="535" >
                 <StackPanel Orientation="Horizontal" Margin="0 0 60 200">
                     <TextBox Style="{StaticResource MaterialDesignOutlinedTextBox}"
