@@ -85,7 +85,7 @@ namespace InvestSafra
         {
 
 
-			Entrar form = new Entrar();
+			GraficosWindow form = new GraficosWindow();
 			form.ShowDialog();
 		}
 

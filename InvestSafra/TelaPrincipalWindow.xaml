@@ -87,7 +87,7 @@
         </Grid>
         
         <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Image Source="/Imagens/logo_pgnPrincipal.png" Height="400"/>
+            <Image Source="/Imagens/logo_pgnPrincipal.png" Height="400" Width="612"/>
         </StackPanel>
 
 

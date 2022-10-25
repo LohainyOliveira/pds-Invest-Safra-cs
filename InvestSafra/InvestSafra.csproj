@@ -199,6 +199,9 @@
     <Compile Include="Views\CadastrarInsumos.xaml.cs">
       <DependentUpon>CadastrarInsumos.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\GraficosWindow.xaml.cs">
+      <DependentUpon>GraficosWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\LevantamentoDeDadosDaSafra.xaml.cs">
       <DependentUpon>LevantamentoDeDadosDaSafra.xaml</DependentUpon>
     </Compile>
@@ -341,6 +344,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\CadastrarInsumos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\GraficosWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
