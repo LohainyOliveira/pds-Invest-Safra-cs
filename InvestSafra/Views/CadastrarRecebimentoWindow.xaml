@@ -39,7 +39,6 @@
                         <ColumnDefinition Width="17*"/>
                     </Grid.ColumnDefinitions>
                     <Image HorizontalAlignment="Left" Height="200" Margin="38,15,0,0" VerticalAlignment="Top" Width="136" Source="/Imagens/LogoCanto.png"/>
-                    <Image HorizontalAlignment="Right" Height="200" VerticalAlignment="Top" Width="200" Source="/Icons/recebimentoClaro.png" Margin="0,48,17,0"/>
                     <Label  Content="Cadastrar Recebimento" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Malik" FontSize="24" Foreground="#EFA82E" FontWeight="Bold" Height="59" Width="292" RenderTransformOrigin="0.336,0.452" Margin="423,47,0,0"/>
                     <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Right">
                         <Button Style="{StaticResource topButton}"  Height="40"  x:Name="btSair" Width="48" Click="btSair_Click">

@@ -46,9 +46,7 @@
                 </Grid.ColumnDefinitions>
                 <Image HorizontalAlignment="Left" Height="200" Margin="38,15,0,0" VerticalAlignment="Top" Width="136" Source="/Imagens/LogoCanto.png"/>
                 <Label  Content="Cadastro de Máquinas" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Malik" FontSize="24" Foreground="#EFA82E" FontWeight="Bold" Height="49" Width="292" RenderTransformOrigin="0.336,0.452" Margin="329,44,0,0"/>
-
-                <Image HorizontalAlignment="Right" Height="200"  Width="200" VerticalAlignment="Top" Source="/Icons/Maquina.png"/>
-            </Grid>
+                </Grid>
 
 
             <Grid VerticalAlignment="Top" HorizontalAlignment="Center" Height="535" >
