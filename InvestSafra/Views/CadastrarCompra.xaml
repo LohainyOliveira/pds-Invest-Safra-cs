@@ -41,7 +41,7 @@
                         <ColumnDefinition Width="17*"/>
                     </Grid.ColumnDefinitions>
                     <Image HorizontalAlignment="Left" Height="200" Margin="38,15,0,0" VerticalAlignment="Top" Width="170" Source="/Imagens/LogoCanto.png"/>
-                    <Label  Content="Cadastro de Compra" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Malik" FontSize="24" Foreground="#EFA82E" FontWeight="Bold" Height="49" Width="292" RenderTransformOrigin="0.336,0.452" Margin="350,45,0,0"/>
+                    <Label  Content="Cadastro de Compra" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Malik" FontSize="24" Foreground="#EFA82E" FontWeight="Bold" Height="49" Width="292" RenderTransformOrigin="0.336,0.452" Margin="410,45,0,0"/>
                 </Grid>
 
                 <Grid VerticalAlignment="Top" HorizontalAlignment="Center" Height="535" >
@@ -116,7 +116,7 @@
                 </Grid>
             </Grid>
             <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Right">
-                <Button Style="{StaticResource topButton}"  Height="40"  x:Name="btSair2" Width="48" Click="btSair_Click">
+                <Button Style="{StaticResource topButton}"  Height="51"  x:Name="btSair2"  Margin="0 18 18 0" Width="48" Click="btSair_Click">
                     <Button.Background>
                         <ImageBrush ImageSource="/Icons/logout.png"/>
                     </Button.Background>
