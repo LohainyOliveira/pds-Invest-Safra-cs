@@ -8,8 +8,6 @@ namespace InvestSafra.Models
 {
 	public class Clima
 	{
-
-		
 		public int Id { get; set; }
 		public double Temperatura { get; set; }
 		public string Climatizacao { get; set; }

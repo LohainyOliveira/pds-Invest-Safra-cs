@@ -14,15 +14,6 @@ namespace InvestSafra.Models
 		public string Safra { get; set; }
 		public string Comprador { get; set; }
 
-
-
-
 	}
-
-
-
-
-
-
 
 }

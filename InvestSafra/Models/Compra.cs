@@ -15,7 +15,6 @@ namespace InvestSafra.Models
 		public string Descricao { get; set; }
 		public DateTime? Data { get; set; }
 		public string Fornecedor { get; set; }
-
 		
 	}
 }
