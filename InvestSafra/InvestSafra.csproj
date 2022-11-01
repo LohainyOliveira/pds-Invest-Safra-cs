@@ -167,6 +167,9 @@
     <Compile Include="TelaPrincipalWindow.xaml.cs">
       <DependentUpon>TelaPrincipalWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\CadastraCaixa.xaml.cs">
+      <DependentUpon>CadastraCaixa.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\CadastrarArea.xaml.cs">
       <DependentUpon>CadastrarArea.xaml</DependentUpon>
     </Compile>
@@ -299,6 +302,10 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="TelaPrincipalWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CadastraCaixa.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
