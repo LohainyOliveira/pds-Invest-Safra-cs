@@ -100,8 +100,10 @@ create table Insumo (
 id_ins int primary key auto_increment not null,
 nome_ins varchar (100) not null,
 tipo_ins varchar (100) not null,
-marca_ins varchar (100) not null,
-descricao_ins varchar (100) not null
+nome_ins varchar (100) not null,
+descricao_ins varchar (100) not null,
+quantidade_ins int not null,
+valor_ins float not null
 );
 
 create table Compra_Insumo (
