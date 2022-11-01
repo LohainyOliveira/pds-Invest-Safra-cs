@@ -13,20 +13,17 @@
         TextOptions.TextRenderingMode="Auto"
         FontFamily="{DynamicResource MaterialDesignFont}"
        
-        Height="760" Width="1080" WindowStartupLocation="CenterScreen" WindowStyle="None"
+        Height="960" Width="1380" WindowStartupLocation="CenterScreen" WindowStyle="None"
         AllowsTransparency="True" Background="Transparent">
 
-    <Border Background="White" CornerRadius="30" MouseDown="Border_MouseDown" MouseLeftButtonDown="Border_MouseLeftButtonDown">
+    <Border CornerRadius="30" Background="#f7fbfc" MouseDown="Border_MouseDown" MouseLeftButtonDown="Border_MouseLeftButtonDown">
         <Grid Margin="0,0,-23,-151">
             <Grid.RowDefinitions>
-                <RowDefinition Height="115"/>
+                <RowDefinition Height="185"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="60"/>
             </Grid.RowDefinitions>
 
-            <Grid.Background>
-                <ImageBrush ImageSource="/Imagens/ImgDesfocada2.png"/>
-            </Grid.Background>
 
             <Grid Grid.Row="0">
                 <Grid.ColumnDefinitions>
@@ -34,7 +31,7 @@
                     <ColumnDefinition Width="17*"/>
                     <ColumnDefinition Width="17*"/>
                 </Grid.ColumnDefinitions>
-                <Image HorizontalAlignment="Left" Height="200" Margin="38,15,0,0" VerticalAlignment="Top" Width="136" Source="/Imagens/LogoCanto.png"/>
+                <Image HorizontalAlignment="Left" Height="200" Margin="38,15,0,0" VerticalAlignment="Top" Width="170" Source="/Imagens/LogoCanto.png"/>
                 <Label  Content="Cadastro Funcionário" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Malik" FontSize="24" Foreground="#EFA82E" FontWeight="Bold" Height="50" Width="292" RenderTransformOrigin="0.326,0.452" Margin="394,55,0,0"/>
             </Grid>
 
@@ -237,23 +234,12 @@
                      Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     AcceptsReturn="True"
                     MaxWidth="400"
-                    Margin="280 90 50 0"
+                    Margin="10 90 0 0"
                     materialDesign:HintAssist.Hint="Complemento"
                     x:Name="txtComplemento" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
                     Width="209" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
-                    <TextBox 
-                     Style="{StaticResource MaterialDesignOutlinedTextBox}"
-                    AcceptsReturn="True"
-                    MaxWidth="400"
-                    Margin="280 90 50 0"
-                    materialDesign:HintAssist.Hint="Tipo"
-                    x:Name="txtTipo" Padding="16" Grid.Row="1" 
-                    TextWrapping="Wrap" VerticalAlignment="Center" 
-                    Width="209" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
-                  />
-
 
 
                 </StackPanel>
