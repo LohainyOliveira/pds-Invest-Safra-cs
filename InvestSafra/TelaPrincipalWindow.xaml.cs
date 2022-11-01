@@ -78,7 +78,8 @@ namespace InvestSafra
 
 		private void btEntrar_Click(object sender, RoutedEventArgs e)
 		{
-
+			MenuWindow menu = new MenuWindow();
+			menu.ShowDialog();
 		}
 
         private void ListViewItem_Selected(object sender, RoutedEventArgs e)
