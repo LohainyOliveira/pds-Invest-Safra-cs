@@ -16,31 +16,6 @@ namespace InvestSafra.Models
 		public DateTime? Data { get; set; }
 		public string Fornecedor { get; set; }
 
-		//Terceiras tabelas de compra
-
-		//Compra Insumo
-
-		public int IdCompraInsumo { get; set; }
-
-		public int QuantidadeCompraInsumo { get; set; }
-
-		public double ValorCompraInsumo { get; set; }
-
-		public DateTime DataCompraInsumo { get; set; }
-
-		public string TipoCompraInsumo { get; set; }
-
-
-		//Compra Semente
-
-		public int IdCompraSemente { get; set; }
-
-		public int QuantidadeCompraSemente { get; set; }
-
-		public double ValorCompraSemente { get; set; }
-
-		public DateTime DataCompraSemente { get; set; }
-
-		public string TipoCompraSemente { get; set; }
+		
 	}
 }
