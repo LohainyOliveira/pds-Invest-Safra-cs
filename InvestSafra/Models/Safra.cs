@@ -17,21 +17,6 @@ namespace InvestSafra.Models
 		public DateTime DataFim { get; set; }
 
 
-
-		//Terceiras tabelas de safra
-
-		//Safra Produto
-		public int IdSafraProduto { get; set; }
-
-		//Safra Insumos
-		public int IdSafraInsumos { get; set; }
-
-		//Safra Clima
-		public int IdSafraClima { get; set; }
-
-		//Safra Maquinas
-		public int IdSafraMaquinas { get; set; }
-
 	}
 
 }

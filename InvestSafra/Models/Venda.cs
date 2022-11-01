@@ -14,33 +14,6 @@ namespace InvestSafra.Models
 		public string Safra { get; set; }
 		public string Comprador { get; set; }
 
-
-		//Terceiras tabelas de venda
-
-		//Venda Produto 
-
-		public int IdVendaProduto { get; set; }
-
-		public int QuantidadeVendaProduto { get; set; }
-
-		public double ValorVendaProduto { get; set; }
-
-		public string TipoVendaProduto { get; set; }
-
-		public DateTime  DataVendaProduto { get; set; }
-
-
-
-
-
-
-
 	}
-
-
-
-
-
-
 
 }
