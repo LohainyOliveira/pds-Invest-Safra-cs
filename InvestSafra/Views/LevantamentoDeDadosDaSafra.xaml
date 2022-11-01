@@ -44,16 +44,8 @@
         </EventTrigger>
     </Window.Triggers>
 
-    <Grid>
-        <Grid.Background>
-            <ImageBrush ImageSource="/Imagens/ImgDesfocada2.png"/>
-        </Grid.Background>
-        <StackPanel Margin="190 20 20 20">
-
-            <StackPanel.Background>
-                <SolidColorBrush Color="#FF849246" />
-            </StackPanel.Background>
-        </StackPanel>
+    <Grid Background="#f7fbfc">
+       
        
             <Button Style="{StaticResource topButton}"  Height="40" Margin="730 -360 0 0" x:Name="btSair" Width="48" Click="btSair_Click">
                 <Button.Background>

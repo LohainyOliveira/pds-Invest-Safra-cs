@@ -5,17 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:InvestSafra.Views"
         mc:Ignorable="d"  Height="560" Width="1080" WindowStartupLocation="CenterScreen" Background="Transparent" Visibility="Visible" AllowsTransparency="True" WindowStyle="None">
-    <Border CornerRadius="30" MouseDown="Border_MouseDown" MouseLeftButtonDown="Border_MouseLeftButtonDown" Background="White">
+    <Border CornerRadius="30" MouseDown="Border_MouseDown" MouseLeftButtonDown="Border_MouseLeftButtonDown" Background="#f7fbfc">
 
-        <Grid Background="Aqua">
-            <TextBox x:Name="txtArquivo" HorizontalAlignment="Left" Height="23" Margin="51,374,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="432"/>
-            <Button x:Name="btnProcurar" Content="Procurar" HorizontalAlignment="Left" Margin="488,374,0,0" VerticalAlignment="Top" Width="75" Background="#FF9A9AC1" Click="btnProcurar_Click" Cursor="Hand"/>
-            <Button x:Name="btnSalvar" Content="Salvar a imagem no Banco de dados" HorizontalAlignment="Left" Margin="51,402,0,0" VerticalAlignment="Top" Width="432" Background="#FF9898CF"  Click="btnSalvar_Click"/>
-            <Button x:Name="btnSair" Content="Sair" HorizontalAlignment="Left" Margin="488,402,0,0" VerticalAlignment="Top" Width="75" Background="#FFAEAED6" Click="btnSair_Click"/>
-            <Image x:Name="imgArquivo" HorizontalAlignment="Left" Height="309" Margin="51,29,0,0" VerticalAlignment="Top" Width="432" ToolTip="Selecione a imagem para Salvar" />
-            <Label x:Name="lblmsg" Content="" HorizontalAlignment="Left" Margin="51,429,0,0" VerticalAlignment="Top" Width="432" Height="30"/>
-        </Grid>
-
+       
     </Border>
 
 </Window>

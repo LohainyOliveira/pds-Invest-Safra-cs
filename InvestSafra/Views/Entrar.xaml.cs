@@ -14,6 +14,8 @@ using System.Windows.Shapes;
 using InvestSafra.Views;
 using System.Windows.Threading;
 using MS.Internal.WindowsBase;
+using InvestSafra.Helpers;
+using InvestSafra.Database;
 
 namespace InvestSafra.Views
 {
@@ -28,22 +30,28 @@ namespace InvestSafra.Views
 		{
 
 			InitializeComponent();
+            
+        }
 
 
 
-		}
 
-		
-
-		private void btVoltar_Click(object sender, RoutedEventArgs e)
+        private void btVoltar_Click(object sender, RoutedEventArgs e)
 		{
 			DialogResult = false;
 		}
 
 		private void btLogar_Click(object sender, RoutedEventArgs e)
 		{
-			MenuWindow form = new MenuWindow();
-			form.ShowDialog();
-		}
+			try
+            {
+
+            }
+			catch (Exception ex)
+            {
+				MessageBox.Show(ex.Message);
+            }
+          
+        }
 	}
 }
