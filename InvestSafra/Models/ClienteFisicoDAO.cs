@@ -38,11 +38,8 @@ namespace InvestSafra.Models
                 comando.Parameters.AddWithValue("@Complemento", clienteF.Complemento);
                 comando.Parameters.AddWithValue("@email", clienteF.Email);
 
-
                 var resultado = comando.ExecuteNonQuery();
-
-
-
+    
                 if (resultado == 0)
                 {
                     throw new Exception("Ocorreram erros ao salvar as informações");
