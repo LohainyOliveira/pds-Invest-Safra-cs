@@ -56,12 +56,12 @@ namespace InvestSafra.Views
 
         private void btCancelar_Click(object sender, RoutedEventArgs e)
         {
-            txtDescricao1.Clear();
-            txtMarca1.Clear();
-            cbMedida.SelectedItem = null;
-            txtQuantidade.Clear();
-            txtTipoInsumo.Clear();
-            txtValor.Clear();
+            //txtDescricao1.Clear();
+            //txtMarca1.Clear();
+            //cbMedida.SelectedItem = null;
+            //txtQuantidade.Clear();
+            //txtTipoInsumo.Clear();
+            //txtValor.Clear();
 
             ExibirMensagemLimpar();
         }
@@ -74,11 +74,11 @@ namespace InvestSafra.Views
 
         private void btSalvar_Click(object sender, RoutedEventArgs e)
         {
-            _insumos.Descricao = txtDescricao1.Text;
-            _insumos.Marca = txtMarca1.Text;
-            _insumos.Quantidade = Convert.ToInt32(txtQuantidade.Text);  
-            _insumos.Tipo = txtTipoInsumo.Text;
-            _insumos.Valor = Convert.ToInt32(txtValor.Text);
+            //_insumos.Descricao = txtDescricao1.Text;
+            //_insumos.Marca = txtMarca1.Text;
+            //_insumos.Quantidade = Convert.ToInt32(txtQuantidade.Text);  
+            //_insumos.Tipo = txtTipoInsumo.Text;
+            //_insumos.Valor = Convert.ToInt32(txtValor.Text);
 
 
             try
@@ -101,12 +101,12 @@ namespace InvestSafra.Views
                 MessageBox.Show(ex.Message);
             }
 
-            txtDescricao1.Clear();
-            txtMarca1.Clear();
-            cbMedida.SelectedItem = null;
-            txtQuantidade.Clear();
-            txtTipoInsumo.Clear();
-            txtValor.Clear();
+            //txtDescricao1.Clear();
+            //txtMarca1.Clear();
+            //cbMedida.SelectedItem = null;
+            //txtQuantidade.Clear();
+            //txtTipoInsumo.Clear();
+            //txtValor.Clear();
         }
         private void btSair_Click(object sender, RoutedEventArgs e)
         {

@@ -42,25 +42,25 @@
             </Grid>
 
             <Grid VerticalAlignment="Top" HorizontalAlignment="Center" Height="535" >
-                <StackPanel Orientation="Horizontal" Margin="0 0 60 200">
-                    <TextBox 
-                Style="{StaticResource MaterialDesignOutlinedTextBox}"
-                    AcceptsReturn="True"
-                    MaxWidth="400"
-                    Margin="80 0 50 0"
-                    materialDesign:HintAssist.Hint="Tipos de Insumo"
-                    x:Name="txtTipoInsumo" Padding="16" Grid.Row="1" 
-                    TextWrapping="Wrap" VerticalAlignment="Center" 
-                    Width="209" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
-                  />
+                <StackPanel Orientation="Horizontal" Margin="80 10 60 200">
+                    <ComboBox
+                    materialDesign:HintAssist.Hint="Tipo Insumo" 
+                    Style="{StaticResource MaterialDesignOutlinedComboBox}"   
+                    Background="#0F040302" FontFamily="Arial" FontWeight="Bold"
+                    x:Name="cbTipoInsumo" Padding="8"  Width="208" Height="58">
+                        <ComboBoxItem/>
+                        <ComboBoxItem Content="Natural"/>
+                        <ComboBoxItem Content="Trabalho"/>
+                        <ComboBoxItem Content="Capital"/>
+                    </ComboBox>
                     <TextBox 
                 
                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     AcceptsReturn="True"
                     MaxWidth="400"
-                    Margin="10 0 50 0"
-                    materialDesign:HintAssist.Hint="Marca"
-                    x:Name="txtMarca1" Padding="16" 
+                    Margin="50 0 0 0"
+                    materialDesign:HintAssist.Hint="Nome"
+                    x:Name="txtNome" Padding="16" 
                     TextWrapping="Wrap" 
                     Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
@@ -81,9 +81,9 @@
                     TextWrapping="Wrap" VerticalAlignment="Center" 
                     Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
-                    
-                    
-                <ComboBox
+
+
+                    <ComboBox
                     materialDesign:HintAssist.Hint="Medida" 
                     Style="{StaticResource MaterialDesignOutlinedComboBox}"
                     HorizontalAlignment="Center"   
@@ -92,7 +92,7 @@
                         <ComboBoxItem></ComboBoxItem>
                         <ComboBoxItem>Feminino</ComboBoxItem>
                         <ComboBoxItem>Masculino</ComboBoxItem>
-                        </ComboBox>
+                    </ComboBox>
 
 
 
@@ -114,7 +114,7 @@
                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     AcceptsReturn="True"
                     MaxWidth="400"
-                    Margin="10 0 50 0"
+                    Margin="0 0 50 0"
                     materialDesign:HintAssist.Hint="Valor"
                     x:Name="txtValor" Padding="16" 
                     TextWrapping="Wrap" 
@@ -140,7 +140,7 @@
                         </StackPanel>
                     </Grid>
                 </Grid>
-                
+
 
 
             </Grid>
