@@ -12,7 +12,10 @@
         TextOptions.TextFormattingMode="Ideal" 
         TextOptions.TextRenderingMode="Auto"
         FontFamily="{DynamicResource MaterialDesignFont}"
-        Title="Inscrever" Height="543" Width="956">
+         Height="520" Width="900" WindowStartupLocation="CenterScreen" WindowStyle="None"
+        AllowsTransparency="True" Background="Transparent">
+
+    <Border CornerRadius="30" Background="#f7fbfc" MouseDown="Border_MouseDown" MouseLeftButtonDown="Border_MouseLeftButtonDown" Margin="0,0,-52,0">
     <Grid Margin="0,0,0,-28" RenderTransformOrigin="0.5,0.5">
         <Grid.RenderTransform>
             <TransformGroup>
@@ -26,18 +29,15 @@
             <RowDefinition Height="115"/>
         </Grid.RowDefinitions>
 
-        <Grid Grid.RowSpan="3" Margin="0,0,0,10">
-            <Grid.Background>
-                <ImageBrush ImageSource="/Imagens/ImgDesfocada2.png"/>
-            </Grid.Background>
+            <Grid Grid.RowSpan="3" Margin="0,0,0,10">
 
-            <Grid Grid.Row="0">
+                <Grid Grid.Row="0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="1538*"/>
                     <ColumnDefinition Width="17*"/>
                     <ColumnDefinition Width="17*"/>
                 </Grid.ColumnDefinitions>
-                <Image HorizontalAlignment="Left" Height="200" Margin="38,15,0,0" VerticalAlignment="Top" Width="136" Source="/Imagens/LogoCanto.png"/>
+                <Image HorizontalAlignment="Left" Height="200" Margin="38,15,0,0" VerticalAlignment="Top" Width="170" Source="/Imagens/LogoCanto.png"/>
                 <Label  Content="Cadastro de Sementes" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Malik" FontSize="24" Foreground="#EFA82E" FontWeight="Bold" Height="49" Width="292" RenderTransformOrigin="0.336,0.452" Margin="329,44,0,0"/>
             </Grid>
 
@@ -125,8 +125,8 @@
 
                     <Grid Margin="334,7,-137,-7" Grid.ColumnSpan="4">
                         <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
-                            <Button x:Name="btSalvar" FontSize="19" Content="Salvar" Height="40" Width="119"  Margin="0,0,20,0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Grid.Column="2" Grid.ColumnSpan="2"/>
-                            <Button x:Name="btCancelar" FontSize="19" Content="Cancelar" Height="40" Width="119"  Margin="0,0,0,0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Grid.ColumnSpan="4" Click="btCancelar_Click"/>
+                            <Button x:Name="btSalvar" FontSize="19" Content="Salvar" Height="40" Width="119"  Margin="0,-50,20,0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Grid.Column="2" Grid.ColumnSpan="2"/>
+                            <Button x:Name="btCancelar" FontSize="19" Content="Cancelar" Height="40" Width="119"  Margin="0,-50,0,0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Grid.ColumnSpan="4" Click="btCancelar_Click"/>
                         </StackPanel>
                     </Grid>
                 </Grid>
@@ -142,5 +142,5 @@
             </Button>
         </StackPanel>
     </Grid>
-
+</Border>
 </Window>

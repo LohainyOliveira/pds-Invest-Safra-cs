@@ -7,11 +7,11 @@
         mc:Ignorable="d"
          xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         Title="CadastrarRecebimentoWindow"
-        Height="560" Width="1080" WindowStartupLocation="CenterScreen" WindowStyle="None"
+        Height="560" Width="1000" WindowStartupLocation="CenterScreen" WindowStyle="None"
         AllowsTransparency="True" Background="Transparent">
 
 
-    <Border Background="White" CornerRadius="30" MouseDown="Border_MouseDown" MouseLeftButtonDown="Border_MouseLeftButtonDown">
+    <Border CornerRadius="30" Background="#f7fbfc" MouseDown="Border_MouseDown" MouseLeftButtonDown="Border_MouseLeftButtonDown" Margin="0,0,-52,0">
         <Grid Margin="0,0,0,-28" RenderTransformOrigin="0.5,0.5">
 
             <Grid.RenderTransform>
@@ -28,9 +28,7 @@
             </Grid.RowDefinitions>
 
             <Grid Grid.RowSpan="3" Margin="0,-5,0,10">
-                <Grid.Background>
-                    <ImageBrush ImageSource="/Imagens/ImgDesfocada2.png"/>
-                </Grid.Background>
+                
 
                 <Grid Grid.Row="0">
                     <Grid.ColumnDefinitions>
@@ -38,7 +36,7 @@
                         <ColumnDefinition Width="17*"/>
                         <ColumnDefinition Width="17*"/>
                     </Grid.ColumnDefinitions>
-                    <Image HorizontalAlignment="Left" Height="200" Margin="38,15,0,0" VerticalAlignment="Top" Width="136" Source="/Imagens/LogoCanto.png"/>
+                    <Image HorizontalAlignment="Left" Height="200" Margin="38,15,0,0" VerticalAlignment="Top" Width="170" Source="/Imagens/LogoCanto.png"/>
                     <Label  Content="Cadastrar Recebimento" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Malik" FontSize="24" Foreground="#EFA82E" FontWeight="Bold" Height="59" Width="292" RenderTransformOrigin="0.336,0.452" Margin="423,47,0,0"/>
                     <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Right">
                         <Button Style="{StaticResource topButton}"  Height="40"  x:Name="btSair" Width="48" Click="btSair_Click">
