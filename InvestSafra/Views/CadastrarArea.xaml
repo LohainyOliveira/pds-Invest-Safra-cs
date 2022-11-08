@@ -73,7 +73,7 @@
                     materialDesign:HintAssist.Hint="Metros"
                     x:Name="txtMetros" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
-                    Width="209" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
+                    Width="209" Background="#f7fbfc" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
                         <TextBox 
                 
@@ -84,7 +84,7 @@
                     materialDesign:HintAssist.Hint="Descrição"
                     x:Name="txtDescricao" Padding="16" 
                     TextWrapping="Wrap" 
-                    Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
+                    Width="208" Background="#f7fbfc" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
 
 
@@ -99,7 +99,7 @@
                     materialDesign:HintAssist.Hint="Localização"
                     x:Name="txtLocalizacao" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
-                    Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
+                    Width="208" Background="#f7fbfc" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
                         <TextBox 
                     
@@ -110,7 +110,7 @@
                     materialDesign:HintAssist.Hint="Nome do Terreno"
                     x:Name="txtNomeTerreno" Padding="16" 
                     TextWrapping="Wrap" 
-                    Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
+                    Width="208" Background="#f7fbfc" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
 
 
@@ -126,7 +126,7 @@
                     materialDesign:HintAssist.Hint="CNPJ"
                     x:Name="txtcnpj" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
-                    Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
+                    Width="208" Background="#f7fbfc" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
                         <TextBox 
                     
@@ -137,7 +137,7 @@
                     materialDesign:HintAssist.Hint="Responsável"
                     x:Name="txtresponsavel" Padding="16" 
                     TextWrapping="Wrap" 
-                    Width="209" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow" TextChanged="txtresponsavel_TextChanged"
+                    Width="209" Background="#f7fbfc" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow" TextChanged="txtresponsavel_TextChanged"
                   />
 
 

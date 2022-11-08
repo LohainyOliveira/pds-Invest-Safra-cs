@@ -48,7 +48,7 @@
                         <ComboBox
                     materialDesign:HintAssist.Hint="Tipo Insumo" 
                     Style="{StaticResource MaterialDesignOutlinedComboBox}"   
-                    Background="#0F040302" FontFamily="Arial" FontWeight="Bold"
+                    Background="#f7fbfc" FontFamily="Arial" FontWeight="Bold"
                     x:Name="cbTipoInsumo" Padding="8"  Width="208" Height="58">
                             <ComboBoxItem/>
                             <ComboBoxItem Content="Natural"/>
@@ -64,7 +64,7 @@
                     materialDesign:HintAssist.Hint="Nome"
                     x:Name="txtNome" Padding="16" 
                     TextWrapping="Wrap" 
-                    Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
+                    Width="208" Background="#f7fbfc" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
 
 
@@ -81,7 +81,7 @@
                     materialDesign:HintAssist.Hint="Descrição"
                     x:Name="txtDescricao1" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
-                    Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
+                    Width="208" Background="#f7fbfc" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
 
 
@@ -89,7 +89,7 @@
                     materialDesign:HintAssist.Hint="Medida" 
                     Style="{StaticResource MaterialDesignOutlinedComboBox}"
                     HorizontalAlignment="Center"   
-                    Background="#0F040302" FontFamily="Arial" FontWeight="Bold"
+                    Background="#f7fbfc" FontFamily="Arial" FontWeight="Bold"
                     x:Name="cbMedida" Padding="8"  Width="208" Grid.Column="1" Grid.Row="1" Height="58">
                             <ComboBoxItem></ComboBoxItem>
                             <ComboBoxItem>Feminino</ComboBoxItem>
@@ -108,7 +108,7 @@
                     materialDesign:HintAssist.Hint="Quantidade"
                     x:Name="txtQuantidade" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
-                    Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
+                    Width="208" Background="#f7fbfc" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
                         <TextBox 
                     
@@ -119,7 +119,7 @@
                     materialDesign:HintAssist.Hint="Valor"
                     x:Name="txtValor" Padding="16" 
                     TextWrapping="Wrap" 
-                    Width="209" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
+                    Width="209" Background="#f7fbfc" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
 
 

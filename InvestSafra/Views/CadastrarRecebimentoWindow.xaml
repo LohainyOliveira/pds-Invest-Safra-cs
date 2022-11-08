@@ -60,7 +60,7 @@
                     materialDesign:HintAssist.Hint="Venda"
                     x:Name="txtVenda" Padding="16" 
                     TextWrapping="Wrap" 
-                    Width="209" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
+                    Width="209" Background="#f7fbfc" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                      />
                         <DatePicker 
                     x:Name="dtPikerDataRecebimento"
@@ -69,15 +69,7 @@
                        Width="260" Height="60" 
                             Margin="70 0 0 0"/>
 
-
-
-
-
                     </StackPanel>
-
-
-
-
 
 
                     <Grid Margin="0,465,10,10">
