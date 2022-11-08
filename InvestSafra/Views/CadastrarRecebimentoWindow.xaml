@@ -39,7 +39,7 @@
                     <Image HorizontalAlignment="Left" Height="200" Margin="38,15,0,0" VerticalAlignment="Top" Width="170" Source="/Imagens/LogoCanto.png"/>
                     <Label  Content="Cadastrar Recebimento" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Malik" FontSize="24" Foreground="#EFA82E" FontWeight="Bold" Height="59" Width="292" RenderTransformOrigin="0.336,0.452" Margin="423,47,0,0"/>
                     <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Right">
-                        <Button Style="{StaticResource topButton}"  Height="40"  x:Name="btSair" Width="48" Click="btSair_Click">
+                        <Button Style="{StaticResource topButton}"  Height="51"   Margin="0 20 0 0" x:Name="btSair" Width="48" Click="btSair_Click">
                             <Button.Background>
                                 <ImageBrush ImageSource="/Icons/logout.png"/>
                             </Button.Background>

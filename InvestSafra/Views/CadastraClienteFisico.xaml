@@ -210,7 +210,7 @@
             </Grid>
 
             <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Right">
-                <Button Style="{StaticResource topButton}"  Height="40"  x:Name="btSair" Width="48" Click="btSair_Click">
+                <Button Style="{StaticResource topButton}"  Height="51"  x:Name="btSair"  Width="48"   Click="btSair_Click">
                     <Button.Background>
                         <ImageBrush ImageSource="/Icons/logout.png"/>
                     </Button.Background>
