@@ -16,6 +16,7 @@ using System.Windows.Threading;
 using MS.Internal.WindowsBase;
 using InvestSafra.Helpers;
 using InvestSafra.Database;
+using InvestSafra.Models;
 
 namespace InvestSafra.Views
 {
@@ -43,16 +44,28 @@ namespace InvestSafra.Views
 
 		private void btLogar_Click(object sender, RoutedEventArgs e)
 		{
-			try
-            {
+			string usuario = txtUsuario.Text;
+			string senha = psSenha.Password.ToString();
 
-            }
-			catch (Exception ex)
-            {
-				MessageBox.Show(ex.Message);
+			if (Usuario.Login(usuario, senha))
+			{
+				MenuWindow form = new MenuWindow();
 
-            }
-          
+				this.Close();
+				form.ShowDialog();
+			}
+			else
+			{
+				MessageBox.Show("Usuario e/ou senha incorretos! Tente novamente", "Autorização negada", MessageBoxButton.OK, MessageBoxImage.Warning);
+				_ = txtUsuario.Focus();
+			}
+			
+
+		}
+
+        private void btCadastrar_Click(object sender, RoutedEventArgs e)
+        {
+			
         }
-	}
+    }
 }

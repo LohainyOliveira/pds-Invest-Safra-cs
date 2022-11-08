@@ -121,6 +121,7 @@ namespace InvestSafra
 		private void btEntrar_Click_1(object sender, RoutedEventArgs e)
 		{
 			Entrar form = new Entrar();
+			this.Close();
 			form.ShowDialog();
 
 		}
