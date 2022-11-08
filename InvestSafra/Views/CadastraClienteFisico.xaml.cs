@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using InvestSafra.Models;
 
 namespace InvestSafra.Views
 {
@@ -19,11 +20,116 @@ namespace InvestSafra.Views
     /// </summary>
     public partial class CadastraClienteFisico : Window
     {
+        ClienteFisico _clienteF = new ClienteFisico();
         public CadastraClienteFisico()
         {
             InitializeComponent();
+            Loaded += ClienteFisicoFormWindow_Loaded;
         }
-        
+
+        public CadastraClienteFisico(ClienteFisico clienteJ)
+        {
+            InitializeComponent();
+
+            _clienteF = clienteJ;
+            Loaded += ClienteFisicoFormWindow_Loaded;
+
+        }
+
+
+        private void ClienteFisicoFormWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            txtNomeCompleto.Text = _clienteF.Nome;
+            txtCEP.Text = _clienteF.CEP;
+            txtRg.Text = _clienteF.RG;
+            txtBairro.Text = _clienteF.Bairro;
+            txtCPF.Text = _clienteF.CEP;
+            txtEmail.Text = _clienteF.Email;
+            txtMunicipio.Text = _clienteF.Cidade;
+            txtTelefone.Text = _clienteF.Telefone;
+
+        }
+
+
+        private void btLimpar_Click(object sender, RoutedEventArgs e)
+        {
+            txtBairro.Clear();
+            txtComplemento.Clear();
+            txtCPF.Clear();
+            txtEmail.Clear();
+            txtNomeCompleto.Clear();
+            txtRg.Clear();
+            txtRua.Clear();
+            txtMunicipio.Clear();
+            txtCEP.Clear();
+            txtTelefone.Clear();
+            cbEstado.SelectedItem = null;
+            cbSexo.SelectedItem = null;
+
+            ExibirMensagemLimpar();
+        }
+
+        private void ExibirMensagemLimpar()
+        {
+            MessageBox.Show($"Campos Limpos com Sucesso", "Limpeza Concluida",
+                MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
+        private void ExibirMensagemSalvar()
+        {
+            MessageBox.Show($"Campos Salvos com Sucesso!", "Registros Salvos",
+                MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
+        private void btSalvar_Click(object sender, RoutedEventArgs e)
+        {
+            _clienteF.Nome = txtNomeCompleto.Text;
+            _clienteF.CEP = txtCEP.Text;
+            _clienteF.Bairro = txtBairro.Text;
+            _clienteF.Cidade = txtMunicipio.Text;
+            _clienteF.Complemento = txtComplemento.Text;
+            _clienteF.CPF = txtCPF.Text;
+            _clienteF.Email = txtEmail.Text;
+            _clienteF.RG = txtRg.Text;
+            _clienteF.Rua = txtRua.Text;
+            _clienteF.Telefone = txtTelefone.Text;
+            _clienteF.Estado = cbEstado.Text;
+            _clienteF.Sexo = cbSexo.Text;
+
+            try
+            {
+                var dao = new ClienteFisicoDAO();
+
+                if (_clienteF.Id > 0)
+                {
+                    dao.Update(_clienteF);
+                }
+                else
+                {
+                    dao.Insert(_clienteF);
+                }
+
+                ExibirMensagemSalvar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            txtBairro.Clear();
+            txtComplemento.Clear();
+            txtCPF.Clear();
+            txtEmail.Clear();
+            txtNomeCompleto.Clear();
+            txtRg.Clear();
+            txtRua.Clear();
+            txtMunicipio.Clear();
+            txtCEP.Clear();
+            txtTelefone.Clear();
+            cbEstado.SelectedItem = null;
+            cbSexo.SelectedItem = null;
+
+        }
 
 
 
@@ -57,17 +163,8 @@ namespace InvestSafra.Views
                 }
             }
         }
+
         private void btSair_Click(object sender, RoutedEventArgs e)
-        {
-            DialogResult = false;
-        }
-
-        private void btSalvar_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void btLimpar_Click(object sender, RoutedEventArgs e)
         {
 
         }

@@ -13,7 +13,7 @@
         TextOptions.TextRenderingMode="Auto"
         FontFamily="{DynamicResource MaterialDesignFont}"
        
-        Height="720" Width="1000" WindowStartupLocation="CenterScreen" WindowStyle="None"
+        Height="820" Width="1172" WindowStartupLocation="CenterScreen" WindowStyle="None"
         AllowsTransparency="True" Background="Transparent">
     <Border CornerRadius="30" Background="#f7fbfc" MouseDown="Border_MouseDown" MouseLeftButtonDown="Border_MouseLeftButtonDown">
         <Grid>
@@ -30,7 +30,7 @@
                     <ColumnDefinition Width="17*"/>
                 </Grid.ColumnDefinitions>
                 <Image HorizontalAlignment="Left" Height="200" Margin="38,15,0,0" VerticalAlignment="Top" Width="170" Source="/Imagens/LogoCanto.png"/>
-                <Label  Content="Cadastro Cliente Jurídico " HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Malik" FontSize="24" Foreground="#EFA82E" FontWeight="Bold" Height="50" Width="312" RenderTransformOrigin="0.326,0.452" Margin="376,0,0,0"/>
+                <Label  Content="Cadastro Cliente " HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Malik" FontSize="24" Foreground="#EFA82E" FontWeight="Bold" Height="50" Width="312" RenderTransformOrigin="0.326,0.452" Margin="376,0,0,0"/>
             </Grid>
 
             <Grid VerticalAlignment="Top" Grid.Row="1" HorizontalAlignment="Center" >
@@ -43,7 +43,7 @@
                     materialDesign:HintAssist.Hint="Nome Completo"
                     x:Name="txtNomeCompleto" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
-                    Width="209" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
+                    Width="209" Background="#f7fbfc" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
                     <TextBox 
                 
@@ -54,14 +54,14 @@
                     materialDesign:HintAssist.Hint="CPF"
                     x:Name="txtCPF" Padding="16" 
                     TextWrapping="Wrap" 
-                    Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
+                    Width="208" Background="#f7fbfc" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
 
                     <ComboBox
                     materialDesign:HintAssist.Hint="Sexo" 
                     Style="{StaticResource MaterialDesignOutlinedComboBox}"
                     HorizontalAlignment="Center"   
-                    Background="#0F040302" FontFamily="Arial" FontWeight="Bold"
+                    Background="#f7fbfc" FontFamily="Arial" FontWeight="Bold"
                     x:Name="cbSexo" Padding="8"  Width="208" Grid.Column="1" Grid.Row="1" Height="58">
                         <ComboBoxItem></ComboBoxItem>
                         <ComboBoxItem>Feminino</ComboBoxItem>
@@ -79,7 +79,7 @@
                     materialDesign:HintAssist.Hint="Email"
                     x:Name="txtEmail" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
-                    Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
+                    Width="208" Background="#f7fbfc" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
                     <TextBox 
                     
@@ -90,7 +90,7 @@
                     materialDesign:HintAssist.Hint="RG"
                     x:Name="txtRg" Padding="16" 
                     TextWrapping="Wrap" 
-                    Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
+                    Width="208" Background="#f7fbfc" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
 
                     <TextBox 
@@ -100,7 +100,7 @@
                     materialDesign:HintAssist.Hint="Telefone"
                     x:Name="txtTelefone" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
-                    Width="206" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
+                    Width="206" Background="#f7fbfc" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
 
                 </StackPanel>
@@ -114,12 +114,12 @@
                     materialDesign:HintAssist.Hint="Município"
                     x:Name="txtMunicipio" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
-                    Width="209" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
+                    Width="209" Background="#f7fbfc" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
                     <ComboBox
                     materialDesign:HintAssist.Hint="Estado" 
                     Style="{StaticResource MaterialDesignOutlinedComboBox}"   
-                    Background="#0F040302" FontFamily="Arial" FontWeight="Bold"
+                    Background="#f7fbfc" FontFamily="Arial" FontWeight="Bold"
                     x:Name="cbEstado" Padding="8"  Margin="10 0 0 0" Width="205" Grid.Column="1" Grid.Row="1" Height="58">
 
                         <ComboBoxItem></ComboBoxItem>
@@ -159,7 +159,7 @@
                     materialDesign:HintAssist.Hint="CEP"
                     x:Name="txtCEP" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" Margin="50 0 0 0" 
-                    Width="210" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
+                    Width="210" Background="#f7fbfc" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
 
 
@@ -174,7 +174,7 @@
                     materialDesign:HintAssist.Hint="Rua"
                     x:Name="txtRua" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
-                    Width="209" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
+                    Width="209" Background="#f7fbfc" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
                     <TextBox 
                      Style="{StaticResource MaterialDesignOutlinedTextBox}"
@@ -184,7 +184,7 @@
                     materialDesign:HintAssist.Hint="Bairro"
                     x:Name="txtBairro" Padding="16" 
                     TextWrapping="Wrap" 
-                    Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
+                    Width="208" Background="#f7fbfc" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
 
                     <TextBox 
@@ -194,7 +194,7 @@
                     materialDesign:HintAssist.Hint="Complemento"
                     x:Name="txtComplemento" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
-                    Width="206" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
+                    Width="206" Background="#f7fbfc" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
 
 
@@ -202,11 +202,12 @@
 
 
 
+
             </Grid>
 
             <Grid Grid.Row="1" Margin="0,517,10,30" Grid.RowSpan="2">
                 <Button x:Name="btSalvar" FontSize="19" Content="Salvar" Height="40" Width="119" HorizontalAlignment="Right" Margin="0,-45,48,0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Click="btSalvar_Click" />
-                <Button x:Name="btLimpar" FontSize="19" Content="Limpar" Height="40" Width="119" HorizontalAlignment="Left" Margin="670,-90,0,1" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" VerticalAlignment="Bottom" Click="btLimpar_Click"/>
+                <Button x:Name="btLimpar" FontSize="19" Content="Limpar" Height="40" Width="119" HorizontalAlignment="Left" Margin="842,0,0,46" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" VerticalAlignment="Bottom" Click="btLimpar_Click"/>
             </Grid>
 
             <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Right">
@@ -216,6 +217,23 @@
                     </Button.Background>
                 </Button>
             </StackPanel>
+            <TextBox 
+                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                    AcceptsReturn="True"
+                    MaxWidth="400"
+                    materialDesign:HintAssist.Hint="Usuário"
+                    x:Name="txtUsuario" Padding="16" Grid.Row="1" 
+                    TextWrapping="Wrap" VerticalAlignment="Top" 
+                    Width="206" Background="#f7fbfc" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow" Margin="210,452,756,0"
+                  />
+
+            <PasswordBox 
+           Style="{StaticResource MaterialDesignOutlinedPasswordBox}"
+                            MaxWidth="700" 
+                            Margin="480,452,481,63"
+                            materialDesign:HintAssist.Hint="Senha"
+                            x:Name="psSenha" Padding="16" Grid.Row="1" 
+                            Background="#f7fbfc" FontFamily="Arial" FontSize="14" FontWeight="Bold" Cursor="Arrow"/>
         </Grid>
     </Border>
 </Window>
