@@ -15,7 +15,7 @@
         Height="570" Width="1000" WindowStartupLocation="CenterScreen" WindowStyle="None"
         AllowsTransparency="True" Background="Transparent">
 
-    <Border Background="White" CornerRadius="30" MouseDown="Border_MouseDown" MouseLeftButtonDown="Border_MouseLeftButtonDown">
+    <Border CornerRadius="30" Background="#f7fbfc" MouseDown="Border_MouseDown" MouseLeftButtonDown="Border_MouseLeftButtonDown" Margin="0,0,-52,0">
 
         <Grid Margin="0,0,0,-28" RenderTransformOrigin="0.5,0.5">
         <Grid.RenderTransform>
@@ -32,18 +32,15 @@
             <RowDefinition Height="115"/>
         </Grid.RowDefinitions>
 
-        <Grid Grid.RowSpan="3" Margin="0,0,0,10">
-            <Grid.Background>
-                <ImageBrush ImageSource="/Imagens/ImgDesfocada2.png"/>
-            </Grid.Background>
+            <Grid Grid.RowSpan="3" Margin="0,0,0,10">
 
-            <Grid Grid.Row="0">
+                <Grid Grid.Row="0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="1538*"/>
                     <ColumnDefinition Width="17*"/>
                     <ColumnDefinition Width="17*"/>
                 </Grid.ColumnDefinitions>
-                <Image HorizontalAlignment="Left" Height="200" Margin="38,15,0,0" VerticalAlignment="Top" Width="136" Source="/Imagens/LogoCanto.png"/>
+                <Image HorizontalAlignment="Left" Height="200" Margin="38,15,0,0" VerticalAlignment="Top" Width="170" Source="/Imagens/LogoCanto.png"/>
                 <Label  Content="Clima da Fazenda" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Malik" FontSize="24" Foreground="#EFA82E" FontWeight="Bold" Height="49" Width="292" RenderTransformOrigin="0.336,0.452" Margin="361,45,0,0"/>
                 </Grid>
 

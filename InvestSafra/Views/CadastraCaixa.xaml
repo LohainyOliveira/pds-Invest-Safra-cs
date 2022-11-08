@@ -1,10 +1,11 @@
-﻿<Window x:Class="InvestSafra.Views.ControDeEstoque"
+﻿<Window x:Class="InvestSafra.Views.CadastraCaixa"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:InvestSafra.Views"
         mc:Ignorable="d"
+        xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
@@ -12,36 +13,54 @@
         TextOptions.TextFormattingMode="Ideal" 
         TextOptions.TextRenderingMode="Auto"
         FontFamily="{DynamicResource MaterialDesignFont}"
-        Height="570" Width="1000" WindowStartupLocation="CenterScreen" WindowStyle="None"
-        AllowsTransparency="True" Background="Transparent">
+      
+        Height="560" Width="1080" WindowStartupLocation="CenterScreen" Background="Transparent" Visibility="Visible" AllowsTransparency="True" WindowStyle="None">
 
-    <Border CornerRadius="30" Background="#f7fbfc" MouseDown="Border_MouseDown" MouseLeftButtonDown="Border_MouseLeftButtonDown" Margin="0,0,-52,0">
+    <Border CornerRadius="30" Background="#f7fbfc" MouseDown="Border_MouseDown" MouseLeftButtonDown="Border_MouseLeftButtonDown">
+
         <Grid Margin="0,0,0,-28" RenderTransformOrigin="0.5,0.5">
+
             <Grid.RenderTransform>
                 <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
                     <RotateTransform Angle="0.043"/>
                     <TranslateTransform/>
                 </TransformGroup>
             </Grid.RenderTransform>
+
             <Grid.RowDefinitions>
                 <RowDefinition Height="115"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="115"/>
             </Grid.RowDefinitions>
 
-            <Grid Grid.RowSpan="3" Margin="0,0,0,10">
+            <Grid Grid.RowSpan="3" Margin="0,-5,0,10">
 
-                <Grid Grid.Row="0">
+
+                <Grid Background="Transparent" Grid.Row="0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="1538*"/>
                         <ColumnDefinition Width="17*"/>
                         <ColumnDefinition Width="17*"/>
                     </Grid.ColumnDefinitions>
                     <Image HorizontalAlignment="Left" Height="200" Margin="38,15,0,0" VerticalAlignment="Top" Width="170" Source="/Imagens/LogoCanto.png"/>
-                    <Label  Content="Controle de Estoque" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Malik" FontSize="24" Foreground="#EFA82E" FontWeight="Bold" Height="49" Width="292" RenderTransformOrigin="0.336,0.452" Margin="338,44,0,0"/>
+                    <Image HorizontalAlignment="Right" Height="172" VerticalAlignment="Top" Width="173"  Grid.ColumnSpan="2" Margin="0,0,11,0">
+                        <Image.OpacityMask>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="Black"/>
+                                <GradientStop Color="White" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Image.OpacityMask>
+                    </Image>
+                    <Label  Content="Cadastro de Caixa" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Malik" FontSize="24" Foreground="#EFA82E" FontWeight="Bold" Height="59" Width="292" RenderTransformOrigin="0.336,0.452" Margin="423,47,0,0"/>
+                    <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Right">
+                        <Button Style="{StaticResource topButton}"  Height="51"  x:Name="btSair" Width="48" Margin="0 10 0 0" >
+                            <Button.Background>
+                                <ImageBrush ImageSource="/Icons/logout.png"/>
+                            </Button.Background>
+                        </Button>
+                    </StackPanel>
                 </Grid>
+
 
                 <Grid VerticalAlignment="Top" HorizontalAlignment="Center" Height="535" >
                     <StackPanel Orientation="Horizontal" Margin="0 0 60 200">
@@ -50,8 +69,8 @@
                     AcceptsReturn="True"
                     MaxWidth="400"
                     Margin="80 0 50 0"
-                    materialDesign:HintAssist.Hint="Quantidade de Sementes"
-                    x:Name="txtQuantSementes" Padding="16" Grid.Row="1" 
+                    materialDesign:HintAssist.Hint="Número"
+                    x:Name="txtNumero" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
                     Width="209" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
@@ -61,13 +80,11 @@
                     AcceptsReturn="True"
                     MaxWidth="400"
                     Margin="10 0 50 0"
-                    materialDesign:HintAssist.Hint="Quantidade de Insumos"
-                    x:Name="txtQuantInsumos" Padding="16" 
+                    materialDesign:HintAssist.Hint="Saldo inicial"
+                    x:Name="txtSaldoInicial" Padding="16" 
                     TextWrapping="Wrap" 
                     Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
-
-
 
 
                     </StackPanel>
@@ -78,8 +95,8 @@
                     AcceptsReturn="True"
                     MaxWidth="400"
                     Margin="80 0 50 0"
-                    materialDesign:HintAssist.Hint="Tipos de Insumos"
-                    x:Name="txtTipoInsumo" Padding="16" Grid.Row="1" 
+                    materialDesign:HintAssist.Hint="Troco"
+                    x:Name="txtTroco" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
                     Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
@@ -89,8 +106,8 @@
                     AcceptsReturn="True"
                     MaxWidth="400"
                     Margin="10 0 50 0"
-                    materialDesign:HintAssist.Hint="Descrição"
-                    x:Name="txtDescricao" Padding="16" 
+                    materialDesign:HintAssist.Hint="Valor Crédito"
+                    x:Name="txtValorcredito" Padding="16" 
                     TextWrapping="Wrap" 
                     Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
@@ -104,14 +121,42 @@
                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     AcceptsReturn="True"
                     MaxWidth="400"
-                    Margin="220 0 50 0"
-                    materialDesign:HintAssist.Hint="Medida"
-                    x:Name="txtMedida" Padding="16" Grid.Row="1" 
+                    Margin="80 0 50 0"
+                    materialDesign:HintAssist.Hint="Valor Débito"
+                    x:Name="txtValorDebito" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
-                    Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Hand"
+                    Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
+                        <TextBox 
+                    
+                Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                    AcceptsReturn="True"
+                    MaxWidth="400"
+                    Margin="10 0 50 0"
+                    materialDesign:HintAssist.Hint="Saldo Final"
+                    x:Name="txtSaldofinal" Padding="16" 
+                    TextWrapping="Wrap" 
+                    Width="209" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow" 
+                  />
+                    </StackPanel>
 
 
+                    <StackPanel Orientation="Horizontal" Margin="0 400 60 0">
+                        <TextBox 
+                Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                    AcceptsReturn="True"
+                    MaxWidth="400"
+                    Margin="80 0 50 0"
+                    materialDesign:HintAssist.Hint="Descrição"
+                    x:Name="txtDescricao" Padding="16" Grid.Row="1" 
+                    TextWrapping="Wrap" VerticalAlignment="Center" 
+                    Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
+                  />
+                        <DatePicker 
+                       x:Name="dtDia"
+                       materialDesign:HintAssist.Hint="Data" 
+                       Style="{StaticResource MaterialDesignOutlinedDatePicker}"
+                       Width="206" Height="60" />
 
                     </StackPanel>
 
@@ -125,8 +170,8 @@
 
                         <Grid Margin="334,7,-137,-7" Grid.ColumnSpan="4">
                             <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
-                                <Button x:Name="btSalvar" FontSize="19" Content="Salvar" Height="40" Width="119"  Margin="0,0,20,0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Grid.Column="2" Grid.ColumnSpan="2"/>
-                                <Button x:Name="btCancelar" FontSize="19" Content="Cancelar" Height="40" Width="119"  Margin="0,0,0,0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Grid.ColumnSpan="4" Click="btCancelar_Click"/>
+                                <Button x:Name="btSalvar" FontSize="19" Content="Salvar" Height="40" Width="119"  Margin="0,20,20,0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Grid.Column="2" Grid.ColumnSpan="2" />
+                                <Button x:Name="btCancelar" FontSize="19" Content="Limpar" Height="40" Width="119"  Margin="0,20,0,0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Grid.ColumnSpan="4" />
                             </StackPanel>
                         </Grid>
                     </Grid>
@@ -134,14 +179,8 @@
 
                 </Grid>
             </Grid>
-            <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Right">
-                <Button Style="{StaticResource topButton}"  Height="40"  x:Name="btSair" Width="48" Click="btSair_Click">
-                    <Button.Background>
-                        <ImageBrush ImageSource="/Icons/logout.png"/>
-                    </Button.Background>
-                </Button>
-            </StackPanel>
         </Grid>
-    </Border>
-</Window>
 
+    </Border>
+
+</Window>

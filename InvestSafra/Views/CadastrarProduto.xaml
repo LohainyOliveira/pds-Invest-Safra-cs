@@ -12,40 +12,41 @@
         TextOptions.TextFormattingMode="Ideal" 
         TextOptions.TextRenderingMode="Auto"
         FontFamily="{DynamicResource MaterialDesignFont}"
-        Title="Produto" Height="542" Width="953">
-    <Grid>
+        Height="520" Width="900" WindowStartupLocation="CenterScreen" WindowStyle="None"
+        AllowsTransparency="True" Background="Transparent">
 
-        <Grid.RenderTransform>
-            <TransformGroup>
-                <RotateTransform Angle="0.043"/>
-                <TranslateTransform/>
-            </TransformGroup>
-        </Grid.RenderTransform>
+    <Border CornerRadius="30" Background="#f7fbfc" MouseDown="Border_MouseDown" MouseLeftButtonDown="Border_MouseLeftButtonDown" Margin="0,0,-52,0">
 
-        <Grid.RowDefinitions>
-            <RowDefinition Height="115"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="115"/>
-        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.RenderTransform>
+                <TransformGroup>
+                    <RotateTransform Angle="0.043"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Grid.RenderTransform>
 
-        <Grid Grid.RowSpan="3" Margin="0,0,0,-31">
-            <Grid.Background>
-                <ImageBrush ImageSource="/Imagens/ImgDesfocada2.png"/>
-            </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="115"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="115"/>
+            </Grid.RowDefinitions>
 
-            <Grid Grid.Row="0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="1538*"/>
-                    <ColumnDefinition Width="17*"/>
-                    <ColumnDefinition Width="17*"/>
-                </Grid.ColumnDefinitions>
-                <Image HorizontalAlignment="Left" Height="100" Margin="38,15,0,0" VerticalAlignment="Top" Width="136" Source="/Imagens/LogoCanto.png"/>
-                <Label  Content="Cadastrar Produtos" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Malik" FontSize="24" Foreground="#EFA82E" FontWeight="Bold" Height="49" Width="292" RenderTransformOrigin="0.336,0.452" Margin="354,44,0,0"/>
-            </Grid>
+            <Grid Grid.RowSpan="3" Margin="0,0,0,-31">
 
-            <Grid VerticalAlignment="Top" HorizontalAlignment="Center" Height="535" >
-                <StackPanel Orientation="Horizontal" Margin="0 0 60 200">
-                    <TextBox 
+
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1538*"/>
+                        <ColumnDefinition Width="17*"/>
+                        <ColumnDefinition Width="17*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image HorizontalAlignment="Left" Height="147" Margin="38,15,0,0" VerticalAlignment="Top" Width="170" Source="/Imagens/LogoCanto.png"/>
+                    <Label  Content="Cadastrar Produtos" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Malik" FontSize="24" Foreground="#EFA82E" FontWeight="Bold" Height="49" Width="292" RenderTransformOrigin="0.336,0.452" Margin="354,44,0,0"/>
+                </Grid>
+
+                <Grid VerticalAlignment="Top" HorizontalAlignment="Center" Height="535" >
+                    <StackPanel Orientation="Horizontal" Margin="0 0 60 200">
+                        <TextBox 
                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     AcceptsReturn="True"
                     MaxWidth="400"
@@ -55,7 +56,7 @@
                     TextWrapping="Wrap" VerticalAlignment="Center" 
                     Width="209" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
-                    <TextBox 
+                        <TextBox 
                 
                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     AcceptsReturn="True"
@@ -70,10 +71,10 @@
 
 
 
-                </StackPanel>
+                    </StackPanel>
 
-                <StackPanel Orientation="Horizontal" Margin="0 0 60 0">
-                    <TextBox 
+                    <StackPanel Orientation="Horizontal" Margin="0 0 60 0">
+                        <TextBox 
                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     AcceptsReturn="True"
                     MaxWidth="400"
@@ -83,7 +84,7 @@
                     TextWrapping="Wrap" VerticalAlignment="Center" 
                     Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
-                    <TextBox 
+                        <TextBox 
                     
                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     AcceptsReturn="True"
@@ -97,10 +98,10 @@
 
 
 
-                </StackPanel>
+                    </StackPanel>
 
-                <StackPanel Orientation="Horizontal" Margin="0 200 60 0">
-                    <TextBox 
+                    <StackPanel Orientation="Horizontal" Margin="0 200 60 0">
+                        <TextBox 
                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     AcceptsReturn="True"
                     MaxWidth="400"
@@ -113,33 +114,34 @@
 
 
 
-                </StackPanel>
+                    </StackPanel>
 
-                <Grid Margin="0,465,10,10">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="391*"/>
-                        <ColumnDefinition Width="2*"/>
-                        <ColumnDefinition Width="0*"/>
-                        <ColumnDefinition Width="195*"/>
-                    </Grid.ColumnDefinitions>
+                    <Grid Margin="0,465,10,10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="391*"/>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="0*"/>
+                            <ColumnDefinition Width="195*"/>
+                        </Grid.ColumnDefinitions>
 
-                    <Grid Margin="334,7,-137,-7" Grid.ColumnSpan="4">
-                        <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
-                            <Button x:Name="btSalvar" FontSize="19" Content="Salvar" Height="40" Width="119"  Margin="0,0,20,0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Grid.Column="2" Grid.ColumnSpan="2" Click="btSalvar_Click"/>
-                            <Button x:Name="btCancelar" FontSize="19" Content="Cancelar" Height="40" Width="119"  Margin="0,0,0,0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Grid.ColumnSpan="4"/>
-                        </StackPanel>
+                        <Grid Margin="350,7,-130,-7" Grid.ColumnSpan="4">
+                            <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+                                <Button x:Name="btSalvar" FontSize="19" Content="Salvar" Height="40" Width="119"  Margin="0,-50,20,0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Grid.Column="2" Grid.ColumnSpan="2" Click="btSalvar_Click"/>
+                                <Button x:Name="btCancelar" FontSize="19" Content="Cancelar" Height="40" Width="119"  Margin="0,-50,0,0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Grid.ColumnSpan="4"/>
+                            </StackPanel>
+                        </Grid>
                     </Grid>
+
+
                 </Grid>
-
-
             </Grid>
+            <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Right">
+                <Button Style="{StaticResource topButton}"  Height="40"  x:Name="btSair" Width="48" Click="btSair_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/Icons/logout.png"/>
+                    </Button.Background>
+                </Button>
+            </StackPanel>
         </Grid>
-        <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Right">
-            <Button Style="{StaticResource topButton}"  Height="40"  x:Name="btSair" Width="48" Click="btSair_Click">
-                <Button.Background>
-                    <ImageBrush ImageSource="/Icons/logout.png"/>
-                </Button.Background>
-            </Button>
-        </StackPanel>
-    </Grid>
+    </Border>
 </Window>

@@ -12,11 +12,10 @@
         TextOptions.TextFormattingMode="Ideal" 
         TextOptions.TextRenderingMode="Auto"
         FontFamily="{DynamicResource MaterialDesignFont}"
-       
-        Height="960" Width="1380" WindowStartupLocation="CenterScreen" WindowStyle="None"
+        Height="860" Width="1300" WindowStartupLocation="CenterScreen" WindowStyle="None"
         AllowsTransparency="True" Background="Transparent">
 
-    <Border CornerRadius="30" Background="#f7fbfc" MouseDown="Border_MouseDown" MouseLeftButtonDown="Border_MouseLeftButtonDown">
+    <Border CornerRadius="30" Background="#f7fbfc" MouseDown="Border_MouseDown" MouseLeftButtonDown="Border_MouseLeftButtonDown" Margin="0,0,-52,0">
         <Grid Margin="0,0,-23,-151">
             <Grid.RowDefinitions>
                 <RowDefinition Height="185"/>
@@ -248,8 +247,8 @@
 
             </Grid>
 
-            <Grid Grid.Row="1" Margin="0,517,10,63">
-                <Button x:Name="btSalvar" FontSize="19" Content="Salvar" Height="40" Width="119" HorizontalAlignment="Right" Margin="10 110 50 0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Click="btSalvar_Click"/>
+            <Grid Grid.Row="1" Margin="0,490,10,63">
+                <Button x:Name="btSalvar" FontSize="19" Content="Salvar" Height="40" Width="119" HorizontalAlignment="Right" Margin="10 50 50 0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Click="btSalvar_Click"/>
                 <Button x:Name="btLimpar" FontSize="19" Content="Limpar" Width="119" HorizontalAlignment="Right" Margin="0,113,200,0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Click="btLimpar_Click" Height="40" VerticalAlignment="Top"/>
             </Grid>
             <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Right">

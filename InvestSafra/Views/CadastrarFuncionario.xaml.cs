@@ -123,7 +123,6 @@ namespace InvestSafra.Views
             _funcionario.Complemento = txtComplemento.Text;
             _funcionario.Email = txtEmail.Text;
             _funcionario.Funcao = txtfuncao.Text;
-            _funcionario.Tipo = txtTipo.Text;
             _funcionario.Salario = Convert.ToDouble(txtsalario.Text);
 
            
@@ -162,7 +161,6 @@ namespace InvestSafra.Views
             txtCEP.Clear();
             txtEmail.Clear();
             txtfuncao.Clear();
-            txtTipo.Clear();
             txtsalario.Clear();
         }
         private void ExibirMensagemSalvar()
