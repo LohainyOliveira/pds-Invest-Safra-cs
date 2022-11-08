@@ -203,7 +203,7 @@
                 <Button x:Name="btLimpar" FontSize="19" Content="Limpar" Height="40" Width="119" HorizontalAlignment="Right" Margin="10 -50 200 0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Click="btLimpar_Click"/>
             </Grid>
             <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Right">
-                <Button Style="{StaticResource topButton}"  Height="40"  x:Name="btSair" Width="48" Click="btSair_Click">
+                <Button Style="{StaticResource topButton}"  Height="51"  Margin="0 20 17 0" x:Name="btSair" Width="48" Click="btSair_Click">
                     <Button.Background>
                         <ImageBrush ImageSource="/Icons/logout.png"/>
                     </Button.Background>
