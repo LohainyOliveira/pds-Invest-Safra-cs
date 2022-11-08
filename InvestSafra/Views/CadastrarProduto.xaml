@@ -54,7 +54,7 @@
                     materialDesign:HintAssist.Hint="Nome"
                     x:Name="txtNome" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
-                    Width="209" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
+                    Width="209" Background="#f7fbfc" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
                         <TextBox 
                 
@@ -65,7 +65,7 @@
                     materialDesign:HintAssist.Hint="Descrição"
                     x:Name="txtDescricao" Padding="16" 
                     TextWrapping="Wrap" 
-                    Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
+                    Width="208" Background="#f7fbfc" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
 
 
@@ -82,7 +82,7 @@
                     materialDesign:HintAssist.Hint="Marca"
                     x:Name="txtMarca" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
-                    Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
+                    Width="208" Background="#f7fbfc"  FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
                         <TextBox 
                     
@@ -93,7 +93,7 @@
                     materialDesign:HintAssist.Hint="Quantidade"
                     x:Name="txtQuantidade" Padding="16" 
                     TextWrapping="Wrap" 
-                    Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
+                    Width="208" Background="#f7fbfc" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
 
 
@@ -109,7 +109,7 @@
                     materialDesign:HintAssist.Hint="Valor"
                     x:Name="txtvalor" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
-                    Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
+                    Width="208" Background="#f7fbfc" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
 
 
