@@ -72,7 +72,7 @@
                     materialDesign:HintAssist.Hint="Número"
                     x:Name="txtNumero" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
-                    Width="209" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
+                    Width="209" Background="#f7fbfc" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
                         <TextBox 
                 
@@ -83,7 +83,7 @@
                     materialDesign:HintAssist.Hint="Saldo inicial"
                     x:Name="txtSaldoInicial" Padding="16" 
                     TextWrapping="Wrap" 
-                    Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
+                    Width="208" Background="#f7fbfc" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
 
 
@@ -98,7 +98,7 @@
                     materialDesign:HintAssist.Hint="Troco"
                     x:Name="txtTroco" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
-                    Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
+                    Width="208" Background="#f7fbfc" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
                         <TextBox 
                     
@@ -109,7 +109,7 @@
                     materialDesign:HintAssist.Hint="Valor Crédito"
                     x:Name="txtValorcredito" Padding="16" 
                     TextWrapping="Wrap" 
-                    Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
+                    Width="208" Background="#f7fbfc" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
 
 
@@ -125,7 +125,7 @@
                     materialDesign:HintAssist.Hint="Valor Débito"
                     x:Name="txtValorDebito" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
-                    Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
+                    Width="208" Background="#f7fbfc" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
                         <TextBox 
                     
@@ -136,7 +136,7 @@
                     materialDesign:HintAssist.Hint="Saldo Final"
                     x:Name="txtSaldofinal" Padding="16" 
                     TextWrapping="Wrap" 
-                    Width="209" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow" 
+                    Width="209" Background="#f7fbfc" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow" 
                   />
                     </StackPanel>
 
@@ -150,7 +150,7 @@
                     materialDesign:HintAssist.Hint="Descrição"
                     x:Name="txtDescricao" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
-                    Width="208" Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
+                    Width="208" Background="#f7fbfc" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
                         <DatePicker 
                        x:Name="dtDia"
