@@ -21,6 +21,7 @@ complemento_cliF varchar (100) not null,
 email_cliF varchar (100) not null
 );
 
+
 create table Usuario(
 id_user int primary key auto_increment,
 usuario_user varchar(80),
@@ -28,6 +29,30 @@ senha_user varchar(10),
 id_cliF_fk int,
 foreign key (id_cliF_fk) references Cliente_Fisico (id_cliF)
 );
+
+DELIMITER $$
+CREATE PROCEDURE InserirClienteFisico (nome varchar(100), cpf varchar(100), rg varchar(100), sexo varchar (100), telefone varchar(100), cidade varchar(100), estado varchar(100), 
+rua varchar(100), bairro varchar (100), cep varchar(100), complemento varchar(100), email varchar(100), usuario varchar(80), senha  varchar(10), codigo int)
+BEGIN
+	declare verificacao varchar(100);
+    set verificacao = (select  cpf_cliF from Cliente_Fisico where (cpf_cliF = cpf));
+    set verificacao = (select  usuario_user from usuario where (usuario_user = usuario));
+    set verificacao = (select id_cliF from Cliente_Fisico where (id_cliF = codigo));
+    
+    if(verificacao = '' ) or (verificacao is null) then
+		insert into Cliente_Fisico values (null, nome, cpf, rg, sexo, telefone, cidade, estado, rua, bairro, cep, complemento, email);
+        insert into Usuario values (null, nome, senha, codigo);
+        select "Cadastro realizado com sucesso" as Resultado;
+	else
+		select  "Esse  Usuario já está cadastrado ou as informações são invalidas " as Resultado;
+	end if;
+END;
+
+$$ DELIMITER ;
+
+CALL InserirClienteFisico('Lohainy Teixeira dos Santos oliveira','077.383.422-23','2345.8765','Femenino','(69)99251 6467',
+'Ji-Paraná','RO','Lindcelma alves de jesus','Bosque dos ipes 2','76901-390','Nada a declarar','lohainy@gmalcom','Lohainy','1234',2);
+
 
 create table Cliente_Juridico (
 id_cliJ int primary key auto_increment not null,
