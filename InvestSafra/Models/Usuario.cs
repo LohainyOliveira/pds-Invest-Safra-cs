@@ -12,7 +12,7 @@ namespace InvestSafra.Models
 
         public string UsuarioNome { get; set; }
 
-        public string Senha { private get; set; }
+        public string Senha {  get; set; }
 
         public ClienteFisico Cliente { get; set; }
 

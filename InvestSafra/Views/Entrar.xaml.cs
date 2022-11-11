@@ -65,7 +65,9 @@ namespace InvestSafra.Views
 
         private void btCadastrar_Click(object sender, RoutedEventArgs e)
         {
-			
+			CadastraClienteFisico form = new CadastraClienteFisico();
+			this.Close();
+			form.ShowDialog();
         }
     }
 }

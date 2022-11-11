@@ -10,32 +10,32 @@ namespace InvestSafra.Models
     /// <summary>
     ///     Abstract Class para classes DAO
     /// </summary>
-    /// <typeparam name="I"></typeparam>
-    class AbstractDAO<I>
+    /// <typeparam name="T"></typeparam>
+    class AbstractDAO<T>
     {
         protected Conexao conn = new Conexao();
 
-        public virtual void Delete(I i)
+        public virtual void Delete(T t)
         {
             throw new NotImplementedException();
         }
 
-        public virtual I GetById(int id)
+        public virtual T GetById(int id)
         {
             throw new NotImplementedException();
         }
 
-        public virtual void Insert(I i)
+        public virtual void Insert(T t)
         {
             throw new NotImplementedException();
         }
 
-        public virtual List<I> List()
+        public virtual List<T> List()
         {
             throw new NotImplementedException();
         }
 
-        public virtual void Update(I i)
+        public virtual void Update(T t)
         {
             throw new NotImplementedException();
         }

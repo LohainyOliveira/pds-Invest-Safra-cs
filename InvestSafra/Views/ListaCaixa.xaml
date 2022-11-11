@@ -23,7 +23,7 @@
                 <Icon:PackIconMaterial Kind="Menu" Width="15" Height="15"/>
             </Button>
 
-            <Border Background="#EFA82E" CornerRadius="0 50 0 30" Margin="0,117,0,0">
+            <Border Background="#EFA82E" CornerRadius="0 50 0 02" Margin="0,117,0,0">
                 <DockPanel>
                     <Border Width="80" Height="80" Padding="3" Background="white" CornerRadius="100"
                             DockPanel.Dock="Top" HorizontalAlignment="Center" Margin="0 -30 0 0">
