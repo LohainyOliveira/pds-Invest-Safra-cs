@@ -10,6 +10,30 @@ namespace InvestSafra.Models
 {
     internal class UsuarioDAO: AbstractDAO<Usuario>
     {
+        private static Conexao _conn = new Conexao();
+        public void Insert(ClienteFisico clienteF, int IdCliente)
+        {
+            try
+            {
+                var comando = _conn.Query();
+                comando.CommandText = "Call (@nomeUsu, @senha, @idCliente);";
+
+                comando.Parameters.AddWithValue("@nomeUsu", usuarioNome);
+                comando.Parameters.AddWithValue("@senha", senha);
+                comando.Parameters.AddWithValue("@idCliente", IdCliente);
+
+                var resultado = comando.ExecuteNonQuery();
+
+                if (resultado == 0)
+                {
+                    throw new Exception("Ocorreram erros ao salvar as informações");
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
         public Usuario GetByUsuario(string usuarioNome, string senha)
         {
             try

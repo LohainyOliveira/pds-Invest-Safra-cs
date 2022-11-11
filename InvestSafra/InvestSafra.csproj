@@ -121,6 +121,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Database\Conexao.cs" />
+    <Compile Include="Interface\IDAO.cs" />
     <Compile Include="Models\AbstractDAO.cs" />
     <Compile Include="Models\Area.cs" />
     <Compile Include="Models\AreaDAO.cs" />
@@ -194,9 +195,6 @@
     </Compile>
     <Compile Include="Views\CadastrarRecebimentoWindow.xaml.cs">
       <DependentUpon>CadastrarRecebimentoWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ClienteFisicoWindow.xaml.cs">
-      <DependentUpon>ClienteFisicoWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\CadastrarClienteJuridico.xaml.cs">
       <DependentUpon>CadastrarClienteJuridico.xaml</DependentUpon>
@@ -342,10 +340,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\CadastrarRecebimentoWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\ClienteFisicoWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

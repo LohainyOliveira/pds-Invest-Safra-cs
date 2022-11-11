@@ -13,7 +13,7 @@ namespace InvestSafra.Models
 	{
 
         private static Conexao _conn = new Conexao();
-        public void Insert(ClienteFisico clienteF)
+        public void Insert(ClienteFisico clienteF, Usuario usuario)
         {
 
             try
@@ -44,6 +44,13 @@ namespace InvestSafra.Models
                 {
                     throw new Exception("Ocorreram erros ao salvar as informações");
                 }
+
+                int ClienteF_Id = Convert.ToInt32(comando.LastInsertedId);
+
+                UsuarioDAO usu = new UsuarioDAO();
+                Usuario 
+                usu.Insert(usu., ClienteF_Id);
+
             }
 
 
@@ -52,7 +59,6 @@ namespace InvestSafra.Models
                 throw ex;
             }
         }
-
 
         public List<ClienteFisico> List()
         {

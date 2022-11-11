@@ -38,7 +38,7 @@ namespace InvestSafra.Models
             return false;
         }
 
-        public static int GetFuncionarioId()
+        public static int GetClienteFisicoId()
         {
             return _instance.Cliente.Id;
         }

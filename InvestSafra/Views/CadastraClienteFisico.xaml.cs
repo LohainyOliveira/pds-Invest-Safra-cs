@@ -21,6 +21,7 @@ namespace InvestSafra.Views
     public partial class CadastraClienteFisico : Window
     {
         ClienteFisico _clienteF = new ClienteFisico();
+
         public CadastraClienteFisico()
         {
             InitializeComponent();
@@ -47,6 +48,7 @@ namespace InvestSafra.Views
             txtEmail.Text = _clienteF.Email;
             txtMunicipio.Text = _clienteF.Cidade;
             txtTelefone.Text = _clienteF.Telefone;
+            txtUsuario.Text
 
         }
 

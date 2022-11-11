@@ -70,18 +70,8 @@ namespace InvestSafra
             
         }
 
-        private void btCadastra_Click(object sender, RoutedEventArgs e)
-		{
-			CadastrarMaquinas form = new CadastrarMaquinas();
-			form.ShowDialog();
-		}
-
-		private void btEntrar_Click(object sender, RoutedEventArgs e)
-		{
-			MenuWindow menu = new MenuWindow();
-			menu.ShowDialog();
-		}
-
+        
+		
         private void ListViewItem_Selected(object sender, RoutedEventArgs e)
         {
 
@@ -112,7 +102,7 @@ namespace InvestSafra
 
 		private void btCadastrar_Click(object sender, RoutedEventArgs e)
 		{
-			ClienteFisicoWindow form = new ClienteFisicoWindow();
+			CadastraClienteFisico form = new CadastraClienteFisico();
 			form.ShowDialog();
 
 		}
