@@ -37,7 +37,7 @@
                         <ColumnDefinition Width="17*"/>
                     </Grid.ColumnDefinitions>
                     <Image HorizontalAlignment="Left" Height="200" Margin="38,15,0,0" VerticalAlignment="Top" Width="170" Source="/Imagens/LogoCanto.png"/>
-                    <Label  Content="Cadastrar Recebimento" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Malik" FontSize="24" Foreground="#EFA82E" FontWeight="Bold" Height="59" Width="292" RenderTransformOrigin="0.336,0.452" Margin="423,47,0,0"/>
+                    <Label  Content="Cadastrar Recebimento" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Malik" FontSize="24" Foreground="#EFA82E" FontWeight="Bold" Height="59" Width="292" RenderTransformOrigin="0.336,0.452" Margin="390,47,0,0"/>
                     <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Right">
                         <Button Style="{StaticResource topButton}"  Height="51"   Margin="0 20 0 0" x:Name="btSair" Width="48" Click="btSair_Click">
                             <Button.Background>
@@ -53,11 +53,11 @@
 
 
                     <StackPanel Orientation="Horizontal">
-                        <TextBox VerticalAlignment="Center" HorizontalAlignment="Center" Margin="70 0 0 0"
+                        <TextBox VerticalAlignment="Center" HorizontalAlignment="Center" Margin="130 -110 0 0"
                      Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     AcceptsReturn="True"
                     MaxWidth="400"
-                    materialDesign:HintAssist.Hint="Venda"
+                    materialDesign:HintAssist.Hint="Valor da Venda"
                     x:Name="txtVenda" Padding="16" 
                     TextWrapping="Wrap" 
                     Width="209" Background="#f7fbfc" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
@@ -66,10 +66,25 @@
                     x:Name="dtPikerDataRecebimento"
                        materialDesign:HintAssist.Hint="Data do Recebimento" 
                        Style="{StaticResource MaterialDesignOutlinedDatePicker}"
-                       Width="260" Height="60" 
-                            Margin="70 0 0 0"/>
+                       Width="219" Height="60" 
+                            Margin="70 -110 0 0"/>
+
+
+                        <TextBox VerticalAlignment="Center" HorizontalAlignment="Center" Margin="-497 110 0 0"
+                     Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                    AcceptsReturn="True"
+                    MaxWidth="400"
+                    materialDesign:HintAssist.Hint="Comprador"
+                    x:Name="txtComprador" Padding="16" 
+                    TextWrapping="Wrap" 
+                    Width="209" Background="#f7fbfc" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
+                     />
 
                     </StackPanel>
+                    
+
+                    
+                    
 
 
                     <Grid Margin="0,465,10,10">

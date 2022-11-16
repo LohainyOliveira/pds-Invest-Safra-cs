@@ -41,7 +41,7 @@
                     <ColumnDefinition Width="17*"/>
                 </Grid.ColumnDefinitions>
                 <Image HorizontalAlignment="Left" Height="200" Margin="38,15,0,0" VerticalAlignment="Top" Width="170" Source="/Imagens/LogoCanto.png"/>
-                <Label  Content="Cadastro de Máquinas" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Malik" FontSize="24" Foreground="#EFA82E" FontWeight="Bold" Height="49" Width="292" RenderTransformOrigin="0.336,0.452" Margin="329,44,0,0"/>
+                <Label  Content="Cadastro de Máquinas" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Malik" FontSize="24" Foreground="#EFA82E" FontWeight="Bold" Height="49" Width="292" RenderTransformOrigin="0.336,0.452" Margin="339,44,0,0"/>
                 </Grid>
 
 
@@ -63,8 +63,8 @@
                     AcceptsReturn="True"
                     MaxWidth="400"
                     Margin="10 70 50 0"
-                    materialDesign:HintAssist.Hint="CNPJ"
-                    x:Name="txtCnpj1" Padding="16" 
+                    materialDesign:HintAssist.Hint="Modelo"
+                    x:Name="txtModelo" Padding="16" 
                     TextWrapping="Wrap" 
                     Width="208" Background="#f7fbfc" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
@@ -91,8 +91,8 @@
                     AcceptsReturn="True"
                     MaxWidth="400"
                     Margin="10 70 50 0"
-                    materialDesign:HintAssist.Hint="Valor"
-                    x:Name="txtValor" Padding="16" 
+                    materialDesign:HintAssist.Hint="Quantidade"
+                    x:Name="txtQuantidade" Padding="16" 
                     TextWrapping="Wrap" 
                     Width="208" Background="#f7fbfc" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
