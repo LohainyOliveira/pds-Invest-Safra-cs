@@ -51,12 +51,12 @@
 
                     <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center" Width="400" Height="400">
                         <StackPanel VerticalAlignment="Center" Margin="15">
-                            <ComboBox
+                            <TextBox
                                 materialDesign:HintAssist.Hint="Cliente...." 
-                                Style="{StaticResource MaterialDesignOutlinedComboBox}"   
+                                Style="{StaticResource MaterialDesignOutlinedTextBox}"   
                                 Background="#0F040302" FontFamily="Arial" FontWeight="Bold"
                                 x:Name="cbCliente" Padding="8"  Margin="0 0 0 0" Width="363" Grid.Column="1" Grid.Row="1" Height="52">
-                            </ComboBox>
+                            </TextBox>
                             <TextBox  Style="{StaticResource MaterialDesignOutlinedTextBox}"
                                 AcceptsReturn="True"
                                 MaxWidth="700" 
