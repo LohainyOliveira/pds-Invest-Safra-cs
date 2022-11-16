@@ -46,7 +46,7 @@ namespace InvestSafra.Models
             try
             {
                 var query = conn.Query();
-                query.CommandText = "SELECT * FROM usuario LEFT JOIN Cliente_fisico ON id_cliF = id_cliF_fk " +
+                query.CommandText = "SELECT * FROM usuario LEFT JOIN Cliente_Juridico ON id_cliJ = id_cliJ_fk " +
                     "WHERE usuario_user = @usuario AND senha_user = @senha";
 
                 query.Parameters.AddWithValue("@usuario", usuarioNome);
@@ -61,7 +61,7 @@ namespace InvestSafra.Models
                     usuario = Usuario.GetInstance();
                     usuario.Id = reader.GetInt32("id_user");
                     usuario.UsuarioNome = reader.GetString("usuario_user");
-                    usuario.Cliente = new ClienteFisico() { Id = reader.GetInt32("id_CliF"), Nome = reader.GetString("nome_cliF") };
+                    usuario.Cliente = new ClienteJuridico() { Id = reader.GetInt32("id_CliJ"), Nome = reader.GetString("nome_cliJ") };
                 }
 
                 return usuario;

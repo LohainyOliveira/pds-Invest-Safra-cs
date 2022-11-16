@@ -38,8 +38,7 @@ namespace InvestSafra.Views
 
         private void CompraFormWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            txtDescricao.Text = _compra.Descricao;
-            txtNome.Text = _compra.Nome;
+            
 
 
 
@@ -48,10 +47,7 @@ namespace InvestSafra.Views
         private void btCancelar_Click(object sender, RoutedEventArgs e)
         {
 
-            txtDescricao.Clear();
-            txtNome.Clear();
-            txtQuantidade.Clear();
-            dtPickerDataNascimento.SelectedDate= null;
+          
 
             ExibirMensagemLimpar();
         }
@@ -102,10 +98,7 @@ namespace InvestSafra.Views
 
         private void btSalvar_Click(object sender, RoutedEventArgs e)
         {
-            _compra.Nome = txtNome.Text;
-            _compra.Quantidade = Convert.ToInt32(txtQuantidade.Text);
-            _compra.Descricao = txtDescricao.Text;
-            _compra.Data = dtPickerDataNascimento.SelectedDate;
+            
 
             try
             {

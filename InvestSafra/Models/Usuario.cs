@@ -14,7 +14,7 @@ namespace InvestSafra.Models
 
         public string Senha {  get; set; }
 
-        public ClienteFisico Cliente { get; set; }
+        public ClienteJuridico Cliente { get; set; }
 
         private static Usuario _instance;
 

@@ -12,113 +12,144 @@
         TextOptions.TextFormattingMode="Ideal" 
         TextOptions.TextRenderingMode="Auto"
         FontFamily="{DynamicResource MaterialDesignFont}"
-        Height="560" Width="1000" WindowStartupLocation="CenterScreen" Background="Transparent" Visibility="Visible" AllowsTransparency="True" WindowStyle="None">
+        Height="600" Width="1000" WindowStartupLocation="CenterScreen" Background="Transparent" Visibility="Visible" AllowsTransparency="True" WindowStyle="None">
 
     <Border CornerRadius="30" Background="#f7fbfc" MouseDown="Border_MouseDown" MouseLeftButtonDown="Border_MouseLeftButtonDown">
 
         <Grid Margin="0,0,0,-28" RenderTransformOrigin="0.5,0.5">
-            <Grid.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0.043"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Grid.RenderTransform>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="115"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="115"/>
-            </Grid.RowDefinitions>
 
-            <Grid Grid.RowSpan="3" Margin="0,0,0,10">
-               
 
-                <Grid Grid.Row="0">
+            <Grid Grid.RowSpan="4" Margin="0,0,0,10">
+
+
+                <Grid Grid.Row="0" Margin="12,0,-12,0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="1538*"/>
                         <ColumnDefinition Width="17*"/>
                         <ColumnDefinition Width="17*"/>
                     </Grid.ColumnDefinitions>
                     <Image HorizontalAlignment="Left" Height="200" Margin="38,15,0,0" VerticalAlignment="Top" Width="170" Source="/Imagens/LogoCanto.png"/>
-                    <Label  Content="Cadastro de Compra" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Malik" FontSize="24" Foreground="#EFA82E" FontWeight="Bold" Height="49" Width="292" RenderTransformOrigin="0.336,0.452" Margin="390,45,0,0"/>
-                </Grid>
-
-                <Grid VerticalAlignment="Top" HorizontalAlignment="Center" Height="535" >
-                    <StackPanel Orientation="Horizontal" Margin="0 0 60 200">
-                        <TextBox Style="{StaticResource MaterialDesignOutlinedTextBox}"
-                    AcceptsReturn="True"
-                    MaxWidth="400"
-                    Margin="100 95 50 0"
-                    materialDesign:HintAssist.Hint="Nome"
-                    x:Name="txtNome" Padding="16" Grid.Row="1" 
-                    TextWrapping="Wrap" VerticalAlignment="Center" 
-                    Width="209" Background="#f7fbfc" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow" TextChanged="txtNome_TextChanged"
-                  />
-                        <DatePicker 
-                       x:Name="dtPickerDataNascimento"
-                       materialDesign:HintAssist.Hint="Data " 
-                       Style="{StaticResource MaterialDesignOutlinedDatePicker}"
-                       Width="206" Height="61" Margin="20 95 0 0"/>
-
-                    </StackPanel>
-
-                    <StackPanel Orientation="Horizontal" Margin="0 0 60 0">
-                        <TextBox 
-                Style="{StaticResource MaterialDesignOutlinedTextBox}"
-                    AcceptsReturn="True"
-                    MaxWidth="400"
-                    Margin="100 120 50 0"
-                    materialDesign:HintAssist.Hint="Quantidade"
-                    x:Name="txtQuantidade" Padding="16" Grid.Row="1" 
-                    TextWrapping="Wrap" VerticalAlignment="Center" 
-                    Width="208" Background="#f7fbfc" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
-                  />
-                        <TextBox 
-                    
-                Style="{StaticResource MaterialDesignOutlinedTextBox}"
-                    AcceptsReturn="True"
-                    MaxWidth="400"
-                    Margin="18 120 50 0"
-                    materialDesign:HintAssist.Hint="Descrição"
-                    x:Name="txtDescricao" Padding="16" 
-                    TextWrapping="Wrap" 
-                    Width="208" Background="#f7fbfc" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
-                  />
-
-
-                    </StackPanel>
-
-
-
-                    <Grid Margin="0,465,10,10">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="391*"/>
-                            <ColumnDefinition Width="2*"/>
-                            <ColumnDefinition Width="0*"/>
-                            <ColumnDefinition Width="195*"/>
-                        </Grid.ColumnDefinitions>
-
-                        <Grid Margin="334,7,-137,-7" Grid.ColumnSpan="4">
-                            <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
-                                <Button x:Name="btSalvar" FontSize="19" Content="Salvar" Height="40" Width="119"  Margin="0,0,20,0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Grid.Column="2" Grid.ColumnSpan="2" Click="btSalvar_Click"/>
-                                <Button x:Name="btCancelar" FontSize="19" Content="Cancelar" Height="40" Width="119"  Margin="0,0,0,0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Grid.ColumnSpan="4" Click="btCancelar_Click"/>
-                            </StackPanel>
-                        </Grid>
-                    </Grid>
-
-
-
-
+                    <Label  Content="Cadastro de Compra" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Malik" FontSize="24" Foreground="#EFA82E" FontWeight="Bold" Height="49" Width="292" RenderTransformOrigin="0.336,0.452" Margin="294,51,0,0"/>
                 </Grid>
             </Grid>
-            <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Right">
+            <StackPanel HorizontalAlignment="Left" Margin="1534,0,0,37" Width="66">
                 <Button Style="{StaticResource topButton}"  Height="51"  x:Name="btSair2"  Margin="0 18 18 0" Width="48" Click="btSair_Click">
                     <Button.Background>
                         <ImageBrush ImageSource="/Icons/logout.png"/>
                     </Button.Background>
                 </Button>
             </StackPanel>
+
+
+            <TextBox
+                x:Name="txtPesquisa"
+                materialDesign:HintAssist.Hint="Buscar Insumo ou semente"
+                materialDesign:TextFieldAssist.HasClearButton="True"
+                Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                Text="{Binding Descricao}" Cursor="IBeam" FontFamily="Arial" FontSize="18" FontWeight="Bold" Margin="22,329,172,248" Foreground="Black"/>
+
+            <DatePicker 
+                       x:Name="dtPickerDataCompra"
+                       materialDesign:HintAssist.Hint="Data da Compra" 
+                       Style="{StaticResource MaterialDesignOutlinedDatePicker}"
+                       Width="260" Height="59" Margin="312,211,428,0" VerticalAlignment="Top" Foreground="Black" />
+
+            <DataGrid  ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" RowStyle="{DynamicResource DataGridRowStyle1}" x:Name="dataGridInsumo"  Margin="16,410,16,93" Background="#FFFFEBCC" BorderBrush="#1FECECEC" Foreground="#DD000000">
+                <DataGrid.Columns>
+                    <!-- Começo CheckBox -->
+                    <DataGridCheckBoxColumn CanUserResize="False" Width="auto">
+                        <DataGridCheckBoxColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <CheckBox/>
+                            </DataTemplate>
+                        </DataGridCheckBoxColumn.HeaderTemplate>
+                    </DataGridCheckBoxColumn>
+                    <!-- Fim CheckBox -->
+                    <!-- Começo -->
+                    <DataGridTextColumn Header="#" IsReadOnly="True" CanUserResize="False" Width="auto"/>
+                    <DataGridTemplateColumn Header="Insumos" IsReadOnly="True" Width="*">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Border Width="25" Height="25" CornerRadius="50" Margin="0 0 10 0" Background="Red">
+                                        <TextBlock Text="...." VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Margin=" 0 0 0 1"/>
+                                    </Border>
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <!-- Fim -->
+
+
+
+                    <DataGridTextColumn Header="Nome" Binding="{Binding Nome}"/>
+                    <DataGridTextColumn Header="Tipo" Binding="{Binding Tipo }"/>
+                    <DataGridTextColumn Header="Marca" Binding="{Binding Marca}"/>
+                    <DataGridTextColumn Header="Descrição" Binding="{Binding Descricao}"/>
+
+                    <DataGridTemplateColumn Header="Operation" IsReadOnly="True" Width="*">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Button Style="{StaticResource GridEditButton}">
+                                        <!-- Fim 
+                                        <Icon:PackIconMaterial Kind="PencilOutline" Style="{StaticResource GridButtonIcon}"/>
+                                    </Button>
+                                    <Button Style="{StaticResource GridRemoveButton}">
+                                        <Icon:PackIconMaterial Kind="DeleteOutline" Style="{StaticResource GridButtonIcon}"/>
+                                    -->
+                                    </Button>
+
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
+                </DataGrid.Columns>
+            </DataGrid>
+            <Separator Margin="10,266,10,304" Background="#FFFD9F0C"/>
+
+            <TextBox
+                x:Name="txtQuantidade"
+                materialDesign:HintAssist.Hint="Quantidade"
+                materialDesign:TextFieldAssist.HasClearButton="True"
+                Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                Text="{Binding Descricao}" Cursor="IBeam" FontFamily="Arial" FontSize="18" FontWeight="Bold" Margin="22,212,730,358" Foreground="Black"/>
+
+            <TextBox
+                x:Name="txtDescricao"
+                materialDesign:HintAssist.Hint="Descrição"
+                materialDesign:TextFieldAssist.HasClearButton="True"
+                Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                Text="{Binding Descricao}" Cursor="IBeam" FontFamily="Arial" FontSize="18" FontWeight="Bold" Margin="616,124,16,358" Foreground="#FF060202"/>
+
+
+
+            <Button x:Name="BtnSearch" Margin="862,334,98,254"
+                    Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}"
+                    ToolTip="Adicionar Departamento" 
+                    Background="#EFA82E"     BorderBrush="#FFD8D8D8">
+                <materialDesign:PackIcon Kind="TableSearch" Foreground="Black" />
+            </Button>
+
+
+
+
+            <Button x:Name="btNovoInsumo" FontSize="19"
+                        Content="Adicionar Insumo" Height="47" Width="966" 
+                        BorderThickness="17" Margin="17,545,17,36"
+                        Foreground="Black" BorderBrush="#FFFFB12C" 
+                        Background="#FFFFB22F" Cursor="Hand" 
+                        Click="btSalvar_Click" RenderTransformOrigin="0.5,0.5">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.069"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
         </Grid>
     </Border>
 </Window>
