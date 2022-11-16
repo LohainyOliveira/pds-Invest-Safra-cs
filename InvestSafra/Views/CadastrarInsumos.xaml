@@ -40,7 +40,7 @@
                         <ColumnDefinition Width="17*"/>
                     </Grid.ColumnDefinitions>
                     <Image HorizontalAlignment="Left" Height="200" Margin="38,15,0,0" VerticalAlignment="Top" Width="170" Source="/Imagens/LogoCanto.png"/>
-                    <Label  Content="Cadastro de Insumos" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Malik" FontSize="24" Foreground="#EFA82E" FontWeight="Bold" Height="49" Width="292" RenderTransformOrigin="0.336,0.452" Margin="329,44,0,0"/>
+                    <Label  Content="Cadastro de Insumos" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Malik" FontSize="24" Foreground="#EFA82E" FontWeight="Bold" Height="49" Width="292" RenderTransformOrigin="0.336,0.452" Margin="389,44,0,0"/>
                 </Grid>
 
                 <Grid VerticalAlignment="Top" HorizontalAlignment="Center" Height="535" >
@@ -85,16 +85,14 @@
                   />
 
 
-                        <ComboBox
-                    materialDesign:HintAssist.Hint="Medida" 
-                    Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                        <TextBox
+                    materialDesign:HintAssist.Hint="Marca" 
+                    Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     HorizontalAlignment="Center"   
                     Background="#f7fbfc" FontFamily="Arial" FontWeight="Bold"
-                    x:Name="cbMedida" Padding="8"  Width="208" Grid.Column="1" Grid.Row="1" Height="58">
-                            <ComboBoxItem></ComboBoxItem>
-                            <ComboBoxItem>Feminino</ComboBoxItem>
-                            <ComboBoxItem>Masculino</ComboBoxItem>
-                        </ComboBox>
+                    x:Name="" Padding="8"  Width="208" Grid.Column="1" Grid.Row="1" Height="58">
+                            
+                        </TextBox>
 
 
                     </StackPanel>
