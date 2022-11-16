@@ -128,6 +128,11 @@ namespace InvestSafra.Views
 
             }
 
+            txtDescricao.Clear();
+            txtNome.Clear();
+            txtQuantidade.Clear();
+            dtPickerDataNascimento.SelectedDate = null;
+
         }
         private void btSair_Click(object sender, RoutedEventArgs e)
         {
