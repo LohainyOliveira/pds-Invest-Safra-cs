@@ -4,32 +4,6 @@ create database bd_safra;
 use bd_safra;
 
 
-
-create table Cliente_Fisico (
-id_cliF int primary key auto_increment not null,
-nome_cliF varchar (100) not null,
-cpf_cliF varchar (100) not null,
-rg_cliF varchar (100) not null,
-sexo_cliF varchar (100) not null,
-telefone_cliF varchar (100) not null,
-cidade_cliF varchar (100) not null,
-estado_cliF varchar (100) not null,
-rua_cliF varchar (100) not null,
-bairro_cliF varchar (100) not null,
-cep_cliF varchar (100) not null,
-complemento_cliF varchar (100) not null,
-email_cliF varchar (100) not null
-);
-
-
-create table Usuario(
-id_user int primary key auto_increment,
-usuario_user varchar(80),
-senha_user varchar(10),
-id_cliF_fk int,
-foreign key (id_cliF_fk) references Cliente_Fisico (id_cliF)
-);
-
 create table Cliente_Juridico (
 id_cliJ int primary key auto_increment not null,
 nome_cliJ varchar (100) not null,
@@ -46,15 +20,22 @@ complemento_cliJ varchar (100) not null,
 email_cliJ varchar (100) not null
 );
 
+
+create table Usuario(
+id_user int primary key auto_increment,
+usuario_user varchar(80),
+senha_user varchar(10),
+id_cliJ_fk int,
+foreign key (id_cliJ_fk) references Cliente_Juridico (id_cliJ)
+);
+
 create table Venda (
 id_ven int primary key auto_increment not null,
 valor_ven double not null,
 data_ven date not null,
 safra_ven varchar (100) not null,
 comprador_ven varchar (100) not null,
-id_cliF_fk int not null,
 id_cliJ_fk int not null,
-foreign key (id_cliF_fk) references Cliente_Fisico (id_cliF),
 foreign key (id_cliJ_fk) references Cliente_Juridico (id_cliJ)
 );
 
@@ -285,14 +266,14 @@ foreign key (id_maq_fk) references Maquinas (id_maq)
 );
 
 DELIMITER $$
-CREATE PROCEDURE InserirClienteFisico (nome varchar(100), cpf varchar(100), rg varchar(100), sexo varchar (100), telefone varchar(100), cidade varchar(100), estado varchar(100), 
+CREATE PROCEDURE InserirClienteJuridico (nome varchar(100), cpf varchar(100), rg varchar(100), sexo varchar (100), telefone varchar(100), cidade varchar(100), estado varchar(100), 
 rua varchar(100), bairro varchar (100), cep varchar(100), complemento varchar(100), email varchar(100))
 BEGIN
 	declare verificacao varchar(100);
-    set verificacao = (select  cpf_cliF from Cliente_Fisico where (cpf_cliF = cpf));
+    set verificacao = (select  cpf_cliJ from cliente_juridico where (cpf_cliJ = cpf));
     
     if(verificacao = '' ) or (verificacao is null) then
-		insert into Cliente_Fisico values (null, nome, cpf, rg, sexo, telefone, cidade, estado, rua, bairro, cep, complemento, email);
+		insert into cliente_juridico values (null, nome, cpf, rg, sexo, telefone, cidade, estado, rua, bairro, cep, complemento, email);
         select "Cadastro realizado com sucesso" as Resultado;
 	else
 		select  "Não foi possível realizar o seu cadastro" as Resultado;
@@ -300,7 +281,7 @@ BEGIN
 END;
 
 $$ DELIMITER ;
-CALL InserirClienteFisico('Lohainy Teixeira dos Santos oliveira','077.383.422-23','2345.8765','Femenino','(69)99251 6467',
+CALL InserirClienteJuridico('Lohainy Teixeira dos Santos oliveira','077.383.422-23','2345.8765','Femenino','(69)99251 6467',
 'Ji-Paraná','RO','Lindcelma alves de jesus','Bosque dos ipes 2','76901-390','Nada a declarar','lohainy@gmalcom');
 
 select *from Cliente_fisico;
