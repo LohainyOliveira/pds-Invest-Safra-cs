@@ -172,9 +172,6 @@
     <Compile Include="Views\CadastraCaixa.xaml.cs">
       <DependentUpon>CadastraCaixa.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\CadastraClienteFisico.xaml.cs">
-      <DependentUpon>CadastraClienteFisico.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\CadastrarArea.xaml.cs">
       <DependentUpon>CadastrarArea.xaml</DependentUpon>
     </Compile>
@@ -311,10 +308,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\CadastraCaixa.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\CadastraClienteFisico.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

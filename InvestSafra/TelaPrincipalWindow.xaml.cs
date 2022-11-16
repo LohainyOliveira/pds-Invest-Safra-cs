@@ -113,7 +113,8 @@ namespace InvestSafra
 		private void btCadastrar_Click(object sender, RoutedEventArgs e)
 		{
 			
-			CadastraClienteFisico form = new CadastraClienteFisico();
+			CadastrarClienteJuridico form = new CadastrarClienteJuridico();
+			this.Close();
 			form.ShowDialog();
 
 		}
