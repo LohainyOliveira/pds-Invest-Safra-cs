@@ -41,7 +41,7 @@
                         <ColumnDefinition Width="17*"/>
                     </Grid.ColumnDefinitions>
                     <Image HorizontalAlignment="Left" Height="200" Margin="38,15,0,0" VerticalAlignment="Top" Width="170" Source="/Imagens/LogoCanto.png"/>
-                    <Label  Content="Cadastro de Compra" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Malik" FontSize="24" Foreground="#EFA82E" FontWeight="Bold" Height="49" Width="292" RenderTransformOrigin="0.336,0.452" Margin="410,45,0,0"/>
+                    <Label  Content="Cadastro de Compra" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Malik" FontSize="24" Foreground="#EFA82E" FontWeight="Bold" Height="49" Width="292" RenderTransformOrigin="0.336,0.452" Margin="390,45,0,0"/>
                 </Grid>
 
                 <Grid VerticalAlignment="Top" HorizontalAlignment="Center" Height="535" >
@@ -49,7 +49,7 @@
                         <TextBox Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     AcceptsReturn="True"
                     MaxWidth="400"
-                    Margin="80 95 50 0"
+                    Margin="100 95 50 0"
                     materialDesign:HintAssist.Hint="Nome"
                     x:Name="txtNome" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
@@ -68,7 +68,7 @@
                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     AcceptsReturn="True"
                     MaxWidth="400"
-                    Margin="79 120 50 0"
+                    Margin="100 120 50 0"
                     materialDesign:HintAssist.Hint="Quantidade"
                     x:Name="txtQuantidade" Padding="16" Grid.Row="1" 
                     TextWrapping="Wrap" VerticalAlignment="Center" 
