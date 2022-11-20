@@ -12,28 +12,200 @@
         TextOptions.TextFormattingMode="Ideal" 
         TextOptions.TextRenderingMode="Auto"
         FontFamily="{DynamicResource MaterialDesignFont}"
-        Height="600" Width="1000" WindowStartupLocation="CenterScreen" Background="Transparent" Visibility="Visible" AllowsTransparency="True" WindowStyle="None">
+        Height="750" Width="1000" WindowStartupLocation="CenterScreen" Background="Transparent" Visibility="Visible" AllowsTransparency="True" WindowStyle="None">
 
     <Border CornerRadius="30" Background="#f7fbfc" MouseDown="Border_MouseDown" MouseLeftButtonDown="Border_MouseLeftButtonDown">
-
-        <Grid Margin="0,0,0,-28" RenderTransformOrigin="0.5,0.5">
-
-
-            <Grid Grid.RowSpan="4" Margin="0,0,0,10">
+        <Grid>
+            <Grid x:Name="CompraProduto" Margin="0,0,0,-28" RenderTransformOrigin="0.5,0.5">
 
 
-                <Grid Grid.Row="0" Margin="12,0,-12,0">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="1538*"/>
-                        <ColumnDefinition Width="17*"/>
-                        <ColumnDefinition Width="17*"/>
-                    </Grid.ColumnDefinitions>
-                    <Image HorizontalAlignment="Left" Height="200" Margin="38,15,0,0" VerticalAlignment="Top" Width="170" Source="/Imagens/LogoCanto.png"/>
-                    <Label  Content="Cadastro de Compra" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Malik" FontSize="24" Foreground="#EFA82E" FontWeight="Bold" Height="49" Width="292" RenderTransformOrigin="0.336,0.452" Margin="294,51,0,0"/>
+                <Grid Grid.RowSpan="4" Margin="0,0,0,10">
+
+
+                    <Grid Grid.Row="0" Margin="12,0,-12,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1538*"/>
+                            <ColumnDefinition Width="17*"/>
+                            <ColumnDefinition Width="17*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image HorizontalAlignment="Left" Height="200" Margin="38,15,0,0" VerticalAlignment="Top" Width="170" Source="/Imagens/LogoCanto.png"/>
+                        <Label  Content="Cadastro de Compra" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Malik" FontSize="24" Foreground="#EFA82E" FontWeight="Bold" Height="49" Width="292" RenderTransformOrigin="0.336,0.452" Margin="294,51,0,0"/>
+                    </Grid>
                 </Grid>
+                <StackPanel HorizontalAlignment="Left" Margin="1534,0,0,37" Width="66">
+                    <Button Style="{StaticResource topButton}"  Height="51"  x:Name="btSair2"  Margin="0 18 18 0" Width="48" Click="btSair_Click">
+                        <Button.Background>
+                            <ImageBrush ImageSource="/Icons/logout.png"/>
+                        </Button.Background>
+                    </Button>
+                </StackPanel>
+
+
+                <TextBox
+                x:Name="txtPesquisa"
+                materialDesign:HintAssist.Hint="Buscar Insumo ou semente"
+                materialDesign:TextFieldAssist.HasClearButton="True"
+                Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                Text="{Binding Descricao}" Cursor="IBeam" FontFamily="Arial" FontSize="18" FontWeight="Bold" Margin="22,302,146,416" Foreground="Black"/>
+
+                <DatePicker 
+                       x:Name="dtPickerDataCompra"
+                       materialDesign:HintAssist.Hint="Data da Compra" 
+                       Style="{StaticResource MaterialDesignOutlinedDatePicker}"
+                       Width="260" Height="59" Margin="312,211,428,0" VerticalAlignment="Top" Foreground="Black" />
+
+                <DataGrid  ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" RowStyle="{DynamicResource DataGridRowStyle1}" x:Name="dataGridInsumo"  Margin="22,398,500,104" Background="#FFFFEBCC" BorderBrush="#1FECECEC" Foreground="#DD000000">
+                    <DataGrid.Columns>
+                        <!-- Começo CheckBox -->
+                        <DataGridCheckBoxColumn CanUserResize="False" Width="auto">
+                            <DataGridCheckBoxColumn.HeaderTemplate>
+                                <DataTemplate>
+                                    <CheckBox/>
+                                </DataTemplate>
+                            </DataGridCheckBoxColumn.HeaderTemplate>
+                        </DataGridCheckBoxColumn>
+                        <!-- Fim CheckBox -->
+                        <!-- Começo -->
+                        <DataGridTextColumn Header="#" IsReadOnly="True" CanUserResize="False" Width="auto"/>
+                        <DataGridTemplateColumn Header="Insumos" IsReadOnly="True" Width="*">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Border Width="25" Height="25" CornerRadius="50" Margin="0 0 10 0" Background="Red">
+                                            <TextBlock Text="...." VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Margin=" 0 0 0 1"/>
+                                        </Border>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <!-- Fim -->
+
+
+
+                        <DataGridTextColumn Header="Nome" Binding="{Binding Nome}"/>
+                        <DataGridTextColumn Header="Tipo" Binding="{Binding Tipo }"/>
+                        <DataGridTextColumn Header="Marca" Binding="{Binding Marca}"/>
+                        <DataGridTextColumn Header="Descrição" Binding="{Binding Descricao}"/>
+
+                        <DataGridTemplateColumn Header="Operation" IsReadOnly="True" Width="*">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button Style="{StaticResource GridEditButton}">
+                                            <!-- Fim 
+                                        <Icon:PackIconMaterial Kind="PencilOutline" Style="{StaticResource GridButtonIcon}"/>
+                                    </Button>
+                                    <Button Style="{StaticResource GridRemoveButton}">
+                                        <Icon:PackIconMaterial Kind="DeleteOutline" Style="{StaticResource GridButtonIcon}"/>
+                                    -->
+                                        </Button>
+
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+
+                    </DataGrid.Columns>
+                </DataGrid>
+
+                <DataGrid  ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" RowStyle="{DynamicResource DataGridRowStyle1}" x:Name="dataGridSemente" SelectionChanged="membersDataGrid_SelectionChanged" Background="#FFFFEBCC" BorderBrush="#1FECECEC" Foreground="#DD000000" Margin="522,398,10,104">
+                    <DataGrid.Columns>
+                        <!-- Começo CheckBox -->
+                        <DataGridCheckBoxColumn CanUserResize="False" Width="auto">
+                            <DataGridCheckBoxColumn.HeaderTemplate>
+                                <DataTemplate>
+                                    <CheckBox/>
+                                </DataTemplate>
+                            </DataGridCheckBoxColumn.HeaderTemplate>
+                        </DataGridCheckBoxColumn>
+                        <!-- Fim CheckBox -->
+                        <!-- Começo -->
+                        <DataGridTextColumn Header="#" IsReadOnly="True" CanUserResize="False" Width="auto"/>
+                        <DataGridTemplateColumn Header="Sementes" IsReadOnly="True" Width="*">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Border Width="25" Height="25" CornerRadius="50" Margin="0 0 10 0" Background="Red">
+                                            <TextBlock Text="...." VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Margin=" 0 0 0 1"/>
+                                        </Border>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <!-- Fim -->
+
+
+
+                        <DataGridTextColumn Header="Descrição" Binding="{Binding Descricao}"/>
+                        <DataGridTextColumn Header="Marca" Binding="{Binding Marca }"/>
+                        <DataGridTextColumn Header="Quantidade" Binding="{Binding Quantidade}"/>
+                        <DataGridTextColumn Header="Medida" Binding="{Binding Medida}"/>
+                        <DataGridTextColumn Header="Valor" Binding="{Binding Valor}"/>
+
+                        <DataGridTemplateColumn Header="Operation" IsReadOnly="True" Width="*">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button Style="{StaticResource GridEditButton}">
+                                        </Button>
+                                        <Button Style="{StaticResource GridRemoveButton}">
+                                        </Button>
+
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+
+                    </DataGrid.Columns>
+                </DataGrid>
+                <Separator Margin="0,357,0,385" Background="#FFFD9F0C" HorizontalAlignment="Center" Width="968"/>
+
+                <TextBox
+                x:Name="txtQuantidade"
+                materialDesign:HintAssist.Hint="Quantidade"
+                materialDesign:TextFieldAssist.HasClearButton="True"
+                Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                Text="{Binding Descricao}" Cursor="IBeam" FontFamily="Arial" FontSize="18" FontWeight="Bold" Margin="22,212,730,512" Foreground="Black"/>
+
+                <TextBox
+                x:Name="txtDescricao"
+                materialDesign:HintAssist.Hint="Descrição"
+                materialDesign:TextFieldAssist.HasClearButton="True"
+                Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                Text="{Binding Descricao}" Cursor="IBeam" FontFamily="Arial" FontSize="18" FontWeight="Bold" Margin="616,124,16,508" Foreground="#FF060202"/>
+
+
+
+                <Button x:Name="BtnSearch" Margin="913,312,47,426"
+                    Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}"
+                    ToolTip="Adicionar Departamento" 
+                    Background="#EFA82E"     BorderBrush="#FFD8D8D8" Click="BtnSearch_Click">
+                    <materialDesign:PackIcon Kind="TableSearch" Foreground="Black" />
+                </Button>
+
+
+
+
+                <Button x:Name="btSalvar" FontSize="19"
+                        Content="Salvar" Height="47" 
+                        BorderThickness="17" Margin="25,696,9,35"
+                        Foreground="Black" BorderBrush="#FFFFB12C" 
+                        Background="#FFFFB22F" Cursor="Hand" 
+                        Click="btSalvar_Click" RenderTransformOrigin="0.5,0.5">
+                    <Button.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0.069"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Button.RenderTransform>
+                </Button>
+
             </Grid>
-            <StackPanel HorizontalAlignment="Left" Margin="1534,0,0,37" Width="66">
-                <Button Style="{StaticResource topButton}"  Height="51"  x:Name="btSair2"  Margin="0 18 18 0" Width="48" Click="btSair_Click">
+
+            <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Right">
+                <Button Style="{StaticResource topButton}"  Height="58"  x:Name="btSair" Width="56" Click="btSair_Click">
                     <Button.Background>
                         <ImageBrush ImageSource="/Icons/logout.png"/>
                     </Button.Background>
@@ -41,115 +213,10 @@
             </StackPanel>
 
 
-            <TextBox
-                x:Name="txtPesquisa"
-                materialDesign:HintAssist.Hint="Buscar Insumo ou semente"
-                materialDesign:TextFieldAssist.HasClearButton="True"
-                Style="{StaticResource MaterialDesignOutlinedTextBox}"
-                Text="{Binding Descricao}" Cursor="IBeam" FontFamily="Arial" FontSize="18" FontWeight="Bold" Margin="22,329,172,248" Foreground="Black"/>
-
-            <DatePicker 
-                       x:Name="dtPickerDataCompra"
-                       materialDesign:HintAssist.Hint="Data da Compra" 
-                       Style="{StaticResource MaterialDesignOutlinedDatePicker}"
-                       Width="260" Height="59" Margin="312,211,428,0" VerticalAlignment="Top" Foreground="Black" />
-
-            <DataGrid  ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" RowStyle="{DynamicResource DataGridRowStyle1}" x:Name="dataGridInsumo"  Margin="16,410,16,93" Background="#FFFFEBCC" BorderBrush="#1FECECEC" Foreground="#DD000000">
-                <DataGrid.Columns>
-                    <!-- Começo CheckBox -->
-                    <DataGridCheckBoxColumn CanUserResize="False" Width="auto">
-                        <DataGridCheckBoxColumn.HeaderTemplate>
-                            <DataTemplate>
-                                <CheckBox/>
-                            </DataTemplate>
-                        </DataGridCheckBoxColumn.HeaderTemplate>
-                    </DataGridCheckBoxColumn>
-                    <!-- Fim CheckBox -->
-                    <!-- Começo -->
-                    <DataGridTextColumn Header="#" IsReadOnly="True" CanUserResize="False" Width="auto"/>
-                    <DataGridTemplateColumn Header="Insumos" IsReadOnly="True" Width="*">
-                        <DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                                <StackPanel Orientation="Horizontal">
-                                    <Border Width="25" Height="25" CornerRadius="50" Margin="0 0 10 0" Background="Red">
-                                        <TextBlock Text="...." VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Margin=" 0 0 0 1"/>
-                                    </Border>
-                                </StackPanel>
-                            </DataTemplate>
-                        </DataGridTemplateColumn.CellTemplate>
-                    </DataGridTemplateColumn>
-                    <!-- Fim -->
-
-
-
-                    <DataGridTextColumn Header="Nome" Binding="{Binding Nome}"/>
-                    <DataGridTextColumn Header="Tipo" Binding="{Binding Tipo }"/>
-                    <DataGridTextColumn Header="Marca" Binding="{Binding Marca}"/>
-                    <DataGridTextColumn Header="Descrição" Binding="{Binding Descricao}"/>
-
-                    <DataGridTemplateColumn Header="Operation" IsReadOnly="True" Width="*">
-                        <DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                                <StackPanel Orientation="Horizontal">
-                                    <Button Style="{StaticResource GridEditButton}">
-                                        <!-- Fim 
-                                        <Icon:PackIconMaterial Kind="PencilOutline" Style="{StaticResource GridButtonIcon}"/>
-                                    </Button>
-                                    <Button Style="{StaticResource GridRemoveButton}">
-                                        <Icon:PackIconMaterial Kind="DeleteOutline" Style="{StaticResource GridButtonIcon}"/>
-                                    -->
-                                    </Button>
-
-                                </StackPanel>
-                            </DataTemplate>
-                        </DataGridTemplateColumn.CellTemplate>
-                    </DataGridTemplateColumn>
-
-                </DataGrid.Columns>
-            </DataGrid>
-            <Separator Margin="10,266,10,304" Background="#FFFD9F0C"/>
-
-            <TextBox
-                x:Name="txtQuantidade"
-                materialDesign:HintAssist.Hint="Quantidade"
-                materialDesign:TextFieldAssist.HasClearButton="True"
-                Style="{StaticResource MaterialDesignOutlinedTextBox}"
-                Text="{Binding Descricao}" Cursor="IBeam" FontFamily="Arial" FontSize="18" FontWeight="Bold" Margin="22,212,730,358" Foreground="Black"/>
-
-            <TextBox
-                x:Name="txtDescricao"
-                materialDesign:HintAssist.Hint="Descrição"
-                materialDesign:TextFieldAssist.HasClearButton="True"
-                Style="{StaticResource MaterialDesignOutlinedTextBox}"
-                Text="{Binding Descricao}" Cursor="IBeam" FontFamily="Arial" FontSize="18" FontWeight="Bold" Margin="616,124,16,358" Foreground="#FF060202"/>
-
-
-
-            <Button x:Name="BtnSearch" Margin="862,334,98,254"
-                    Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}"
-                    ToolTip="Adicionar Departamento" 
-                    Background="#EFA82E"     BorderBrush="#FFD8D8D8">
-                <materialDesign:PackIcon Kind="TableSearch" Foreground="Black" />
-            </Button>
-
-
-
-
-            <Button x:Name="btNovoInsumo" FontSize="19"
-                        Content="Adicionar Insumo" Height="47" Width="966" 
-                        BorderThickness="17" Margin="17,545,17,36"
-                        Foreground="Black" BorderBrush="#FFFFB12C" 
-                        Background="#FFFFB22F" Cursor="Hand" 
-                        Click="btSalvar_Click" RenderTransformOrigin="0.5,0.5">
-                <Button.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="0.069"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Button.RenderTransform>
-            </Button>
         </Grid>
+
+
+
+
     </Border>
 </Window>
