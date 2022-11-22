@@ -12,7 +12,7 @@
         TextOptions.TextFormattingMode="Ideal" 
         TextOptions.TextRenderingMode="Auto"
         FontFamily="{DynamicResource MaterialDesignFont}"
-        Height="750" Width="1000" WindowStartupLocation="CenterScreen" Background="Transparent" Visibility="Visible" AllowsTransparency="True" WindowStyle="None">
+        Height="868" Width="1000" WindowStartupLocation="CenterScreen" Background="Transparent" Visibility="Visible" AllowsTransparency="True" WindowStyle="None">
 
     <Border CornerRadius="30" Background="#f7fbfc" MouseDown="Border_MouseDown" MouseLeftButtonDown="Border_MouseLeftButtonDown">
         <Grid>
@@ -46,15 +46,14 @@
                 materialDesign:HintAssist.Hint="Buscar Insumo ou semente"
                 materialDesign:TextFieldAssist.HasClearButton="True"
                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
-                Text="{Binding Descricao}" Cursor="IBeam" FontFamily="Arial" FontSize="18" FontWeight="Bold" Margin="22,302,146,416" Foreground="Black"/>
+                Text="{Binding Descricao}" Cursor="IBeam" FontFamily="Arial" FontSize="18" FontWeight="Bold" Margin="22,362,149,476" Foreground="Black"/>
 
                 <DatePicker 
                        x:Name="dtPickerDataCompra"
                        materialDesign:HintAssist.Hint="Data da Compra" 
-                       Style="{StaticResource MaterialDesignOutlinedDatePicker}"
-                       Width="260" Height="59" Margin="312,211,428,0" VerticalAlignment="Top" Foreground="Black" />
+                       Style="{StaticResource MaterialDesignOutlinedDatePicker}" Height="56" Margin="22,205,754,0" VerticalAlignment="Top" Foreground="Black" FontFamily="Arial" FontWeight="Bold" FontSize="14" />
 
-                <DataGrid  ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" RowStyle="{DynamicResource DataGridRowStyle1}" x:Name="dataGridInsumo"  Margin="22,398,500,104" Background="#FFFFEBCC" BorderBrush="#1FECECEC" Foreground="#DD000000">
+                <DataGrid  ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" RowStyle="{DynamicResource DataGridRowStyle1}" x:Name="dataGridInsumo"  Margin="22,457,500,104" Background="#FFFFEBCC" BorderBrush="#1FECECEC" Foreground="#DD000000">
                     <DataGrid.Columns>
                         <!-- Começo CheckBox -->
                         <DataGridCheckBoxColumn CanUserResize="False" Width="auto">
@@ -108,7 +107,7 @@
                     </DataGrid.Columns>
                 </DataGrid>
 
-                <DataGrid  ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" RowStyle="{DynamicResource DataGridRowStyle1}" x:Name="dataGridSemente" SelectionChanged="membersDataGrid_SelectionChanged" Background="#FFFFEBCC" BorderBrush="#1FECECEC" Foreground="#DD000000" Margin="522,398,10,104">
+                <DataGrid  ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" RowStyle="{DynamicResource DataGridRowStyle1}" x:Name="dataGridSemente"  Background="#FFFFEBCC" BorderBrush="#1FECECEC" Foreground="#DD000000" Margin="522,457,10,104">
                     <DataGrid.Columns>
                         <!-- Começo CheckBox -->
                         <DataGridCheckBoxColumn CanUserResize="False" Width="auto">
@@ -158,23 +157,30 @@
 
                     </DataGrid.Columns>
                 </DataGrid>
-                <Separator Margin="0,357,0,385" Background="#FFFD9F0C" HorizontalAlignment="Center" Width="968"/>
+                <Separator Margin="22,388,0,398" Background="#FFFD9F0C" HorizontalAlignment="Left" Width="1000"/>
 
                 <TextBox
                 x:Name="txtQuantidade"
-                materialDesign:HintAssist.Hint="Quantidade"
+                materialDesign:HintAssist.Hint="Quantidade Itens Comprados"
                 materialDesign:TextFieldAssist.HasClearButton="True"
                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
-                Text="{Binding Descricao}" Cursor="IBeam" FontFamily="Arial" FontSize="18" FontWeight="Bold" Margin="22,212,730,512" Foreground="Black"/>
+                Text="{Binding Descricao}" Cursor="IBeam" FontFamily="Arial" FontSize="18" FontWeight="Bold" Margin="22,272,616,568" Foreground="Black" TextChanged="txtQuantidade_TextChanged_1"/>
 
                 <TextBox
                 x:Name="txtDescricao"
                 materialDesign:HintAssist.Hint="Descrição"
                 materialDesign:TextFieldAssist.HasClearButton="True"
                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
-                Text="{Binding Descricao}" Cursor="IBeam" FontFamily="Arial" FontSize="18" FontWeight="Bold" Margin="616,124,16,508" Foreground="#FF060202"/>
+                Text="{Binding Descricao}" Cursor="IBeam" FontFamily="Arial" FontSize="18" FontWeight="Bold" Margin="542,207,10,568" Foreground="#FF060202"/>
 
+                <ComboBox
+                    materialDesign:HintAssist.Hint="Fornecedor" 
+                    Style="{StaticResource MaterialDesignOutlinedComboBox}"   
+                    Background="#f7fbfc" FontFamily="Arial" FontWeight="Bold"
+                    x:Name="cbFornecedor" Padding="8"  Margin="282,205,478,0" Height="56" VerticalAlignment="Top" FontSize="14" Foreground="Black">
 
+                    <ComboBoxItem></ComboBoxItem>
+                </ComboBox>
 
                 <Button x:Name="BtnSearch" Margin="913,312,47,426"
                     Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}"
@@ -188,7 +194,7 @@
 
                 <Button x:Name="btSalvar" FontSize="19"
                         Content="Salvar" Height="47" 
-                        BorderThickness="17" Margin="25,696,9,35"
+                        BorderThickness="17" Margin="20,811,14,38"
                         Foreground="Black" BorderBrush="#FFFFB12C" 
                         Background="#FFFFB22F" Cursor="Hand" 
                         Click="btSalvar_Click" RenderTransformOrigin="0.5,0.5">

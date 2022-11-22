@@ -138,5 +138,15 @@ namespace InvestSafra.Views
 		{
 
 		}
+
+		private void txtQuantidade_TextChanged(object sender, TextChangedEventArgs e)
+		{
+
+		}
+
+		private void txtQuantidade_TextChanged_1(object sender, TextChangedEventArgs e)
+		{
+
+		}
 	}
 }
