@@ -66,6 +66,12 @@ namespace InvestSafra.Views
                 MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
+        private void ExibirMensagemSalvar()
+        {
+            MessageBox.Show($"Campos Salvos com Sucesso!", "Registros Salvos",
+                MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
 
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -102,6 +108,35 @@ namespace InvestSafra.Views
         private void btSair_Click(object sender, RoutedEventArgs e)
         {
             DialogResult = false;
+        }
+
+        private void btSalvar_Click(object sender, RoutedEventArgs e)
+        {
+            _estoque.Descricao = txtDescricao.Text;
+            _estoque.Medida = txtMedida.Text;
+            _estoque.Tipo_Insumo = txtTipoInsumo.Text;
+            _estoque.Quantidade_Insumos = Convert.ToInt32(txtQuantInsumos.Text);
+            _estoque.Quantidade_Semente = Convert.ToInt32(txtQuantSementes.Text);
+
+            try
+            {
+                var dao = new EstoqueDAO();
+
+                if (_estoque.Id > 0)
+                {
+                    dao.Update(_estoque);
+                }
+                else
+                {
+                    dao.Insert(_estoque);
+                }
+
+                ExibirMensagemSalvar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

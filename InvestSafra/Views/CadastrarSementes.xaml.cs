@@ -62,6 +62,12 @@ namespace InvestSafra.Views
             ExibirMensagemLimpar();
         }
 
+        private void ExibirMensagemSalvar()
+        {
+            MessageBox.Show($"Campos Salvos com Sucesso!", "Registros Salvos",
+                MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
         private void ExibirMensagemLimpar()
         {
             MessageBox.Show($"Campos Limpos com Sucesso", "Limpeza Concluida",
