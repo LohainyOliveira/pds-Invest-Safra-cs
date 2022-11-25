@@ -12,129 +12,229 @@
         TextOptions.TextRenderingMode="Auto"
         FontFamily="{DynamicResource MaterialDesignFont}"
         mc:Ignorable="d"
-        Title="LevantamentoDeDadosDaSafra"  Height="450" Width="800" ResizeMode="NoResize" WindowStyle="None" WindowStartupLocation="CenterScreen">
-    <Window.Resources>
-        <Storyboard x:Key="Storyboard1">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="Basic_Details">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-441"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="Experience">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-435"/>
-            </DoubleAnimationUsingKeyFrames>
-        </Storyboard>
-        <Storyboard x:Key="Storyboard2">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="Basic_Details">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-432"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="Experience">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-437"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
-            </DoubleAnimationUsingKeyFrames>
-        </Storyboard>
-    </Window.Resources>
-    <Window.Triggers>
-        <EventTrigger RoutedEvent="UIElement.MouseDown" SourceName="image">
-            <BeginStoryboard Storyboard="{StaticResource Storyboard1}"/>
-        </EventTrigger>
-        <EventTrigger RoutedEvent="UIElement.MouseDown" SourceName="image1">
-            <BeginStoryboard x:Name="Storyboard2_BeginStoryboard" Storyboard="{StaticResource Storyboard2}"/>
-        </EventTrigger>
-    </Window.Triggers>
-
-    <Grid Background="#f7fbfc">
-       
-       
-            <Button Style="{StaticResource topButton}"  Height="40" Margin="730 -360 0 0" x:Name="btSair" Width="48" Click="btSair_Click">
-                <Button.Background>
-                    <ImageBrush ImageSource="/Icons/logout.png"/>
-                </Button.Background>
-            </Button>
-       
+        xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        Height="600" Width="1000" WindowStartupLocation="CenterScreen" WindowStyle="None"
+         AllowsTransparency="True" Background="Transparent">
 
 
-        <Rectangle Fill="#EFA82E" HorizontalAlignment="Left" Height="450" VerticalAlignment="Top" Width="178.795"/>
-        <Grid x:Name="Basic_Details" HorizontalAlignment="Left" Height="412" Margin="179,0,0,0" VerticalAlignment="Top" Width="611" RenderTransformOrigin="0.5,0.5">
-            <Grid.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Grid.RenderTransform>
+    <Border CornerRadius="30 30 30 30" Background="#f7fbfc" MouseDown="Border_MouseDown" MouseLeftButtonDown="Border_MouseLeftButtonDown">
+        <Grid>
+            <Grid Grid.RowSpan="4" Margin="0,0,0,10">
 
 
+                <Grid Grid.Row="0" Margin="12,0,-12,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1538*"/>
+                        <ColumnDefinition Width="17*"/>
+                        <ColumnDefinition Width="17*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image HorizontalAlignment="Left" Height="200" Margin="38,15,0,0" VerticalAlignment="Top" Width="170" Source="/Imagens/LogoCanto.png"/>
+                    <Label  Content="Levantamento de Dados da safra" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Malik" FontSize="24" Foreground="#EFA82E" FontWeight="Bold" Height="48" Width="400" RenderTransformOrigin="0.336,0.452" Margin="0,74,0,0"/>
+                </Grid>
+            </Grid>
+            <StackPanel HorizontalAlignment="Right"  Width="74" Margin="0,0,0,507">
+                <Button Style="{StaticResource topButton}"  Height="51"  x:Name="btSair2"  Margin="0 18 18 0" Width="58" Click="btSair_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/Icons/logout.png"/>
+                    </Button.Background>
+                </Button>
+            </StackPanel>
 
-            <TextBlock HorizontalAlignment="Left" Height="31" Margin="28,46,0,0" TextWrapping="Wrap" Text="Levantamento de Dados Safra" VerticalAlignment="Top" Width="383" FontSize="20" FontFamily="Open Sans" Foreground="#EFA82E"/>
 
-            <ListBox Width="150" HorizontalAlignment="Left" x:Name="listSafra1" Margin="30 100 30 30">
-                <ListBoxItem Height="130" Width="150" HorizontalAlignment="Left">
-                    <Image Source="/Icons/arroz.png"/>
-                </ListBoxItem>
-                <ListBoxItem Height="130" Width="150" HorizontalAlignment="Left">
-                    <Image Source="/Icons/feijão.png"/>
-                </ListBoxItem>
-
-            </ListBox>
-
-            <ListBox Width="150" HorizontalAlignment="Center" x:Name="listSafra2" Margin="30 100 30 30">
-                <ListBoxItem Height="130" Width="150" HorizontalAlignment="Left">
-                    <Image Source="/Icons/milho.png"/>
-                </ListBoxItem>
-                <ListBoxItem Height="130" Width="150" HorizontalAlignment="Left">
-                    <Image Source="/Icons/soja.png"/>
-                </ListBoxItem>
-
-            </ListBox>
-
-            <ListBox Width="150" HorizontalAlignment="Right" x:Name="listSafra3" Margin="30 100 30 30">
-                <ListBoxItem Height="150" Width="150" HorizontalAlignment="Left">
-                    <Image Source="/Icons/trigo.png"/>
-                </ListBoxItem>
-            </ListBox>
-
-        </Grid>
-        <Grid x:Name="Experience" HorizontalAlignment="Left" Height="450" Margin="178.795,436,0,-436" VerticalAlignment="Top" Width="621.205" RenderTransformOrigin="0.5,0.5">
-            <Grid.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Grid.RenderTransform>
+            <TextBox
+                x:Name="txtPesquisa"
+                materialDesign:HintAssist.Hint="Buscar Insumo ou semente"
+                materialDesign:TextFieldAssist.HasClearButton="True"
+                Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                Text="{Binding Descricao}" Cursor="IBeam" FontFamily="Arial" FontSize="18" FontWeight="Bold" Margin="22,362,149,476" Foreground="Black"/>
 
             <DatePicker 
                        x:Name="dtPickerDataInicio"
-                       materialDesign:HintAssist.Hint="Data do Inicio da Plantação" 
-                       Style="{StaticResource MaterialDesignOutlinedDatePicker}"
-                       Width="260" Height="60" Margin="0,75,310,0" VerticalAlignment="Top" />
+                       materialDesign:HintAssist.Hint="Data Inicio da Plantação" 
+                       Style="{StaticResource MaterialDesignOutlinedDatePicker}" Height="56" Margin="22,0,754,0" Foreground="Black" FontFamily="Arial" FontWeight="Bold" FontSize="14" />
+            <ComboBox
+                    materialDesign:HintAssist.Hint="Informe o a safra escolhida" 
+                    Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                       Foreground="black"
+                    Margin="22,203,754,0"
+                    Background="#f7fbfc" FontFamily="Arial" FontWeight="SemiBold"
+                    x:Name="cbSafra" Padding="8" Height="58" SelectionChanged="cbSafra_SelectionChanged" VerticalAlignment="Top">
+                <ComboBoxItem></ComboBoxItem>
+                <ComboBoxItem>Milho</ComboBoxItem>
+                <ComboBoxItem>Soja</ComboBoxItem>
+                <ComboBoxItem>Feijão</ComboBoxItem>
+                <ComboBoxItem>Trigo</ComboBoxItem>
+                <ComboBoxItem>Arroz</ComboBoxItem>
+                <ComboBoxItem>Outros..</ComboBoxItem>
+            </ComboBox>
+
+            <DataGrid  Background="#FFFFEBCC" BorderBrush="#1FECECEC" Foreground="#DD000000" ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" RowStyle="{DynamicResource DataGridRowStyle1}" x:Name="dataGridSemente" SelectionChanged="membersDataGrid_SelectionChanged" Margin="22,362,515,90">
+                <DataGrid.Columns>
+                    <!-- Começo CheckBox -->
+                    <DataGridCheckBoxColumn CanUserResize="False" Width="auto">
+                        <DataGridCheckBoxColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <CheckBox/>
+                            </DataTemplate>
+                        </DataGridCheckBoxColumn.HeaderTemplate>
+                    </DataGridCheckBoxColumn>
+                    <!-- Fim CheckBox -->
+                    <!-- Começo -->
+                    <DataGridTextColumn Header="#" IsReadOnly="True" CanUserResize="False" Width="auto"/>
+                    <DataGridTemplateColumn Header="Sementes" IsReadOnly="True" Width="*">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Border Width="25" Height="25" CornerRadius="50" Margin="0 0 10 0" Background="Red">
+                                        <TextBlock Text="...." VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Margin=" 0 0 0 1"/>
+                                    </Border>
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <!-- Fim -->
+
+                    <DataGridTextColumn Header="Descrição" Binding="{Binding Descricao}"/>
+                    <DataGridTextColumn Header="Marca" Binding="{Binding Marca }"/>
+                    <DataGridTextColumn Header="Quantidade" Binding="{Binding Quantidade}"/>
+                    <DataGridTextColumn Header="Medida" Binding="{Binding Medida}"/>
+                    <DataGridTextColumn Header="Valor" Binding="{Binding Valor}"/>
+
+                    <DataGridTemplateColumn Header="Operation" IsReadOnly="True" Width="*">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Button Style="{StaticResource GridEditButton}">
+                                        <Icon:PackIconMaterial Kind="PencilOutline" Style="{StaticResource GridButtonIcon}"/>
+                                    </Button>
+                                    <Button Style="{StaticResource GridRemoveButton}">
+                                        <Icon:PackIconMaterial Kind="DeleteOutline" Style="{StaticResource GridButtonIcon}"/>
+                                    </Button>
+
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <DataGrid Background="#FFFFEBCC" BorderBrush="#1FECECEC" Foreground="#DD000000" ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" RowStyle="{DynamicResource DataGridRowStyle1}" x:Name="dataGridInsumo" SelectionChanged="membersDataGrid_SelectionChanged" Margin="500,367,10,90">
+                <DataGrid.Columns>
+                    <!-- Começo CheckBox -->
+                    <DataGridCheckBoxColumn CanUserResize="False" Width="auto">
+                        <DataGridCheckBoxColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <CheckBox/>
+                            </DataTemplate>
+                        </DataGridCheckBoxColumn.HeaderTemplate>
+                    </DataGridCheckBoxColumn>
+                    <!-- Fim CheckBox -->
+                    <!-- Começo -->
+                    <DataGridTextColumn Header="#" IsReadOnly="True" CanUserResize="False" Width="auto"/>
+                    <DataGridTemplateColumn Header="Insumos" IsReadOnly="True" Width="*">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Border Width="25" Height="25" CornerRadius="50" Margin="0 0 10 0" Background="Red">
+                                        <TextBlock Text="...." VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Margin=" 0 0 0 1"/>
+                                    </Border>
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <!-- Fim -->
+
+
+
+                    <DataGridTextColumn Header="Nome" Binding="{Binding Nome}"/>
+                    <DataGridTextColumn Header="Tipo" Binding="{Binding Tipo }"/>
+                    <DataGridTextColumn Header="Marca" Binding="{Binding Marca}"/>
+                    <DataGridTextColumn Header="Descrição" Binding="{Binding Descricao}"/>
+
+                    <DataGridTemplateColumn Header="Operation" IsReadOnly="True" Width="*">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Button Style="{StaticResource GridEditButton}">
+                                        <Icon:PackIconMaterial Kind="PencilOutline" Style="{StaticResource GridButtonIcon}"/>
+                                    </Button>
+                                    <Button Style="{StaticResource GridRemoveButton}">
+                                        <Icon:PackIconMaterial Kind="DeleteOutline" Style="{StaticResource GridButtonIcon}"/>
+                                    </Button>
+
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <Separator Margin="0,333,0,248" Background="#FFFD9F0C" HorizontalAlignment="Center" Width="980"/>
+
+            <ComboBox
+                    materialDesign:HintAssist.Hint="Funcionário" 
+                    Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                       Foreground="black"
+                    Margin="261,203,515,0"
+                    Background="#f7fbfc" FontFamily="Arial" FontWeight="SemiBold"
+                    x:Name="cbFuncionario" Padding="8" Height="58" SelectionChanged="cbSafra_SelectionChanged" VerticalAlignment="Top">
+            </ComboBox>
+
+            <ComboBox
+                    materialDesign:HintAssist.Hint="àrea" 
+                    Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                       Foreground="black"
+                    Margin="500,203,273,0"
+                    Background="#f7fbfc" FontFamily="Arial" FontWeight="SemiBold"
+                    x:Name="cbArea" Padding="8" Height="58" SelectionChanged="cbSafra_SelectionChanged" VerticalAlignment="Top">
+            </ComboBox>
+
+            <ComboBox
+                    materialDesign:HintAssist.Hint="Fazenda" 
+                    Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                       Foreground="black"
+                    Margin="500,0,273,0"
+                    Background="#f7fbfc" FontFamily="Arial" FontWeight="SemiBold"
+                    x:Name="cbFazenda" Padding="8" Height="56" SelectionChanged="cbSafra_SelectionChanged"/>
+
+            <ComboBox
+                    materialDesign:HintAssist.Hint="Clima" 
+                    Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                       Foreground="black"
+                    Margin="745,0,10,0"
+                    Background="#f7fbfc" FontFamily="Arial" FontWeight="SemiBold"
+                    x:Name="cbClima" Padding="8" Height="56" SelectionChanged="cbSafra_SelectionChanged"/>
+            <ComboBox
+                    materialDesign:HintAssist.Hint="Maquinário Utilizado" 
+                    Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                       Foreground="black"
+                    Margin="745,203,10,0"
+                    Background="#f7fbfc" FontFamily="Arial" FontWeight="SemiBold"
+                    x:Name="cbMaquinas" Padding="8" Height="58" SelectionChanged="cbSafra_SelectionChanged" VerticalAlignment="Top"/>
+
+            <Button x:Name="btSalvar" FontSize="19"
+                        Content="Salvar" Height="47" 
+                        BorderThickness="17" Margin="20,523,14,30"
+                        Foreground="Black" BorderBrush="#FFFFB12C" 
+                        Background="#FFFFB22F" Cursor="Hand" 
+                        Click="btSalvar_Click" RenderTransformOrigin="0.5,0.5">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.069"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
             <DatePicker 
-                       x:Name="dtPickerDataFim"
-                       materialDesign:HintAssist.Hint="Data Fim Plantação" 
-                       Style="{StaticResource MaterialDesignOutlinedDatePicker}"
-                       Width="260" Height="60" Margin="305,75,10,0" VerticalAlignment="Top" />
-            <TextBox HorizontalAlignment="Left" 
-                             Height="195"
-                             materialDesign:HintAssist.Hint="Descrição e Observações a serem Declaradas....." 
-                      Style="{StaticResource MaterialDesignOutlinedTextBox}"
-                            
-                             VerticalAlignment="Top" 
-                             Width="565" Margin="20,179,0,0" Cursor="Arrow"/>
+                x:Name="dtPickerDataFim"
+                materialDesign:HintAssist.Hint="Data Fim da Plantação" 
+                Style="{StaticResource MaterialDesignOutlinedDatePicker}" Height="56" Margin="261,0,515,0" Foreground="Black" FontFamily="Arial" FontWeight="Bold" FontSize="14" />
 
-            <StackPanel HorizontalAlignment="Right"  Orientation="Horizontal" >
-                <Button x:Name="btSalvar" FontSize="19" Content="Salvar" Height="40" Width="119"  Margin="0 350 20 0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Grid.Column="2" Grid.ColumnSpan="2"/>
-                <Button x:Name="btCancelar" FontSize="19" Content="Cancelar" Height="40" Width="119"  Margin="0 350 40 0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Grid.ColumnSpan="4"/>
-            </StackPanel>
         </Grid>
-        <Image x:Name="image1" HorizontalAlignment="Left" Height="56.25" Margin="62.277,36.161,0,0" VerticalAlignment="Top" Width="56.25" Source="/Icons/setaCima.png"/>
-        <Image x:Name="image" HorizontalAlignment="Left" Height="56.25" Margin="62.277,355.581,0,0" VerticalAlignment="Top" Width="56.25" Source="/Icons/setaBaixa.png"/>
 
-    </Grid>
-
-
-
+    </Border>
 </Window>

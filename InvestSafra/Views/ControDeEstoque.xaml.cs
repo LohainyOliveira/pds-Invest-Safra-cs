@@ -44,14 +44,12 @@ namespace InvestSafra.Views
 		private void EstoqueFormWindow_Loaded(object sender, RoutedEventArgs e)
         {
             txtDescricao.Text = _estoque.Descricao;
-            txtMedida.Text = _estoque.Medida;
             txtTipoInsumo.Text = _estoque.Tipo_Insumo;
         }
 
         private void btCancelar_Click(object sender, RoutedEventArgs e)
         {
             txtDescricao.Clear();
-            txtMedida.Clear();
             txtQuantInsumos.Clear();
             txtQuantSementes.Clear();
             txtTipoInsumo.Clear();
@@ -92,8 +90,8 @@ namespace InvestSafra.Views
                 if (IsMaxinized)
                 {
                     this.WindowState = WindowState.Normal;
-                    this.Width = 1080;
-                    this.Height = 720;
+                    this.Width = 680;
+                    this.Height = 570;
 
                     IsMaxinized = false;
                 }
@@ -113,7 +111,6 @@ namespace InvestSafra.Views
         private void btSalvar_Click(object sender, RoutedEventArgs e)
         {
             _estoque.Descricao = txtDescricao.Text;
-            _estoque.Medida = txtMedida.Text;
             _estoque.Tipo_Insumo = txtTipoInsumo.Text;
             _estoque.Quantidade_Insumos = Convert.ToInt32(txtQuantInsumos.Text);
             _estoque.Quantidade_Semente = Convert.ToInt32(txtQuantSementes.Text);
@@ -138,5 +135,20 @@ namespace InvestSafra.Views
                 MessageBox.Show(ex.Message);
             }
         }
-    }
+
+		private void txtQuantInsumos_TextChanged(object sender, TextChangedEventArgs e)
+		{
+
+		}
+
+		private void txtQuantSementes_TextChanged(object sender, TextChangedEventArgs e)
+		{
+
+		}
+
+		private void txts_TextChanged(object sender, TextChangedEventArgs e)
+		{
+
+		}
+	}
 }

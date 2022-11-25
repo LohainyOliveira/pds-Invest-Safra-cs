@@ -40,17 +40,13 @@ namespace InvestSafra.Views
 
 		public ClimaFazenda(Area climaSelecionado)
 		{
-			this.climaSelecionado = climaSelecionado;
+			
 		}
 
 		private void ClimaFazendaFormWindow_Loaded(object sender, RoutedEventArgs e)
         {
          
-            txtClima.Text = _climaFazenda.Climatizacao;
-            txtTemperatura.Text = Convert.ToString(_climaFazenda.Temperatura);
-            txtLocal.Text = _climaFazenda.Local;
-
-            dtDia.SelectedDate = _climaFazenda.Data;
+            
 
 
 
@@ -58,9 +54,7 @@ namespace InvestSafra.Views
 
         private void btCancelar_Click(object sender, RoutedEventArgs e)
         {
-            txtClima.Clear();
-            txtLocal.Clear();
-            txtTemperatura.Clear();
+           
 
             ExibirMensagemLimpar();
         }
@@ -87,17 +81,15 @@ namespace InvestSafra.Views
         }
 
         private bool IsMaxinized = false;
-		private Area climaSelecionado;
-
-		private void Border_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void Border_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             if (e.ClickCount == 2)
             {
                 if (IsMaxinized)
                 {
                     this.WindowState = WindowState.Normal;
-                    this.Width = 1080;
-                    this.Height = 720;
+                    this.Width = 600;
+                    this.Height = 450;
 
                     IsMaxinized = false;
                 }
@@ -109,6 +101,7 @@ namespace InvestSafra.Views
                 }
             }
         }
+
         private void btSair_Click(object sender, RoutedEventArgs e)
         {
             DialogResult = false;
@@ -117,10 +110,6 @@ namespace InvestSafra.Views
         private void btSalvar_Click(object sender, RoutedEventArgs e)
         {
            
-            _climaFazenda.Data = dtDia.SelectedDate;
-            _climaFazenda.Temperatura = Convert.ToDouble(txtTemperatura.Text);
-            _climaFazenda.Local = txtLocal.Text;
-            _climaFazenda.Climatizacao = txtClima.Text;
 
 
 
@@ -136,14 +125,16 @@ namespace InvestSafra.Views
                 MessageBox.Show(ex.Message);
             }
 
-            txtTemperatura.Clear();
-            txtLocal.Clear();
-            txtClima.Clear();
-            dtDia.SelectedDate = null;
+            
 
 
         }
-    }
+
+		private void txtLocal_TextChanged(object sender, TextChangedEventArgs e)
+		{
+
+		}
+	}
 
     
 }

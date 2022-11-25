@@ -64,7 +64,6 @@
                             Background="#0F040302" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="52" Cursor="Arrow" Width="364"/>
                         <StackPanel>
                             <Button Name="btLogar" BorderBrush="#EFA82E" Background="#EFA82E" Content="Logar" Cursor="Hand" Margin="0 20 0 0" Foreground="Black" Click="btLogar_Click"/>
-                            <Button Name="btCadastrar" BorderBrush="#EFA82E" Background="#EFA82E" Content="Cadastrar" Cursor="Hand" Margin="0 10 0 0" Foreground="Black" Click="btCadastrar_Click"/>
                         </StackPanel>
                     </StackPanel>
                 </StackPanel>

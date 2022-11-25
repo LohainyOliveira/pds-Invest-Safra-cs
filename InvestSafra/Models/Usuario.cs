@@ -12,9 +12,9 @@ namespace InvestSafra.Models
 
         public string UsuarioNome { get; set; }
 
-        public string Senha {  get; set; }
+        public string Senha { get; set; }
 
-        public ClienteJuridico Cliente { get; set; }
+        public Funcionario Funcionario { get; set; }
 
         private static Usuario _instance;
 
@@ -40,7 +40,7 @@ namespace InvestSafra.Models
 
         public static int GetFuncionarioId()
         {
-            return _instance.Cliente.Id;
+            return _instance.Funcionario.Id;
         }
     }
 }

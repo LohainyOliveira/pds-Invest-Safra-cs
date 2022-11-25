@@ -127,7 +127,6 @@
     <Compile Include="Models\AreaDAO.cs" />
     <Compile Include="Models\Caixa.cs" />
     <Compile Include="Models\CaixaDAO.cs" />
-    <Compile Include="Models\ClienteFisico.cs" />
     <Compile Include="Models\ClienteFisicoDAO.cs" />
     <Compile Include="Models\Clima.cs" />
     <Compile Include="Models\ClimaDAO.cs" />
@@ -211,9 +210,6 @@
     <Compile Include="Views\CadastrarInsumos.xaml.cs">
       <DependentUpon>CadastrarInsumos.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\GraficosWindow.xaml.cs">
-      <DependentUpon>GraficosWindow.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\LevantamentoDeDadosDaSafra.xaml.cs">
       <DependentUpon>LevantamentoDeDadosDaSafra.xaml</DependentUpon>
     </Compile>
@@ -253,9 +249,6 @@
     <Compile Include="Views\ListaMaquinas.xaml.cs">
       <DependentUpon>ListaMaquinas.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\ListaProduto.xaml.cs">
-      <DependentUpon>ListaProduto.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\ListaSemente.xaml.cs">
       <DependentUpon>ListaSemente.xaml</DependentUpon>
     </Compile>
@@ -264,9 +257,6 @@
     </Compile>
     <Compile Include="Views\MenuWindow.xaml.cs">
       <DependentUpon>MenuWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\CadastrarProduto.xaml.cs">
-      <DependentUpon>CadastrarProduto.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\CadastrarSementes.xaml.cs">
       <DependentUpon>CadastrarSementes.xaml</DependentUpon>
@@ -363,10 +353,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\GraficosWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Views\LevantamentoDeDadosDaSafra.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -419,10 +405,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Views\ListaProduto.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="Views\ListaSemente.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -432,10 +414,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\MenuWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\CadastrarProduto.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

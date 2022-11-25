@@ -12,10 +12,10 @@
         TextOptions.TextFormattingMode="Ideal" 
         TextOptions.TextRenderingMode="Auto"
         FontFamily="{DynamicResource MaterialDesignFont}"
-        Height="570" Width="1000" WindowStartupLocation="CenterScreen" WindowStyle="None"
+        Height="570" Width="680" WindowStartupLocation="CenterScreen" WindowStyle="None"
         AllowsTransparency="True" Background="Transparent">
 
-    <Border CornerRadius="30" Background="#f7fbfc" MouseDown="Border_MouseDown" MouseLeftButtonDown="Border_MouseLeftButtonDown" Margin="0,0,-52,0">
+    <Border CornerRadius="30" Background="#f7fbfc" MouseDown="Border_MouseDown" MouseLeftButtonDown="Border_MouseLeftButtonDown">
         <Grid Margin="0,0,0,-28" RenderTransformOrigin="0.5,0.5">
             <Grid.RenderTransform>
                 <TransformGroup>
@@ -39,56 +39,52 @@
                         <ColumnDefinition Width="17*"/>
                         <ColumnDefinition Width="17*"/>
                     </Grid.ColumnDefinitions>
-                    <Image HorizontalAlignment="Left" Height="200" Margin="38,15,0,0" VerticalAlignment="Top" Width="170" Source="/Imagens/LogoCanto.png"/>
-                    <Label  Content="Controle de Estoque" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Malik" FontSize="24" Foreground="#EFA82E" FontWeight="Bold" Height="49" Width="292" RenderTransformOrigin="0.336,0.452" Margin="398,44,0,0"/>
+                    <Image HorizontalAlignment="Left" Height="139" Margin="38,15,0,0" VerticalAlignment="Top" Width="162" Source="/Imagens/LogoCanto.png"/>
+                    <Label  Content="Controle de Estoque" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Malik" FontSize="24" Foreground="#EFA82E" FontWeight="Bold" Height="42" Width="241" RenderTransformOrigin="0.336,0.452" Margin="249,54,0,0"/>
                 </Grid>
 
-                <Grid VerticalAlignment="Top" HorizontalAlignment="Center" Height="535" >
-                    <StackPanel Orientation="Horizontal" Margin="0 0 60 200">
-                        <TextBox 
+                <Grid VerticalAlignment="Top" HorizontalAlignment="Center" Height="535" Width="640" >
+                    <TextBox 
                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     AcceptsReturn="True"
                     MaxWidth="400"
-                    Margin="80 0 50 0"
+                    Margin="333,370,98,0"
                     materialDesign:HintAssist.Hint="Quantidade de Sementes"
-                    x:Name="txtQuantSementes" Padding="16" Grid.Row="1" 
-                    TextWrapping="Wrap" VerticalAlignment="Center" 
-                    Width="209" Background="#f7fbfc"  FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
+                    x:Name="txtQuantSementes" Padding="16" 
+                    TextWrapping="Wrap" VerticalAlignment="Top" 
+                    Width="209" Background="#f7fbfc"  FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow" TextChanged="txtQuantSementes_TextChanged"
                   />
-                        <TextBox 
+                    <TextBox 
                 
                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     AcceptsReturn="True"
                     MaxWidth="400"
-                    Margin="10 0 50 0"
+                    Margin="334,272,102,203"
                     materialDesign:HintAssist.Hint="Quantidade de Insumos"
                     x:Name="txtQuantInsumos" Padding="16" 
-                    TextWrapping="Wrap" 
-                    Width="208" Background="#f7fbfc" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
+                    TextWrapping="Wrap" Background="#f7fbfc" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow" TextChanged="txtQuantInsumos_TextChanged"
                   />
 
 
 
 
-                    </StackPanel>
 
-                    <StackPanel Orientation="Horizontal" Margin="0 0 60 0">
-                        <TextBox 
+                    <TextBox 
                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     AcceptsReturn="True"
                     MaxWidth="400"
-                    Margin="80 0 50 0"
+                    Margin="90,273,342,0"
                     materialDesign:HintAssist.Hint="Tipos de Insumos"
-                    x:Name="txtTipoInsumo" Padding="16" Grid.Row="1" 
-                    TextWrapping="Wrap" VerticalAlignment="Center" 
-                    Width="208" Background="#f7fbfc" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
+                    x:Name="txtTipoInsumo" Padding="16" 
+                    TextWrapping="Wrap" VerticalAlignment="Top" 
+                    Width="208" Background="#f7fbfc" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="62" Cursor="Arrow"
                   />
-                        <TextBox 
+                    <TextBox 
                     
                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     AcceptsReturn="True"
                     MaxWidth="400"
-                    Margin="10 0 50 0"
+                    Margin="329,186,103,289"
                     materialDesign:HintAssist.Hint="Descrição"
                     x:Name="txtDescricao" Padding="16" 
                     TextWrapping="Wrap" 
@@ -97,23 +93,26 @@
 
 
 
-                    </StackPanel>
 
-                    <StackPanel Orientation="Horizontal" Margin="0 200 60 0">
-                        <TextBox 
+
+                    <TextBox 
                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     AcceptsReturn="True"
                     MaxWidth="400"
-                    Margin="220 0 50 0"
+                    Margin="90,187,342,0"
                     materialDesign:HintAssist.Hint="Medida"
-                    x:Name="txtMedida" Padding="16" Grid.Row="1" 
-                    TextWrapping="Wrap" VerticalAlignment="Center" 
+                    x:Name="txtMedia" Padding="16" 
+                    TextWrapping="Wrap" VerticalAlignment="Top" 
                     Width="208" Background="#f7fbfc" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Hand"
                   />
-
-
-
-                    </StackPanel>
+                    <ComboBox
+                    materialDesign:HintAssist.Hint="Safra" 
+                    Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                       Foreground="black"
+                    Margin="92,368,340,0"
+                    Background="#f7fbfc" FontFamily="Arial" FontWeight="Bold"
+                    x:Name="cbSafra" Padding="8" Height="62"  VerticalAlignment="Top">
+                    </ComboBox>
 
                     <Grid Margin="0,465,10,10">
                         <Grid.ColumnDefinitions>
@@ -123,7 +122,7 @@
                             <ColumnDefinition Width="195*"/>
                         </Grid.ColumnDefinitions>
 
-                        <Grid Margin="334,7,-137,-7" Grid.ColumnSpan="4">
+                        <Grid Margin="228,7,-31,-7" Grid.ColumnSpan="4">
                             <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
                                 <Button x:Name="btSalvar" FontSize="19" Content="Salvar" Height="40" Width="119"  Margin="0,0,20,0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Grid.Column="2" Grid.ColumnSpan="2" Click="btSalvar_Click"/>
                                 <Button x:Name="btCancelar" FontSize="19" Content="Cancelar" Height="40" Width="119"  Margin="0,0,0,0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Grid.ColumnSpan="4" Click="btCancelar_Click"/>

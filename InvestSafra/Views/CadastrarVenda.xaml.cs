@@ -90,5 +90,10 @@ namespace InvestSafra.Views
 		{
 
 		}
+
+		private void txtDescricao_TextChanged(object sender, TextChangedEventArgs e)
+		{
+
+		}
 	}
 }

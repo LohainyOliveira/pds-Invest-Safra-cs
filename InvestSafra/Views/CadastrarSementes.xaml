@@ -13,10 +13,11 @@
         TextOptions.TextRenderingMode="Auto"
         FontFamily="{DynamicResource MaterialDesignFont}"
          Height="520" Width="900" WindowStartupLocation="CenterScreen" WindowStyle="None"
-        AllowsTransparency="True" Background="Transparent">
+      AllowsTransparency="True" Background="Transparent">
 
-    <Border CornerRadius="30" Background="#f7fbfc" MouseDown="Border_MouseDown" MouseLeftButtonDown="Border_MouseLeftButtonDown" Margin="0,0,-52,0">
-    <Grid Margin="0,0,0,-28" RenderTransformOrigin="0.5,0.5">
+    <Border CornerRadius="30" Background="#f7fbfc" MouseDown="Border_MouseDown" MouseLeftButtonDown="Border_MouseLeftButtonDown">
+
+        <Grid Margin="0,0,0,-28" RenderTransformOrigin="0.5,0.5">
         <Grid.RenderTransform>
             <TransformGroup>
                 <RotateTransform Angle="0.043"/>

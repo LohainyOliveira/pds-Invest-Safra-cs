@@ -12,63 +12,45 @@
         TextOptions.TextFormattingMode="Ideal" 
         TextOptions.TextRenderingMode="Auto"
         FontFamily="{DynamicResource MaterialDesignFont}"
-        Height="570" Width="1000" WindowStartupLocation="CenterScreen" WindowStyle="None"
+        
+        Height="450" Width="600" WindowStartupLocation="CenterScreen" WindowStyle="None"
         AllowsTransparency="True" Background="Transparent">
 
-    <Border CornerRadius="30" Background="#f7fbfc" MouseDown="Border_MouseDown" MouseLeftButtonDown="Border_MouseLeftButtonDown" Margin="0,0,-52,0">
+    <Border CornerRadius="30" Background="#f7fbfc" MouseDown="Border_MouseDown" MouseLeftButtonDown="Border_MouseLeftButtonDown">
 
-        <Grid Margin="0,0,0,-28" RenderTransformOrigin="0.5,0.5">
-        <Grid.RenderTransform>
-            <TransformGroup>
-                <ScaleTransform/>
-                <SkewTransform/>
-                <RotateTransform Angle="0.043"/>
-                <TranslateTransform/>
-            </TransformGroup>
-        </Grid.RenderTransform>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="115"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="115"/>
-        </Grid.RowDefinitions>
+        <Grid >
 
-            <Grid Grid.RowSpan="3" Margin="0,0,0,10">
+            <Image HorizontalAlignment="Left" Height="115" Margin="38,15,0,0" VerticalAlignment="Top" Width="170" Source="/Imagens/LogoCanto.png"/>
+            <Label  Content="Clima Fazenda" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Malik" FontSize="24" Foreground="#EFA82E" FontWeight="Bold" Height="33" Width="172" RenderTransformOrigin="0.326,0.452" Margin="0,75,0,0"/>
 
-                <Grid Grid.Row="0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="1538*"/>
-                    <ColumnDefinition Width="17*"/>
-                    <ColumnDefinition Width="17*"/>
-                </Grid.ColumnDefinitions>
-                <Image HorizontalAlignment="Left" Height="200" Margin="38,15,0,0" VerticalAlignment="Top" Width="170" Source="/Imagens/LogoCanto.png"/>
-                <Label  Content="Clima da Fazenda" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Malik" FontSize="24" Foreground="#EFA82E" FontWeight="Bold" Height="49" Width="292" RenderTransformOrigin="0.336,0.452" Margin="391,45,0,0"/>
-                </Grid>
 
-            <Grid VerticalAlignment="Top" HorizontalAlignment="Center" Height="535" >
-                <StackPanel Orientation="Horizontal" Margin="0 0 60 200">
-                    <DatePicker 
+
+
+
+            <StackPanel Orientation="Horizontal" Margin="0,0,16,206">
+                <DatePicker 
                        x:Name="dtDia"
                        materialDesign:HintAssist.Hint="Data" 
                        Style="{StaticResource MaterialDesignOutlinedDatePicker}"
                        Width="206" Height="60" Margin="80 95 0 0"/>
-                    
-                    <TextBox Style="{StaticResource MaterialDesignOutlinedTextBox}"
+
+                <TextBox Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     AcceptsReturn="True"
                     MaxWidth="400"
                     Margin="60 93 50 0"
                     materialDesign:HintAssist.Hint="Clima"
                     x:Name="txtClima" Padding="16" 
                     TextWrapping="Wrap" 
-                    Width="208" Background="#f7fbfc" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
+                    Width="202" Background="#f7fbfc" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
 
 
 
 
-                </StackPanel>
+            </StackPanel>
 
-                <StackPanel Orientation="Horizontal" Margin="0 0 60 0">
-                    <TextBox 
+            <StackPanel Orientation="Horizontal" Margin="0,0,-4,0">
+                <TextBox 
                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     AcceptsReturn="True"
                     MaxWidth="400"
@@ -78,7 +60,7 @@
                     TextWrapping="Wrap" VerticalAlignment="Center" 
                     Width="208" Background="#f7fbfc" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
                   />
-                    <TextBox 
+                <TextBox 
                     
                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     AcceptsReturn="True"
@@ -87,41 +69,26 @@
                     materialDesign:HintAssist.Hint= "Local"
                     x:Name="txtLocal" Padding="16" 
                     TextWrapping="Wrap" 
-                    Width="208" Background="#f7fbfc" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
+                    Width="207" Background="#f7fbfc" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow" TextChanged="txtLocal_TextChanged"
                   />
 
 
 
-                </StackPanel>
-
-
-
-                <Grid Margin="0,465,10,10">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="391*"/>
-                        <ColumnDefinition Width="2*"/>
-                        <ColumnDefinition Width="0*"/>
-                        <ColumnDefinition Width="195*"/>
-                    </Grid.ColumnDefinitions>
-
-                    <Grid Margin="334,7,-137,-7" Grid.ColumnSpan="4">
-                        <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
-                            <Button x:Name="btSalvar" FontSize="19" Content="Salvar" Height="40" Width="119"  Margin="0,0,20,0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Grid.Column="2" Grid.ColumnSpan="2" Click="btSalvar_Click"/>
-                            <Button x:Name="btCancelar" FontSize="19" Content="Cancelar" Height="40" Width="119"  Margin="0,0,0,0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Grid.ColumnSpan="4" Click="btCancelar_Click"/>
-                        </StackPanel>
-                    </Grid>
-                </Grid>
-
-
-            </Grid>
-        </Grid>
-            <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Right">
-                <Button Style="{StaticResource topButton}"  Height="51"  Margin="0 20 16 0" x:Name="btSair" Width="48" Click="btSair_Click">
-                    <Button.Background>
-                        <ImageBrush ImageSource="/Icons/logout.png"/>
-                    </Button.Background>
-                </Button>
             </StackPanel>
+
+
+
+
+
+            <Button x:Name="btSalvar" FontSize="19" Content="Salvar" Height="40" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Click="btSalvar_Click" Margin="302,377,154,33"/>
+            <Button x:Name="btCancelar" FontSize="19" Content="Cancelar" Height="40" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Click="btCancelar_Click" Margin="459,377,10,33"/>
+
+
+            <Button Style="{StaticResource topButton}"  Height="51"  Margin="539,10,0,389" x:Name="btSair" Width="59" Click="btSair_Click" RenderTransformOrigin="1.108,0.501">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Icons/logout.png"/>
+                </Button.Background>
+            </Button>
         </Grid>
     </Border>
 </Window>

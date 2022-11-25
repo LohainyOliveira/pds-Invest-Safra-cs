@@ -7,11 +7,11 @@
         mc:Ignorable="d"
          xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         Title="CadastrarRecebimentoWindow"
-        Height="560" Width="1000" WindowStartupLocation="CenterScreen" WindowStyle="None"
-        AllowsTransparency="True" Background="Transparent">
+        Height="500" Width="670" WindowStartupLocation="CenterScreen" WindowStyle="None"
+       AllowsTransparency="True" Background="Transparent">
 
+    <Border CornerRadius="30" Background="#f7fbfc" MouseDown="Border_MouseDown" MouseLeftButtonDown="Border_MouseLeftButtonDown">
 
-    <Border CornerRadius="30" Background="#f7fbfc" MouseDown="Border_MouseDown" MouseLeftButtonDown="Border_MouseLeftButtonDown" Margin="0,0,-52,0">
         <Grid Margin="0,0,0,-28" RenderTransformOrigin="0.5,0.5">
 
             <Grid.RenderTransform>
@@ -36,8 +36,8 @@
                         <ColumnDefinition Width="17*"/>
                         <ColumnDefinition Width="17*"/>
                     </Grid.ColumnDefinitions>
-                    <Image HorizontalAlignment="Left" Height="200" Margin="38,15,0,0" VerticalAlignment="Top" Width="170" Source="/Imagens/LogoCanto.png"/>
-                    <Label  Content="Cadastrar Recebimento" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Malik" FontSize="24" Foreground="#EFA82E" FontWeight="Bold" Height="59" Width="292" RenderTransformOrigin="0.336,0.452" Margin="390,47,0,0"/>
+                    <Image HorizontalAlignment="Left" Height="149" Margin="38,15,0,0" VerticalAlignment="Top" Width="158" Source="/Imagens/LogoCanto.png"/>
+                    <Label  Content="Cadastrar Recebimento" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Malik" FontSize="24" Foreground="#EFA82E" FontWeight="Bold" Height="59" Width="279" RenderTransformOrigin="0.336,0.452" Margin="280,47,0,0"/>
                     <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Right">
                         <Button Style="{StaticResource topButton}"  Height="51"   Margin="0 20 0 0" x:Name="btSair" Width="48" Click="btSair_Click">
                             <Button.Background>
@@ -52,41 +52,38 @@
 
 
 
-                    <StackPanel Orientation="Horizontal">
 
 
 
-                        <TextBox
+                    <TextBox
                      Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     AcceptsReturn="True"
                     MaxWidth="400"
                     materialDesign:HintAssist.Hint="Valor da Venda"
                     x:Name="txtVenda" Padding="16" 
-                    TextWrapping="Wrap" 
-                    Width="209" Background="#f7fbfc" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
+                    TextWrapping="Wrap" Background="#f7fbfc" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow" Margin="266,290,158,185"
                      />
 
 
 
-                        <DatePicker 
+                    <DatePicker 
                     x:Name="dtPikerDataRecebimento"
                        materialDesign:HintAssist.Hint="Data do Recebimento" 
                        Style="{StaticResource MaterialDesignOutlinedDatePicker}"
                        Width="219" Height="60" 
-                            Margin="70 -110 0 0"/>
+                            Margin="24,291,517,0" VerticalAlignment="Top"/>
 
 
-                        <TextBox VerticalAlignment="Center" HorizontalAlignment="Center" Margin="-497 110 0 0"
+                    <TextBox VerticalAlignment="Top" HorizontalAlignment="Left" Margin="394,206,0,0"
                      Style="{StaticResource MaterialDesignOutlinedTextBox}"
                     AcceptsReturn="True"
                     MaxWidth="400"
                     materialDesign:HintAssist.Hint="Comprador"
                     x:Name="txtComprador" Padding="16" 
                     TextWrapping="Wrap" 
-                    Width="209" Background="#f7fbfc" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="60" Cursor="Arrow"
+                    Width="209" Background="#f7fbfc" FontFamily="Arial" FontSize="14" FontWeight="Bold" Height="56" Cursor="Arrow" TextChanged="txtComprador_TextChanged"
                      />
 
-                    </StackPanel>
 
 
 
@@ -101,13 +98,31 @@
                             <ColumnDefinition Width="195*"/>
                         </Grid.ColumnDefinitions>
 
-                        <Grid Margin="334,7,-137,-7" Grid.ColumnSpan="4">
+                        <Grid Margin="148,-35,49,35" Grid.ColumnSpan="4">
                             <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
                                 <Button x:Name="btSalvar" FontSize="19" Content="Salvar" Height="40" Width="119"  Margin="0,20,20,0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Grid.Column="2" Grid.ColumnSpan="2" Click="btSalvar_Click"/>
                                 <Button x:Name="btCancelar" FontSize="19" Content="Limpar" Height="40" Width="119"  Margin="0,20,0,0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Grid.ColumnSpan="4" Click="btCancelar_Click"/>
                             </StackPanel>
                         </Grid>
                     </Grid>
+
+                    <ComboBox
+                    materialDesign:HintAssist.Hint="Caixa" 
+                    Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                       Foreground="black"
+                    Margin="22,206,625,0"
+                    Background="#f7fbfc" FontFamily="Arial" FontWeight="SemiBold"
+                    x:Name="cbCaixa" Padding="8" Height="58"  VerticalAlignment="Top">
+                    </ComboBox>
+
+                    <ComboBox
+                    materialDesign:HintAssist.Hint="Venda" 
+                    Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                       Foreground="black"
+                    Margin="164,207,386,0"
+                    Background="#f7fbfc" FontFamily="Arial" FontWeight="SemiBold"
+                    x:Name="cbVenda" Padding="8" Height="56"  VerticalAlignment="Top">
+                    </ComboBox>
 
                 </Grid>
             </Grid>

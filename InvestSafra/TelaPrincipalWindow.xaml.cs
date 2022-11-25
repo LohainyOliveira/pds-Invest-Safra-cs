@@ -87,8 +87,6 @@ namespace InvestSafra
         {
 
 
-			GraficosWindow form = new GraficosWindow();
-			form.ShowDialog();
 		}
 
         private void btMenu_Click(object sender, RoutedEventArgs e)
@@ -114,9 +112,7 @@ namespace InvestSafra
 		private void btCadastrar_Click(object sender, RoutedEventArgs e)
 		{
 			
-			CadastrarClienteJuridico form = new CadastrarClienteJuridico();
-			this.Close();
-			form.ShowDialog();
+			
 
 		}
 
@@ -124,7 +120,6 @@ namespace InvestSafra
 		private void btEntrar_Click_1(object sender, RoutedEventArgs e)
 		{
 			Entrar form = new Entrar();
-			this.Close();
 			form.ShowDialog();
 
 		}
