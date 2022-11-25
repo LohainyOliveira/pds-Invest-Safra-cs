@@ -22,14 +22,14 @@ namespace InvestSafra.Models
             {
                 var comando = _conn.Query();
 
-                comando.CommandText = ("insert into Clima value (null, @data, @temperatura, @local, @clima)");
+                comando.CommandText = ("insert into Clima value (null, @temperatura, @local, @clima, @data)");
 
 
 
-                comando.Parameters.AddWithValue("@data", clima.Data?.ToString("yyyy-MM-dd"));
                 comando.Parameters.AddWithValue("@temperatura", clima.Temperatura);
                 comando.Parameters.AddWithValue("@local", clima.Local);
                 comando.Parameters.AddWithValue("@clima", clima.Climatizacao);
+                comando.Parameters.AddWithValue("@data", clima.Data?.ToString("yyyy-MM-dd"));
 
                 var resultado = comando.ExecuteNonQuery();
 
@@ -70,7 +70,7 @@ namespace InvestSafra.Models
                     clima.Temperatura = reader.GetDouble("temperatura_clim");
                     clima.Local = DAOHelper.GetString(reader, "local_clim");
                     clima.Climatizacao = DAOHelper.GetString(reader, "clima_clim");
-                   
+
 
                     lista.Add(clima);
                 }

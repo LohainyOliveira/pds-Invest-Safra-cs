@@ -38,15 +38,10 @@ namespace InvestSafra.Views
 
         }
 
-		public ClimaFazenda(Area climaSelecionado)
-		{
-			
-		}
 
 		private void ClimaFazendaFormWindow_Loaded(object sender, RoutedEventArgs e)
         {
-         
-            
+           
 
 
 
@@ -109,9 +104,11 @@ namespace InvestSafra.Views
 
         private void btSalvar_Click(object sender, RoutedEventArgs e)
         {
-           
 
-
+            _climaFazenda.Temperatura = Convert.ToDouble(txtTemperatura.Text);
+            _climaFazenda.Climatizacao = txtTemperatura.Text;
+            _climaFazenda.Local = txtLocal.Text;
+            _climaFazenda.Data = dtDia.SelectedDate;
 
             try
             {

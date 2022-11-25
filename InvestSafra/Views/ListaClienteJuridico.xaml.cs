@@ -123,5 +123,10 @@ namespace InvestSafra.Views
         {
             DialogResult = false;
         }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

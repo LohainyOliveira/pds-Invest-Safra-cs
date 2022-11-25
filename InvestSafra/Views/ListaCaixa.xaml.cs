@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using InvestSafra.Models;
 
 namespace InvestSafra.Views
 {
@@ -19,10 +20,35 @@ namespace InvestSafra.Views
     /// </summary>
     public partial class ListaCaixa : Window
     {
+        
         public ListaCaixa()
         {
             InitializeComponent();
+
+            Loaded += SementesListaWindow_Loaded;
         }
+
+        private void SementesListaWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            CarregarListagem();
+        }
+
+        private void CarregarListagem()
+        {
+            try
+            {
+                var dao = new CaixaDAO();
+                List<Caixa> listaSementes = dao.List();
+
+                dataGridCaixa.ItemsSource = listaSementes;
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.ChangedButton == MouseButton.Left)
@@ -66,6 +92,39 @@ namespace InvestSafra.Views
         private void btSair_Click(object sender, RoutedEventArgs e)
         {
             DialogResult = false;
+        }
+
+        private void btRemover_Click(object sender, RoutedEventArgs e)
+        {
+            var caixaSelecionada = dataGridCaixa.SelectedItem as Caixa;
+
+            var resultado = MessageBox.Show($"Deseja realmente Remover a escola{caixaSelecionada.Id}?", "Confirmação de Exclusão", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+
+            try
+            {
+                if (resultado == MessageBoxResult.Yes)
+                {
+                    var dao = new CaixaDAO();
+                    dao.Delete(caixaSelecionada);
+
+                    MessageBox.Show("Registros Removidos!");
+                    CarregarListagem();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void btAtualizar_Click(object sender, RoutedEventArgs e)
+        {
+            var caixaSelecionada = dataGridCaixa.SelectedItem as Caixa;
+
+            var form = new CadastraCaixa(caixaSelecionada);
+            form.ShowDialog();
+            form.Close();
         }
     }
 }

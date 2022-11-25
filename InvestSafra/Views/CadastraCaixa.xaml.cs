@@ -23,8 +23,23 @@ namespace InvestSafra.Views
         Caixa _caixa = new Caixa();
         public CadastraCaixa()
         {
-            InitializeComponent();
+            InitializeComponent(); 
+            Loaded += caixaFormWindow_Loaded;
         }
+        public CadastraCaixa(Caixa caixa)
+        {
+            InitializeComponent();
+
+            _caixa = caixa;
+            Loaded += caixaFormWindow_Loaded;
+
+        }
+
+        private void caixaFormWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
+
 
 
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
