@@ -9,7 +9,8 @@
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="200"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="89*"/>
+                <ColumnDefinition Width="21*"/>
             </Grid.ColumnDefinitions>
 
             <Grid>
@@ -19,17 +20,13 @@
                 </Grid.RowDefinitions>
             </Grid>
 
-            <Button VerticalAlignment="Top" HorizontalAlignment="Right" Style="{StaticResource topButton}" Width="90">
-                <Icon:PackIconMaterial Kind="Menu" Width="15" Height="15"/>
-            </Button>
-
             <Border Background="#EFA82E" CornerRadius="0 50 0 02" Margin="0,117,0,0">
                 <DockPanel>
                     <Border Width="80" Height="80" Padding="3" Background="white" CornerRadius="100"
                             DockPanel.Dock="Top" HorizontalAlignment="Center" Margin="0 -30 0 0">
                         <Ellipse>
                             <Ellipse.Fill>
-                                <ImageBrush/>
+                                <ImageBrush ImageSource="/Imagens/usu.png" />
                             </Ellipse.Fill>
                         </Ellipse>
                     </Border>
@@ -50,47 +47,26 @@
                         </Button>
                     </StackPanel>
 
-                    <StackPanel DockPanel.Dock="Top">
-                        <Button Height="56" Background="#EFA82E" Cursor="Hand" BorderBrush="#EFA82E">
-                            <DockPanel>
-                                <Icon:PackIconMaterial Kind="ForumOutline" Style="{StaticResource ResourceKey=menuButtonIcon}" RenderTransformOrigin="0.133,0.48" Foreground="Black"/>
-                                <TextBlock Text="Chat" Width="49" Foreground="Black"/>
-                            </DockPanel>
-                        </Button>
-                    </StackPanel>
+                    <StackPanel DockPanel.Dock="Top"/>
 
-                    <DockPanel>
-                        <Button Style="{StaticResource menuButton}" VerticalAlignment="Bottom" DockPanel.Dock="Bottom">
-                            <DockPanel>
-                                <Icon:PackIconMaterial Kind="Logout" Style="{StaticResource ResourceKey=menuButtonIcon}" RenderTransformOrigin="0.133,0.48" Foreground="Black"/>
-                                <TextBlock Text="Logout" Foreground="#FF0E0606" Width="49"/>
-                            </DockPanel>
-                        </Button>
-                    </DockPanel>
+                    <DockPanel/>
 
                 </DockPanel>
             </Border>
 
-            <Grid Grid.Column="1" Margin="30 20 20 20">
+            <Grid Grid.Column="1" Margin="30,20,20,20" Grid.ColumnSpan="2">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
-                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="94*"/>
+                    <RowDefinition Height="133*"/>
                     <RowDefinition Height="auto"/>
                 </Grid.RowDefinitions>
 
-
-                <Grid Width="300" HorizontalAlignment="Left">
-                    <TextBlock Margin="20 0 " VerticalAlignment="Center" Foreground="#b0b9c6" IsHitTestVisible="False"
-                               Panel.ZIndex="1" Text="Search hare..." Visibility="Visible"/>
-
-
-                </Grid>
-
-                <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Right">
+                <StackPanel HorizontalAlignment="Left" Margin="782,0,0,0">
                     <Button Style="{StaticResource topButton}"  Height="40"  x:Name="btSair" Width="48" Click="btSair_Click">
                         <Button.Background>
                             <ImageBrush ImageSource="/Icons/logout.png"/>
@@ -98,10 +74,10 @@
                     </Button>
                 </StackPanel>
 
-                <TextBlock Text="Caixa" Grid.Row="1" FontSize="32" FontWeight="SemiBold" Margin="0 20 0 0"
-                           HorizontalAlignment="Left" Foreground="black"/>
+                <TextBlock Text="Caixa" Grid.Row="1" FontSize="32" FontWeight="SemiBold" Margin="0,20,0,8"
+                           HorizontalAlignment="Left" Foreground="black" Grid.RowSpan="2"/>
 
-                <Button Style="{StaticResource addButton}" Background="#FF040306">
+                <Button Style="{StaticResource addButton}" Background="#FF040306" Margin="0,24,0,4" Grid.Row="1">
                     <StackPanel Orientation="Horizontal">
                         <Icon:PackIconMaterial Kind="Plus" VerticalAlignment="Center" Width="11" Height="11" Margin="0 20 0 0"/>
                         <TextBlock Text="Add New Caixa" Height="19"/>
@@ -110,7 +86,7 @@
 
 
 
-                <Separator Height="1" Grid.Row="3" Background="white" Margin="0 -1 0 10"/>
+                <Separator Height="1" Grid.Row="3" Background="white" Margin="0,3,0,14"/>
 
                 <!--<StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0 10 0 0">
                     <Button Content="Club Staff" Style="{StaticResource tabButton}"/>
@@ -120,22 +96,19 @@
 
 
                 <TextBlock Text="Atualize ou Delete o Seu Caixa Aqui"  Grid.Row="2" FontSize="18"  FontWeight="SemiBold"
-                           Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="504,2,0,0" Width="330" Grid.RowSpan="2"/>
+                           Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="504,2,0,0" Width="330" Grid.RowSpan="3"/>
 
 
 
-                <Grid Width="200" HorizontalAlignment="Right" Grid.Row="4">
-                    <TextBlock Margin="59,0,-29,0" VerticalAlignment="Center" Foreground="black" IsHitTestVisible="False"
-                               Panel.ZIndex="1" Text="Procurar por Caixa..." Visibility="Visible"/>
-
-                    <TextBox x:Name="txtFilter" Style="{StaticResource textBoxFilter}"/>
+                <Grid Width="200" HorizontalAlignment="Left" Grid.Row="4" Margin="630,0,0,0">
 
                     <Icon:PackIconMaterial Kind="Magnify" Height="15" VerticalAlignment="Center" Margin="0 0 15 0"
                                            Foreground="black" HorizontalAlignment="Right"/>
                 </Grid>
 
-                <DataGrid  ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" RowStyle="{DynamicResource DataGridRowStyle1}" Grid.Row="5" x:Name="dataGridCaixa">
+                <DataGrid ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" RowStyle="{DynamicResource DataGridRowStyle1}" Grid.Row="4" x:Name="dataGridCaixa" IsReadOnly="true" AlternatingRowBackground="#FFE5E5E5" AlternationCount="2" AutoGenerateColumns="False" Background="#FFFAFAFA" Margin="0,37,0,60" Grid.RowSpan="4">
                     <DataGrid.Columns>
+
                         <!-- Começo CheckBox -->
                         <DataGridCheckBoxColumn CanUserResize="False" Width="auto">
                             <DataGridCheckBoxColumn.HeaderTemplate>
@@ -146,25 +119,19 @@
                         </DataGridCheckBoxColumn>
                         <!-- Fim CheckBox -->
                         <!-- Começo -->
-
-                        <!-- Fim -->
-
-
-
-
-                        <DataGridTextColumn Header="" Binding="{Binding Nome}"/>
-                        <DataGridTextColumn Header="" Binding="{Binding Data }"/>
-                        <DataGridTextColumn Header="" Binding="{Binding Quantidade}"/>
-                        <DataGridTextColumn Header="" Binding="{Binding Descricao}"/>
+                        <DataGridTextColumn Header="Numero" Binding="{Binding Numero }"/>
+                        <DataGridTextColumn Header="Saldo Inicial" Binding="{Binding SaldoInicial }"/>
+                        <DataGridTextColumn Header="Saldo Final" Binding="{Binding SaldoFinal}"/>
+                        <DataGridTextColumn Header="Data" Binding="{Binding Data_Hora}"/>
 
                         <DataGridTemplateColumn Header="Operation" IsReadOnly="True" Width="*">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
                                     <StackPanel Orientation="Horizontal">
-                                        <Button Style="{StaticResource GridEditButton}">
+                                        <Button Click="btAtualizar_Click" Style="{StaticResource GridEditButton}">
                                             <Icon:PackIconMaterial Kind="PencilOutline" Style="{StaticResource GridButtonIcon}"/>
                                         </Button>
-                                        <Button Style="{StaticResource GridRemoveButton}">
+                                        <Button Click="btRemover_Click" Margin="20 0 0 0" Style="{StaticResource GridRemoveButton}">
                                             <Icon:PackIconMaterial Kind="DeleteOutline" Style="{StaticResource GridButtonIcon}"/>
                                         </Button>
 
@@ -172,37 +139,8 @@
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>
-
                     </DataGrid.Columns>
                 </DataGrid>
-                <Border Grid.Row="6" HorizontalAlignment="Right" BorderBrush="#dee4ec" BorderThickness="1"
-                        CornerRadius="5" Padding="5" Background="White" Margin="0 10 10 10">
-                    <StackPanel Orientation="Horizontal">
-                        <Button Style="{StaticResource pagingButton}">
-                            <Icon:PackIconMaterial Kind="ChevronLeft" Style="{StaticResource pagingButtonIcon}"/>
-                        </Button>
-
-                        <Rectangle Width="1" Fill="#dee4ec" Margin="3 7 "/>
-
-                        <Button Style="{StaticResource pagingButton}" Content="1"/>
-                        <Button Style="{StaticResource pagingButton}" Content="2" Background="#EFA82E" Foreground="#ffffff"/>
-                        <Button Style="{StaticResource pagingButton}" Content="3"/>
-
-                        <TextBlock Text="..." Foreground="#6c7682" VerticalAlignment="Center" FontSize="15" Margin="10 0"/>
-
-                        <Button Style="{StaticResource pagingButton}" Content="7"/>
-                        <Button Style="{StaticResource pagingButton}" Content="8"/>
-                        <Button Style="{StaticResource pagingButton}" Content="9"/>
-
-                        <Rectangle Width="1" Fill="#dee4ec" Margin="3 7 "/>
-
-                        <Button Style="{StaticResource pagingButton}">
-                            <Icon:PackIconMaterial Kind="ChevronRight" Style="{StaticResource pagingButtonIcon}"/>
-                        </Button>
-
-                    </StackPanel>
-
-                </Border>
             </Grid>
         </Grid>
     </Border>

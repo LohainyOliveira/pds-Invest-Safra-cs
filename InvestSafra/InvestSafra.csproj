@@ -127,7 +127,6 @@
     <Compile Include="Models\AreaDAO.cs" />
     <Compile Include="Models\Caixa.cs" />
     <Compile Include="Models\CaixaDAO.cs" />
-    <Compile Include="Models\ClienteFisicoDAO.cs" />
     <Compile Include="Models\Clima.cs" />
     <Compile Include="Models\ClimaDAO.cs" />
     <Compile Include="Models\CompraSemente.cs" />
@@ -575,6 +574,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Icons\setaProximo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\usu.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\MaterialDesignThemes.4.4.0\build\MaterialDesignThemes.targets" Condition="Exists('packages\MaterialDesignThemes.4.4.0\build\MaterialDesignThemes.targets')" />
