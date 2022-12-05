@@ -98,7 +98,8 @@ namespace InvestSafra.Views
 
         private void btSalvar_Click(object sender, RoutedEventArgs e)
         {
-            
+            if (cbFornecedor.SelectedItem != null)
+                _compra.fornecedor = cbFornecedor.SelectedItem as Fornecedor;
 
             try
             {

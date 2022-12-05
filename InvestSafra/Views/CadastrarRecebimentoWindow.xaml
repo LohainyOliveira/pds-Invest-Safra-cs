@@ -37,7 +37,7 @@
                         <ColumnDefinition Width="17*"/>
                     </Grid.ColumnDefinitions>
                     <Image HorizontalAlignment="Left" Height="149" Margin="38,15,0,0" VerticalAlignment="Top" Width="158" Source="/Imagens/LogoCanto.png"/>
-                    <Label  Content="Cadastrar Recebimento" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Malik" FontSize="24" Foreground="#EFA82E" FontWeight="Bold" Height="59" Width="279" RenderTransformOrigin="0.336,0.452" Margin="280,47,0,0"/>
+                    <Label  Content="Cadastrar Recebimento" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Malik" FontSize="24" Foreground="#EFA82E" FontWeight="Bold" Height="59" Width="282" RenderTransformOrigin="0.336,0.452" Margin="229,47,0,0"/>
                     <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Right">
                         <Button Style="{StaticResource topButton}"  Height="51"   Margin="0 20 0 0" x:Name="btSair" Width="48" Click="btSair_Click">
                             <Button.Background>
@@ -99,7 +99,7 @@
                         </Grid.ColumnDefinitions>
 
                         <Grid Margin="148,-35,49,35" Grid.ColumnSpan="4">
-                            <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+                            <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Margin="245,0,0,0" Width="308">
                                 <Button x:Name="btSalvar" FontSize="19" Content="Salvar" Height="40" Width="119"  Margin="0,20,20,0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Grid.Column="2" Grid.ColumnSpan="2" Click="btSalvar_Click"/>
                                 <Button x:Name="btCancelar" FontSize="19" Content="Limpar" Height="40" Width="119"  Margin="0,20,0,0" BorderThickness="17" Foreground="Black" BorderBrush="#EFA82E" Background="#EFA82E" Cursor="Hand" Grid.ColumnSpan="4" Click="btCancelar_Click"/>
                             </StackPanel>

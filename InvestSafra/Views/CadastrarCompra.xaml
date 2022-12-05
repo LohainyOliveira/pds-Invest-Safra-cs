@@ -177,7 +177,9 @@
                     materialDesign:HintAssist.Hint="Fornecedor" 
                     Style="{StaticResource MaterialDesignOutlinedComboBox}"   
                     Background="#f7fbfc" FontFamily="Arial" FontWeight="Bold"
-                    x:Name="cbFornecedor" Padding="8"  Margin="282,205,478,0" Height="56" VerticalAlignment="Top" FontSize="14" Foreground="Black">
+                    x:Name="cbFornecedor" Padding="8"  Margin="282,205,478,0" Height="56" VerticalAlignment="Top" FontSize="14" Foreground="Black"
+                    DisplayMemberPath="Nome"
+                    SelectedValuePath="Id">
 
                     <ComboBoxItem></ComboBoxItem>
                 </ComboBox>
