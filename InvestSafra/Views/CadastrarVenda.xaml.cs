@@ -45,5 +45,55 @@ namespace InvestSafra.Views
         {
             DialogResult = false;
         }
-    }
+        private void Border_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+            {
+                this.DragMove();
+            }
+
+        }
+
+        private bool IsMaxinized = false;
+        private void Border_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ClickCount == 2)
+            {
+                if (IsMaxinized)
+                {
+                    this.WindowState = WindowState.Normal;
+                    this.Width = 1080;
+                    this.Height = 720;
+
+                    IsMaxinized = false;
+                }
+                else
+                {
+                    this.WindowState = WindowState.Maximized;
+                    IsMaxinized = true;
+
+                }
+            }
+        }
+
+		private void membersDataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+		{
+
+		}
+
+		private void BtnSearch_Click(object sender, RoutedEventArgs e)
+		{
+
+		}
+
+		private void btSalvar_Click(object sender, RoutedEventArgs e)
+		{
+
+		}
+
+		private void txtDescricao_TextChanged(object sender, TextChangedEventArgs e)
+		{
+
+		}
+	}
 }

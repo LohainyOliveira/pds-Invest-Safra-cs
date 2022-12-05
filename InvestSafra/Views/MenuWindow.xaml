@@ -172,11 +172,6 @@
                         </hc:SideMenuItem.Icon>
                     </hc:SideMenuItem>
 
-                    <hc:SideMenuItem Background="Transparent" Foreground="Black" Header="Lista Produto" Selected="SideMenuItemListaProduto_Selected" Command="{Binding SelectCmd}" CommandParameter="{Binding Header,RelativeSource={RelativeSource Self}}">
-                        <hc:SideMenuItem.Icon>
-                            <Image Height="30"  Source="/Icons/marcador.png"/>
-                        </hc:SideMenuItem.Icon>
-                    </hc:SideMenuItem>
 
                     <hc:SideMenuItem Background="Transparent" Foreground="Black" Header="Lista Sementes" Selected="SideMenuItemListaSementes_Selected" Command="{Binding SelectCmd}" CommandParameter="{Binding Header,RelativeSource={RelativeSource Self}}">
                         <hc:SideMenuItem.Icon>
@@ -272,12 +267,6 @@
                     </hc:SideMenuItem.Icon>
                 </hc:SideMenuItem>
 
-
-                <hc:SideMenuItem Background="Transparent" Header="Produtos" Selected="SideMenuItemProdutos_Selected" FontFamily="Arial" FontWeight="Bold">
-                    <hc:SideMenuItem.Icon>
-                        <Image  Height="30" Source="/Icons/produtos.png"/>
-                    </hc:SideMenuItem.Icon>
-                </hc:SideMenuItem>
 
                 <hc:SideMenuItem Background="Transparent" Header="Recebimentos" Selected="SideMenuItemRecebimento_Selected" FontFamily="Arial" FontWeight="Bold">
                     <hc:SideMenuItem.Icon>

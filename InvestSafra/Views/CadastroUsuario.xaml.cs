@@ -12,19 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-
 namespace InvestSafra.Views
 {
     /// <summary>
-    /// Lógica interna para GraficosWindow.xaml
+    /// Lógica interna para CadastroUsuario.xaml
     /// </summary>
-    public partial class GraficosWindow : Window
+    public partial class CadastroUsuario : Window
     {
-        public GraficosWindow()
+        public CadastroUsuario()
         {
             InitializeComponent();
         }
-
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.ChangedButton == MouseButton.Left)
@@ -56,21 +54,11 @@ namespace InvestSafra.Views
             }
         }
 
-        private void btnProcurar_Click(object sender, RoutedEventArgs e)
+        private void btCancelar_Click(object sender, RoutedEventArgs e)
         {
-
-        }
-
-        private void btnSair_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void btnSalvar_Click(object sender, RoutedEventArgs e)
-        {
-
+            Entrar form = new Entrar();
+            this.Close();
+            form.ShowDialog();
         }
     }
-
-
 }

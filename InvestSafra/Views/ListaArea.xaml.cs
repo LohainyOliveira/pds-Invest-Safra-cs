@@ -128,5 +128,24 @@ namespace InvestSafra.Views
         {
             DialogResult = false;
         }
-    }
+
+		private void Button_Click_1(object sender, RoutedEventArgs e)
+		{
+            CadastrarArea form = new CadastrarArea();
+            this.Close();
+            form.ShowDialog();
+		}
+
+		private void Button_Click_2(object sender, RoutedEventArgs e)
+		{
+
+		}
+
+		private void Button_Click_3(object sender, RoutedEventArgs e)
+		{
+            MenuWindow form = new MenuWindow();
+            this.Close();
+            form.ShowDialog();
+		}
+	}
 }

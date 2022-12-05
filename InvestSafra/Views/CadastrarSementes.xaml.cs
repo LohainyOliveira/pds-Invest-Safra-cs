@@ -62,6 +62,12 @@ namespace InvestSafra.Views
             ExibirMensagemLimpar();
         }
 
+        private void ExibirMensagemSalvar()
+        {
+            MessageBox.Show($"Campos Salvos com Sucesso!", "Registros Salvos",
+                MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
         private void ExibirMensagemLimpar()
         {
             MessageBox.Show($"Campos Limpos com Sucesso", "Limpeza Concluida",
@@ -88,8 +94,8 @@ namespace InvestSafra.Views
                 if (IsMaxinized)
                 {
                     this.WindowState = WindowState.Normal;
-                    this.Width = 1080;
-                    this.Height = 720;
+                    this.Width = 900;
+                    this.Height = 520;
 
                     IsMaxinized = false;
                 }

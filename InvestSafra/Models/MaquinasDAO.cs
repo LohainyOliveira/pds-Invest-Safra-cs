@@ -24,11 +24,9 @@ namespace InvestSafra.Models
 
 
                 comando.Parameters.AddWithValue("@nome", maquinas.Nome);
-                comando.Parameters.AddWithValue("@descricao", maquinas.Descricao);
                 comando.Parameters.AddWithValue("@modelo", maquinas.Modelo);
                 comando.Parameters.AddWithValue("@marca", maquinas.Marca);
                 comando.Parameters.AddWithValue("@quantidade", maquinas.Quantidade);
-                comando.Parameters.AddWithValue("@valor", maquinas.Valor);
 
                 var resultado = comando.ExecuteNonQuery();
 
@@ -67,11 +65,9 @@ namespace InvestSafra.Models
                     var maquinas = new Maquinas();
                     maquinas.Id = reader.GetInt32("id_maq");
                     maquinas.Nome = DAOHelper.GetString(reader, "nome_maq");
-                    maquinas.Descricao = DAOHelper.GetString(reader, "descricao_maq");
                     maquinas.Modelo = DAOHelper.GetString(reader, "modelo_maq");
                     maquinas.Marca = DAOHelper.GetString(reader, "marca_maq");
                     maquinas.Quantidade = reader.GetInt32("quantidade_maq");
-                    maquinas.Valor = reader.GetDouble("valor_maq");
 
                     lista.Add(maquinas);
                 }
@@ -94,11 +90,9 @@ namespace InvestSafra.Models
                 comando.CommandText = "UPDATE Maquinas set nome_maq = @nome, descricao_maq = @descricao, modelo_maq = @modelo, marca_maq = @marca, quantidade_maq = @quantidade, valor_maq = @valor WHERE id_maq = @id";
 
                 comando.Parameters.AddWithValue("@nome", maquinas.Nome);
-                comando.Parameters.AddWithValue("@descricao", maquinas.Descricao);
                 comando.Parameters.AddWithValue("@modelo", maquinas.Modelo);
                 comando.Parameters.AddWithValue("@marca", maquinas.Marca);
                 comando.Parameters.AddWithValue("@quantidade", maquinas.Quantidade);
-                comando.Parameters.AddWithValue("@valor", maquinas.Valor);
 
                 comando.ExecuteNonQuery();
             }

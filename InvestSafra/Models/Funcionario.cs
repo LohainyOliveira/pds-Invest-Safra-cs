@@ -24,7 +24,7 @@ namespace InvestSafra.Models
 		public string Complemento { get; set; }
 		public string Email { get; set; }
 		public string Funcao { get; set; }
-		public string Tipo { get; set; }
+
 		public double Salario { get; set; }
 	}
 }

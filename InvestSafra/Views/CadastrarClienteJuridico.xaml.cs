@@ -128,6 +128,12 @@ namespace InvestSafra.Views
             cbEstado.SelectedItem = null;
             cbSexo.SelectedItem = null;
 
+
+            CadastroUsuario form = new CadastroUsuario();
+
+            this.Close();
+            form.ShowDialog();
+
         }
 
 
@@ -166,5 +172,7 @@ namespace InvestSafra.Views
         {
             DialogResult = false;
         }
+        
+        
     }
 }

@@ -5,15 +5,104 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:InvestSafra.Views"
         mc:Ignorable="d"
-        Title="Venda" Height="450" Width="800">
-    <Grid>
-        <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Right">
-            <Button Style="{StaticResource topButton}"  Height="40"  x:Name="btSair" Width="48" Click="btSair_Click">
-                <Button.Background>
-                    <ImageBrush ImageSource="/Icons/logout.png"/>
-                </Button.Background>
-            </Button>
-        </StackPanel>
+         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        Height="670" Width="700" WindowStartupLocation="CenterScreen" Background="Transparent" Visibility="Visible" AllowsTransparency="True" WindowStyle="None">
+    <Border CornerRadius="30" Background="#f7fbfc" MouseDown="Border_MouseDown" MouseLeftButtonDown="Border_MouseLeftButtonDown">
+        <Grid>
+            <Grid x:Name="CompraProduto" Margin="0,0,0,-28" RenderTransformOrigin="0.5,0.5">
 
-    </Grid>
+
+                <Grid Grid.RowSpan="4" Margin="0,0,0,10">
+
+
+                    <Grid Grid.Row="0" Margin="12,0,27,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1538*"/>
+                            <ColumnDefinition Width="17*"/>
+                            <ColumnDefinition Width="17*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image HorizontalAlignment="Left" Height="147" Margin="38,15,0,0" VerticalAlignment="Top" Width="142" Source="/Imagens/LogoCanto.png"/>
+                        <Label  Content="Cadastro de Venda" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Malik" FontSize="24" Foreground="#EFA82E" FontWeight="Bold" Height="49" Width="292" RenderTransformOrigin="0.336,0.452" Margin="230,60,0,0"/>
+                    </Grid>
+                </Grid>
+
+
+                <DatePicker 
+                       x:Name="dtPickerDataCompra"
+                       materialDesign:HintAssist.Hint="Data da Compra" 
+                       Style="{StaticResource MaterialDesignOutlinedDatePicker}" Height="59" Margin="312,211,42,0" VerticalAlignment="Top" Foreground="Black" />
+
+
+                <Separator Margin="0,404,0,280" Background="#FFFD9F0C" HorizontalAlignment="Center" Width="968"/>
+
+                <TextBox
+                x:Name="txtQuantidade"
+                materialDesign:HintAssist.Hint="Quantidade"
+                materialDesign:TextFieldAssist.HasClearButton="True"
+                Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                Text="{Binding Descricao}" Cursor="IBeam" FontFamily="Arial" FontSize="18" FontWeight="Bold" Margin="22,211,412,428" Foreground="Black" Padding="12,16,12,16"/>
+
+                <TextBox
+                x:Name="txtDescricao"
+                materialDesign:HintAssist.Hint="Descrição"
+                materialDesign:TextFieldAssist.HasClearButton="True"
+                Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                Text="{Binding Descricao}" Cursor="IBeam" FontFamily="Arial" FontSize="18" FontWeight="Bold" Margin="22,445,10,117" Foreground="#FF060202" TextChanged="txtDescricao_TextChanged"/>
+                <ComboBox
+                    materialDesign:HintAssist.Hint="Safra" 
+                    Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                       Foreground="black"
+                    Margin="22,312,412,0"
+                    Background="#f7fbfc" FontFamily="Arial" FontWeight="Bold"
+                    x:Name="cbSafra" Padding="8" Height="58" VerticalAlignment="Top">
+                </ComboBox>
+
+
+
+                <Button x:Name="btSalvar" FontSize="19"
+                        Content="Salvar" Height="47" 
+                        BorderThickness="17" Margin="26,604,22,47"
+                        Foreground="Black" BorderBrush="#FFFFB12C" 
+                        Background="#FFFFB22F" Cursor="Hand" 
+                        Click="btSalvar_Click" RenderTransformOrigin="0.5,0.5">
+                    <Button.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0.069"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Button.RenderTransform>
+                </Button>
+                <ComboBox
+                    materialDesign:HintAssist.Hint="Funcionário" 
+                    Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                    Foreground="black"
+                    Margin="312,312,42,0"
+                    Background="#f7fbfc" FontFamily="Arial" FontWeight="Bold"
+                    x:Name="cbFuncionario" Padding="8" Height="58" VerticalAlignment="Top"/>
+
+            </Grid>
+
+            <StackPanel HorizontalAlignment="Left" Margin="612,0,0,0">
+                <Button Style="{StaticResource topButton}"  Height="58"  x:Name="btSair" Width="56" Click="btSair_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/Icons/logout.png"/>
+                    </Button.Background>
+                </Button>
+            </StackPanel>
+
+
+        </Grid>
+
+
+
+
+    </Border>
 </Window>

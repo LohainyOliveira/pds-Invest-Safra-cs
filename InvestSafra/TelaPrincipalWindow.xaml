@@ -33,7 +33,7 @@
                         Background="#EFA82E" BorderBrush="#EFA82E" Foreground="Black"
                         Width="111" Height="41" Cursor="Hand" Click="btEntrar_Click_1"/>
 
-                <Button x:Name="btCadastro" Content="Inscreva-se" Height="40" Width="160"
+                <Button x:Name="btCadastro" Content="Cadastro" Height="40" Width="160"
                         materialDesign:ButtonAssist.CornerRadius="8" Background="#EFA82E"
                         BorderBrush="#EFA82E" Foreground="Black" Click="btCadastrar_Click"
                         Margin="10 0" Cursor="Hand"/>
@@ -53,25 +53,12 @@
                 <ListView FontFamily="Century Gothic" FontSize="14" Foreground="black"
                           BorderBrush="Transparent" Background="Transparent">
 
-                    <ListViewItem Height="40" x:Name="slhome" Selected="ListViewItem_Selected_1">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="/Icons/home.png"/>
-                            <TextBlock Margin="10 0 0 0" Text="Home" VerticalAlignment="center" FontWeight="bold" FontFamily="Arial"/>
-                        </StackPanel>
-                    </ListViewItem>
-
-
-                    <ListViewItem Height="40">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="/Icons/conta.png" Height="26" VerticalAlignment="Center" Width="21"/>
-                            <TextBlock Margin="10 0 0 0" Text="Conta" VerticalAlignment="Center" FontWeight="Bold" FontFamily="Arial"/>
-                        </StackPanel>
-                    </ListViewItem>
+                  
 
                     <ListViewItem Height="40">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="/Icons/contato.png" Height="20" VerticalAlignment="Center"/>
-                            <TextBlock Margin="10 0 0 0" Text="Contatos" VerticalAlignment="Center" FontWeight="Bold" FontFamily="Arial"/>
+                            <TextBlock Margin="10 0 0 0" Text="Formas de Contatos" VerticalAlignment="Center" FontWeight="Bold" FontFamily="Arial"/>
                         </StackPanel>
                     </ListViewItem>
 

@@ -43,8 +43,8 @@ namespace InvestSafra.Views
                 if (IsMaxinized)
                 {
                     this.WindowState = WindowState.Normal;
-                    this.Width = 1080;
-                    this.Height = 720;
+                    this.Width = 670;
+                    this.Height = 500;
 
                     IsMaxinized = false;
                 }
@@ -70,5 +70,10 @@ namespace InvestSafra.Views
         {
 
         }
-    }
+
+		private void txtComprador_TextChanged(object sender, TextChangedEventArgs e)
+		{
+
+		}
+	}
 }

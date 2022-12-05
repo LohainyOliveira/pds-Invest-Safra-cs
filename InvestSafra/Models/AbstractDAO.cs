@@ -10,7 +10,7 @@ namespace InvestSafra.Models
     /// <summary>
     ///     Abstract Class para classes DAO
     /// </summary>
-    /// <typeparam name="I"></typeparam>
+    /// <typeparam name="T"></typeparam>
     class AbstractDAO<T>
     {
         protected Conexao conn = new Conexao();

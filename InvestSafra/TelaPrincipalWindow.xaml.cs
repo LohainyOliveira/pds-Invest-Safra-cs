@@ -41,7 +41,8 @@ namespace InvestSafra
 
         private void TelaPrincipalWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            
+			//new CadastrarFuncionario().Show();
+			//this.Close();
         }
 
         private void Timer_Tick(object sender, EventArgs e)
@@ -70,14 +71,22 @@ namespace InvestSafra
             
         }
 
-        
-		
+        private void btCadastra_Click(object sender, RoutedEventArgs e)
+		{
+			CadastrarMaquinas form = new CadastrarMaquinas();
+			form.ShowDialog();
+		}
+
+		private void btEntrar_Click(object sender, RoutedEventArgs e)
+		{
+			MenuWindow menu = new MenuWindow();
+			menu.ShowDialog();
+		}
+
         private void ListViewItem_Selected(object sender, RoutedEventArgs e)
         {
 
 
-			GraficosWindow form = new GraficosWindow();
-			form.ShowDialog();
 		}
 
         private void btMenu_Click(object sender, RoutedEventArgs e)
@@ -102,8 +111,8 @@ namespace InvestSafra
 
 		private void btCadastrar_Click(object sender, RoutedEventArgs e)
 		{
-			CadastraClienteFisico form = new CadastraClienteFisico();
-			form.ShowDialog();
+			
+			
 
 		}
 
@@ -111,7 +120,6 @@ namespace InvestSafra
 		private void btEntrar_Click_1(object sender, RoutedEventArgs e)
 		{
 			Entrar form = new Entrar();
-			this.Close();
 			form.ShowDialog();
 
 		}

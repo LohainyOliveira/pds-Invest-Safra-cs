@@ -67,8 +67,8 @@ namespace InvestSafra.Views
                 if (IsMaxinized)
                 {
                     this.WindowState = WindowState.Normal;
-                    this.Width = 1080;
-                    this.Height = 720;
+                    this.Width = 600;
+                    this.Height = 520;
 
                     IsMaxinized = false;
                 }
@@ -84,5 +84,10 @@ namespace InvestSafra.Views
         {
             DialogResult = false;
         }
-    }
+
+		private void btSalvar_Click(object sender, RoutedEventArgs e)
+		{
+
+		}
+	}
 }

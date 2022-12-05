@@ -90,8 +90,8 @@ namespace InvestSafra.Views
                 if (IsMaxinized)
                 {
                     this.WindowState = WindowState.Normal;
-                    this.Width = 1080;
-                    this.Height = 720;
+                    this.Width = 1000;
+                    this.Height = 800;
 
                     IsMaxinized = false;
                 }
