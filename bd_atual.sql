@@ -142,6 +142,29 @@ localizacao_faze varchar (100) not null,
 complemento_faze varchar (100) not null
 );
 
+DELIMITER $$
+CREATE PROCEDURE InsertFazenda (nomeFazenda varchar(300), nomeFantasia varchar(300), proprietario varchar(300), cnpj varchar(300), 
+	localizacao varchar(300), complemento varchar(300), codigo int)
+BEGIN
+    declare verificacao_cnpj varchar(100);
+    declare verificacao_fk int;
+    set verificacao_cnpj = (select  cnpj_faze from Fazenda where (cnpj_faze = cnpj));
+    set verificacao_fk = (select id_faze fROM Fazenda WHERE (id_faze = codigo));
+    
+
+	if (verificacao_fk is not null) or (verificacao_fk <> '') then
+		if ((verificacao_cnpj is null) or (verificacao_cnpj = '')) then
+			insert into Fazenda values (null, nomeFazenda, nomeFantasia , proprietario, cnpj, localizacao, complemento );
+			select 'A Fazenda ', nomeFazenda ,' foi inserido com sucesso!' as "Confirmação";
+		else
+			select concat('A Fazenda  ', nomeFazenda, ' Já Existe!') as Alerta;
+		end if;
+	else
+		select 'Os dados do Cadastro informado Não existe!' as Alerta;
+	end if;
+END;
+$$ DELIMITER ;
+
 create table Area (
 id_are int primary key auto_increment not null,
 nome_terren_are varchar (100) not null,
@@ -292,6 +315,5 @@ BEGIN
 	end if;
 END;
 $$ DELIMITER ;
-call InsertUsuario ('Julia','1234',1);
 
 select *from clima;
